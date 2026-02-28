@@ -1,0 +1,148 @@
+# C11 文档通用结构规范 — 文档骨架 Schema
+# 来源规范：specs/common/outputs/C11-文档通用结构规范_v0.14@202602271500.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供文档结构骨架约束
+# 完整规则（附录编写要求详细说明）：见原规范文件
+# 版本：0.14（2026-02-27）
+# 主要变更：按M01规范补充一致性约束；优化附录通用规则和分类表说明；增加修订记录排列顺序要求
+
+doc_id: C11
+doc_name: 文档通用结构规范
+
+# ── 文档分类 ──
+doc_categories:
+  - category: 规范类
+    structure: 完整结构（五分区）
+    types: [编写规范, 通用规范, 过程规范, 术语规范]
+  - category: 交付类
+    structure: 完整结构（五分区）
+    types: [需求文档, 设计文档, 战略规划, 测试报告]
+  - category: 辅助类
+    structure: 简化结构（标题+内容）
+    types: [清单, 记录, 索引, 模板]
+
+# ── 完整结构文档的五分区（固定顺序） ──
+sections:
+  - name: 总则
+    required: true
+    position: first
+    heading: "# 1 {标题}"
+    note: "标题不强制使用「总则」，可根据内容命名（如「目的和范围」「规范定位」）"
+    required_elements:
+      - 文档编号
+      - 文档名称
+      - 文档密级
+    note_for_elements: "各类别文档可补充专有要素：规范类补充适用对象和管理要点，交付类补充编写目的和背景等"
+
+  - name: 正文
+    required: true
+    starts_at: "# 2"
+    chapter_limit: "1万汉字/一级标题（用户可覆盖）"
+
+  - name: 规范性附录
+    required: false
+    before: 资料性附录
+    content: "执行配套——模板、文档骨架"
+
+  - name: 资料性附录
+    required: false
+    content: "理解辅助——术语、方法论、教学、检查清单"
+    suggested_order: [术语表, 文档说明]
+
+  - name: 修订记录
+    required: true
+    position: last
+    heading: "# 修订记录"
+
+# ── 简化结构文档要求 ──
+simplified_structure:
+  required_parts: [标题, 内容]
+  optional_parts: [修订记录]
+  content_format:
+    清单类: 表格形式
+    记录类: 时间序列条目
+    索引类: 固定格式（如术语表的三层术语体系）
+    模板类: 可填充的结构
+
+# ── 附录编号格式 ──
+appendix:
+  numbering: "附录A, 附录B, ... 按字母递增"
+  ordering: "规范性附录排在资料性附录之前"
+  title_format:
+    规范性: "# 附录{letter}（规范性）{标题}"
+    资料性: "# 附录{letter}（资料性）{标题}"
+  consistency_constraint: "附录编号格式和标题格式以第6.1节为权威来源"
+  note: "标注'-'的附录类型无固定格式要求，按内容需要自由组织"
+
+# ── 附录分类 ──
+appendix_categories:
+  - category: 索引类
+    nature: 资料性
+    types:
+      - name: 术语表
+        format: 固定格式（三层术语体系）
+        spec_ref: 第6.3节
+      - name: 缩略语表
+        format: 固定格式（表格）
+        spec_ref: 第6.4节
+      - name: 参考文献
+        format: 固定格式（列表）
+        spec_ref: 第6.5节
+  - category: 配套类
+    nature: 规范性
+    types:
+      - name: 裁剪规则
+        format: 结构化（裁剪条件表 + 裁剪建议）
+        spec_ref: 第6.6节
+      - name: 文档骨架
+        format: 固定格式（代码块/模板）
+        spec_ref: 第6.7节
+      - name: 检查清单
+        nature: 资料性
+        format: 固定格式（表格）
+        spec_ref: 第6.8节
+      - name: 模板集合
+        format: 结构化（多个模板条目）
+  - category: 辅助类
+    nature: 资料性
+    types:
+      - name: 文档说明
+        format: 结构化（定位图 + 层级关系说明）或纯文字
+        spec_ref: 第6.9节
+      - name: 内容释义
+        format: 自由组织
+      - name: 补充示例
+        format: 自由组织
+      - name: 应用指南
+        format: 自由组织
+
+# ── 术语表附录 ──
+terminology_appendix:
+  type: 资料性
+  structure:
+    - layer: "业界通用术语"
+      content: "仅列名称"
+    - layer: "天帷通用术语"
+      content: "列名称 + 引用C99"
+    - layer: "文档专有术语"
+      content: "完整定义"
+
+# ── 密级 ──
+classification:
+  levels:
+    - level: 商密一级
+      label: "【商密一级】 -- 仅限指定人员，外发必追责。"
+    - level: 商密二级
+      label: "【商密二级】 -- 外发必追责。"
+    - level: 内部资料
+      label: "【内部资料】 -- 不主动对外公开。"
+  default: "内部资料"
+  外发定义: "传递给天帷体系外部的任何个人或组织"
+
+# ── 修订记录 ──
+revision_log:
+  format: "表格（标记 | 日期 | 修订内容 | 修订人）"
+  max_line_width: 180  # 中文=2, 英文/数字/符号=1
+  version_format: "主版本.次版本（如0.10, 1.00）"
+  ai_revision: "R.{nn}（R.01, R.02...顺序递增），用户指示时才归并为正式版本"
+  merge_rule: "归并时只描述最终结果与该版本原始状态的差异，不体现中间演变"
+  排列顺序: "按时间正序排列（最早版本在上，最新版本在下）"

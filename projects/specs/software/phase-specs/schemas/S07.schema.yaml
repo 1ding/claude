@@ -1,0 +1,389 @@
+# S07 BC详细设计编写规范 — 编写规则 Schema
+# 来源规范：specs/software/meta/S07-BC详细设计编写规范_v0.10@202602252051.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供章节结构、内容模型和编写约束
+# 完整规则（章节目的详述、完整示例、裁剪依据详述）：见原规范文件
+
+doc_id: S07
+doc_name: BC详细设计编写规范
+target_doc: "07-BC详细设计"
+target_doc_name: BC详细设计文档
+
+# ── 文档定位 ──
+positioning:
+  stage: 7
+  stage_name: BC详细设计
+  upstream: [阶段6-BC总体设计, 阶段5-BC详细需求, 阶段4-系统设计]
+  downstream: [开发实施]
+  role: "针对单个BC内的子领域（或小BC整体），完成从领域模型到代码实现的详细设计。是开发人员直接依据的技术蓝图"
+
+# ── 上游输入 ──
+upstream_inputs:
+  - { item: "BC架构决策", source: "阶段6 BC总体设计", note: "分层架构、技术选型、安全设计" }
+  - { item: "子领域划分", source: "阶段6 BC总体设计", note: "子领域边界和职责" }
+  - { item: "聚合概要设计", source: "阶段6 BC总体设计", note: "聚合边界和核心不变式" }
+  - { item: "User Story清单", source: "阶段5 BC详细需求", note: "含验收标准和场景描述" }
+  - { item: "业务场景定义", source: "阶段5 BC详细需求", note: "场景流程和异常处理" }
+  - { item: "全局架构约束", source: "阶段4 系统设计", note: "技术栈、集成规范、非功能约束" }
+missing_input_handling: "缺失内容记录为假设（AS-*），标注'来源：阶段N输出缺失'"
+
+# ── 全局硬约束 ──
+hard_constraints:
+  - "领域层不依赖外层（接口层、应用层、基础设施层）"
+  - "基础设施层通过依赖反转实现领域层接口"
+  - "聚合内对象共同维护一个业务不变性"
+  - "跨聚合通过ID引用，禁止直接对象引用"
+  - "聚合边界不跨微服务"
+  - "领域层禁止直接执行I/O操作（数据库、外部服务、消息发送、缓存）"
+  - "状态转换应有守卫条件约束"
+  - "接口幂等性应有明确保证机制"
+
+# ── 裁剪指引 ──
+tailoring:
+  不可裁剪: ["第1章(定位和边界)", "第4章(领域模型核心)", "第6章(接口契约)", "第7章(数据模型)"]
+  小型BC: "聚合数≤2时：第5章可简化，第10章可并入第6章，第11章可简化为覆盖率目标"
+  裁剪后保障: "领域模型完整性（聚合→实体→值对象→业务规则不断裂）"
+
+# ── 必选元数据 ──
+required_metadata: [所属BC, 子领域编号, 子领域名称, 设计版本]
+
+# ── 章节结构（12章，顺序固定不可调整） ──
+chapters:
+
+  - chapter: 1
+    title: 概述
+    required: true
+    purpose: "定位章节：明确设计单元边界、版本范围、业务边界、场景索引和术语"
+    sections:
+      - { id: "1.1", title: "设计单元定位", model: "design_unit_positioning" }
+      - { id: "1.2", title: "版本范围", model: "version_scope" }
+      - { id: "1.3", title: "业务边界", model: "business_boundary" }
+      - { id: "1.4", title: "场景索引", model: "scenario_index" }
+      - { id: "1.5", title: "术语表", model: "terminology" }
+
+  - chapter: 2
+    title: 设计约束
+    required: true
+    purpose: "约束章节：引用架构约束、定义状态机、并发幂等策略、安全约束"
+    rules:
+      - "架构约束以引用为主，不重复BC总体设计内容"
+      - "状态机属于设计决策，应完整定义转换规则"
+      - "并发与幂等策略给出统一方案，后续章节不重复"
+    sections:
+      - { id: "2.1", title: "架构约束引用", model: "arch_constraint_ref" }
+      - { id: "2.2", title: "状态机定义", model: "state_machine" }
+      - { id: "2.3", title: "并发与幂等策略", model: "concurrency_idempotency" }
+      - { id: "2.4", title: "安全约束", model: "security_constraints" }
+
+  - chapter: 3
+    title: 业务流程设计
+    required: true
+    purpose: "流程章节：定义一级和二级流程，明确步骤、异常处理"
+    rules:
+      - "步骤表中的业务规则引用应引用规则编号，不重复规则内容"
+      - "异常处理是流程设计的核心价值"
+      - "流程图使用ASCII图绘制"
+    sections:
+      - { id: "3.1", title: "流程总览", model: "process_overview" }
+      - { id: "3.2+", title: "各流程详细设计", model: "process_detail", points: "每个流程一个小节，包含流程概述、流程图、步骤表、异常处理表" }
+
+  - chapter: 4
+    title: 领域模型设计
+    required: true
+    non_reducible: true
+    purpose: "核心章节：定义聚合、实体、值对象、业务规则、领域服务、领域事件"
+    rules:
+      - "聚合内对象共同维护一个业务不变性"
+      - "跨聚合通过ID引用，禁止直接对象引用"
+      - "领域层不依赖外层，不直接执行I/O操作"
+    sections:
+      - { id: "4.1", title: "聚合概述", model: "aggregate_overview" }
+      - { id: "4.2", title: "各聚合详细定义", model: "aggregate_detail", points: "每个聚合一组三表：属性清单表+业务规则表+业务方法表" }
+      - { id: "4.3", title: "值对象定义", model: "value_object_detail" }
+      - { id: "4.4", title: "领域服务", model: "domain_service" }
+      - { id: "4.5", title: "领域事件清单", model: "domain_event_list" }
+
+  - chapter: 5
+    title: 应用层设计
+    required: true
+    purpose: "应用层章节：定义应用服务、编排流程、事务边界"
+    sections:
+      - { id: "5.1", title: "应用服务清单", model: "app_service_list" }
+      - { id: "5.2", title: "应用服务方法定义", model: "app_service_method" }
+      - { id: "5.3", title: "事务边界", model: "transaction_boundary" }
+      - { id: "5.4", title: "应用层异常处理", model: "app_exception_handling" }
+
+  - chapter: 6
+    title: 接口设计
+    required: true
+    non_reducible: true
+    purpose: "接口契约章节：定义REST API、消息接口、内部接口"
+    rules:
+      - "接口命名遵循RESTful规范"
+      - "错误码全BC统一编码"
+      - "消息Payload应包含版本字段"
+    sections:
+      - { id: "6.1", title: "接口总览", model: "interface_overview" }
+      - { id: "6.2", title: "REST API设计", model: "rest_api_detail" }
+      - { id: "6.3", title: "消息接口设计", model: "message_interface_detail" }
+      - { id: "6.4", title: "内部接口设计", model: "internal_interface_detail" }
+      - { id: "6.5", title: "错误码定义", model: "error_code_def" }
+      - { id: "6.6", title: "接口版本管理", model: "interface_versioning" }
+
+  - chapter: 7
+    title: 数据模型设计
+    required: true
+    non_reducible: true
+    purpose: "数据模型章节：定义数据库表结构、索引、分区策略"
+    rules:
+      - "表命名：{bc_prefix}_{业务表名}，全小写下划线分隔"
+      - "所有业务表应包含审计字段"
+      - "外键约束仅用于同一聚合内"
+    sections:
+      - { id: "7.1", title: "表清单", model: "table_list" }
+      - { id: "7.2", title: "表结构定义", model: "table_structure", points: "每个表一组定义：字段清单表+索引定义表" }
+      - { id: "7.3", title: "数据迁移脚本", model: "migration_script" }
+      - { id: "7.4", title: "领域模型到数据模型映射", model: "domain_to_data_mapping" }
+
+  - chapter: 8
+    title: 前端交互设计
+    required: false
+    purpose: "前端交互章节：定义页面结构、交互流程、状态管理（宜）"
+    sections:
+      - { id: "8.1", title: "页面清单", model: "page_list" }
+      - { id: "8.2", title: "页面结构设计", model: "page_structure" }
+      - { id: "8.3", title: "交互流程", model: "interaction_flow" }
+      - { id: "8.4", title: "前端状态管理", model: "frontend_state_mgmt" }
+
+  - chapter: 9
+    title: 后端工程结构设计
+    required: true
+    purpose: "工程结构章节：定义包结构、类清单、依赖关系"
+    sections:
+      - { id: "9.1", title: "包结构", model: "package_structure" }
+      - { id: "9.2", title: "类清单", model: "class_list" }
+      - { id: "9.3", title: "依赖关系", model: "dependency_diagram" }
+
+  - chapter: 10
+    title: 权限设计
+    required: true
+    purpose: "权限章节：定义功能权限、数据权限、权限校验点"
+    sections:
+      - { id: "10.1", title: "功能权限清单", model: "function_permission_list" }
+      - { id: "10.2", title: "数据权限规则", model: "data_permission_rules" }
+      - { id: "10.3", title: "权限校验点", model: "permission_check_points" }
+
+  - chapter: 11
+    title: 单元测试设计
+    required: true
+    purpose: "测试章节：定义测试策略、测试用例清单、覆盖率目标"
+    sections:
+      - { id: "11.1", title: "测试策略", model: "test_strategy" }
+      - { id: "11.2", title: "测试用例清单", model: "test_case_list" }
+      - { id: "11.3", title: "覆盖率目标", model: "coverage_target" }
+
+  - chapter: 12
+    title: Task细化与工作量估算
+    required: true
+    purpose: "任务章节：将设计拆解为开发任务，估算工作量"
+    sections:
+      - { id: "12.1", title: "Task拆解", model: "task_breakdown" }
+      - { id: "12.2", title: "工作量估算", model: "effort_estimation" }
+      - { id: "12.3", title: "依赖关系", model: "task_dependency" }
+
+# ── 内容模型定义 ──
+# 格式：model_name → columns列表 + 可选note/rules
+
+content_models:
+
+  # ── 第1章 ──
+  design_unit_positioning:
+    note: "键值对表格，定位设计单元"
+    columns:
+      - "所属BC(BC编号+BC名称)"
+      - "子领域编号(大BC填子领域编号如SD01，小BC填'本文档覆盖整个BC，无子领域划分')"
+      - "子领域名称"
+      - "一句话描述(不超过40字)"
+      - "核心关注问题(2~5个)"
+
+  version_scope:
+    columns: ["版本标识(如P1/P2/MVP)", "核心交付内容(一句话)", "文档状态(完整展开/概要)"]
+
+  business_boundary:
+    note: "范围内清单表 + 范围外清单表"
+    in_scope_columns: ["序号", "业务能力"]
+    out_scope_columns: ["序号", "业务能力", "负责方(子领域编号+名称或BC编号)"]
+
+  scenario_index:
+    columns: ["场景编号", "场景名称", "触发者", "版本归属", "需求文档引用(章节号)"]
+
+  terminology:
+    columns: ["术语", "英文", "简要说明", "来源(本设计单元定义/引用BC总体设计X.X节)"]
+
+  # ── 第2章 ──
+  arch_constraint_ref:
+    columns: ["约束项(架构决策名称)", "引用来源(BC总体设计章节号)", "对本设计单元的约束(一句话)"]
+
+  state_machine:
+    note: "状态枚举表 + 状态转换规则表 + 状态机图(ASCII)"
+    state_enum_columns: ["状态值(枚举常量名)", "状态名称", "说明", "是否终态(是/否)"]
+    transition_columns: ["当前状态", "事件", "目标状态", "守卫条件(无则填-)", "副作用(领域事件或附加操作，无则填-)"]
+
+  concurrency_idempotency:
+    note: "乐观锁方案说明 + 幂等性保证表 + 长流程并发控制"
+    idempotency_columns: ["接口类型(写接口/消息消费)", "幂等键生成规则", "存储方式(Redis/数据库唯一索引)", "有效期", "重复请求处理"]
+
+  security_constraints:
+    columns: ["约束项", "涉及范围(实体/字段/接口)", "实施方式", "引用来源(BC总体设计章节号)"]
+
+  # ── 第3章 ──
+  process_overview:
+    columns: ["流程编号(FL-{设计单元缩写}-{序号})", "流程名称", "流程层级(一级/二级)", "触发场景(引用第1章场景编号)", "关联User Story", "版本归属"]
+
+  process_detail:
+    note: "每个流程包含：流程概述(文字) + 流程图(ASCII) + 步骤表 + 异常处理表"
+    step_columns: ["步骤号(1/2/3或1a/1b)", "步骤名称", "执行者(组件或角色)", "输入", "输出", "业务规则引用(规则编号，无则填-)"]
+    exception_columns: ["异常场景", "检测时机(步骤号)", "处理策略", "补偿操作(无则填-)", "最终状态"]
+
+  # ── 第4章 ──
+  aggregate_overview:
+    note: "聚合清单表 + 聚合关系图(ASCII)"
+    columns: ["聚合根(类名PascalCase)", "包含实体(类名列表，无则填-)", "包含值对象(类名列表)", "核心不变式(一句话)"]
+
+  aggregate_detail:
+    note: "每个聚合一组三表：属性清单表 + 业务规则表 + 业务方法表"
+    attribute_columns: ["属性名(camelCase)", "数据类型(Java类型或值对象类型)", "约束(必填/可选、长度、格式、唯一性)", "默认值(无则填-)", "业务含义", "版本"]
+    rule_columns: ["规则编号({实体缩写}-R-{序号})", "规则名称", "规则简述(当…→…)", "验证时机", "违反后果(错误码或修正策略)", "版本"]
+    method_columns: ["方法名(方法签名)", "方法简述", "关联规则(规则编号)", "异常(领域异常类名)", "事件(领域事件，无则填-)", "版本"]
+
+  value_object_detail:
+    note: "值对象三表模型，无独立业务方法时业务方法表注明'由聚合根管理其生命周期'"
+
+  domain_service:
+    note: "领域服务清单表 + 每个服务的方法定义表"
+    service_columns: ["服务名(类名PascalCase，以DomainService结尾)", "职责简述", "所协调的聚合(聚合根列表)"]
+    method_columns: ["方法签名(含入参和返回类型)", "业务语义", "所协调的聚合(聚合根及操作)", "关联规则(规则编号)"]
+
+  domain_event_list:
+    note: "事件清单表，Payload和消费方契约在第6章定义"
+    columns: ["事件名称({Aggregate}{Action}edEvent)", "触发时机", "发布聚合(聚合根+方法)", "消费方(BC编号或子领域标识)", "版本(v1/v2)"]
+
+  # ── 第5章 ──
+  app_service_list:
+    columns: ["应用服务名(类名PascalCase，以ApplicationService结尾)", "职责简述", "所协调的聚合/领域服务"]
+
+  app_service_method:
+    columns: ["方法签名", "业务场景", "事务边界(单聚合/跨聚合/分布式事务)", "调用的领域服务/聚合方法", "异常处理"]
+
+  transaction_boundary:
+    columns: ["场景", "事务范围(单聚合/跨聚合)", "一致性方案(本地事务/Saga/最终一致性)", "实现工具"]
+
+  app_exception_handling:
+    columns: ["异常类型", "捕获位置", "处理策略(重试/补偿/降级/告警)", "返回错误码"]
+
+  # ── 第6章 ──
+  interface_overview:
+    columns: ["接口编号", "接口类型(REST/消息/内部)", "接口名称", "所属应用服务", "版本归属"]
+
+  rest_api_detail:
+    note: "每个API一组定义：基本信息 + 请求参数表 + 响应字段表 + 错误码表"
+    basic_columns: ["API路径", "HTTP方法", "接口描述", "权限要求", "幂等性(是/否)"]
+    request_columns: ["参数名", "位置(Path/Query/Body)", "类型", "必填(是/否)", "约束", "说明"]
+    response_columns: ["字段名", "类型", "必填(是/否)", "说明"]
+    error_columns: ["HTTP状态码", "错误码", "错误描述", "触发条件"]
+
+  message_interface_detail:
+    note: "每个消息一组定义：基本信息 + Payload字段表 + 消费方契约表"
+    basic_columns: ["事件名称", "Topic", "消息类型(领域事件/集成事件)", "发布方", "版本"]
+    payload_columns: ["字段名", "类型", "必填(是/否)", "说明"]
+    consumer_columns: ["消费方(BC编号或子领域)", "处理逻辑简述", "幂等保证", "失败处理"]
+
+  internal_interface_detail:
+    note: "BC内部接口（Repository/DomainService接口）"
+    columns: ["接口名", "方法签名", "职责简述", "实现位置(基础设施层/领域层)"]
+
+  error_code_def:
+    note: "错误码全BC统一编码，格式：E-{HTTP状态码}{BC编号}{序号}"
+    columns: ["错误码", "HTTP状态码", "错误描述", "触发场景", "用户提示"]
+
+  interface_versioning:
+    columns: ["版本号(v1/v2)", "变更内容", "兼容性(向后兼容/不兼容)", "废弃计划"]
+
+  # ── 第7章 ──
+  table_list:
+    columns: ["表名({bc_prefix}_{业务表名})", "所属聚合", "表类型(主表/子表/关联表)", "说明"]
+
+  table_structure:
+    note: "每个表一组定义：字段清单表 + 索引定义表"
+    field_columns: ["字段名", "数据类型", "长度", "必填(是/否)", "默认值(无则填-)", "说明", "对应领域模型属性"]
+    index_columns: ["索引名", "索引类型(主键/唯一/普通/全文)", "索引字段", "索引目的"]
+
+  migration_script:
+    columns: ["版本号", "脚本文件名", "变更内容", "执行顺序"]
+
+  domain_to_data_mapping:
+    columns: ["聚合根", "实体/值对象", "映射表", "映射策略(单表/多表/嵌入JSON)"]
+
+  # ── 第8章 ──
+  page_list:
+    columns: ["页面路由", "页面名称", "页面类型(列表/详情/表单)", "关联User Story", "版本归属"]
+
+  page_structure:
+    note: "页面结构图(ASCII) + 组件清单表"
+    component_columns: ["组件名", "组件类型(容器/展示/表单)", "职责简述", "依赖接口"]
+
+  interaction_flow:
+    note: "交互流程图(ASCII) + 交互步骤表"
+    step_columns: ["步骤号", "用户操作", "前端处理", "后端接口", "响应处理"]
+
+  frontend_state_mgmt:
+    columns: ["状态名称", "状态类型(全局/页面/组件)", "初始值", "更新时机", "持久化(是/否)"]
+
+  # ── 第9章 ──
+  package_structure:
+    note: "包结构树(ASCII) + 包职责表"
+    columns: ["包名", "层级(接口层/应用层/领域层/基础设施层)", "职责简述", "依赖包"]
+
+  class_list:
+    columns: ["类名", "类型(聚合根/实体/值对象/服务/Repository/Controller等)", "所属包", "职责简述"]
+
+  dependency_diagram:
+    note: "依赖关系图(ASCII)，展示层间依赖和包间依赖"
+
+  # ── 第10章 ──
+  function_permission_list:
+    columns: ["权限编号", "权限名称", "权限描述", "关联接口(API路径)", "默认角色"]
+
+  data_permission_rules:
+    columns: ["规则编号", "规则名称", "规则描述(数据过滤条件)", "适用实体", "适用角色"]
+
+  permission_check_points:
+    columns: ["检查点位置(Controller/Service/Repository)", "检查类型(功能权限/数据权限)", "检查逻辑", "拒绝处理"]
+
+  # ── 第11章 ──
+  test_strategy:
+    note: "测试策略说明：单元测试范围、Mock策略、测试数据准备"
+
+  test_case_list:
+    columns: ["用例编号", "测试目标(类名+方法名)", "测试场景", "输入", "预期输出", "优先级(P0/P1/P2)"]
+
+  coverage_target:
+    columns: ["层级(领域层/应用层/接口层)", "覆盖率目标(%)", "关键路径覆盖要求"]
+
+  # ── 第12章 ──
+  task_breakdown:
+    columns: ["Task编号", "Task名称", "Task描述", "关联章节(设计章节号)", "优先级", "前置Task"]
+
+  effort_estimation:
+    columns: ["Task编号", "Task名称", "工作量(人天)", "风险系数(1.0~2.0)", "调整后工作量"]
+
+  task_dependency:
+    note: "Task依赖关系图(ASCII)，展示Task间依赖和关键路径"
+
+# ── 交叉引用要求 ──
+required_xrefs:
+  upstream:
+    - { doc: "阶段6 BC总体设计", check: "BC架构决策、子领域划分、聚合概要设计" }
+    - { doc: "阶段5 BC详细需求", check: "User Story清单、业务场景定义" }
+    - { doc: "阶段4 系统设计", check: "全局架构约束、技术栈、集成规范" }
+  downstream:
+    - { doc: "开发实施", check: "所有设计决策为开发提供技术蓝图" }

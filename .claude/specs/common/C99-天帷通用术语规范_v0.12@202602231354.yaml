@@ -1,0 +1,63 @@
+# C99 天帷通用术语规范 — 术语速查 Schema
+# 来源规范：specs/common/C99-天帷通用术语规范_v0.12@202602231354.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供术语定义和使用规则速查
+# 完整规则（详细说明）：见原规范文件
+
+doc_id: C99
+doc_name: 天帷通用术语规范
+
+# ── 使用规则 ──
+usage_rules:
+  单一来源: "天帷通用术语统一在本文档定义，各文档不重复定义"
+  引用格式: "引用时只需指向《C99》，不需标注具体章节"
+  中英文对照: "首次'中文 (English Term, 缩写)'，后续仅中文"
+  常用缩写: "BC/AC/NFR等可直接使用，首次标注完整形式"
+  复合术语: "'修饰词 + 核心术语'结构，优先使用标准术语组合"
+  编号前缀: "EPIC/BS/US/AC等是P01技术标识符，正文用中文术语，引用条目用编号"
+
+# ── 天帷通用术语定义 ──
+terms:
+  业务价值生态(Business Value Ecosystem): "产品所处的业务生态系统全景，是推导业务域、实体、利益相关方的共同源头"
+  业务域(Business Domain, DOM): "系统按业务职能划分的顶层分区，按业务价值链或职能域划分"
+  业务环节(Business Segment, BS): "客观发生的业务节点，不依赖系统存在；描述业务域内'在什么情境下发生什么'，活动线最细粒度"
+  工作场景(Work Scenario, WS): "角色进入系统的切入点；分直接作业场景(关联业务环节)和间接作业场景(管理/分析/协调)"
+  关键实体(Key Entity, EN): "价值生态中的核心业务对象，具有明确业务含义、归属和生命周期状态流转"
+  困境(Dilemma, DLM): "业务层面达成目标的系统性障碍，描述'为什么目标难以实现'，宏观需求分析输入"
+  痛点(Pain Point, PP): "角色在工作中面临的具体问题，是Epic推导的直接输入"
+  期望(Expectation, EXP): "系统角色对理想工作状态的正向描述，与痛点互补，共同作为Epic推导输入"
+  关键旅程触点(Key Journey Touchpoint, TP): "角色与系统/业务流程交互的关键节点，是WS的进一步细化"
+  业务验收场景(Business Acceptance Scenario, BAS): "从业务视角定义Epic'完成'的端到端验收场景"
+  特定利益相关方(Specific Stakeholder, SH): "从利益相关方中识别的具体人员群体或组织，按组织维度定位"
+  系统角色(System Role, SROLE): "按业务职能对系统使用者分类的身份标签，携带预设权限集合，独立于GRC制度"
+  业务角色(Business Role, BROLE): "GRC制度文档中显式定义的职责承担者，独立于平台权限体系"
+  语义ID(Semantic ID): "条目的正式标识符，由类型前缀+语义片段组成，表达业务含义"
+  短号(Short Code): "条目的便捷引用标识符，由类型前缀+递增数字组成，无业务含义"
+  双轨标识(Dual-Track Identification): "同一条目同时拥有语义ID和短号，两者一一对应"
+  类型前缀(Type Prefix): "语义ID和短号的首段，标识条目所属类型(如EPIC/US/API)"
+  语义片段(Semantic Segment): "语义ID中类型前缀之后的各组成部分，表达业务含义"
+  三线演绎(Three-Line Deduction): "宏观需求分析方法论，通过活动线、角色线、实体线推导和验证Epic"
+  抽象过滤(Abstraction Filtering): "Epic推导中将候选需求按粒度分类：Epic级保留，Feature级降级为候选项"
+  宏观需求(Macro Requirements): "产品全局视角的需求，定义Epic级业务能力，不涉及具体交付"
+  基础性需求(Foundation Requirements, FR): "跨BC的通用能力需求(认证/权限/审计等)，功能性横切关注点"
+  需求域(Requirements Domain): "按抽象层级划分：业务需求域(StRS)、系统架构需求域(SyRS)、软件开发需求域(SRS)"
+  大BC(Large Bounded Context): "涉及多个子领域的复杂BC，总体设计阶段需子领域划分"
+  小BC(Small Bounded Context): "业务范围单一、无需子领域划分的BC"
+  BC总体设计(BC High-Level Design): "BC层面的高层技术方案设计"
+  BC详细设计(BC Detailed Design): "BC/子领域层面的细粒度技术设计"
+  条目(Item): "软件开发过程中需要唯一标识和追溯的工作产物或管理对象"
+  知识单点定义原则: "每个知识点只在一个位置完整定义，其他位置通过精确引用指向"
+
+# ── 易混淆术语区分 ──
+disambiguation:
+  - pair: [业务域(DOM), 限界上下文(BC)]
+    distinction: "DOM是编号体系顶层分区标识；BC是DDD业务边界划分单元。一个DOM可含多个BC"
+  - pair: [业务域, 领域(DDD)]
+    distinction: "业务域是编号体系概念；领域是DDD分析概念(核心域/支撑域/通用域)"
+  - pair: [事件(EVT), 领域事件(Domain Event)]
+    distinction: "EVT是宏观需求中触发实体状态流转的动作；领域事件是DDD中BC间通信机制"
+  - pair: [关键实体(EN), 实体(Entity/DDD)]
+    distinction: "EN是宏观需求的核心业务对象(业务建模)；Entity是DDD详设的领域对象(技术建模)"
+  - pair: [系统角色(SROLE), 业务角色(BROLE)]
+    distinction: "SROLE按业务职能分类、携带权限；BROLE是GRC制度中的职责承担者"
+  - pair: [宏观需求, 详细需求]
+    distinction: "宏观是产品全局Epic级业务能力定义；详细是BC内Feature/US/AC级实现定义"

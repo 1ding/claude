@@ -1,0 +1,102 @@
+# P02 软件开发错误代码规范 — 错误码速查 Schema
+# 来源规范：specs/software/specs/P02-软件开发错误代码规范_v0.30@202602231604.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供错误码格式和速查表
+# 完整规则（设计原则、扩展判断、响应体结构）：见原规范文件
+
+doc_id: P02
+doc_name: 软件开发错误代码规范
+
+# ── 错误码格式 ──
+format: "E-XXXBBSS"
+segments:
+  E-: "固定前缀"
+  XXX: "HTTP状态码(400/401/403/404/409/422/429/500/503)"
+  BB: "BC编码(00=通用, 01-99=各BC, 等于P01中BC短号的数字部分)"
+  SS: "错误序号(01-99, BC内自增)"
+
+# ── BC编码分配规则 ──
+bc_coding:
+  mapping: "BB段 = P01中该BC短号的数字部分(如BC10→BB=10)"
+  allocation: "架构师/Tech Lead统一分配，禁止BC自行占用"
+  uniqueness: "全局唯一，不可变更，BC废弃后不复用"
+  capacity: "每个BC每个HTTP状态码下可定义99个错误码"
+
+# ── 通用错误码表(BB=00) ──
+common_errors:
+
+  # 400 参数校验
+  - { code: "E-4000001", enum: "PARAM_INVALID",           desc: "参数校验失败" }
+  - { code: "E-4000002", enum: "REQUEST_BODY_EMPTY",      desc: "请求体不能为空" }
+  - { code: "E-4000003", enum: "PARAM_TYPE_MISMATCH",     desc: "参数类型错误" }
+  - { code: "E-4000004", enum: "PARAM_OUT_OF_RANGE",      desc: "参数值超出允许范围" }
+  - { code: "E-4000005", enum: "PARAM_LENGTH_EXCEEDED",   desc: "参数长度超限" }
+  - { code: "E-4000006", enum: "DATE_FORMAT_INVALID",     desc: "日期格式错误" }
+  - { code: "E-4000007", enum: "ENUM_VALUE_INVALID",      desc: "枚举值无效" }
+  - { code: "E-4000008", enum: "JSON_FORMAT_INVALID",     desc: "JSON格式错误" }
+  - { code: "E-4000009", enum: "PARAM_REQUIRED",          desc: "缺少必填参数" }
+  - { code: "E-4000010", enum: "FILE_TYPE_INVALID",       desc: "文件类型不支持" }
+  - { code: "E-4000011", enum: "FILE_SIZE_EXCEEDED",      desc: "文件大小超限" }
+  - { code: "E-4000012", enum: "CONTENT_TYPE_INVALID",    desc: "Content-Type不支持" }
+  - { code: "E-4000013", enum: "CHARSET_UNSUPPORTED",     desc: "字符编码不支持" }
+  - { code: "E-4000014", enum: "PAGE_PARAM_INVALID",      desc: "分页参数无效" }
+  - { code: "E-4000015", enum: "SORT_PARAM_INVALID",      desc: "排序参数无效" }
+
+  # 401 认证
+  - { code: "E-4010001", enum: "NOT_LOGGED_IN",           desc: "未登录" }
+  - { code: "E-4010002", enum: "TOKEN_EXPIRED",           desc: "Token已过期" }
+  - { code: "E-4010003", enum: "TOKEN_INVALID",           desc: "Token格式无效" }
+  - { code: "E-4010004", enum: "ACCOUNT_DISABLED",        desc: "账户已被禁用" }
+  - { code: "E-4010005", enum: "CREDENTIALS_INVALID",     desc: "用户名或密码错误" }
+  - { code: "E-4010006", enum: "SESSION_EXPIRED",         desc: "会话已过期" }
+  - { code: "E-4010007", enum: "REFRESH_TOKEN_INVALID",   desc: "刷新令牌无效" }
+
+  # 403 权限
+  - { code: "E-4030001", enum: "PERMISSION_DENIED",       desc: "无操作权限" }
+  - { code: "E-4030002", enum: "DATA_ACCESS_DENIED",      desc: "无数据权限" }
+  - { code: "E-4030003", enum: "TENANT_ACCESS_DENIED",    desc: "跨租户访问被拒绝" }
+  - { code: "E-4030004", enum: "IP_BLOCKED",              desc: "IP访问被限制" }
+  - { code: "E-4030005", enum: "OPERATION_NOT_ALLOWED",   desc: "当前环境不允许此操作" }
+
+  # 404 资源不存在
+  - { code: "E-4040001", enum: "RESOURCE_NOT_FOUND",          desc: "资源不存在" }
+  - { code: "E-4040002", enum: "RELATED_RESOURCE_NOT_FOUND",  desc: "关联资源不存在" }
+  - { code: "E-4040003", enum: "API_NOT_FOUND",               desc: "接口不存在" }
+
+  # 409 冲突
+  - { code: "E-4090001", enum: "OPTIMISTIC_LOCK_CONFLICT", desc: "数据已被修改" }
+  - { code: "E-4090002", enum: "DUPLICATE_KEY",            desc: "数据重复" }
+  - { code: "E-4090003", enum: "CONCURRENT_CONFLICT",      desc: "并发操作冲突" }
+  - { code: "E-4090004", enum: "DUPLICATE_SUBMISSION",     desc: "重复提交" }
+
+  # 422 业务逻辑
+  - { code: "E-4220001", enum: "STATUS_TRANSITION_INVALID", desc: "当前状态不允许此操作" }
+  - { code: "E-4220002", enum: "PRECONDITION_NOT_MET",      desc: "前置条件未满足" }
+  - { code: "E-4220003", enum: "QUOTA_EXCEEDED",            desc: "配额已用尽" }
+  - { code: "E-4220004", enum: "DEPENDENCY_CONSTRAINT",     desc: "存在依赖关系，无法操作" }
+
+  # 429 限流
+  - { code: "E-4290001", enum: "RATE_LIMIT_EXCEEDED",  desc: "请求过于频繁" }
+  - { code: "E-4290002", enum: "CONCURRENT_LIMIT",     desc: "并发请求数超限" }
+
+  # 500/503 系统错误
+  - { code: "E-5000001", enum: "INTERNAL_ERROR",              desc: "系统内部错误" }
+  - { code: "E-5000002", enum: "DATABASE_ERROR",              desc: "数据库操作异常" }
+  - { code: "E-5000003", enum: "CACHE_ERROR",                 desc: "缓存服务异常" }
+  - { code: "E-5000004", enum: "MQ_ERROR",                    desc: "消息队列异常" }
+  - { code: "E-5000005", enum: "DEPENDENCY_SERVICE_FAILED",   desc: "依赖服务调用失败" }
+  - { code: "E-5000006", enum: "DEPENDENCY_SERVICE_TIMEOUT",  desc: "依赖服务调用超时" }
+  - { code: "E-5030001", enum: "SERVICE_UNAVAILABLE",         desc: "服务暂时不可用" }
+  - { code: "E-5030002", enum: "SERVICE_DEGRADED",            desc: "服务已降级" }
+
+# ── 新增错误码判断 ──
+extend_decision:
+  复用现有: "现有错误码完全匹配当前场景"
+  参数化消息: "错误提示信息需要调整（不需要新错误码）"
+  需新增: "新业务规则校验失败 或 前端需区分处理的细分场景"
+  视情况: "相似场景不同原因 → 优先使用details字段区分"
+
+# ── 关键规则 ──
+rules:
+  - "已发布错误码不得变更含义或删除，只可废弃并标注替代方案"
+  - "通用错误码(BB=00)优先复用，BC自定义码仅在通用码不适用时新增"
+  - "错误信息面向用户友好，不暴露技术细节(堆栈、SQL、内部路径)"

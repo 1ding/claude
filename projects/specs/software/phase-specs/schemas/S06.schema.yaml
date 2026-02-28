@@ -1,0 +1,354 @@
+# S06 BC总体设计编写规范 — 编写规则 Schema
+# 来源规范：specs/software/meta/S06-BC总体设计编写规范_v0.10@202602252051.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供章节结构、内容模型和编写约束
+# 完整规则（章节目的详述、完整示例、裁剪依据详述）：见原规范文件
+
+doc_id: S06
+doc_name: BC总体设计编写规范
+target_doc: "06-BC总体设计"
+target_doc_name: BC总体设计文档
+
+# ── 文档定位 ──
+positioning:
+  stage: 6
+  stage_name: BC总体设计
+  upstream: [阶段5-BC详细需求, 阶段4-系统设计, 阶段3-领域设计]
+  downstream: [阶段7-BC详细设计]
+  role: "每个BC对应一份。承接BC详细需求的Feature清单和系统设计的架构约束，为阶段7提供子领域划分方案、公共架构决策和跨子领域约束。是'1+N'体系中的'1'(骨架)"
+
+# ── 上游输入 ──
+upstream_inputs:
+  - { item: "Feature列表(含优先级与验收标准)", source: "阶段5 BC详细需求" }
+  - { item: "User Story(含验收标准)", source: "阶段5 BC详细需求" }
+  - { item: "业务规则、数据需求、BC间交互需求", source: "阶段5 BC详细需求" }
+  - { item: "Enabler Capability/Feature架构需求清单", source: "阶段4 系统设计" }
+  - { item: "系统整体架构约束、技术选型基线、集成方案、部署架构", source: "阶段4 系统设计" }
+  - { item: "BC识别与边界定义、上下文映射图、统一语言词汇表", source: "阶段3 领域设计" }
+missing_input_handling: "缺失内容记录为假设（AS-*）"
+
+# ── 全局硬约束 ──
+hard_constraints:
+  - "BC归属信息中BC编号/名称/所属域/微服务映射/数据库映射禁止与上游文档不一致，发现不一致需走变更流程"
+  - "边界定义中'明确排除'不可为空，必须说明'我不做什么、由谁做'"
+  - "禁止跨BC分布式事务（2PC/XA）；跨BC数据一致性必须采用最终一致性方案"
+  - "禁止直接依赖上游领域模型，下游必须通过ACL隔离"
+  - "禁止双向依赖（原则上）；如确需，必须双向ACL并在架构评审中说明"
+  - "子领域划分禁止按技术层划分，禁止按CRUD划分，禁止出现'公共子领域'"
+  - "分层架构：领域层不依赖任何外层；应用层仅依赖领域层；基础设施层通过依赖倒置实现领域层接口"
+  - "技术栈在BC总体设计统一决策，子领域不应引入本章未列出的技术依赖"
+  - "角色在BC总体设计统一定义，子领域不应自行新增角色"
+  - "日志禁止记录敏感信息（密码/Token/身份证号等），即使DEBUG级别"
+  - "告警规则中处理预案不可为空，每条告警应有明确排查步骤和升级路径"
+
+# ── 裁剪指引 ──
+tailoring:
+  不可裁剪: ["第1~8章及附录A~B"]
+  小型项目可裁剪: ["第9章测试策略", "第10章部署运维"]
+  小BC处理: "第3章可简化（标注'本BC无需子领域划分'并说明判定依据），但不可删除该章节"
+
+# ── 四域结构 ──
+domain_structure:
+  - { domain: "I. 战略定位",  chapters: "第1章",    core_question: "本BC是什么、边界在哪" }
+  - { domain: "II. 业务架构", chapters: "第2~4章",  core_question: "做什么、内部怎么分、和外部怎么协作" }
+  - { domain: "III. 技术架构",chapters: "第5~8章",  core_question: "架构骨架、基础设施、安全、质量属性" }
+  - { domain: "IV. 工程治理", chapters: "第9~11章", core_question: "测试、部署、文档演进" }
+
+# ── 章节结构（11章 + 附录，顺序固定） ──
+chapters:
+
+  - chapter: 1
+    title: 上下文概述
+    required: true
+    non_reducible: true
+    purpose: "BC身份信息、价值定位和职责边界。回答'本BC是什么、边界在哪、和谁协作'"
+    rules:
+      - "BC归属信息的5个字段（编号/名称/所属域/微服务映射/数据库映射）禁止与上游不一致"
+      - "明确排除至少3项；排除项不足说明边界定义不够清晰"
+      - "术语表≤15条，超出部分归入附录A"
+    sections:
+      - { id: "1.1", title: "BC归属信息", model: "bc_identity" }
+      - { id: "1.2", title: "上下文价值定位", points: "核心价值(≤30字一句话)、业务目标(1~3条)、服务对象、核心能力(3~5条)" }
+      - { id: "1.3", title: "上下文边界", model: "boundary_def", points: "核心职责、扩展职责、明确排除表、职责对比表(仅边界争议时编写)" }
+      - { id: "1.4", title: "版本范围", model: "version_scope" }
+      - { id: "1.5", title: "术语表", model: "term_list" }
+
+  - chapter: 2
+    title: 业务职责与功能清单
+    required: true
+    non_reducible: true
+    purpose: "定义本BC全量业务职责和功能清单。功能清单是子领域划分、接口规划和测试策略的基础"
+    rules:
+      - "功能清单应全量覆盖BC详细需求文档中的Feature，不遗漏/不拆分/不合并"
+      - "功能编号全BC唯一，一经分配不可变更（可标记废弃但不可回收复用）"
+      - "功能依赖关系表仅记录BC内部依赖，跨BC依赖在第4章定义"
+      - "职责描述用业务语言，禁止使用'实现XX接口''调用XX服务'等技术语言"
+    sections:
+      - { id: "2.1", title: "核心职责", model: "responsibility_list", points: "主要职责(3~7项)+辅助职责(1~5项)，每项含职责详细说明(业务场景/触发条件/预期结果/关联功能)" }
+      - { id: "2.2", title: "功能清单", model: "feature_list", points: "功能汇总表+功能详细清单表+功能依赖关系表" }
+
+  - chapter: 3
+    title: 子领域划分
+    required: true
+    non_reducible: true
+    purpose: "定义BC内部子领域划分方案。每个子领域对应一份阶段7详细设计文档。本章结论直接驱动阶段7编写范围"
+    rules:
+      - "每个功能编号应且仅应归属到一个子领域，不遗漏/不重复"
+      - "子领域间共享数据库但不共享聚合，跨子领域通过ID引用或领域事件通信"
+      - "划分依据是业务关注点（核心关注问题的独立性+功能高内聚）而非技术模块"
+      - "典型数量2~5个；超过5个时应审视是否需要拆分BC"
+    sections:
+      - { id: "3.1", title: "子领域划分总览", model: "subdomain_overview", points: "子领域清单表+子领域关系图(ASCII，标注子领域类型/调用方向/同步异步)" }
+      - { id: "3.2", title: "各子领域职责说明", points: "每个子领域输出独立段落：定位(核心/支撑/通用)+核心关注问题(1~3个)+功能归属" }
+      - { id: "3.3", title: "子领域间依赖关系", model: "subdomain_dependency", points: "子领域间调用关系表+共享数据说明(如有)" }
+
+  - chapter: 4
+    title: 上下文映射与协作设计
+    required: true
+    non_reducible: true
+    purpose: "定义本BC与其他BC的协作关系。是跨BC协作的契约依据，每个映射模式选择应有明确权衡理由"
+    rules:
+      - "上下文映射图应与阶段3领域设计文档中的全局上下文映射保持一致，差异须说明原因"
+      - "每个映射模式选择应有明确的权衡理由"
+      - "风险与缓解不可省略，每个协作决策都应有对应风险识别和缓解方案"
+    sections:
+      - { id: "4.1", title: "输入输出全景", model: "io_overview", points: "输入定义表+输出定义表+数据流图(ASCII)" }
+      - { id: "4.2", title: "上下文映射图", points: "ASCII图，标注所有协作BC、上下游方向(U/D)和映射模式(OHS/PL/ACL/CF/SK等)" }
+      - { id: "4.3", title: "映射关系说明", model: "mapping_relations" }
+      - { id: "4.4", title: "协作设计决策", model: "collaboration_decisions", points: "每个跨BC协作一条记录，含协作场景/模式选择原因/调用方式选择原因/风险与缓解策略" }
+      - { id: "4.5", title: "上下游依赖治理规则", model: "dependency_governance_rules", points: "至少覆盖：查询类依赖/命令类依赖/跨BC数据一致性/上游模型变更/双向依赖5类场景" }
+
+  - chapter: 5
+    title: 公共架构决策
+    required: true
+    non_reducible: true
+    purpose: "定义本BC公共架构决策。对所有子领域具有强制约束力，子领域应遵循而非自行变更"
+    rules:
+      - "分层架构是强制约束，所有子领域必须遵循，不得引入绕过层级的调用"
+      - "技术栈在BC总体设计统一决策，子领域如确需新增应先更新本章"
+      - "模块间依赖关系应与分层依赖规则一致"
+    sections:
+      - { id: "5.1", title: "分层架构", model: "ddd_layers_bc", points: "DDD分层架构图(ASCII)+分层职责表+依赖规则(领域层零依赖/应用层仅依赖领域层/基础设施层依赖倒置)" }
+      - { id: "5.2", title: "技术栈选型", model: "tech_stack_bc", points: "以阶段4系统设计技术基线为基础，仅列BC层面具体化决策和差异项" }
+      - { id: "5.3", title: "模块结构", model: "module_structure", points: "目录树(ASCII)+模块职责表" }
+
+  - chapter: 6
+    title: 基础设施与集成规范
+    required: true
+    non_reducible: true
+    purpose: "定义BC基础设施层公共规范。规范在总体设计定义一次，具体实现在各子领域详细设计中分别定义"
+    rules:
+      - "消息队列的幂等策略和死信处理是必备内容，不可省略"
+      - "缓存Key和消息Topic命名在BC总体设计统一规划，子领域不应自行定义不同命名模式"
+      - "每个上游依赖都应有对应的ACL适配器"
+    sections:
+      - { id: "6.1", title: "数据隔离架构", model: "data_isolation", points: "(宜)多租户场景时定义数据隔离策略；不涉及时标注原因" }
+      - { id: "6.2", title: "仓储实现策略", model: "repository_strategy", points: "命名三件套(接口/实现/数据映射器)+仓储实现清单表" }
+      - { id: "6.3", title: "缓存设计", model: "cache_design", points: "Key命名规范({bc}:{entity}:{identifier})+缓存策略总览表+缓存一致性策略表" }
+      - { id: "6.4", title: "消息队列设计", model: "mq_design", points: "Topic命名规范({bc}.{event-type})+统一消息格式+消费者策略表" }
+      - { id: "6.5", title: "防腐层实现", model: "acl_strategy", points: "本BC作为下游时定义；每个上游BC对应一条记录" }
+
+  - chapter: 7
+    title: 安全与权限设计
+    required: true
+    non_reducible: true
+    purpose: "定义本BC完整安全体系。角色在BC总体设计统一定义，子领域引用角色并定义具体权限点"
+    rules:
+      - "角色是BC级公共决策，子领域不应自行新增角色"
+      - "权限命名规范一致性极为重要，命名不一致将导致权限失效或维护困难"
+      - "前端权限控制实现方式在BC总体设计统一定义，子领域只定义权限-角色映射关系"
+    sections:
+      - { id: "7.1", title: "认证方案", points: "认证方式(JWT/OAuth2等)+Token管理策略+内部服务间认证方式" }
+      - { id: "7.2", title: "角色定义", model: "role_list" }
+      - { id: "7.3", title: "权限命名规范", model: "permission_naming", points: "三段式命名(模块:资源:操作)+标准操作动词表+命名示例" }
+      - { id: "7.4", title: "权限-角色矩阵框架", model: "permission_matrix_template", points: "矩阵模板(Y/N/C)+条件授权(C)需补充条件说明" }
+      - { id: "7.5", title: "数据权限通用策略", model: "data_permission_levels", points: "租户级/部门级/个人级三层定义" }
+      - { id: "7.6", title: "前端权限控制策略", points: "路由权限实现方式+按钮权限实现方式+权限数据来源" }
+      - { id: "7.7", title: "敏感数据与审计", model: "security_coverage", points: "涵盖：敏感数据加密/脱敏、传输安全、审计日志范围与保留策略、XSS/SQL注入防护" }
+
+  - chapter: 8
+    title: 非功能需求与可观测性
+    required: true
+    non_reducible: true
+    purpose: "落实系统设计Enabler Feature对本BC的非功能约束。性能目标需量化且附带测量方式"
+    rules:
+      - "性能目标应量化且可测量，每个目标附带测量方式确保可验证"
+      - "监控指标命名遵循Prometheus约定：小写下划线分隔，带单位后缀(_seconds/_total)"
+      - "告警规则中处理预案不可为空"
+    sections:
+      - { id: "8.1", title: "性能设计", model: "perf_design", points: "性能目标表+性能优化策略表" }
+      - { id: "8.2", title: "日志规范", model: "log_standard", points: "日志级别规范表(ERROR/WARN/INFO/DEBUG)+统一日志格式(标准字段：traceId/spanId/timestamp/level/logger/message/extra)" }
+      - { id: "8.3", title: "监控指标", model: "metrics_def", points: "至少覆盖：健康检查/请求量/响应时间/错误率/资源使用/业务指标" }
+      - { id: "8.4", title: "链路追踪", points: "追踪框架+Span命名规范({layer}.{operation})+采样策略+跨服务传播方式" }
+      - { id: "8.5", title: "告警规则", model: "alert_rules", points: "至少覆盖：服务健康异常/响应时间超标/错误率突增/资源使用超限/业务异常" }
+
+  - chapter: 9
+    title: 测试策略
+    required: false
+    purpose: "定义本BC整体测试策略，为所有子领域提供统一测试标准。子领域按此标准执行，禁止自行定义不同标准"
+    rules:
+      - "测试策略在BC级统一定义，禁止各子领域自行定义不同覆盖率标准或测试工具"
+      - "契约测试应覆盖第4章定义的所有协作关系"
+      - "测试数据清理方式应明确，禁止测试数据残留在共享环境"
+    sections:
+      - { id: "9.1", title: "测试分层策略", model: "test_pyramid", points: "测试金字塔表+各层测试重点(单元测试重聚合根/值对象/领域服务，集成测试重仓储/ACL/消息，E2E重核心业务流程)" }
+      - { id: "9.2", title: "测试覆盖要求", model: "test_coverage", points: "各层覆盖率目标+关键场景清单" }
+      - { id: "9.3", title: "契约测试策略", model: "contract_testing" }
+      - { id: "9.4", title: "测试数据策略", points: "数据构造方式(工厂/Fixture/Builder)+数据隔离方式+数据清理策略(事务回滚/脚本/测试容器)" }
+
+  - chapter: 10
+    title: 部署运维
+    required: false
+    purpose: "定义本BC部署拓扑和环境配置。以阶段4系统设计部署架构为基础做BC层面具体化配置"
+    rules:
+      - "部署拓扑应覆盖至少生产环境和测试环境，资源配置具体到CPU/内存"
+      - "环境配置中敏感信息使用占位符或环境变量引用（如${DB_PASSWORD}），不得明文写入"
+    sections:
+      - { id: "10.1", title: "部署拓扑", model: "deploy_topology", points: "部署架构图(ASCII，包含微服务实例/数据库/缓存/消息队列)+部署资源配置表" }
+      - { id: "10.2", title: "环境配置", model: "env_config_diff", points: "各环境差异化配置表(开发/测试/预发/生产)" }
+
+# ── 附录 ──
+appendices:
+  - { id: A, title: "术语表与参考资料", type: "资料性", required: false, note: "A.1术语表(字段：术语/英文/说明/首次出现章节)；A.2参考资料清单" }
+  - { id: B, title: "架构决策记录（ADR）", type: "资料性", required: false }
+  - { id: C, title: "修订记录", type: "规范性", required: true }
+
+# ── 内容模型定义 ──
+content_models:
+
+  # ── 第1章 ──
+  bc_identity:
+    note: "以键值对表格形式输出BC身份信息。一致性约束：编号/名称/所属域/微服务映射/数据库映射5个字段须与阶段3/4文档完全一致"
+    fields: ["BC编号(BC-{序号})", "BC名称(中文)", "BC英文名(PascalCase，用于代码包命名)", "所属域(核心域/支撑域/通用域)", "上下文类型(核心子域/支撑子域/通用子域)", "所属微服务(svc-{名称})", "微服务端口", "所属数据库", "代码包路径(com.{company}.{bc-name})", "上游依赖(BC-XX(映射模式))", "下游被依赖(BC-XX(映射模式))", "文档版本(V{主版本}.{次版本})", "设计状态(草稿/评审中/已发布)"]
+
+  boundary_def:
+    note: "三部分：①核心/扩展职责清单；②明确排除表(≥3项)；③职责对比表(仅边界争议时编写)"
+    exclusion_columns: ["排除项(本BC不负责的具体职责)", "归属BC(该职责由哪个BC负责)", "排除原因(一句话)"]
+    comparison_columns: ["职责项", "本BC(Y负责/N不负责/P参与协作)", "BC-XX(Y/N/P)", "说明"]
+
+  version_scope:
+    columns: ["版本(如V1.0 M1)", "设计范围(当前版本/未来版本)", "核心交付(本版本核心交付内容概要)"]
+    note: "当前版本详尽，未来版本仅保留概要设计"
+
+  term_list:
+    columns: ["术语(中文)", "英文", "说明(一句话业务含义)"]
+    note: "仅收录本BC新增或含义偏离通用理解的术语(≤15条)；完整术语见附录A"
+
+  # ── 第2章 ──
+  responsibility_list:
+    main_columns: ["职责编号(R-{序号})", "职责名称", "职责描述(一句话业务含义)", "重要性(核心/重要)"]
+    assist_columns: ["职责编号(R-{序号}，从R-10开始)", "职责名称", "职责描述(一句话)", "依赖方(依赖本职责的BC编号)"]
+    note: "主要职责3~7项，辅助职责1~5项。每项须补充职责详细说明(业务场景/触发条件/预期结果/关联功能编号)"
+
+  feature_list:
+    summary_columns: ["版本(如V1.0 M1)", "功能数量", "优先级分布(P0:X, P1:X, P2:X)", "说明(版本定位)"]
+    detail_columns: ["功能编号(F-{序号})", "功能名称", "功能描述(一句话)", "优先级(P0/P1/P2)", "版本", "关联职责(R-{序号})", "关联页面(如有)", "关联接口(如有)"]
+    dependency_columns: ["功能编号", "前置功能(依赖的前置功能编号)", "依赖说明"]
+
+  # ── 第3章 ──
+  subdomain_overview:
+    columns: ["子领域编号(SD{序号})", "子领域名称", "子领域英文缩写(用于编码前缀)", "核心关注问题(一句话)", "归属功能(F-{序号}列表)", "文档编号(如BC-11-SD01)"]
+    note: "编号按业务依赖顺序排列：核心子领域在前，依赖子领域在后"
+
+  subdomain_dependency:
+    columns: ["调用方(子领域编号)", "被调用方(子领域编号)", "调用方式(方法调用/领域事件/共享数据库表)", "调用目的(一句话)", "数据流向(单向/双向)"]
+
+  # ── 第4章 ──
+  io_overview:
+    input_columns: ["输入编号(IN-{序号})", "输入名称", "输入来源(前端页面/BC-XX/外部系统)", "输入方式(REST API/Feign调用/消息队列)", "数据内容(简要)", "触发场景"]
+    output_columns: ["输出编号(OUT-{序号})", "输出名称", "输出目标(前端页面/BC-XX/外部系统)", "输出方式(REST API/消息队列/文件)", "数据内容(简要)", "触发场景"]
+
+  mapping_relations:
+    columns: ["协作方(BC编号+名称)", "方向(本BC依赖/依赖本BC/双向)", "映射模式", "集成方式(Feign同步调用/领域事件/REST API)", "说明(协作场景简述)"]
+
+  collaboration_decisions:
+    columns: ["决策编号(CTX-{序号})", "协作关系(本BC→BC-XX 或 BC-XX→本BC)", "映射模式", "调用方式(同步/异步，具体技术)", "决策原因", "风险与缓解"]
+
+  dependency_governance_rules:
+    note: "至少覆盖5类标准场景，每类给出强制治理规则"
+    columns: ["场景(查询类依赖/命令类依赖/跨BC数据一致性/上游模型变更/双向依赖)", "治理规则(强制要求)", "违规后果"]
+
+  # ── 第5章 ──
+  ddd_layers_bc:
+    columns: ["层名称(接口层/应用层/领域层/基础设施层)", "英文名(interfaces/application/domain/infrastructure)", "职责(2~4条)", "包路径", "依赖规则(允许依赖的层)"]
+
+  tech_stack_bc:
+    columns: ["技术类别(框架/数据库/缓存/消息/监控/测试)", "技术名称", "版本", "用途(本BC中的具体用途)", "选型原因或注意事项"]
+    note: "与系统基线完全一致的技术可注明'遵循系统基线'"
+
+  module_structure:
+    columns: ["模块名(Maven/Gradle模块名)", "职责", "对应分层(DDD分层)", "依赖模块"]
+
+  # ── 第6章 ──
+  data_isolation:
+    columns: ["隔离维度(租户级/部门级/个人级)", "隔离方式(独立库/共享库独立表/共享库共享表)", "隔离字段(如tenant_id)", "过滤方式(SQL自动注入/手动过滤)", "实现机制(如MyBatis拦截器)"]
+
+  repository_strategy:
+    columns: ["仓储接口({Aggregate}Repository，领域层)", "实现类({Aggregate}RepositoryImpl，基础设施层)", "持久化技术(MyBatis-Plus/JPA等)", "完整类名(含包路径)"]
+
+  cache_design:
+    strategy_columns: ["缓存对象", "缓存类型(Redis/本地缓存/不缓存)", "缓存Key(格式)", "过期时间(TTL)", "更新策略(更新时删除/过期刷新/创建时设置)"]
+    consistency_columns: ["场景(创建/更新/删除/查询)", "一致性策略(Cache-Aside/Write-Through等)", "说明(具体操作步骤)"]
+
+  mq_design:
+    message_fields: ["eventId(唯一标识，幂等处理)", "eventType", "eventVersion", "occurredOn", "aggregateId", "aggregateType", "payload"]
+    consumer_columns: ["幂等策略(基于eventId)", "重试策略(次数+退避策略)", "死信处理(多次重试失败后处理方式)", "顺序性要求(是否顺序消费)"]
+
+  acl_strategy:
+    columns: ["上游BC(编号+名称)", "ACL类名(适配器类名)", "转换规则(上游模型→本BC模型的映射规则)", "降级策略(上游不可用时处理)"]
+
+  # ── 第7章 ──
+  role_list:
+    columns: ["角色编码(如SUPER_ADMIN)", "角色名称(中文)", "角色说明(职责描述)", "适用范围(平台级/租户级)"]
+
+  permission_naming:
+    note: "三段式命名：模块:资源:操作。标准操作动词：create/read/update/delete/export/manage/approve"
+
+  permission_matrix_template:
+    columns: ["权限代码(模块:资源:操作)", "权限名称(中文)", "角色1(Y/N/C)", "角色2(Y/N/C)", "...(按角色清单展开)"]
+    note: "C=条件授权，需补充条件说明（如'仅限本部门数据'）"
+
+  data_permission_levels:
+    columns: ["层级(租户级/部门级/个人级)", "说明", "过滤字段(如tenant_id/department_id/created_by)", "实现方式"]
+
+  security_coverage:
+    fields: ["敏感数据(加密算法/脱敏规则/存储策略)", "传输安全(HTTPS要求/内部通信加密策略)", "审计日志(审计范围/保留策略)", "输入校验(XSS/SQL注入防护/参数校验规范)"]
+
+  # ── 第8章 ──
+  perf_design:
+    target_columns: ["指标(响应时间/吞吐量/并发数等)", "目标值(如P99<200ms)", "适用场景(读/写/批量)", "测量方式"]
+    strategy_columns: ["优化手段(缓存/异步/批量/索引等)", "适用场景", "预期效果", "副作用(一致性延迟/复杂度增加等)"]
+
+  log_standard:
+    columns: ["日志级别(ERROR/WARN/INFO/DEBUG)", "使用场景", "必含字段(该级别必须包含的上下文信息)", "禁止内容(不得记录的敏感信息)"]
+
+  metrics_def:
+    columns: ["指标名称(Prometheus命名，小写下划线，带单位后缀)", "指标类型(Counter/Gauge/Histogram)", "标签(指标标签维度)", "说明(含义和用途)"]
+
+  alert_rules:
+    columns: ["告警名称", "监控指标(指向8.3节)", "告警条件(如>500ms持续5min)", "告警级别(P0紧急/P1重要/P2一般)", "通知方式(电话/短信/钉钉/邮件)", "处理预案(排查步骤)"]
+
+  # ── 第9章 ──
+  test_pyramid:
+    columns: ["测试层级(单元测试/集成测试/E2E测试)", "测试目标", "比例(如70%)", "执行频率(每次提交/每次PR/每次发布)"]
+
+  test_coverage:
+    columns: ["覆盖维度(领域层/应用层/接口层/整体)", "行覆盖率目标(如领域层>=80%)", "关键场景(必须覆盖的核心场景)", "说明"]
+
+  contract_testing:
+    columns: ["契约类型(API契约/消息契约)", "协作BC(编号)", "测试方式(Consumer-Driven/Provider-Driven)", "测试工具(Pact/Spring Cloud Contract等)", "执行时机(CI管道/发布前)"]
+
+  # ── 第10章 ──
+  deploy_topology:
+    columns: ["组件(微服务名称/数据库/缓存/消息队列)", "环境(生产/预发/测试)", "实例数", "CPU/内存(单实例配置)", "存储(数据存储需求)", "说明"]
+
+  env_config_diff:
+    columns: ["配置项(如数据库连接/缓存地址)", "开发环境", "测试环境", "预发环境", "生产环境(敏感信息用占位符)"]
+
+# ── 交叉引用要求 ──
+required_xrefs:
+  upstream:
+    - { doc: "阶段5 BC详细需求", check: "Feature清单全量覆盖(第2章功能清单)" }
+    - { doc: "阶段4 系统设计", check: "BC边界/微服务映射/技术选型基线/部署架构(第1/5/10章)" }
+    - { doc: "阶段3 领域设计", check: "BC编号/名称/所属域/上下文映射图(第1/4章)" }
+  downstream:
+    - { doc: "阶段7 BC详细设计", check: "子领域划分(第3章)驱动各子领域详细设计文档编写范围" }

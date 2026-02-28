@@ -1,0 +1,552 @@
+# S02 宏观需求编写规范 — 编写规则 Schema
+# 来源规范：specs/software/meta/S02-宏观需求编写规范_v0.10@202602252051.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供章节结构、内容模型和编写约束
+# 完整规则（章节目的详述、完整示例、方法论细节、ASCII图规范）：见原规范文件
+
+doc_id: S02
+doc_name: 宏观需求编写规范
+target_doc: "02-宏观需求规格"
+target_doc_name: 宏观需求规格说明书
+
+# ── 文档定位 ──
+positioning:
+  stage: 2
+  stage_name: 宏观需求分析
+  upstream: [阶段1-产品战略]
+  downstream: [阶段3-领域设计]
+  role: "阶段2'宏观需求分析'的唯一正式输出物，从产品全局视角定义Epic级需求，确保从业务目标到Epic级能力需求的完整链路可追溯、可验证、可交付"
+  methodology: "三线演绎，角色驱动，两维验证"
+
+# ── 上游输入 ──
+upstream_inputs:
+  - { item: "战略规划报告（01-战略）", source: "阶段1 产品战略", note: "业务目标、价值主张、版本路线图、业务域初步划分" }
+  - { item: "客户访谈记录", source: "销售/客户成功", note: "客户痛点、需求反馈（困境识别的一手资料）" }
+  - { item: "市场调研报告", source: "市场部", note: "市场趋势、竞品分析（痛点补充来源）" }
+missing_input_handling: "缺失内容记录为假设（AS-*），标注'来源：阶段1输出缺失'"
+
+# ── 核心分析框架 ──
+analysis_framework:
+  three_lines:
+    activity_line: "活动线：CL0(业务生态全景)→CL1(业务域)→CL2(业务活动/PL2流程节点)"
+    role_line: "角色线：CL0(所有利益相关方)→CL1(特定利益相关方)→CL2(用户角色) —— 推导主线"
+    entity_line: "实体线：CL0(ER全景图)→CL1(具体实体)→CL2(生命周期)"
+  derivation: "角色(CL2)的痛点与期望 → Epic推导（主线）"
+  verification: "活动(CL2)覆盖度 + 实体(CL2)覆盖度 → 串联验证"
+  pl_cl_mapping: "活动线PL2(流程节点) = CL2(业务活动)，是宏观需求粒度的基本单元"
+
+# ── 核心原则 ──
+core_principles:
+  - "可追溯：每个需求都能追溯到业务目标和用户价值"
+  - "可验证：每个需求都有明确的验收标准"
+  - "角色驱动：以角色线(CL2)的痛点与期望为主线推导Epic"
+  - "两维验证：以业务活动(CL2)覆盖度和实体生命周期(CL2)覆盖度验证Epic"
+  - "层级分明：严格区分宏观需求与详细需求，避免层级混淆"
+  - "渐进明细：从Epic到Story逐步细化，避免一开始陷入细节"
+
+# ── 裁剪指引 ──
+tailoring:
+  不可裁剪: ["第2章(分析起点)", "第6章(核心产出)", "追溯链完整性(目标→困境→活动→角色→Epic→版本)"]
+  小型项目: "Epic<5且角色<3时：第3/4/5/8章可简化，第9章可合并到追溯矩阵，第10章可省略WSJF"
+  中型项目: "完整执行核心章节，可简化附录和验证章节的输出形式"
+  裁剪后保障: "追溯链完整性（目标→困境→活动→角色→Epic→版本不断裂）"
+
+# ── 必选元数据 ──
+required_metadata: [文档版本, 编制日期, 文档状态, 所属项目, 适用阶段, 文档密级]
+
+# ── 章节结构（11章 + 2附录，顺序固定不可调整） ──
+chapters:
+
+  - chapter: 1
+    title: 概述
+    required: true
+    purpose: "导读章节：分析框架总览和术语约定，不含业务分析内容"
+    sections:
+      - { id: "1.1", title: "文档目的", points: "编写目的和适用范围" }
+      - { id: "1.2", title: "文档框架", points: "宏观需求分析框架总览图（三线演绎→角色驱动→两维验证的完整分析逻辑链）", model: "analysis_framework_overview" }
+      - { id: "1.3", title: "文档定位", points: "本说明书在研发过程中的位置（引用N00）" }
+      - { id: "1.4", title: "术语约定", points: "通用术语引用索引（引用C99）、本说明书特有术语定义、困境与痛点的关系说明", model: "term_tables" }
+      - { id: "1.5", title: "编号约定", points: "各类条目的双轨制编号体系说明（引用P01）" }
+
+  - chapter: 2
+    title: 业务背景与目标
+    required: true
+    non_reducible: true
+    purpose: "分析起点(Why)：引用阶段1的业务目标和价值主张，识别困境、定义成功标准、约束和假设。困境向后传递至第5章细化为痛点，痛点驱动第6章Epic推导"
+    rules:
+      - "业务目标和价值主张引用阶段1输出，不在本章重新定义"
+      - "引用阶段1输出时，应逐项确认输入的完整性和可用性"
+      - "困境识别应来源于客户访谈、市场调研等一手资料"
+      - "关联目标应引用2.1中定义的具体目标维度或目标编号（如OBJ-01），避免笼统描述"
+    sections:
+      - { id: "2.1", title: "业务目标与价值主张", model: "phase1_acceptance + strategic_goal_ref + phase_goal_ref" }
+      - { id: "2.2", title: "困境识别", model: "dilemma_template" }
+      - { id: "2.3", title: "成功标准定义", model: "success_criteria" }
+      - { id: "2.4", title: "约束条件", model: "constraint_table" }
+      - { id: "2.5", title: "假设与依赖", model: "assumption_dependency" }
+
+  - chapter: 3
+    title: 业务价值生态
+    required: true
+    purpose: "活动线完整演绎(Where)：PL0(价值链/职能域)→PL1(端到端流程)→PL2(流程节点)，输出业务活动清单和业务域归类"
+    rules:
+      - "应按PL0→PL1→PL2的顺序演绎"
+      - "PL0(价值链)与PL1(端到端流程)是正交关系"
+      - "PL2(流程节点) = CL2(业务活动)，是宏观需求粒度的基本单元"
+      - "业务域归类(3.4)在流程节点识别完成后进行"
+    sections:
+      - { id: "3.1", title: "业务生态系统", points: "PL0层：价值链分析、职能域识别", model: "phase_division + value_chain + functional_domain" }
+      - { id: "3.2", title: "端到端流程识别", points: "PL1层：跨职能域的完整业务流程", model: "e2e_process" }
+      - { id: "3.3", title: "流程节点分解", points: "PL2层：端到端流程分解为关键节点（3-8个/流程）", model: "process_node" }
+      - { id: "3.4", title: "业务域归类", points: "基于PL0职能域对PL1/PL2进行领域归类，MECE检查", model: "business_domain" }
+
+  - chapter: 4
+    title: 关键实体与生命周期
+    required: true
+    purpose: "实体线完整演绎：识别核心业务实体及其生命周期状态流转，为第6章Epic验证提供实体维度基准"
+    rules:
+      - "实体编号：语义ID格式EN-{域缩写}-{实体描述}，短号EN{3位数字}"
+      - "生命周期阶段编码：语义ID格式{实体语义ID}-LC-{阶段描述}，短号LC{3位数字}全局递增"
+      - "事件编号：语义ID格式EVT-{域缩写}-{事件描述}，短号EVT{3位数字}全局递增"
+      - "4.4节映射中'业务活动'特指第3章定义的PL2流程节点（BA-{域}-{序号}）"
+    sections:
+      - { id: "4.1", title: "核心实体识别与分类", model: "entity_classification" }
+      - { id: "4.2", title: "核心实体关系", model: "entity_relationship", points: "概念级ER图（图形方式呈现）" }
+      - { id: "4.3", title: "生命周期定义", model: "lifecycle_definition" }
+      - { id: "4.4", title: "生命周期→业务活动映射", model: "lifecycle_activity_mapping" }
+
+  - chapter: 5
+    title: 利益相关方与角色分析
+    required: true
+    purpose: "角色线完整演绎(Who/Why)：CL0(全景)→CL1(特定利益相关方)→CL2(用户角色)。角色(CL2)是Epic推导的主线来源"
+    rules:
+      - "仅'直接用户'类利益相关方中的具体岗位进入角色(CL2)定义"
+      - "工作场景分为直接作业场景（关联BA-*）和间接作业场景（说明管理/分析对象）"
+      - "关键旅程触点为可选内容，每角色3-5个"
+      - "UX视角在宏观需求阶段保持轻量——画像仅保留摘要"
+    sections:
+      - { id: "5.1", title: "利益相关方识别", points: "CL0分类框架 + CL1特定利益相关方定位", model: "stakeholder_classification + stakeholder_definition" }
+      - { id: "5.2", title: "用户角色定义", points: "CL2层：角色定义（含痛点/期望/目标/画像摘要）、工作场景、关键旅程触点(可选)", model: "role_definition + work_scenario + journey_touchpoint" }
+      - { id: "5.3", title: "角色→业务活动映射", points: "通过工作场景桥接，覆盖度检查和反向覆盖度检查", model: "role_activity_mapping" }
+
+  - chapter: 6
+    title: 业务能力需求（Epic）
+    required: true
+    non_reducible: true
+    purpose: "核心产出(What)：从角色(CL2)痛点/期望推导Epic，用活动(CL2)和实体(CL2)覆盖度验证。三线在CL2汇聚"
+    rules:
+      - "推导逻辑：主线推导(角色驱动) + 抽象过滤 + 两维验证补充"
+      - "每个候选Epic通过粒度检查（抽象过滤），防止将Feature级需求误提为Epic"
+      - "每个Epic应定义完成标准（DoD）和业务验收场景"
+      - "Epic编号双轨制：语义ID EPIC-{业务域}-{功能模块}，短号EPIC{3位数字}"
+      - "冲突调和以业务目标对齐度为最终裁决标准"
+    sections:
+      - { id: "6.1", title: "能力架构设计", points: "全局能力架构（2-4层）、跨域交互视图(可选但推荐)", model: "capability_architecture + cross_domain_interaction" }
+      - { id: "6.2", title: "Epic定义规范", model: "epic_derivation" }
+      - { id: "6.2.1", title: "Epic推导逻辑", points: "主线推导逻辑链图 + 抽象过滤判断标准 + Feature候选项降级记录", model: "epic_filter + feature_downgrade" }
+      - { id: "6.2.2", title: "Epic定义模板", model: "epic_definition + pending_ownership" }
+      - { id: "6.2.3", title: "Epic编号规范", points: "双轨制编号体系（引用P01）" }
+      - { id: "6.2.4", title: "Epic示例", points: "编写示例" }
+      - { id: "6.2.5", title: "Epic完成标准", points: "完成必要条件 + 完成充分条件 + 业务验收场景", model: "epic_dod + acceptance_scenario" }
+      - { id: "6.3", title: "映射与验证", points: "即时验证：逐条检查映射关系，发现遗漏并补充" }
+      - { id: "6.3.1", title: "业务活动→Epic映射", model: "activity_epic_mapping" }
+      - { id: "6.3.2", title: "实体生命周期→Epic映射", model: "lifecycle_epic_mapping" }
+      - { id: "6.3.3", title: "角色痛点/期望→Epic确认", model: "role_epic_confirmation" }
+      - { id: "6.3.4", title: "冲突调和与遗漏补充", points: "冲突以业务目标对齐度裁决；遗漏标注推导来源" }
+
+  - chapter: 7
+    title: 基础性需求
+    required: true
+    purpose: "定义跨BC的通用能力需求(What)——独立于业务Epic的功能性横切关注点"
+    rules:
+      - "基础性需求定义需要建设什么通用能力（功能性横切关注点）"
+      - "区别于非功能需求（第8章）定义的质量水平（质量约束）"
+      - "说明书中按具体能力分类分节组织（如7.1身份认证、7.2权限管理等）"
+    sections:
+      - { id: "7.1", title: "基础性需求总览", model: "foundation_req_category" }
+      - { id: "7.x", title: "{具体能力分类}", model: "foundation_req_definition" }
+
+  - chapter: 8
+    title: 非功能需求框架
+    required: true
+    purpose: "定义产品质量属性框架(How Well)：全局级基线目标和约束，量级优先"
+    rules:
+      - "非功能需求定义系统应达到的质量水平（质量约束）"
+      - "量化约束以量级优先（Order of Magnitude），如'千级并发'而非精确数值"
+      - "典型场景采用质量属性场景（触发条件+质量要求）"
+      - "说明书中按具体分类分节，集成接口需求排最后一节"
+    sections:
+      - { id: "8.1", title: "非功能需求总览", model: "nfr_category" }
+      - { id: "8.x", title: "{具体分类}", model: "nfr_framework" }
+      - { id: "8.Y", title: "集成接口需求", model: "integration_interface", points: "排在所有非功能需求分类之后" }
+
+  - chapter: 9
+    title: 完整性验证
+    required: true
+    purpose: "全量汇总验证(Verify)：在6.3逐条映射基础上汇总计算各维度覆盖度。应在第10章版本规划之前完成"
+    rules:
+      - "6.3逐条映射（即时验证）→ 第9章汇总统计（全量验证），两者分工互补"
+      - "通过条件：三维覆盖状态均无未覆盖项，或未覆盖项有合理说明"
+    sections:
+      - { id: "9.1", title: "角色推导完整性验证", model: "role_completeness_verification" }
+      - { id: "9.2", title: "价值生态覆盖度验证", model: "ecosystem_coverage_verification" }
+      - { id: "9.3", title: "实体生命周期覆盖度验证", model: "lifecycle_coverage_verification" }
+      - { id: "9.4", title: "完整性结论", points: "综合三个维度给出明确结论" }
+
+  - chapter: 10
+    title: 版本规划
+    required: true
+    purpose: "版本分配(When)：将Epic分配到P1-P6各规划版本。优先级=规划版本"
+    rules:
+      - "版本号三段式：X.Y.Z（主版本.规划版本.修订版本）"
+      - "偶数Y=规划内版本(P1-P6)，奇数Y=规划外补充版本"
+      - "P1优先级最高，P6优先级最低"
+      - "推荐使用WSJF方法（修正Fibonacci序列1/2/3/5/8/13/20）进行版本分配决策"
+    sections:
+      - { id: "10.1", title: "版本号体系", model: "version_numbering" }
+      - { id: "10.2", title: "规划版本定义（P1-P6）", model: "planned_version_def" }
+      - { id: "10.3", title: "补充版本与修订版本", model: "supplementary_version" }
+      - { id: "10.4", title: "版本规划", model: "version_plan" }
+      - { id: "10.5", title: "版本分配决策方法", model: "wsjf_assessment" }
+      - { id: "10.6", title: "Epic-版本映射", model: "epic_version_mapping" }
+
+  - chapter: 11
+    title: 追溯矩阵
+    required: true
+    non_reducible: true
+    purpose: "审计追溯(Check)：建立目标→困境→活动→角色→Epic→版本的完整追溯链路"
+    rules:
+      - "与第9章分工：第9章侧重验证结论（覆盖度百分比），第11章侧重审计追溯（逐条可审查记录）"
+    sections:
+      - { id: "11.1", title: "追溯矩阵目的", points: "追溯链路说明" }
+      - { id: "11.2", title: "困境→业务活动追溯", model: "dilemma_activity_trace" }
+      - { id: "11.3", title: "角色→Epic追溯", model: "role_epic_trace" }
+      - { id: "11.4", title: "业务活动→Epic追溯", model: "activity_epic_trace" }
+      - { id: "11.5", title: "实体生命周期→Epic追溯", model: "lifecycle_epic_trace" }
+      - { id: "11.6", title: "Epic→版本追溯", model: "epic_version_trace" }
+      - { id: "11.7", title: "全链路追溯矩阵", model: "full_traceability_matrix" }
+      - { id: "11.8", title: "覆盖度验证", model: "coverage_checklist" }
+
+# ── 附录 ──
+appendices:
+  - { id: A, title: "需求层级体系", type: "规范性", required: true, note: "定义宏观需求在需求层级体系中的位置和边界，含层级全景图、宏观需求层级表、Epic层级判断表" }
+  - { id: B, title: "术语快速索引", type: "资料性", required: false, note: "通用术语索引 + 本规范特有术语索引" }
+
+# ── 内容模型定义 ──
+# 格式：model_name → columns列表 + 可选note/rules
+# columns用紧凑格式：列名(填写说明)
+
+content_models:
+
+  # ── 第1章 ──
+  analysis_framework_overview:
+    note: "三线三级对齐模型图 + 分析框架总览图，涵盖Why→Where→Who→What→How Well→Verify→When→Check完整逻辑链"
+
+  term_tables:
+    note: "通用术语引用索引表 + 特有术语定义表。困境与痛点关系须明确说明：困境(业务层面,第2章)→痛点(角色层面,第5章)→Epic(第6章)"
+    ref_columns: ["分析线索(活动线/角色线/实体线/-)", "层级(CL0/CL1/CL2/-)", "术语", "英文", "编号前缀", "定义来源", "备注"]
+    own_columns: ["分析线索", "层级", "术语", "英文", "定义"]
+
+  # ── 第2章 ──
+  phase1_acceptance:
+    note: "阶段1输入验收检查表，验收检查项和合格标准见规范2.2节"
+    columns: ["检查项", "合格标准", "不满足时的处理方式"]
+
+  strategic_goal_ref:
+    columns: ["目标维度(如客户价值、商业价值)", "战略目标", "量化指标"]
+
+  phase_goal_ref:
+    columns: ["版本(如P1、P2)", "时间范围", "核心目标", "关键成果", "财务目标(如适用)"]
+
+  dilemma_template:
+    note: "困境是业务层面达成目标的系统性障碍，在第5章细化为各角色的痛点"
+    columns:
+      - "困境编号(语义ID: DLM-{困境描述}; 短号: DLM{3位数字})"
+      - "困境名称(简短名称)"
+      - "困境描述(详细描述达成目标面临的问题)"
+      - "影响范围(受影响的角色)"
+      - "当前应对(用户目前如何应对)"
+      - "严重程度(高/中/低)"
+      - "关联目标(引用2.1的具体目标维度或目标编号)"
+
+  success_criteria:
+    columns: ["维度(如客户价值、商业价值、产品能力)", "指标", "目标值", "衡量方式"]
+
+  constraint_table:
+    columns: ["约束类型(业务约束/技术约束)", "约束项", "约束描述", "影响范围(Epic或版本)"]
+
+  assumption_dependency:
+    columns: ["类型(假设/依赖)", "编号(AS-{n}或DP-{n})", "描述", "影响范围(Epic或版本)", "失效后果"]
+
+  # ── 第3章 ──
+  phase_division:
+    note: "阶段1与阶段2在生态分析上的分工对照"
+    columns: ["阶段", "分析重点", "输出形式", "详细程度(概要/详细)"]
+
+  value_chain:
+    note: "基于价值链分析理论识别价值创造/传递/消费/支撑各环节"
+    columns: ["价值链环节(价值创造/传递/消费/支撑)", "参与方", "核心职能", "价值流向"]
+
+  functional_domain:
+    note: "职能域是PL0层，从价值链归类。MECE检查：互斥且穷尽"
+    columns: ["职能域名称", "职能域缩写(2-3字符)", "价值链位置", "职责范围", "典型参与方"]
+
+  e2e_process:
+    note: "PL1层：端到端流程特征——有明确触发点和终点、贯穿≥2个职能域、形成完整业务闭环、能独立产生价值。应以PL0-PL1正交关系图呈现矩阵关系"
+    columns: ["流程编号(P-{主域缩写}-{序号})", "流程名称", "业务触发点", "业务终点", "贯穿职能域(按流程顺序)", "业务价值", "关联困境(引用2.2)", "关联目标(引用2.1)"]
+
+  process_node:
+    note: "PL2层：每个端到端流程分解为3-8个流程节点。粒度判断标准见原规范4.3.3节"
+    columns: ["节点编号(BA-{职能域缩写}-{序号})", "节点名称", "所属流程(引用3.2)", "所属职能域", "参与角色", "节点输入", "节点输出", "业务目标"]
+    granularity_check:
+      - "业务完整性：有明确输入输出，完成特定职责"
+      - "职能归属：通常在单个职能域内完成"
+      - "价值独立性：能为流程贡献独立价值增量"
+      - "角色稳定性：通常由1-2个明确角色负责"
+      - "数量合理性：一个端到端流程3-8个节点"
+
+  business_domain:
+    note: "业务域基于PL0职能域归类，常见对应：一对一/多对一/一对多"
+    definition_columns: ["业务域", "域缩写(2-3字符)", "对应职能域", "说明", "流程数量", "节点数量"]
+    summary_note: "需输出两个汇总表：业务域→端到端流程归类表、业务域→流程节点归类表。完整性检查：穷尽性+互斥性"
+
+  # ── 第4章 ──
+  entity_classification:
+    note: "实体分类根据产品实际业务模式确定。常见模式：双边平台型(内容/主体/业务)、企业工具型(业务对象/配置/记录)、监管合规型(法规/制度/证据)"
+    columns: ["分类", "实体编号(语义ID EN-{域}-{描述} + 短号EN{3位数字})", "实体名称", "说明"]
+
+  entity_relationship:
+    note: "概念级ER图（图形方式呈现），不要求字段级细节"
+    columns: ["实体A", "关系类型(1:1/1:N/M:N/包含/引用/派生)", "实体B", "关系说明"]
+
+  lifecycle_definition:
+    columns:
+      - "实体编号(双轨制)"
+      - "阶段编码(语义ID: {实体语义ID}-LC-{阶段描述}; 短号: LC{3位数字}全局递增)"
+      - "阶段名称"
+      - "状态(如DRAFT/REVIEW/ACTIVE/VOID)"
+      - "说明"
+      - "触发事件编号(语义ID: EVT-{域}-{事件描述}; 短号: EVT{3位数字})"
+      - "触发事件名称"
+
+  lifecycle_activity_mapping:
+    note: "将每个实体的每个生命周期阶段映射到对应的PL2流程节点"
+    columns: ["实体编号", "实体名称", "阶段编码", "阶段名称", "触发事件编号", "覆盖活动编号(BA-{域}-{序号})", "覆盖活动名称", "覆盖状态(有/无)"]
+
+  # ── 第5章 ──
+  stakeholder_classification:
+    note: "CL0层：从业务价值生态出发建立分类框架。通用分类参考：直接用户/间接用户/外部相关方/平台方。MECE检查"
+
+  stakeholder_definition:
+    note: "CL1层：在每个分类下定位具体人员群体或组织（组织维度）"
+    columns:
+      - "利益相关方编号(语义ID: SH-{描述}; 短号: SH{2位数字})"
+      - "利益相关方名称"
+      - "所属分类(直接用户/间接用户/外部相关方/平台方)"
+      - "所属生态维度"
+      - "组织描述(职责和业务范围)"
+      - "与产品关系"
+      - "影响程度(高/中/低)"
+
+  role_definition:
+    note: "CL2层：角色从CL1直接用户类中识别。MECE检查：同一岗位只定义一次"
+    columns:
+      - "角色编号(语义ID: ROLE-{角色名}; 短号: 分类前缀UP-/UR-/UC-{序号}或统一ROLE{3位数字})"
+      - "角色名称(岗位名称)"
+      - "所属生态维度"
+      - "所属利益相关方(SH-*)"
+      - "核心目标"
+      - "主要职责"
+      - "痛点(当前面临的主要问题)"
+      - "期望(期望产品帮助达成什么)"
+      - "使用频率(高/中/低)"
+      - "用户画像摘要(1-3句话，含典型背景/行为特征/核心诉求中至少两项)"
+      - "工作场景(场景编号列表)"
+
+  work_scenario:
+    note: "角色内部属性，桥接角色与业务活动。直接作业场景关联BA-*，间接作业场景说明管理/分析对象"
+    columns:
+      - "场景编号(语义ID: WS-{角色名}-{场景描述}; 短号: WS{3位数字})"
+      - "场景名称"
+      - "场景类型(直接作业场景/间接作业场景)"
+      - "所属角色"
+      - "场景描述"
+      - "工作目标"
+      - "关联痛点"
+      - "关联期望"
+      - "关联活动(直接→BA-*列表; 间接→管理/分析对象说明)"
+
+  journey_touchpoint:
+    note: "(可选)每角色识别3-5个关键触点。触点不直接推导Epic，用于标识体验敏感区域"
+    columns:
+      - "触点编号(语义ID: TP-{角色名}-{触点描述}; 短号: TP{3位数字})"
+      - "所属角色"
+      - "关联场景"
+      - "关联活动"
+      - "触点描述(做什么、为什么重要)"
+      - "体验敏感因素(效率瓶颈/认知负荷高/出错代价大等)"
+      - "关联Epic(Epic推导后回填)"
+
+  role_activity_mapping:
+    note: "通过工作场景桥接角色(CL2)→业务活动(CL2)。完成后执行反向覆盖度检查：所有BA-*是否都被至少一个直接作业场景覆盖"
+    columns: ["角色编号", "角色名称", "场景编号", "场景名称", "场景类型", "关联活动编号(直接→BA-*; 间接→'-')", "关联活动名称(直接→名称; 间接→管理/分析对象)", "活动数量"]
+
+  # ── 第6章 ──
+  capability_architecture:
+    note: "能力架构层次宜2-4层。层间依赖方向一致（上层依赖下层）。常见层次：业务能力层/数据与分析能力层/基础平台能力层"
+
+  cross_domain_interaction:
+    note: "(可选但推荐)跨业务域的高层级协作关系，为阶段3 BC划分提供集成约束输入"
+    columns: ["源Epic短号", "源Epic所属业务域", "目标Epic短号", "目标Epic所属业务域", "交互类型(数据共享/事件触发/流程编排)", "关键数据流向", "说明"]
+
+  epic_filter:
+    note: "抽象过滤判断标准：能力独立性、多活动覆盖、可拆分性、目标对齐。通过→Epic，不通过→降级为Feature候选项"
+    columns: ["判断维度", "过滤问题", "通过标准(是Epic)", "不通过(疑似Feature)"]
+
+  feature_downgrade:
+    columns: ["候选项名称", "来源角色", "来源痛点/期望", "降级原因", "可能归属的Epic"]
+
+  epic_definition:
+    note: "推导来源：角色驱动(主线)/实体验证补充/活动验证补充。不区分痛点/期望来自直接或间接作业场景"
+    columns:
+      - "Epic编号(语义ID: EPIC-{业务域}-{功能模块}; 短号: EPIC{3位数字})"
+      - "Epic名称(中文)"
+      - "能力定义(一段话)"
+      - "核心要素"
+      - "推导来源(角色驱动/实体验证补充/活动验证补充)"
+      - "来源角色(UR-*及其痛点/期望)"
+      - "关联活动(BA-*，可多个)"
+      - "依赖关系"
+      - "业务价值"
+      - "关联困境(引用2.2)"
+      - "业务边界(Out of Scope，不提供的能力或不覆盖的场景)"
+      - "交互边界(与外部系统或其他Epic的责任分工：交互对象+方向+内容)"
+      - "验证方式(可选：业务验收场景验证/指标度量验证/专家评审验证)"
+
+  pending_ownership:
+    note: "归属不明确的能力，在阶段3 BC划分时确认最终归属"
+    columns: ["待定能力描述", "可能归属方(本Epic/其他EPIC-*/外部系统)", "初步建议归属", "确认时间点(阶段3概要设计)"]
+
+  epic_dod:
+    necessary_conditions: ["业务活动闭环(关联BA-*已在线上实现)", "成功标准达成(第2章量化指标)", "实体流转覆盖(关联LC阶段已实现)", "痛点/期望闭合(来源痛点和期望均被Feature覆盖)"]
+    sufficient_conditions: ["追溯完整(第11章全链路无断点)", "基础性需求已交付(第7章)", "非功能达标(第8章量化约束)"]
+
+  acceptance_scenario:
+    note: "每个Epic 1-2个业务验收场景，从角色视角描述（谁、做什么、达成什么），保持在Epic级别"
+    columns:
+      - "场景编号(语义ID: BAS-{Epic短号}-{场景描述}; 短号: BAS{3位数字})"
+      - "所属Epic"
+      - "场景描述(从角色视角的具体业务验收画面)"
+
+  activity_epic_mapping:
+    note: "即时验证（6.3.1）：逐条检查所有BA-*是否被Epic覆盖。一个Epic可覆盖多个BA-*，一个BA-*也可被多个Epic覆盖"
+    columns: ["活动编号(BA-*)", "活动名称", "Epic短号", "Epic名称", "覆盖状态(Y/N)"]
+
+  lifecycle_epic_mapping:
+    note: "即时验证（6.3.2）：重点关注无人工干预的状态流转"
+    columns: ["实体", "生命周期阶段", "Epic短号", "Epic名称", "覆盖状态(Y/N)"]
+
+  role_epic_confirmation:
+    note: "即时验证（6.3.3）：含所属利益相关方编号(SH-*)，建立Epic→角色→利益相关方完整追溯链"
+    columns: ["所属利益相关方(SH-*)", "角色编号", "角色名称", "痛点/期望", "Epic短号", "Epic名称", "覆盖状态(Y/N)"]
+
+  # ── 第7章 ──
+  foundation_req_category:
+    note: "典型分类：身份认证/权限管理/租户管理/审计日志/消息通知/文件管理。可根据项目增减"
+    columns: ["分类", "典型需求项"]
+
+  foundation_req_definition:
+    columns:
+      - "需求编号(语义ID: FR-{能力描述}; 短号: FR{2位数字})"
+      - "需求名称"
+      - "需求分类"
+      - "需求描述"
+      - "能力要点(核心能力点列表)"
+      - "目标版本(P1-P6)"
+      - "建议归属域(待阶段3 BC划分确认)"
+      - "关联Epic(可选，依赖此需求的Epic短号列表)"
+
+  # ── 第8章 ──
+  nfr_category:
+    note: "典型分类：性能/安全/可用性/可扩展性/兼容性/可维护性/易用性/集成接口"
+    columns: ["分类", "说明", "典型指标"]
+
+  nfr_framework:
+    note: "量化约束以量级优先（Order of Magnitude）；典型场景采用质量属性场景（触发条件+质量要求）"
+    columns:
+      - "需求编号(语义ID: NFR-{类别}-{约束描述}; 短号: NFR{3位数字})"
+      - "需求分类"
+      - "需求项"
+      - "框架要求(全局级要求描述)"
+      - "典型场景(触发条件+质量要求)"
+      - "量化约束(全局基线值或量级范围)"
+      - "目标版本(P1-P6)"
+      - "备注"
+
+  integration_interface:
+    columns: ["集成方向(入站/出站)", "外部系统", "集成目的", "数据类型", "集成方式", "目标版本(P1-P6)"]
+
+  # ── 第9章 ──
+  role_completeness_verification:
+    note: "汇总6.3.3结果"
+    columns: ["角色编号", "角色名称", "痛点/期望", "对应Epic", "覆盖状态(Y/N)"]
+
+  ecosystem_coverage_verification:
+    note: "汇总6.3.1结果，统计覆盖百分比"
+    columns: ["验证维度(已定义业务活动/活动有角色参与/活动有Epic覆盖)", "数量", "覆盖度(%)"]
+
+  lifecycle_coverage_verification:
+    note: "汇总6.3.2结果"
+    columns: ["实体分类", "实体数", "生命周期阶段总数", "已覆盖Epic数", "覆盖度(%)"]
+
+  # ── 第10章 ──
+  version_numbering:
+    note: "三段式X.Y.Z：X=主版本，Y=规划版本(偶数规划内/奇数规划外)，Z=修订版本。以ASCII图呈现"
+
+  planned_version_def:
+    columns: ["规划版本(P1-P6)", "版本号(1.0/1.2/1.4/1.6/1.8/2.0)", "优先级(最高→最低)", "版本定位(MVP/增强/完善/扩展/高级/理想)", "说明"]
+
+  supplementary_version:
+    note: "补充版本(奇数,功能增加)和修订版本(第三位,BUG修复)的触发决策"
+    columns: ["判断维度(紧迫性/业务影响/依赖关系/工作量)", "创建补充版本", "合并到下一规划版本"]
+
+  version_plan:
+    columns: ["规划版本(P1-P6)", "版本号", "版本定位", "Epic数量", "关键里程碑"]
+
+  wsjf_assessment:
+    note: "WSJF = (业务价值+时间紧迫性+风险降低或机会促成) / 实现规模。修正Fibonacci序列(1/2/3/5/8/13/20)"
+    columns: ["Epic短号", "Epic名称", "业务价值(1-20)", "时间紧迫性(1-20)", "风险降低/机会促成(1-20)", "实现规模(1-20)", "WSJF得分"]
+
+  epic_version_mapping:
+    columns: ["Epic短号", "Epic名称", "规划版本(=优先级)(P1-P6)", "版本号", "决策依据(WSJF得分)", "依赖Epic"]
+
+  # ── 第11章 ──
+  dilemma_activity_trace:
+    columns: ["困境描述", "解决该困境的活动(BA-*及名称)", "活动贡献"]
+
+  role_epic_trace:
+    columns: ["角色编号", "角色名称", "痛点/期望", "Epic短号", "Epic名称", "覆盖状态(Y/N)"]
+
+  activity_epic_trace:
+    columns: ["活动编号(BA-*)", "活动名称", "Epic短号", "Epic名称", "覆盖状态(Y/N)"]
+
+  lifecycle_epic_trace:
+    columns: ["实体", "生命周期阶段", "Epic短号", "Epic名称", "覆盖状态(Y/N)"]
+
+  epic_version_trace:
+    columns: ["Epic短号", "Epic名称", "目标版本(=优先级)(P1-P6)", "覆盖状态(Y/N)"]
+
+  full_traceability_matrix:
+    note: "完整追溯链：目标→困境→活动→利益相关方→角色→Epic→版本。每级禁止留空"
+    columns: ["目标", "困境(DLM*)", "活动(BA-*)", "利益相关方(SH-*)", "角色(UR-*)", "Epic(EPIC*)", "版本(P1-P6)"]
+
+  coverage_checklist:
+    note: "所有维度通过标准为100%覆盖"
+    items: ["困境覆盖(困境→BA-*)", "角色推导覆盖(痛点/期望→Epic)", "业务活动覆盖(BA-*→Epic)", "实体生命周期覆盖(LC→Epic)", "版本覆盖(Epic→P1-P6)", "基础性需求覆盖(FR完整定义)", "非功能需求覆盖(NFR框架完整定义)"]
+
+# ── 交叉引用要求 ──
+required_xrefs:
+  upstream:
+    - { doc: "阶段1 产品战略", check: "业务目标、价值主张、版本路线图、业务域初步划分" }
+  downstream:
+    - { doc: "阶段3 领域设计", check: "Epic清单、业务域划分、能力架构为BC划分提供输入" }
+    - { doc: "阶段4 BC详细需求", check: "Epic是Feature拆分的输入，非功能框架是BC级细化的输入" }

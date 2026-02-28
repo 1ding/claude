@@ -1,0 +1,452 @@
+# S05 BC详细需求编写规范 — 编写规则 Schema
+# 来源规范：specs/software/meta/S05-详细需求编写规范_v0.10@202602252051.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供章节结构、内容模型和编写约束
+# 完整规则（章节目的详述、完整示例、裁剪依据详述）：见原规范文件
+
+doc_id: S05
+doc_name: BC详细需求编写规范
+target_doc: "05-BC详细需求"
+target_doc_name: BC详细需求规格说明书
+
+# ── 文档定位 ──
+positioning:
+  stage: 5
+  stage_name: BC详细需求
+  upstream: [阶段4-系统设计, 阶段3-领域设计, 阶段2-宏观需求, 阶段1-产品战略]
+  downstream: [阶段6-BC总体设计]
+  role: "每个BC对应一份，将Business Epic和Capability分解为Feature和User Story，为每个Story定义可测试的验收标准，建立从Business Epic到可交付User Story的完整可追溯链路"
+
+# ── 上游输入 ──
+upstream_inputs:
+  - { item: "BC与服务映射表", source: "阶段4 系统设计" }
+  - { item: "Enabler Capability/Feature 架构需求清单", source: "阶段4 系统设计", note: "含验收标准和约束映射" }
+  - { item: "集成架构设计", source: "阶段4 系统设计" }
+  - { item: "全局依赖治理原则", source: "阶段4 系统设计" }
+  - { item: "非功能需求方案（全局基线）", source: "阶段4 系统设计" }
+  - { item: "BC版本覆盖矩阵", source: "阶段4 系统设计" }
+  - { item: "BC定义（职责、边界、所属子域、核心聚合）", source: "阶段3 领域设计" }
+  - { item: "上下文映射", source: "阶段3 领域设计" }
+  - { item: "领域事件全景", source: "阶段3 领域设计" }
+  - { item: "统一语言词汇表", source: "阶段3 领域设计" }
+  - { item: "核心领域模型概要", source: "阶段3 领域设计" }
+  - { item: "本BC承接的Business Epic清单", source: "阶段2 宏观需求", note: "含能力架构、Epic定义、验收标准和版本分配" }
+  - { item: "相关业务活动（PL2流程节点）", source: "阶段2 宏观需求" }
+  - { item: "相关用户角色（CL2角色定义、痛点和期望）", source: "阶段2 宏观需求" }
+  - { item: "相关实体生命周期", source: "阶段2 宏观需求" }
+  - { item: "非功能需求框架（全局级基线目标）", source: "阶段2 宏观需求" }
+  - { item: "版本路线图", source: "阶段1 产品战略" }
+missing_input_handling: "缺失内容记录为假设（AS-{BC编号}-{序号}），标注'来源：阶段N输出缺失'"
+
+# ── 全局硬约束 ──
+hard_constraints:
+  - "User Story遵循INVEST原则（Independent/Negotiable/Valuable/Estimable/Small/Testable）"
+  - "XL级Story禁止保留，应拆分为多个M或L级Story后再录入"
+  - "每条AC描述一个独立的验收点，格式：能{动作}{对象}（{约束条件}）"
+  - "业务规则独立于User Story集中管理，便于跨Story复用"
+  - "追溯链完整性：Business Epic → Capability → Feature → User Story → AC 不断裂"
+  - "Enabler Feature约束在非功能需求中落实，指标值不得低于上游定义的基线"
+
+# ── 裁剪指引 ──
+tailoring:
+  不可裁剪: ["第2章(BC级分析基线)", "第5章(核心产出-需求分解)", "第8章(追溯链完整性保障)"]
+  标准项目: "Feature>=8或Story>=30时：完整执行全部章节"
+  小型项目: "Feature<3且Story<10时：第3/4章可简化合并；第6章可简化为关键规则；第7章可并入第5章各Feature"
+  裁剪后保障: "追溯链完整性（Business Epic→Capability→Feature→User Story→AC不断裂）"
+
+# ── 章节结构（9章 + 附录，顺序固定不可调整） ──
+chapters:
+
+  - chapter: 1
+    title: 概述
+    required: true
+    purpose: "导读章节：方法论框架图和术语约定，不含需求分析内容"
+    sections:
+      - { id: "1.1", title: "文档目的", points: "编写目的和适用范围" }
+      - { id: "1.2", title: "方法论框架", points: "需求分解方法论框架图、各环节职责概述、与上下游阶段关系" }
+      - { id: "1.3", title: "文档定位", points: "在研发过程中的位置（引用N00），与宏观需求的层级边界" }
+      - { id: "1.4", title: "术语约定", points: "通用术语引用索引（引用C99）、本文档特有术语定义（Feature/Story/AC/Capability/业务规则等）" }
+      - { id: "1.5", title: "编号约定", points: "各类条目编号体系说明（引用P01），含Feature/Story/AC/BR编号" }
+
+  - chapter: 2
+    title: BC概述与边界
+    required: true
+    non_reducible: true
+    purpose: "建立BC级分析基线：承接验收、BC定位、业务边界、Enabler Feature约束、版本范围"
+    rules:
+      - "BC定位和边界定义引用阶段3/4上游文档，不重新定义"
+      - "缺失项记录假设编号AS-{BC编号}-{序号}"
+      - "正面清单和负面清单应穷尽本BC的业务边界"
+    sections:
+      - { id: "2.1", title: "上游承接验收", model: "upstream_acceptance" }
+      - { id: "2.2", title: "BC基本信息", model: "bc_basic_info" }
+      - { id: "2.3", title: "BC定位与核心价值", points: "BC职责定义、核心业务能力、为用户提供的核心价值" }
+      - { id: "2.4", title: "业务边界", model: "business_boundary" }
+      - { id: "2.5", title: "BC间协作关系", model: "bc_collaboration" }
+      - { id: "2.6", title: "Enabler Feature 约束", model: "ef_constraints" }
+      - { id: "2.7", title: "当前版本范围", model: "version_scope" }
+
+  - chapter: 3
+    title: 用户角色
+    required: true
+    purpose: "从本BC视角提取和细化用户角色，回答'谁使用这个BC'"
+    rules:
+      - "角色编号沿用阶段2 CL2编号，不新建编号体系"
+      - "每个Business Epic至少有一个角色关联"
+    sections:
+      - { id: "3.1", title: "角色提取", model: "role_extraction" }
+      - { id: "3.2", title: "角色定义", model: "role_definition", points: "按角色分设子节，每个角色的BC级定义" }
+      - { id: "3.3", title: "角色-Epic关联", model: "role_epic_mapping" }
+
+  - chapter: 4
+    title: 业务场景
+    required: true
+    purpose: "将宏观需求业务活动在本BC范围内细化为具体操作场景，回答'用户在这个BC里做什么'"
+    rules:
+      - "场景编号格式：SC-{BC编号}-{三位序号}"
+      - "场景名称使用动宾结构（如'提交试用申请'）"
+      - "每步只包含一个动作；分支流程标注分支点；异常流程标注触发条件和处理结果"
+    sections:
+      - { id: "4.1", title: "场景识别与细化方法", model: "scenario_method" }
+      - { id: "4.2", title: "场景定义", model: "scenario_definition", points: "按场景分设子节，每个场景的完整定义和流程描述" }
+      - { id: "4.3", title: "场景-Epic-活动映射", model: "scenario_epic_mapping" }
+
+  - chapter: 5
+    title: 需求分解
+    required: true
+    non_reducible: true
+    purpose: "将Business Epic和Capability分解为Feature和User Story，为每个Story定义AC，核心交付章节"
+    rules:
+      - "Feature编号：FT-{BC编号}-{两位序号}"
+      - "Story编号：US-{BC编号}-{三位序号}"
+      - "AC编号：AC-{Story序号}-{两位序号}"
+      - "User Story三段式：作为{角色}，我想要{做什么}，以便{获得什么价值}"
+      - "AC格式：能{动作}{对象}（{约束条件}），动作使用用户视角动词"
+      - "XL级Story禁止保留，应拆分为M或L级"
+    sections:
+      - { id: "5.1", title: "分解方法与原则", model: "invest_checklist" }
+      - { id: "5.2", title: "需求层级总览", model: "requirement_hierarchy" }
+      - { id: "5.3", title: "Capability 拆分", model: "capability_split", points: "(宜) 跨BC Capability的拆分说明" }
+      - { id: "5.4", title: "Feature 定义", model: "feature_definition", points: "按Epic分组，逐个Feature的完整定义" }
+      - { id: "5.5", title: "User Story 定义", model: "story_definition", points: "按Feature分组，逐个Story的完整定义和AC表" }
+
+  - chapter: 6
+    title: 业务规则汇总
+    required: true
+    purpose: "汇总本BC所有业务规则，便于跨Story复用和统一维护"
+    rules:
+      - "规则编号：BR-{BC编号}-{三位序号}，从001起连续编排"
+      - "规则描述格式：{判断对象}在{触发时机}时，若{判断条件}，则{通过处理}；否则{违规处理}"
+      - "业务规则与AC的区分：可跨Story复用的是规则，特定Story的验收点是AC"
+    sections:
+      - { id: "6.1", title: "规则分类体系", model: "rule_categories" }
+      - { id: "6.2", title: "业务规则清单", model: "business_rules" }
+      - { id: "6.3", title: "规则-Story映射", model: "rule_story_mapping" }
+
+  - chapter: 7
+    title: 非功能需求细化
+    required: true
+    purpose: "将上游全局级非功能需求基线细��为本BC的具体可测试指标"
+    rules:
+      - "每条非功能需求应包含可量化指标值"
+      - "Enabler Feature约束涉及的非功能要求，指标值不得低于上游基线"
+      - "BC间交互需求应与第2章2.5节协作关系一致"
+    sections:
+      - { id: "7.1", title: "非功能需求来源", model: "nfr_sources" }
+      - { id: "7.2", title: "性能需求", model: "perf_requirements" }
+      - { id: "7.3", title: "安全需求", model: "security_requirements" }
+      - { id: "7.4", title: "可用性需求", model: "availability_requirements" }
+      - { id: "7.5", title: "其他质量属性", points: "(宜) 可维护性、可扩展性等" }
+      - { id: "7.6", title: "BC间交互需求", model: "bc_interface_requirements" }
+      - { id: "7.7", title: "数据需求", model: "data_requirements" }
+
+  - chapter: 8
+    title: 需求追溯矩阵
+    required: true
+    non_reducible: true
+    purpose: "建立Business Epic到User Story的完整追溯链路，验证覆盖完整性"
+    rules:
+      - "追溯链路：Business Epic → Capability → Feature → User Story → AC"
+      - "正向追溯覆盖每个Business Epic；反向追溯覆盖每个User Story"
+      - "覆盖率未达100%时，应说明处理方案"
+    sections:
+      - { id: "8.1", title: "追溯链路说明", model: "traceability_structure" }
+      - { id: "8.2", title: "正向追溯矩阵", model: "forward_traceability" }
+      - { id: "8.3", title: "反向追溯矩阵", model: "backward_traceability" }
+      - { id: "8.4", title: "场景覆盖度验证", model: "scenario_coverage" }
+      - { id: "8.5", title: "Enabler Feature约束落实", model: "ef_constraint_verification" }
+      - { id: "8.6", title: "覆盖度结论", model: "coverage_summary" }
+
+  - chapter: 9
+    title: 优先级与版本规划
+    required: true
+    purpose: "将Feature和User Story分配到具体版本和迭代"
+    rules:
+      - "版本分配应与第2章2.7节当前版本范围一致"
+      - "XL级Story应在本章给出拆分方案"
+      - "P1优先级Story应归入P1版本"
+    sections:
+      - { id: "9.1", title: "版本分配规则", model: "version_rules" }
+      - { id: "9.2", title: "优先级分布", model: "priority_distribution" }
+      - { id: "9.3", title: "版本规划详情", model: "version_details", points: "按版本分设子节，每个版本的Feature/Story清单" }
+      - { id: "9.4", title: "规模估算汇总", model: "size_distribution" }
+
+# ── 附录 ──
+appendices:
+  - { id: A, title: "术语速查", type: "资料性", required: false }
+  - { id: B, title: "评审检查清单", type: "资料性", required: false }
+  - { id: C, title: "修订记录", type: "规范性", required: true }
+
+# ── 内容模型定义 ──
+content_models:
+
+  # ── 第2章 ──
+  upstream_acceptance:
+    note: "验收粒度为阶段2-4章节级输出物，本BC相关部分"
+    columns:
+      - "来源阶段(阶段2宏观需求/阶段3领域设计/阶段4系统设计)"
+      - "验收项(需确认的具体输入内容)"
+      - "状态(已确认/部分缺失/缺失)"
+      - "备注(缺失时填AS-{BC编号}-{序号}和描述)"
+
+  bc_basic_info:
+    note: "单表，字段|内容两列"
+    fields: [BC编号, BC名称, 所属子域, 对应微服务(引用阶段4), 对应数据库(引用阶段4), 核心聚合(引用阶段3)]
+
+  business_boundary:
+    note: "正面清单和负面清单两张表"
+    positive_columns: ["业务范围(本BC负责)", "依据(上游文档引用)"]
+    negative_columns: ["业务范围(本BC不负责)", "归属BC(实际归属的BC编号和名称)", "边界判断依据"]
+
+  bc_collaboration:
+    columns:
+      - "协作BC(编号和名称)"
+      - "协作方向(上游/下游/双向)"
+      - "映射模式(ACL/OHS/CF等，引用阶段3)"
+      - "通信方式(同步API/异步事件/混合，引用阶段4)"
+      - "交互概述(一句话)"
+
+  ef_constraints:
+    note: "影响范围应具体到Feature级别或非功能需求类别（如'性能需求-响应时间'），不得笼统写'全部'"
+    columns:
+      - "约束编号(EF-{BC编号}-{序号})"
+      - "约束名称(Enabler Feature名称)"
+      - "来源(阶段4章节引用)"
+      - "约束内容(对本BC的具体约束)"
+      - "影响范围(Feature级别或非功能需求类别)"
+      - "验收标准(引用阶段4定义)"
+
+  version_scope:
+    columns: ["版本(如P1)", "覆盖Epic(Business Epic编号列表)", "覆盖Feature(第5章完成后回填)"]
+
+  # ── 第3章 ──
+  role_extraction:
+    columns:
+      - "角色编号(沿用阶段2 CL2编号)"
+      - "角色名称"
+      - "所属利益相关方(CL0/CL1)"
+      - "与本BC的关系(直接使用者/间接使用者/系统集成方)"
+      - "提取依据(阶段2章节号)"
+
+  role_definition:
+    note: "按角色分设子节，每个角色一张定义表（字段|内容）"
+    fields: [角色编号, 角色名称, 核心目标(引用阶段2), 在本BC的职责(1~3条), 典型操作场景(关联第4章场景编号), 交互频率(高频/中频/低频), 典型痛点(引用阶段2筛选)]
+
+  role_epic_mapping:
+    columns: ["角色编号", "角色名称", "关联Epic(Business Epic编号列表)", "关联关系(主要使用者/次要使用者/审批者/被通知者)"]
+
+  # ── 第4章 ──
+  scenario_method:
+    note: "细化步骤表，覆盖：提取PL2→识别场景→细化流程→验证覆盖度"
+    columns: ["步骤序号", "步骤名称", "步骤说明", "输入(来源)"]
+
+  scenario_definition:
+    note: "按场景分设子节，每个场景一张定义表 + 流程描述（主/分支/异常）"
+    fields: ["场景编号(SC-{BC编号}-{三位序号})", 场景名称(动宾结构), 来源活动(PL2编号和名称), 触发条件, 前置条件, 参与角色(引用第3章), 业务价值, 后置条件, 关联Epic]
+    flow_types: [主流程(编号步骤列表), 分支流程(标注分支点), 异常流程(标注触发条件和处理结果)]
+
+  scenario_epic_mapping:
+    columns: ["场景编号", "场景名称", "关联Epic", "来源活动(PL2编号)", "覆盖状态(已覆盖/部分覆盖/未覆盖)"]
+
+  # ── 第5章 ──
+  invest_checklist:
+    note: "INVEST原则速查表"
+    columns: ["原则(I/N/V/E/S/T)", "英文", "检查问题", "不满足时的处理"]
+
+  requirement_hierarchy:
+    note: "Epic→Feature→Story→AC树形结构，9列"
+    columns: [Epic, Feature, Story编号, User Story, AC编号, 验收标准, 角色, 优先级, 规模]
+
+  capability_split:
+    note: "(宜) 跨BC Capability拆分说明表"
+    columns: ["Capability编号", "Capability名称", "拆分后归属BC", "本BC承接部分", "拆分依据"]
+
+  feature_definition:
+    note: "按Epic分组，每Feature一张定义表（字段|内容）"
+    fields: ["Feature编号(FT-{BC编号}-{两位序号})", Feature名称, 所属Epic, Feature描述, 业务价值, 包含Story(编号列表), 关联场景(引用第4章), 目标版本(P1~P6), 优先级(P1~P6)]
+
+  story_definition:
+    note: "按Feature分组，每Story一张定义表 + AC表"
+    definition_fields: ["Story编号(US-{BC编号}-{三位序号})", Story名称(动宾结构), 所属Feature, "用户故事(作为{角色}我想要{做什么}以便{获得什么价值})", 角色(引用第3章), 关联场景(引用第4章), 关联规则(引用第6章), 优先级(P1~P6), 规模估算(XS/S/M/L/XL)]
+    ac_columns: ["AC编号(AC-{Story序号}-{两位序号})", "验收标准(能{动作}{对象}({约束条件}))", "AC类型(功能型/数据型/界面型/流程型/规则型/性能型)"]
+
+  # ── 第6章 ──
+  rule_categories:
+    note: "规则分类定义表"
+    rows:
+      - { code: "VAL", name: "校验规则", definition: "数据合法性和完整性校验" }
+      - { code: "CAL", name: "计算规则", definition: "数值计算、公式推导、自动赋值" }
+      - { code: "FLW", name: "流程规则", definition: "流程流转条件、状态变迁约束" }
+      - { code: "AUTH", name: "权限规则", definition: "操作权限、数据可见性约束" }
+      - { code: "LMT", name: "限额规则", definition: "数量上限、频次限制、配额约束" }
+      - { code: "NTF", name: "通知规则", definition: "触发通知/提醒的条件和方式" }
+
+  business_rules:
+    columns:
+      - "规则编号(BR-{BC编号}-{三位序号})"
+      - "规则名称(动宾结构)"
+      - "规则描述(无歧义可测试)"
+      - "规则类型(引用6.1分类编码)"
+      - "关联Story(User Story编号列表)"
+      - "触发时机(具体时机)"
+      - "违规处理(阻断/警告/静默)"
+
+  rule_story_mapping:
+    note: "规则→Story映射表和Story→规则映射表，双向验证"
+
+  # ── 第7章 ──
+  nfr_sources:
+    columns: ["来源(全局基线/Enabler Feature约束/BC特有)", "来源文档(阶段+章节)", "适用范围(需求类别)", "细化原则(继承/收紧/补充)"]
+
+  perf_requirements:
+    columns:
+      - "需求编号(NFR-{BC编号}-P{两位序号})"
+      - "需求项(性能指标名称)"
+      - "指标值(量化，含单位和阈值)"
+      - "来源(全局基线/Enabler Feature/BC特有)"
+      - "测试场景"
+      - "验收方式(性能测试/压力测试/基准测试)"
+      - "优先级(P1~P6)"
+
+  security_requirements:
+    columns: ["需求编号(NFR-{BC编号}-S{序号})", "需求项", "要求描述", "来源", "验收方式", "优先级"]
+
+  availability_requirements:
+    columns: ["需求编号(NFR-{BC编号}-A{序号})", "需求项", "指标值", "来源", "验收方式", "优先级"]
+
+  data_requirements:
+    columns: ["需求编号(NFR-{BC编号}-D{序号})", "需求项", "要求描述", "来源", "验收方式", "优先级"]
+
+  bc_interface_requirements:
+    columns:
+      - "接口编号(ITF-{BC编号}-{两位序号})"
+      - "接口名称"
+      - "方向(本BC调出/本BC调入)"
+      - "对端BC(编号和名称)"
+      - "协议(同步REST/同步gRPC/异步事件/异步消息)"
+      - "数据格式(关键字段列表)"
+      - "SLA要求(响应时间/可用性/重试策略)"
+      - "来源(阶段3/4章节引用)"
+
+  # ── 第8章 ──
+  traceability_structure:
+    note: "追溯链路层级定义"
+    rows:
+      - { level: "L0", type: "Business Epic", source: "第2章2.7节", format: "EP-*(阶段2定义)" }
+      - { level: "L1", type: "Capability", source: "第5章5.3节", format: "阶段3定义(如有)" }
+      - { level: "L2", type: "Feature", source: "第5章5.4节", format: "FT-{BC编号}-{序号}" }
+      - { level: "L3", type: "User Story", source: "第5章5.5节", format: "US-{BC编号}-{序号}" }
+      - { level: "L4", type: "Acceptance Criteria", source: "第5章5.5节", format: "AC-{Story序号}-{序号}" }
+      - { level: "约束层", type: "Enabler Feature", source: "第2章2.6节", format: "EF-{BC编号}-{序号}" }
+
+  forward_traceability:
+    columns: ["Epic编号", "Epic名称", "Capability(如有)", "Feature编号", "Feature名称", "Story编号", "Story名称", "AC数量"]
+
+  backward_traceability:
+    columns: ["Story编号", "Story名称", "Feature编号", "Feature名称", "Capability(如有)", "Epic编号", "Epic名称"]
+
+  scenario_coverage:
+    columns: ["场景编号", "场景名称", "关联Story", "覆盖状态(已覆盖/未覆盖)"]
+
+  ef_constraint_verification:
+    columns: ["约束编号", "约束内容", "落实章节(第7章节号)", "落实需求编号", "落实状态(已落实/未落实)"]
+
+  coverage_summary:
+    columns: ["验证维度", "总数", "已覆盖", "覆盖率", "结论(通过/有缺口)"]
+    required_dimensions:
+      - { dimension: "Epic→Feature覆盖", pass_threshold: "100%" }
+      - { dimension: "Feature→Story覆盖", pass_threshold: "100%" }
+      - { dimension: "场景→Story覆盖", pass_threshold: "100%" }
+      - { dimension: "Enabler Feature约束→落实", pass_threshold: "100%" }
+
+  # ── 第9章 ──
+  version_rules:
+    note: "版本定义表"
+    rows:
+      - { version: "P1", positioning: "MVP版本", story_feature: "核心必备，没有就不能用" }
+      - { version: "P2", positioning: "增强版本", story_feature: "重要功能，没有会很不方便" }
+      - { version: "P3", positioning: "完善版本", story_feature: "标准功能，有了更完善" }
+      - { version: "P4", positioning: "扩展版本", story_feature: "扩展功能，支持更多场景" }
+      - { version: "P5", positioning: "高级版本", story_feature: "高级功能，满足深度需求" }
+      - { version: "P6", positioning: "理想版本", story_feature: "远期功能，理想状态下的能力" }
+
+  priority_distribution:
+    columns: ["版本", "Feature数量", "Story数量", "AC数量", "占比"]
+
+  version_details:
+    note: "按版本分设子节"
+    columns: ["Feature编号", "Feature名称", "Story编号", "Story名称", "优先级", "规模", "迭代安排(如有)"]
+
+  size_distribution:
+    note: "规模等级工作量参考"
+    rows:
+      - { size: "XS", effort: "<0.5天", note: "简单修改、配置调整" }
+      - { size: "S", effort: "0.5~1天", note: "单一功能点" }
+      - { size: "M", effort: "2~3天", note: "标准用户故事" }
+      - { size: "L", effort: "1周", note: "复杂用户故事" }
+      - { size: "XL", effort: "2周+", note: "需拆分，不可直接交付" }
+
+# ── 粒度标准 ──
+granularity:
+  feature:
+    suitable: ["可独立部署和发布", "3~10个Story", "可在1个PI内交付", "用户可感知功能变化"]
+    too_coarse: ["必须与其他Feature联合发布", "超过15个Story", "需跨多个PI"]
+    too_fine: ["仅1~2个Story", "工作量不足1个迭代", "用户无法感知独立价值"]
+
+  story:
+    suitable: ["完成时间1~3天", "AC数量3~10条", "1个角色", "INVEST全部满足", "规模XS~L"]
+    too_coarse: ["超过1周", "超过15条AC", "涉及3个以上角色交替", "I或S不满足", "规模XL"]
+    too_fine: ["少于2小时", "仅1条AC", "V不满足（无独立价值）"]
+
+  scenario:
+    suitable: ["主流程3~10步", "1~2个角色", "1个明确触发事件", "完整业务闭环", "对应1~3个Feature"]
+    too_coarse: ["主流程超过15步", "3个以上角色交替操作", "多个不同触发事件混合", "多个独立业务闭环", "对应5个以上Feature"]
+    too_fine: ["主流程少于2步", "不构成完整闭环是另一场景的子步骤", "多个场景共享同一Feature的同一部分"]
+
+  ac:
+    rule: "每条AC描述一个独立的验收点，不可合并多个验收点为一条"
+    example_split: "'能填写企业名称和所属行业' → 拆为两条AC"
+
+# ── 编号格式汇总 ──
+numbering:
+  - { type: "假设", format: "AS-{BC编号}-{序号}", example: "AS-BC11-001" }
+  - { type: "EF约束", format: "EF-{BC编号}-{序号}", example: "EF-BC11-001" }
+  - { type: "场景", format: "SC-{BC编号}-{三位序号}", example: "SC-BC11-001" }
+  - { type: "Feature", format: "FT-{BC编号}-{两位序号}", example: "FT-BC11-01" }
+  - { type: "User Story", format: "US-{BC编号}-{三位序号}", example: "US-BC11-001" }
+  - { type: "AC", format: "AC-{Story序号}-{两位序号}", example: "AC-001-01" }
+  - { type: "业务规则", format: "BR-{BC编号}-{三位序号}", example: "BR-BC11-001" }
+  - { type: "性能需求", format: "NFR-{BC编号}-P{两位序号}", example: "NFR-BC11-P01" }
+  - { type: "安全需求", format: "NFR-{BC编号}-S{两位序号}", example: "NFR-BC11-S01" }
+  - { type: "可用性需求", format: "NFR-{BC编号}-A{两位序号}", example: "NFR-BC11-A01" }
+  - { type: "其他质量属性", format: "NFR-{BC编号}-Q{两位序号}", example: "NFR-BC11-Q01" }
+  - { type: "数据需求", format: "NFR-{BC编号}-D{两位序号}", example: "NFR-BC11-D01" }
+  - { type: "BC间接口", format: "ITF-{BC编号}-{两位序号}", example: "ITF-BC11-01" }
+
+# ── 交叉引用要求 ──
+required_xrefs:
+  upstream:
+    - { doc: "阶段4 系统设计", check: "BC与服务映射、Enabler Capability/Feature清单、集成架构、非功能需求方案、BC版本覆盖矩阵" }
+    - { doc: "阶段3 领域设计", check: "BC定义、上下文映射、领域事件全景、统一语言词汇表" }
+    - { doc: "阶段2 宏观需求", check: "Business Epic清单、业务活动（PL2）、用户角色（CL2）、非功能需求框架" }
+  downstream:
+    - { doc: "阶段6 BC总体设计", check: "Feature/Story清单、业务规则清单、非功能需求清单为设计提供输入" }

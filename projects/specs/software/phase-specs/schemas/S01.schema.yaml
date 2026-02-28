@@ -1,0 +1,1457 @@
+# S01 战略规划编写规范 — 编写规则 Schema (优化版 v2)
+# 来源规范：specs/software/meta/S01-战略规划编写规范_v0.21@202602232218.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供章节结构、内容模型和编写约束
+# 优化重点：增强 AI 可执行性、结构化内容模型、增加生成指令和示例
+
+doc_id: S01
+doc_name: 战略规划编写规范
+doc_version: "0.21"
+target_doc: "01-战略规划"
+target_doc_name: 战略规划报告
+
+# ── 文档定位 ──
+positioning:
+  stage: 1
+  stage_name: 产品战略
+  upstream: [市场调研报告, 客户访谈记录, 竞品分析报告, 技术趋势报告]
+  downstream: [阶段2-宏观需求分析]
+  role: "阶段1'产品战略'的唯一正式输出物，通过战略评审后阶段1结束，为阶段2提供输入"
+
+# ── 上游输入 ──
+upstream_inputs:
+  - item: "市场调研报告"
+    source: "市场部"
+    note: "市场规模、竞争格局、趋势分析"
+    required: true
+  - item: "客户访谈记录"
+    source: "销售/客户成功"
+    note: "客户痛点、需求反馈"
+    required: true
+  - item: "竞品分析报告"
+    source: "产品部"
+    note: "竞品功能、定价、优劣势"
+    required: false
+  - item: "技术趋势报告"
+    source: "技术部"
+    note: "技术发展趋势、可行性评估"
+    required: false
+
+# ── 裁剪指引 ──
+tailoring:
+  必选项: "不可裁剪。如确实不适用应保留章节标题并注明'本产品不适用，原因：{具体原因}'"
+  宜_可选项: "可直接省略"
+  默认必选_无标注: "如确有充分理由不适用，应保留章节标题并注明不适用原因"
+
+# ── AI 生成全局配置 ──
+ai_generation_config:
+  mode: "progressive"  # 渐进式生成
+  token_budget: 15000  # 整个文档预估 token 数
+  complexity: "high"   # 复杂度：high/medium/low
+
+  generation_order:
+    - stage: "outline"
+      description: "生成文档大纲（章节标题）"
+      output: "章节编号和标题列表"
+
+    - stage: "chapter_1_summary"
+      description: "生成第1章执行摘要框架"
+      output: "各小节标题和占位符"
+      note: "第1章依赖其他章节，最后填充"
+
+    - stage: "chapters_2_to_8"
+      description: "按顺序生成第2-8章"
+      output: "完整章节内容"
+      sequence: [2, 3, 4, 5, 6, 7, 8]
+
+    - stage: "appendix_g"
+      description: "生成附录G（必选）"
+      output: "业务主题和业务域"
+
+    - stage: "fill_chapter_1"
+      description: "回填第1章执行摘要"
+      output: "基于第2-8章和附录G的汇总"
+
+    - stage: "optional_appendices"
+      description: "根据需要生成可选附录"
+      output: "附录A-F"
+
+  common_mistakes:
+    - "第1章执行摘要出现正文中没有的新数据"
+    - "客户分层定义在第2章、第3章、第5章不一致"
+    - "财务数据在第5章、第8章不一致"
+    - "版本规划在第6章与附录G不一致"
+    - "使用模糊表述（如'较多''较好'）而非具体数值"
+
+# ── 必选元数据 ──
+required_metadata:
+  - 文档版本
+  - 编制日期
+  - 文档状态
+  - 所属项目
+  - 适用阶段
+  - 文档密级
+
+# ── 章节结构（正文8章 + 附录7个，顺序固定不可调整） ──
+chapters:
+
+  - chapter: 1
+    title: 执行摘要
+    required: true
+    purpose: "全报告核心结论的压缩版，面向决策层，不产生新信息"
+
+    # ===== AI 生成配置 =====
+    ai_config:
+      generation_timing: "after_all_chapters"  # 在所有其他章节完成后生成
+      estimated_tokens: 2000
+      complexity: "high"
+      dependencies: ["第2-8章", "附录G"]
+
+    # ===== 生成策略 =====
+    generation_strategy:
+      mode: "extract_and_compress"
+      steps:
+        - step: 1
+          action: "从第4章提取核心理念"
+          source: "第4章 价值主张"
+          output: "1.1节内容"
+
+        - step: 2
+          action: "汇总全报告核心数据"
+          sources: ["第2章", "第5章", "第6章", "第8章"]
+          output: "1.2节项目概述表"
+
+        - step: 3
+          action: "压缩第2章市场分析"
+          source: "第2章"
+          output: "1.3节市场机会"
+
+        - step: 4
+          action: "汇总第4章和第5章"
+          sources: ["第4章", "第5章"]
+          output: "1.4节产品与商业"
+
+        - step: 5
+          action: "提取第8.2节预算规划"
+          source: "第8.2节"
+          output: "1.5节分期投入规划"
+
+        - step: 6
+          action: "汇总财务预测"
+          sources: ["第5.6节", "第5.3节", "第8.4节"]
+          output: "1.6节财务预测"
+
+        - step: 7
+          action: "提取P0/P1级风险"
+          source: "第7章"
+          output: "1.7节关键风险"
+
+        - step: 8
+          action: "综合评估"
+          sources: ["第2-8章"]
+          output: "1.8节可行性评估"
+
+        - step: 9
+          action: "生成决策建议"
+          sources: ["第6章", "第8章"]
+          output: "1.9节及子节"
+
+    # ===== 一致性约束 =====
+    consistency_constraints:
+      - source_section: "1.1 核心理念"
+        must_match: "第4章 价值主张（全局概括）"
+        validation: "核心能力描述应一致"
+
+      - source_section: "1.2 项目概述"
+        must_match: "全报告核心数据汇总"
+        validation: "各项数据应可溯源至对应章节"
+
+      - source_section: "1.3 市场机会"
+        must_match: "第2章 市场分析"
+        validation: "市场定位和核心优势应一致"
+
+      - source_section: "1.4 产品与商业"
+        must_match: "第4章 价值主张、第5章 商业模式"
+        validation: "产品架构和定价模型应一致"
+
+      - source_section: "1.5 分期投入规划"
+        must_match: "8.2 预算规划"
+        validation: "预算数据应完全一致"
+
+      - source_section: "1.6 财务预测"
+        must_match: "5.6 盈利模型、5.3 获客策略、8.4 投入产出分析"
+        validation: "财务数据应完全一致"
+
+      - source_section: "1.7 关键风险"
+        must_match: "第7章 风险分析（压缩版）"
+        validation: "仅包含P0/P1级风险"
+
+      - source_section: "1.8 可行性评估"
+        must_match: "综合第2–8章关键结论"
+        validation: "评估依据应可追溯"
+
+      - source_section: "1.9.1 MVP范围"
+        must_match: "6.2 版本规划（首版本）"
+        validation: "P1版本功能范围应一致"
+
+      - source_section: "1.9.2 团队规划"
+        must_match: "8.1 团队资源需求"
+        validation: "团队人数应一致"
+
+      - source_section: "1.9.3 产品路线图"
+        must_match: "第6章 版本路线图（压缩版）"
+        validation: "各期核心目标应一致"
+
+      - source_section: "1.9.4 关键里程碑"
+        must_match: "6.4 关键里程碑、8.3 时间规划"
+        validation: "里程碑时间和标准应一致"
+
+    # ===== 章节结构 =====
+    sections:
+      - id: "1.1"
+        title: "核心理念"
+        content_points:
+          - "产品核心能力一句话描述"
+          - "核心能力与应用场景关系图"
+        model: null
+        generation_instruction: |
+          从第4章提取：
+          1. 产品核心能力的一句话描述（不超过30字）
+          2. 绘制核心能力与应用场景的关系图（ASCII图）
+
+      - id: "1.2"
+        title: "项目概述"
+        content_points:
+          - "产品名称、定位、首选场景"
+          - "核心数据（周期、投入、客户目标、营收、盈亏平衡）"
+        model: "project_core_data"
+        generation_instruction: |
+          汇总全报告核心数据：
+          1. 从第6章提取研发周期
+          2. 从第8章提取总投入
+          3. 从第5章提取客户目标和营收预测
+          4. 从第5.6节提取盈亏平衡时间点
+          5. 生成项目核心数据表
+
+      - id: "1.3"
+        title: "市场机会"
+        content_points:
+          - "市场定位"
+          - "核心优势量化表"
+        model: "quantitative_comparison"
+        generation_instruction: |
+          压缩第2章内容：
+          1. 提取市场定位（一段话）
+          2. 从第2章痛点分析提取核心优势
+          3. 生成量化对比表（传统方式 vs 产品方式）
+
+      - id: "1.4"
+        title: "产品与商业"
+        content_points:
+          - "产品架构概要"
+          - "定价模型表"
+          - "获客路径图"
+        models: ["pricing_model"]
+        generation_instruction: |
+          汇总第4章和第5章：
+          1. 从第4章提取产品架构概要（一段话或简图）
+          2. 从第5.2节提取定价模型表
+          3. 从第5.3节提取获客路径图
+
+      - id: "1.5"
+        title: "分期投入规划"
+        content_points:
+          - "分期预算表（期数、时间、投入、累计、主要目标）"
+          - "投入策略特点"
+        model: "phased_budget"
+        generation_instruction: |
+          直接引用第8.2节：
+          1. 复制分期预算表
+          2. 提取投入策略特点（1-2段话）
+
+      - id: "1.6"
+        title: "财务预测"
+        content_points:
+          - "客户增长预测表"
+          - "财务汇总表"
+          - "盈亏平衡分析"
+        models: ["customer_growth_forecast", "financial_summary"]
+        generation_instruction: |
+          汇总财务数据：
+          1. 从第5.3节提取客户增长预测
+          2. 从第5.6节提取财务汇总表
+          3. 从第5.6.2节提取盈亏平衡分析
+
+      - id: "1.7"
+        title: "关键风险"
+        content_points:
+          - "按P0/P1分级列出风险及一句话应对"
+        model: "risk_summary"
+        generation_instruction: |
+          从第7章提取：
+          1. 筛选P0和P1级风险
+          2. 每个风险压缩为一行（风险名称+一句话描述+一句话应对）
+          3. 生成风险摘要表
+
+      - id: "1.8"
+        title: "可行性评估"
+        content_points:
+          - "分维度评分表（维度、评分、关键依据）"
+        model: "feasibility_score"
+        generation_instruction: |
+          综合评估：
+          1. 定义评估维度（市场可行性、技术可行性、商业可行性、团队可行性、财务可行性）
+          2. 从第2-8章提取支撑数据
+          3. 给出量化评分（1-5分或百分制，全文统一）
+          4. 标注关键依据
+
+      - id: "1.9"
+        title: "决策建议"
+        content_points:
+          - "Go/No-Go判定 + 核心理由"
+          - "阶段性决策点"
+        model: "stage_decision_point"
+        generation_instruction: |
+          生成决策建议：
+          1. 基于1.8节可行性评估给出Go/No-Go判定
+          2. 列出核心理由（3-5条）
+          3. 从第6.4节和第8.3节提取阶段性决策点
+
+      - id: "1.9.1"
+        title: "MVP范围"
+        content_points:
+          - "P1版本功能范围 + 核心验收指标（压缩版）"
+        model: "mvp_acceptance"
+        generation_instruction: |
+          从第6.2节提取P1版本：
+          1. 提取P1版本功能范围（列表形式）
+          2. 提取核心验收指标（3-5个关键指标）
+          3. 生成MVP验收指标表
+
+      - id: "1.9.2"
+        title: "团队规划"
+        content_points:
+          - "各期团队总人数 + 关键岗位变化（压缩版）"
+        model: "phased_team"
+        generation_instruction: |
+          从第8.1节压缩：
+          1. 提取各期团队总人数
+          2. 标注关键岗位变化（相比上期）
+          3. 不展开全部岗位构成
+
+      - id: "1.9.3"
+        title: "产品路线图"
+        content_points:
+          - "各期核心目标 + 关键功能（压缩版）"
+        model: "version_detail"
+        generation_instruction: |
+          从第6章压缩：
+          1. 提取各期核心目标（一句话）
+          2. 提取关键功能（3-5个）
+          3. 不展开功能明细
+
+      - id: "1.9.4"
+        title: "关键里程碑"
+        content_points:
+          - "各期Go/No-Go决策点 + 核心验收标准（压缩版）"
+        model: "milestone"
+        generation_instruction: |
+          从第6.4节和第8.3节提取：
+          1. 列出各期Go/No-Go决策点
+          2. 标注核心验收标准（量化）
+          3. 不展开详细验收清单
+
+  - chapter: 2
+    title: 市场分析
+    required: true
+    purpose: "从外部视角论证'市场值得进入'：痛点真实、规模可支撑、时机合理"
+
+    ai_config:
+      estimated_tokens: 2500
+      complexity: "medium"
+      dependencies: ["市场调研报告", "客户访谈记录"]
+
+    generation_strategy:
+      mode: "sequential"
+      key_principles:
+        - "困境还原应以具体场景为基础，避免泛泛描述"
+        - "市场容量估算应标注数据来源与估算方法"
+        - "客户分层定义为全报告基准，向第3章和第5章传递"
+
+    sections:
+      - id: "2.1"
+        title: "核心痛点分析"
+        content_points:
+          - "按'困境还原→根因分析'逐个展开"
+        generation_instruction: |
+          识别3-5个核心困境：
+          1. 每个困境独立成小节（2.1.1, 2.1.2...）
+          2. 场景还原：描述目标客户的真实困境场景
+          3. 困境表现：用数据量化困境的严重程度
+          4. 根本原因：分析困境的根本原因
+          5. 最后一节归纳共同根源，绘制困境→根源→解决方案关系图
+
+      - id: "2.2"
+        title: "目标市场定义"
+        subsections:
+          - id: "2.2.1"
+            title: "市场选择逻辑"
+            model: "scenario_selection"
+            generation_instruction: |
+              评估候选场景：
+              1. 列出3-5个候选场景
+              2. 从市场规模、痛点强度、竞争程度、进入难度评估
+              3. 给出综合评估（选择/备选/放弃+理由）
+
+          - id: "2.2.2"
+            title: "客户分层"
+            model: "customer_segmentation"
+            generation_instruction: |
+              定义客户分层（全报告基准）：
+              1. 识别2-4个客户类型
+              2. 定义典型特征、产品形态、客单价区间、目标客户数
+              3. 此分层将在第3章和第5章复用，务必清晰
+
+          - id: "2.2.3"
+            title: "市场容量估算"
+            model: "market_sizing"
+            generation_instruction: |
+              估算市场容量：
+              1. 对每个客户类型估算TAM（潜在客户数×客单价）
+              2. 设定目标渗透率，计算SAM
+              3. 标注估算依据（数据来源+方法）
+
+      - id: "2.3"
+        title: "市场窗口期"
+        generation_instruction: |
+          分析时机：
+          1. 窗口形成条件（技术成熟度、政策环境、市场教育程度）
+          2. 时间判断（窗口期还有多久）
+          3. 先发优势（早进入的价值）
+
+      - id: "2.4"
+        title: "增长驱动因素"
+        generation_instruction: |
+          识别驱动因素：
+          1. 列出3-5个驱动市场增长的核心因素
+          2. 每个因素说明影响机制和量化预期
+
+  - chapter: 3
+    title: 客户分析
+    required: true
+    purpose: "从客户视角'我们的客户是谁、如何决策、如何购买'"
+
+    ai_config:
+      estimated_tokens: 2000
+      complexity: "medium"
+      dependencies: ["第2.2.2节客户分层"]
+
+    validation_rules:
+      - rule: "客户分层应与第2.2.2节一致"
+        severity: "error"
+      - rule: "客户画像(3.2)、决策链(3.3)、购买行为(3.4)的子章节数量应与客户分层数量一致"
+        severity: "error"
+
+    sections:
+      - id: "3.1"
+        title: "客户真实场景"
+        subsections:
+          - id: "3.1.1"
+            title: "典型场景还原"
+            model: "scene_narrative"
+            generation_instruction: |
+              叙事方式还原场景：
+              1. 选择一个典型客户
+              2. 描述其工作场景和面临的挑战
+              3. 与第2章痛点呼应
+
+          - id: "3.1.2"
+            title: "客户一天实录"
+            model: "daily_record"
+            generation_instruction: |
+              时间线还原：
+              1. 按时间段列出客户一天的工作活动
+              2. 标注使用工具、痛点、耗时占比
+
+          - id: "3.1.3"
+            title: "购买触发因素"
+            model: "trigger_factors"
+            generation_instruction: |
+              识别触发事件：
+              1. 列出触发客户评估/采购的事件
+              2. 标注触发频率、紧迫程度、关联痛点
+
+      - id: "3.2"
+        title: "客户画像"
+        generation_instruction: |
+          按客户分层分设子章节：
+          1. 每个客户类型一个小节（3.2.1, 3.2.2...）
+          2. 使用customer_portrait模型
+          3. 客户类型应与第2.2.2节一致
+
+      - id: "3.3"
+        title: "决策链分析"
+        generation_instruction: |
+          按客户分层分设子章节：
+          1. 每个客户类型一个小节（3.3.1, 3.3.2...）
+          2. 使用decision_chain模型
+          3. 定义决策角色、关注点、影响力权重
+
+      - id: "3.4"
+        title: "购买行为分析"
+        generation_instruction: |
+          按客户分层分设子章节：
+          1. 每个客户类型一个小节（3.4.1, 3.4.2...）
+          2. 使用purchase_process模型
+          3. 定义购买流程（阶段、动作、周期）
+
+  - chapter: 4
+    title: 价值主张
+    required: true
+    purpose: "回答'我们提供什么独特价值'：核心价值→生态系统→能力模型→差异化→ROI"
+
+    ai_config:
+      estimated_tokens: 3000
+      complexity: "high"
+      dependencies: ["第2章痛点分析"]
+
+    validation_rules:
+      - rule: "'一句话定位'格式：'{产品名}是面向{目标客户}的、{核心技术特征}的、{核心能力}的{品类名称}'"
+        severity: "warning"
+      - rule: "量化价值承诺表中实现前提不应省略"
+        severity: "error"
+      - rule: "差异化优势各子章节应有量化数据支撑"
+        severity: "warning"
+
+    sections:
+      - id: "4.1"
+        title: "核心价值主张"
+        subsections:
+          - id: "4.1.1"
+            title: "根本问题"
+            model: "problem_comparison"
+          - id: "4.1.2"
+            title: "价值主张对比"
+            model: "value_proposition_comparison"
+          - id: "4.1.3"
+            title: "量化价值承诺"
+            model: "quantified_value_promise"
+
+      - id: "4.2"
+        title: "业务价值生态"
+        subsections:
+          - id: "4.2.1"
+            title: "生态系统概述"
+            model: "ecosystem_participant"
+          - id: "4.2.2"
+            title: "生态系统图"
+            model: "ecosystem_diagram"
+            note: "核心视图，活动流视图（供给侧→数据层→消费侧）"
+          - id: "4.2.3"
+            title: "数据资产架构"
+            model: "data_asset_classification"
+          - id: "4.2.4"
+            title: "生态与交付"
+            generation_instruction: "说明生态系统如何驱动价值交付"
+
+      - id: "4.3"
+        title: "核心能力模型"
+        subsections:
+          - id: "4.3.1"
+            title: "模型架构"
+            generation_instruction: "绘制能力模型架构图/表"
+          - id: "4.3.2"
+            title: "核心定义"
+            model: "capability_definition"
+          - id: "4.3.3"
+            title: "能力与痛点"
+            model: "capability_pain_mapping"
+
+      - id: "4.4"
+        title: "差异化优势"
+        generation_instruction: |
+          按壁垒类型分设子章节：
+          1. 4.4.1 能力壁垒
+          2. 4.4.2 成本壁垒
+          3. 4.4.3 执行壁垒
+          4. 4.4.4 IP保护策略
+          每个壁垒使用barrier_description模型
+
+      - id: "4.5"
+        title: "客户ROI分析"
+        model: "customer_roi"
+
+      - id: "4.6"
+        title: "竞争壁垒总结"
+        generation_instruction: "总结壁垒协同效应 + 与竞品本质区别"
+
+  - chapter: 5
+    title: 商业模式
+    required: true
+    purpose: "回答'如何把价值变成收入'：定价→获客→客户成功→成本→盈利"
+
+    ai_config:
+      estimated_tokens: 2500
+      complexity: "high"
+      dependencies: ["第2.2.2节客户分层", "第3章客户画像"]
+
+    validation_rules:
+      - rule: "定价策略的客户分类应与第2.2.2节客户分层一致"
+        severity: "error"
+      - rule: "盈利模型(5.6节)的财务数据应与8.2节预算规划、8.4节投入产出分析保持一致"
+        severity: "error"
+
+    sections:
+      - id: "5.1"
+        title: "商业模式概述"
+        subsections:
+          - id: "5.1.1"
+            title: "模式定位"
+            model: "business_model_comparison"
+          - id: "5.1.2"
+            title: "收入来源"
+            model: "revenue_structure"
+
+      - id: "5.2"
+        title: "定价策略"
+        generation_instruction: |
+          按客户分层分设子章节：
+          1. 5.2.1 定价模型总览（使用pricing_model模型）
+          2. 5.2.x 各客户类型定价详情（使用customer_pricing_detail模型）
+          3. 5.2.n 定价对比（使用pricing_comparison模型）
+          客户类型应与第2.2.2节一致
+
+      - id: "5.3"
+        title: "获客策略"
+        generation_instruction: |
+          按阶段分设子章节：
+          1. 5.3.x 各阶段获客策略（使用acquisition_phase模型）
+          2. 5.3.n 策略汇总（使用acquisition_summary模型）
+
+      - id: "5.4"
+        title: "客户成功"
+        generation_instruction: "团队定位 + 留存策略 + 扩展策略"
+
+      - id: "5.5"
+        title: "成本结构"
+        model: "cost_structure"
+        generation_instruction: "成本类别分析表 + 母体资源复用优势"
+
+      - id: "5.6"
+        title: "盈利模型"
+        subsections:
+          - id: "5.6.1"
+            title: "收益预测"
+            model: "phased_revenue_forecast"
+          - id: "5.6.2"
+            title: "盈亏平衡"
+            generation_instruction: "单期盈利时间点 + 累计盈利时间点"
+          - id: "5.6.3"
+            title: "财务指标目标"
+            model: "financial_kpi"
+
+  - chapter: 6
+    title: 版本路线图
+    required: true
+    purpose: "回答'产品如何分步落地'：版本规划→功能演进→里程碑"
+
+    ai_config:
+      estimated_tokens: 2000
+      complexity: "medium"
+      dependencies: ["附录G业务主题"]
+
+    validation_rules:
+      - rule: "各版本功能范围应与附录G.1业务主题的版本对应关系表保持一致"
+        severity: "error"
+
+    sections:
+      - id: "6.1"
+        title: "产品架构概述"
+        generation_instruction: "核心架构体系概要"
+
+      - id: "6.2"
+        title: "版本规划"
+        generation_instruction: |
+          1. 6.2.1 路线图总览（使用roadmap_overview模型）
+          2. 6.2.x 各版本详情（使用version_detail模型）
+          版本通常为P1-P6
+
+      - id: "6.3"
+        title: "数据资产建设路线"
+        model: "data_asset_roadmap"
+        optional: true
+        note: "(宜) 数据资产分期建设计划 + 内容转化机制"
+
+      - id: "6.4"
+        title: "关键里程碑"
+        model: "milestone"
+        generation_instruction: "各期里程碑 + 验收标准 + Go/No-Go决策点"
+
+  - chapter: 7
+    title: 风险分析
+    required: true
+    purpose: "系统识别和评估风险，建立可执行的风险管控体系"
+
+    ai_config:
+      estimated_tokens: 1500
+      complexity: "medium"
+
+    validation_rules:
+      - rule: "风险等级：P0级（红色，必须立即处理）、P1级（黄色，需要关注）、P2级（绿色，可控）"
+        severity: "info"
+      - rule: "每项风险以统一格式呈现：风险详情表 + 紧跟应对措施列表"
+        severity: "warning"
+
+    sections:
+      - id: "7.1"
+        title: "风险总览"
+        model: "risk_overview"
+
+      - id: "7.2"
+        title: "P0级风险"
+        generation_instruction: |
+          按P0分组：
+          1. 每个风险一个小节（7.2.1, 7.2.2...）
+          2. 使用risk_detail模型
+          3. 风险详情表 + 应对措施列表
+
+      - id: "7.3"
+        title: "P1级风险"
+        generation_instruction: "同7.2，按P1分组"
+
+      - id: "7.4"
+        title: "P2级风险"
+        generation_instruction: "同7.2，按P2分组"
+
+      - id: "7.5"
+        title: "风险监控机制"
+        model: "risk_monitoring"
+
+  - chapter: 8
+    title: 资源需求
+    required: true
+    purpose: "回答'需要多少资源、投入产出是否合理'：团队→预算→时间→投入产出"
+
+    ai_config:
+      estimated_tokens: 1500
+      complexity: "medium"
+
+    validation_rules:
+      - rule: "预算数据(8.2节)应与5.5节成本结构、5.6节盈利模型的财务假设保持一致"
+        severity: "error"
+      - rule: "时间规划(8.3节)应与6.4节关键里程碑保持一致"
+        severity: "error"
+
+    sections:
+      - id: "8.1"
+        title: "团队资源需求"
+        subsections:
+          - id: "8.1.1"
+            title: "核心团队配置"
+            model: "role_capability"
+          - id: "8.1.2"
+            title: "分期团队规模"
+            model: "phased_team"
+          - id: "8.1.3"
+            title: "分期人员构成"
+            model: "phased_staffing"
+
+      - id: "8.2"
+        title: "预算规划"
+        subsections:
+          - id: "8.2.1"
+            title: "分期预算总览"
+            model: "phased_budget"
+          - id: "8.2.2"
+            title: "成本结构说明"
+            model: "cost_structure"
+
+      - id: "8.3"
+        title: "时间规划"
+        model: "milestone"
+
+      - id: "8.4"
+        title: "投入产出分析"
+        subsections:
+          - id: "8.4.1"
+            title: "三年投入产出"
+            model: "roi_summary"
+          - id: "8.4.2"
+            title: "分期止损线"
+            model: "stop_loss"
+
+# ── 附录结构 ──
+appendices:
+  - id: A
+    title: "术语速查"
+    type: "资料性"
+    required: false
+    sections:
+      - id: "A.1"
+        title: "核心术语简表"
+        model: "glossary_brief"
+      - id: "A.2"
+        title: "英文对照表"
+        model: "glossary_en"
+
+  - id: B
+    title: "核心概念"
+    type: "资料性"
+    required: false
+    sections:
+      - id: "B.1"
+        title: "术语关系图谱"
+        model: "term_relation_diagram"
+      - id: "B.2"
+        title: "关键概念详细定义"
+        model: "concept_definition"
+
+  - id: C
+    title: "业务架构"
+    type: "资料性"
+    required: false
+    sections:
+      - id: "C.1"
+        title: "业务架构总览"
+        model: "biz_arch_diagram"
+      - id: "C.2"
+        title: "各模块详细说明"
+        model: "biz_module_description"
+
+  - id: D
+    title: "竞品分析"
+    type: "资料性"
+    required: false
+    sections:
+      - id: "D.1"
+        title: "竞品分类"
+        model: "competitor_classification"
+      - id: "D.2"
+        title: "竞品对比"
+        model: "competitor_comparison"
+      - id: "D.3"
+        title: "竞争策略"
+        model: "competition_strategy"
+
+  - id: E
+    title: "财务模型详情"
+    type: "资料性"
+    required: false
+    validation_rules:
+      - rule: "模型参数和计算结果应与正文5.6节盈利模型、第8章预算规划、投入产出分析保持一致"
+        severity: "error"
+    sections:
+      - id: "E.1"
+        title: "收入模型"
+        model: "revenue_model_detail"
+      - id: "E.2"
+        title: "成本模型"
+        model: "cost_model_detail"
+      - id: "E.3"
+        title: "盈利模型"
+        model: "profit_model_detail"
+      - id: "E.4"
+        title: "关键财务指标"
+        model: "financial_kpi"
+
+  - id: F
+    title: "技术方案详情"
+    type: "资料性"
+    required: false
+    sections:
+      - id: "F.1"
+        title: "技术架构选型"
+        model: "tech_selection"
+      - id: "F.2"
+        title: "数据架构"
+        generation_instruction: "数据存储、流转、治理方案"
+      - id: "F.3"
+        title: "部署架构"
+        generation_instruction: "部署方式和环境规划"
+      - id: "F.4"
+        title: "安全架构"
+        generation_instruction: "安全策略和合规要求"
+      - id: "F.5"
+        title: "性能指标"
+        model: "performance_kpi"
+
+  - id: G
+    title: "业务主题与业务域"
+    type: "规范性"
+    required: true
+    note: "向阶段2传递的关键输入"
+    validation_rules:
+      - rule: "G.1业务主题的版本对应关系应与正文6.2节版本规划一致"
+        severity: "error"
+      - rule: "G.2业务域的范围应完整覆盖G.1中所有业务主题"
+        severity: "error"
+      - rule: "G.3关系图应包含G.2中所有业务域"
+        severity: "error"
+      - rule: "业务域与后续阶段3识别的限界上下文（BC）不必然一一对应，应在文中明确标注"
+        severity: "warning"
+    sections:
+      - id: "G.1"
+        title: "业务主题"
+        models: ["business_theme_list", "theme_version_mapping"]
+        generation_instruction: |
+          1. 生成业务主题清单表（使用business_theme_list模型）
+          2. 生成主题与版本路线图对应关系表（使用theme_version_mapping模型）
+
+      - id: "G.2"
+        title: "业务域初步划分"
+        model: "business_domain_list"
+        generation_instruction: |
+          1. 生成业务域清单表
+          2. 边界说明应明确'本域做什么'和'本域不做什么'
+
+      - id: "G.3"
+        title: "业务域关系概览"
+        model: "domain_relation_diagram"
+        generation_instruction: "业务域关系概览图（ASCII图，标注主要数据流向）"
+
+# ── 内容模型定义 ──
+# 格式：结构化定义，包含列定义、示例、验证规则
+
+content_models:
+
+  # ===== 第1章执行摘要模型 =====
+
+  quantitative_comparison:
+    description: "用于'传统方式 vs 产品方式'对比的场景"
+    output_type: "table"
+    note: "各章节可根据需要调整列名的具体含义，但核心结构应保持一致"
+    columns:
+      - name: "对比维度"
+        type: "text"
+        description: "对比的具体维度"
+        example: "需求分析周期"
+        required: true
+
+      - name: "传统方式"
+        type: "text"
+        description: "传统方式下的现状数据"
+        example: "2-3周"
+        required: true
+        validation: "应为具体数值，不应使用'较多''较好'等模糊表述"
+
+      - name: "产品方式"
+        type: "text"
+        description: "使用本产品后的目标数据"
+        example: "2-3天"
+        required: true
+        validation: "应为具体数值"
+
+      - name: "提升幅度"
+        type: "text"
+        description: "量化提升"
+        example: "缩短70%"
+        required: true
+        format: "百分比或倍数"
+
+      - name: "实现前提"
+        type: "text"
+        description: "达成该提升的前提条件"
+        example: "团队已掌握产品使用方法"
+        required: true
+        validation: "不可省略"
+
+    example: |
+      | 对比维度     | 传统方式 | 产品方式 | 提升幅度 | 实现前提                 |
+      |-------------|---------|---------|---------|-------------------------|
+      | 需求分析周期 | 2-3周   | 2-3天   | 缩短70% | 团队已掌握产品使用方法   |
+      | 人工成本     | 5人月   | 1人月   | 降低80% | 使用标准化模板和工作流   |
+
+  phased_budget:
+    description: "分期预算表，每行对应一个版本期"
+    output_type: "table"
+    columns:
+      - name: "期数"
+        type: "enum"
+        values: ["P1", "P2", "P3", "P4", "P5", "P6"]
+        example: "P1"
+        required: true
+
+      - name: "时间范围"
+        type: "text"
+        format: "YYYY-QN ~ YYYY-QN"
+        example: "2026-Q1 ~ 2026-Q2"
+        required: true
+
+      - name: "期间投入"
+        type: "number"
+        unit: "万元"
+        example: "150"
+        required: true
+
+      - name: "累计投入"
+        type: "number"
+        unit: "万元"
+        example: "150"
+        required: true
+        validation: "应为前面所有期间投入之和"
+
+      - name: "主要目标"
+        type: "text"
+        description: "本期核心交付目标（一句话）"
+        example: "完成MVP版本，验证核心价值"
+        required: true
+        max_length: 50
+
+    example: |
+      | 期数 | 时间范围           | 期间投入 | 累计投入 | 主要目标                 |
+      |-----|-------------------|---------|---------|-------------------------|
+      | P1  | 2026-Q1 ~ 2026-Q2 | 150万   | 150万   | 完成MVP版本，验证核心价值 |
+      | P2  | 2026-Q3 ~ 2026-Q4 | 200万   | 350万   | 扩展功能，提升用户体验    |
+
+  project_core_data:
+    description: "项目核心数据表，集中呈现项目全局关键指标"
+    output_type: "table"
+    columns:
+      - name: "指标"
+        type: "text"
+        description: "指标名称"
+        examples: ["研发周期", "总投入", "目标客户数", "预期营收", "盈亏平衡点"]
+        required: true
+
+      - name: "数值"
+        type: "text"
+        description: "具体数值或区间"
+        example: "12个月"
+        required: true
+        validation: "不应使用模糊表述"
+
+      - name: "说明"
+        type: "text"
+        description: "数值的口径或前提条件"
+        example: "含P1–P3三期"
+        required: false
+
+    example: |
+      | 指标       | 数值      | 说明         |
+      |-----------|----------|-------------|
+      | 研发周期   | 12个月   | 含P1–P3三期  |
+      | 总投入     | 500万元  | 首年预算     |
+      | 目标客户数 | 50家     | P1末目标     |
+
+  customer_growth_forecast:
+    description: "客户增长预测表，按时间维度展示客户数量的增长预测"
+    output_type: "table"
+    columns:
+      - name: "时间节点"
+        type: "text"
+        format: "Px末 或 第N个月"
+        example: "P1末"
+        required: true
+
+      - name: "目标客户数"
+        type: "number"
+        description: "预期累计客户数量"
+        example: "50"
+        required: true
+
+      - name: "新增客户数"
+        type: "number"
+        description: "本期新增客户数量"
+        example: "50"
+        required: true
+
+      - name: "客户类型"
+        type: "text"
+        description: "按客户分层标注主要客户构成"
+        example: "中小企业为主"
+        required: true
+
+      - name: "关键假设"
+        type: "text"
+        description: "预测所依赖的核心假设"
+        example: "月均获客5家"
+        required: true
+
+    example: |
+      | 时间节点 | 目标客户数 | 新增客户数 | 客户类型     | 关键假设     |
+      |---------|-----------|-----------|-------------|-------------|
+      | P1末    | 50        | 50        | 中小企业为主 | 月均获客5家  |
+      | P2末    | 150       | 100       | 中大型企业   | 转化率提升   |
+
+  financial_summary:
+    description: "财务汇总表，集中呈现关键财务指标的分期预测"
+    output_type: "table"
+    columns:
+      - name: "时间节点"
+        type: "text"
+        example: "P1末"
+        required: true
+
+      - name: "收入"
+        type: "number"
+        unit: "万元"
+        description: "本期收入"
+        required: true
+
+      - name: "成本"
+        type: "number"
+        unit: "万元"
+        description: "本期成本"
+        required: true
+
+      - name: "净利润"
+        type: "number"
+        unit: "万元"
+        description: "本期净利润"
+        required: true
+
+      - name: "累计净利润"
+        type: "number"
+        unit: "万元"
+        description: "截至本期末累计净利润"
+        required: true
+
+      - name: "关键假设"
+        type: "text"
+        description: "本期财务预测的核心假设"
+        required: true
+
+  risk_summary:
+    description: "风险摘要表，仅摘录P0/P1级风险"
+    output_type: "table"
+    note: "每项风险压缩为一行，详细风险分析见第7章"
+    columns:
+      - name: "风险等级"
+        type: "enum"
+        values: ["P0", "P1"]
+        required: true
+
+      - name: "风险名称"
+        type: "text"
+        description: "简短风险名"
+        max_length: 20
+        required: true
+
+      - name: "一句话描述"
+        type: "text"
+        description: "风险的核心内容"
+        max_length: 50
+        required: true
+
+      - name: "应对策略"
+        type: "text"
+        description: "一句话应对措施"
+        max_length: 50
+        required: true
+
+  feasibility_score:
+    description: "可行性评分表，从多维度对项目可行性进行评分"
+    output_type: "table"
+    columns:
+      - name: "评估维度"
+        type: "text"
+        examples: ["市场可行性", "技术可行性", "商业可行性", "团队可行性", "财务可行性"]
+        required: true
+
+      - name: "评分"
+        type: "number"
+        description: "量化评分"
+        format: "1-5分或百分制，全文统一"
+        example: "4"
+        required: true
+        validation: "全文应使用统一的评分标准"
+
+      - name: "关键依据"
+        type: "text"
+        description: "支撑该评分的核心事实或数据"
+        required: true
+
+  stage_decision_point:
+    description: "阶段性决策点表，定义每个版本期末的验收标准和继续/止损条件"
+    output_type: "table"
+    columns:
+      - name: "决策点"
+        type: "text"
+        format: "Px末"
+        example: "P1末"
+        required: true
+
+      - name: "验收标准"
+        type: "text"
+        description: "本期必须达成的量化标准"
+        example: "核心功能完成率≥90%"
+        required: true
+        validation: "应为量化标准"
+
+      - name: "继续条件"
+        type: "text"
+        description: "满足什么条件可进入下一期"
+        required: true
+
+      - name: "止损条件"
+        type: "text"
+        description: "触发什么条件应终止项目"
+        required: true
+
+  mvp_acceptance:
+    description: "MVP验收指标表，定义MVP版本的量化验收指标"
+    output_type: "table"
+    columns:
+      - name: "指标名称"
+        type: "text"
+        examples: ["核心功能完成率", "用户满意度", "系统稳定性"]
+        required: true
+
+      - name: "目标值"
+        type: "text"
+        description: "量化的目标值"
+        example: "≥90%"
+        required: true
+        validation: "应为量化值"
+
+      - name: "度量方式"
+        type: "text"
+        description: "如何度量该指标"
+        example: "功能测试通过率"
+        required: true
+
+      - name: "数据来源"
+        type: "text"
+        description: "指标数据的获取途径"
+        example: "测试报告"
+        required: true
+
+  phased_team:
+    description: "分期团队构成表，展示各版本期的团队规模和岗位分布"
+    output_type: "table"
+    columns:
+      - name: "期数"
+        type: "enum"
+        values: ["P1", "P2", "P3", "P4", "P5", "P6"]
+        required: true
+
+      - name: "团队总人数"
+        type: "number"
+        description: "本期团队总规模"
+        required: true
+
+      - name: "岗位构成"
+        type: "text"
+        description: "各岗位人数分布"
+        example: "后端3人、前端2人、产品1人"
+        required: true
+
+      - name: "关键变化"
+        type: "text"
+        description: "相比上期的主要人员变动"
+        example: "新增测试工程师1人"
+        required: false
+
+  role_capability:
+    description: "岗位能力要求表，定义核心岗位的能力要求"
+    output_type: "table"
+    columns:
+      - name: "岗位名称"
+        type: "text"
+        examples: ["产品经理", "后端工程师", "前端工程师"]
+        required: true
+
+      - name: "职责简述"
+        type: "text"
+        description: "一句话描述该岗位核心职责"
+        max_length: 50
+        required: true
+
+      - name: "能力要求"
+        type: "text"
+        description: "关键能力要求（技术栈、经验年限等）"
+        example: "Java/Spring Boot，3年以上经验"
+        required: true
+
+      - name: "优先级"
+        type: "enum"
+        values: ["必须", "优先", "可延后"]
+        description: "到岗紧迫程度"
+        required: true
+
+  milestone:
+    description: "里程碑表，定义各版本期的关键里程碑"
+    output_type: "table"
+    columns:
+      - name: "里程碑"
+        type: "text"
+        description: "里程碑名称"
+        example: "MVP版本发布"
+        required: true
+
+      - name: "目标日期"
+        type: "date"
+        format: "YYYY-MM-DD"
+        description: "预期完成日期"
+        required: true
+
+      - name: "验收标准"
+        type: "text"
+        description: "里程碑的量化验收标准"
+        required: true
+        validation: "应为量化标准"
+
+      - name: "Go/No-Go"
+        type: "enum"
+        values: ["是", "否"]
+        description: "是否为决策点"
+        required: true
+
+  # ===== 第2章市场分析模型 =====
+
+  pain_scenario:
+    description: "困境场景还原，每个困境采用结构化还原"
+    output_type: "structured_text"
+    elements:
+      - name: "场景标题"
+        description: "简短命名"
+        example: "需求分析效率低下"
+
+      - name: "角色"
+        description: "主要参与者"
+        example: "产品经理"
+
+      - name: "背景"
+        description: "业务上下文1-2句"
+        example: "在传统软件开发中，产品经理需要..."
+
+      - name: "流程还原"
+        description: "逐步还原当前方式，标注耗时和痛点"
+        format: "分步骤描述"
+
+      - name: "结果"
+        description: "典型结果量化"
+        example: "平均耗时2-3周，错误率30%"
+
+  pain_metrics:
+    description: "困境表现量化表"
+    output_type: "table"
+    columns:
+      - name: "表现维度"
+        type: "text"
+        examples: ["耗时", "错误率", "人力成本"]
+        required: true
+
+      - name: "现状数据"
+        type: "text"
+        description: "量化数据"
+        required: true
+        validation: "应为具体数值"
+
+      - name: "影响范围"
+        type: "text"
+        description: "受影响的人群或业务范围"
+        required: true
+
+      - name: "数据来源"
+        type: "text"
+        description: "数据的来源"
+        example: "客户访谈"
+        required: true
+
+  scenario_selection:
+    description: "首选场景选择依据表"
+    output_type: "table"
+    columns:
+      - name: "候选场景"
+        type: "text"
+        required: true
+
+      - name: "市场规模"
+        type: "text"
+        description: "潜在市场规模估算"
+        required: true
+
+      - name: "痛点强度"
+        type: "enum"
+        values: ["高", "中", "低"]
+        required: true
+
+      - name: "竞争程度"
+        type: "enum"
+        values: ["激烈", "中等", "蓝海"]
+        required: true
+
+      - name: "进入难度"
+        type: "enum"
+        values: ["高", "中", "低"]
+        required: true
+
+      - name: "综合评估"
+        type: "text"
+        format: "选择/备选/放弃 + 理由"
+        required: true
+
+  customer_segmentation:
+    description: "客户分层表，此分层为全报告客户分类基准"
+    output_type: "table"
+    note: "第3章客户画像、第5章定价策略均应与此一致"
+    columns:
+      - name: "客户类型"
+        type: "text"
+        description: "分层名称"
+        examples: ["中小企业", "大型企业", "政府机构"]
+        required: true
+
+      - name: "典型特征"
+        type: "text"
+        description: "该类客户的典型特征"
+        required: true
+
+      - name: "产品形态"
+        type: "text"
+        description: "适合的产品形态"
+        examples: ["SaaS标准版", "私有化部署"]
+        required: true
+
+      - name: "客单价区间"
+        type: "text"
+        format: "X万元 ~ Y万元"
+        required: true
+
+      - name: "目标客户数"
+        type: "number"
+        description: "预期客户数量"
+        required: true
+
+  market_sizing:
+    description: "市场容量估算表"
+    output_type: "table"
+    columns:
+      - name: "客户类型"
+        type: "text"
+        description: "与客户分层表一致"
+        required: true
+        validation: "应与customer_segmentation表中的客户类型一致"
+
+      - name: "潜在客户总数"
+        type: "number"
+        required: true
+
+      - name: "客单价"
+        type: "number"
+        unit: "万元"
+        required: true
+
+      - name: "TAM"
+        type: "number"
+        unit: "亿元"
+        description: "潜在客户数×客单价"
+        required: true
+
+      - name: "目标渗透率"
+        type: "percentage"
+        example: "5%"
+        required: true
+
+      - name: "SAM"
+        type: "number"
+        unit: "亿元"
+        description: "TAM×渗透率"
+        required: true
+
+      - name: "估算依据"
+        type: "text"
+        description: "数据来源+方法"
+        required: true
+        validation: "不应有无出处的数据"
+

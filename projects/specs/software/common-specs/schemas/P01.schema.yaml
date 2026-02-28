@@ -1,0 +1,350 @@
+# P01 软件开发编号规范 — 编号格式与规则 Schema
+# 来源规范：specs/software/specs/P01-软件开发编号规范_v0.21@202602231651.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供编号格式速查和命名规则
+# 完整规则（命名词典全集、完整示例、附录资料）：见原规范文件
+
+doc_id: P01
+doc_name: 软件开发编号规范
+
+# ── 双轨标识总则 ──
+dual_track:
+  semantic_id:
+    format: "{类型前缀}-{语义片段1}-{语义片段2}-..."
+    separator: "-"  # 层级间和同层复合词均用连字符；禁止 _ / 空格 / 其他分隔符
+    max_length: 60  # 复合型（如LC）可放宽至80；超80时优先精简描述
+    max_depth: 5    # 语义片段层级
+    case_convention:
+      全大写: "类型前缀、业务域/技术域标识（如 EPIC、USER、ARCH）"
+      PascalCase: "BC名称、SVC名称、DE名称（如 OrderPlacement、UserService）"
+      全小写: "描述性语义片段（如 auth、login-password）"
+    层级解析: "通过大小写隐式区分：全大写=前缀或域标识，PascalCase=BC/SVC/DE名称，全小写=描述"
+    no_embed_shortcode: true  # 语义ID中不嵌入其他条目的短号或编号
+    immutability: "一经分配不应变更；确需变更时保留原ID记录，新建ID，管理表标注替代关系"
+  short_code:
+    format: "{类型前缀}{N位数字}"
+    digits: "2位(≤99) / 3位(100-999) / 4位(≥1000)，数字部分以零填充至固定位数"
+    allocation: "按创建/报告/识别时间递增分配，不插入/重排/回收"
+    expansion: "位数不足时在当前序列用完后扩展位数（如3位→4位），已分配短号保持不变"
+    deprecation: "条目废弃时标记'已废弃'，短号保留不再使用"
+  usage_scenarios:
+    语义ID: "条目自身的定义和描述、系统存储、代码引用、文档索引"
+    短号: "追溯矩阵等密集引用场景、日常沟通/会议/即时通讯"
+  first_mention: "EPIC001: 用户认证体系 (EPIC-USER-auth)  # 首次引用同时标注短号和语义ID，后续可仅用短号"
+  uniqueness:
+    语义ID: "全局唯一"
+    短号: "同一类型前缀内唯一"
+    类型前缀: "全局唯一，统一登记在附录F编号类型速查表"
+  traceability: "条目间追溯关系通过管理表（关联表）维护，不嵌入语义ID"
+
+# ── 类型前缀管理 ──
+type_prefix:
+  registry: "附录F 编号类型速查表统一登记"
+  rule: "新增前缀不应与已有前缀或SROLE类别缩写（§4.2）冲突"
+
+# ── 业务域标识 ──
+domain_ids:
+  说明: "语义ID中业务域片段必须使用此表标准标识，不使用短号（如DOM01），不自行定义"
+  示例: [USER, ORDER, PRODUCT, PAYMENT, LOGISTICS, MARKETING, FINANCE, SYSTEM, GRC]
+  rule: "项目启动时建立完整业务域定义表；新增时统一登记"
+
+# ── 技术域标识（Enabler类条目使用） ──
+tech_domain_ids:
+  标识:
+    ARCH: "架构设计（架构风格、通信协议等）"
+    INFRA: "基础设施（部署、CI/CD、容器编排等）"
+    PLATFORM: "平台能力（可观测性、配置中心等）"
+    SEC: "安全（认证协议、加密方案等）"
+    DATA: "数据工程（数据管道、ETL等）"
+    DEVOPS: "DevOps（流水线、自动化工具等）"
+  rule: "仅用于Enabler类条目（Enabler Epic/Feature/ECAP），Business类条目使用业务域标识"
+
+# ── 例外处理 ──
+exception_handling:
+  - "查找最相近条目类型（依据：研发阶段、语义结构、业务用途），参照其格式命名"
+  - "管理表中标注'待规范补充'，记录参照类型和选择理由"
+  - "定期收集例外反馈至规范维护方"
+
+# ── 编号类型速查表 ──
+# 按研发阶段组织，每条包含：前缀、类型名、语义ID格式、短号格式、专项规则
+entity_types:
+
+  # ━━ 阶段1 产品战略 ━━
+  - prefix: THM
+    name: 主题
+    semantic_id: "THM-{战略方向}"
+    short_code: "THM{3位}"
+    rules:
+      - "同期活跃Theme宜≤10个"
+      - "粒度介于方向性和功能性之间。正例:growth、compliance  反例:improve(过抽象)、add-wechat-login(过具体)"
+
+  - prefix: DOM
+    name: 业务域
+    semantic_id: "DOM-{业务域名称(全大写)}"
+    short_code: "DOM{2~3位}"
+    rules: ["短号不嵌入其他条目语义ID；各条目引用域时使用语义标识(USER)而非短号(DOM01)"]
+
+  # ━━ 阶段2 宏观需求 ━━
+  - prefix: EPIC
+    name: 史诗
+    semantic_id: "EPIC-{业务域}-{功能模块}"
+    short_code: "EPIC{3位}"
+    rules:
+      - "Business Epic用业务域名称(如USER/GRC)，Enabler Epic用技术域标识(如ARCH/INFRA)"
+      - "项目启动时在Epic清单中标注类型(Business/Enabler)"
+    example: "EPIC001=EPIC-USER-auth(Business) | EPIC012=EPIC-ARCH-observability(Enabler)"
+
+  - prefix: SROLE
+    name: 系统角色
+    semantic_id: "SROLE-{角色名称}"
+    short_code:
+      default: "{类别缩写(2大写字母)}{2~3位}  # 多利益相关方项目（如SaaS平台）"
+      alternative: "SROLE{3位}  # 单利益相关方项目"
+    rules:
+      - "类别缩写2个大写字母，不与已有条目类型前缀冲突(US/TC/API等已被占用)"
+      - "可选：在需求语义ID中嵌入角色标识(业务域后、对象前)，仅当功能因角色不同而异时使用"
+    example: "UP01=SROLE-platform-admin | UR01=SROLE-compliance-officer"
+
+  - prefix: BROLE
+    name: 业务角色
+    semantic_id: "BROLE-{制度域}-{角色描述}"
+    short_code: "BROLE{3位}"
+    rules:
+      - "从GRC制度文档中直接识别，不自行创造"
+      - "制度域：sdlc/iam/risk/audit/incident/bcp 等，使用小写英文"
+      - "与SROLE完全独立，各自维护独立编号体系"
+
+  - prefix: BG
+    name: 业务目标
+    semantic_id: "BG-{目标描述}"
+    short_code: "BG{3位}"
+    rules: ["描述含动作+对象。正例:improve-conversion  反例:make-better、optimize"]
+
+  - prefix: DLM
+    name: 困境
+    semantic_id: "DLM-{困境描述}"
+    short_code: "DLM{3位}"
+    rules: ["描述系统性障碍(根因)，不描述角色层面具体问题(由PP描述)。正例:fragmented-data  反例:report-slow(现象)"]
+
+  - prefix: PP
+    name: 痛点
+    semantic_id: "PP-{角色名}-{痛点描述}"
+    short_code: "PP{3位}"
+    rules: ["必须关联具体系统角色，不应出现无角色归属的痛点"]
+
+  - prefix: EXP
+    name: 期望
+    semantic_id: "EXP-{角色名}-{期望描述}"
+    short_code: "EXP{3位}"
+    rules: ["正向表述，不与痛点重复描述同一问题；必须关联具体系统角色"]
+
+  - prefix: SH
+    name: 利益相关方
+    semantic_id: "SH-{利益相关方描述}"
+    short_code: "SH{2位}"
+    rules: ["L2层级的系统角色应使用SROLE编号，不使用SH编号"]
+
+  - prefix: BS
+    name: 业务环节
+    semantic_id: "BS-{域缩写}-{活动描述}"
+    short_code: "BS{3位}"
+    rules: ["不重复域缩写已表达的信息。正例:BS-ORDER-standard-create  反例:BS-ORDER-standard-order-create"]
+
+  - prefix: EN
+    name: 关键实体
+    semantic_id: "EN-{域缩写}-{实体描述}"
+    short_code: "EN{3位}"
+    rules: ["实体名与域缩写相同(如ORDER域的order)或含域名的复合术语(payment-order)时保留完整名称，不视为重复"]
+
+  - prefix: LC
+    name: 生命周期阶段
+    semantic_id: "{实体语义ID}-LC-{阶段描述}"
+    short_code: "LC{3位}"
+    rules:
+      - "以所属实体语义ID为前缀（复合型），总长度可放宽至80字符"
+      - "短号全局递增，不按实体分组"
+      - "阶段应描述实体的稳定业务状态，不描述瞬时动作或过渡状态"
+    example: "EN-ORDER-standard-LC-pending-payment = LC001"
+
+  - prefix: EVT
+    name: 事件
+    semantic_id: "EVT-{域缩写}-{事件描述}"
+    short_code: "EVT{3位}"
+    rules: ["描述具有业务意义的动作/状态变化，不描述系统内部技术事件"]
+
+  - prefix: WS
+    name: 工作场景
+    semantic_id: "WS-{角色名}-{场景描述}"
+    short_code: "WS{3位}"
+    rules:
+      - "描述角色的职责域切入点，不描述具体操作步骤。正例:tenant-audit-mgmt  反例:click-approve-button"
+      - "与BS区别：BS描述'业务中发生了什么'(不依赖系统)，WS描述'角色通过系统从哪里切入'"
+
+  - prefix: TP
+    name: 关键旅程触点
+    semantic_id: "TP-{角色名}-{触点描述}"
+    short_code: "TP{3位}"
+    rules: ["粒度介于WS和US之间"]
+
+  - prefix: BAS
+    name: 业务验收场景
+    semantic_id: "BAS-{业务域}-{场景描述}"
+    short_code: "BAS{3位}"
+    rules:
+      - "场景描述宜以-e2e后缀标识端到端特征"
+      - "每个Epic宜定义至少一个BAS"
+
+  - prefix: FR
+    name: 基础性需求
+    semantic_id: "FR-{能力描述}"
+    short_code: "FR{2位}"
+    rules:
+      - "跨BC的通用能力需求（认证/权限/审计等），单BC内部功能不应作为FR"
+      - "与NFR区别：FR定义'需建设什么通用能力'(功能性)，NFR定义'应达到什么质量水平'(质量约束)"
+
+  - prefix: NFR
+    name: 非功能需求
+    semantic_id: "NFR-{类别}-{约束描述}"
+    short_code: "NFR{3位}"
+    categories: [PERF, SEC, AVAIL, SCALE, COMPAT, MAINT, USAB, INTEG, I18N, OBS]
+    rules: ["定义可量化可验证的质量属性约束，避免模糊描述（如'系统应足够快'）"]
+
+  # ━━ 阶段3 领域设计 ━━
+  - prefix: BC
+    name: 限界上下文
+    semantic_id: "BC-{BC名称(PascalCase)}"
+    short_code: "BC{2~3位}"
+    rules:
+      - "PascalCase为通用规则的例外情形"
+      - "名称不含业务域前缀（不命名为 OrderOrderPlacement）"
+
+  # ━━ 阶段4 系统设计 ━━
+  - prefix: CAP
+    name: 能力
+    semantic_id: "CAP-{业务域}-{能力描述}"
+    short_code: "CAP{3位}"
+    rules:
+      - "仅多BC协作交付时使用；单BC可独立交付的需求用Feature，不引入能力层级"
+      - "描述应体现业务价值目标，不描述技术实现方式"
+
+  - prefix: ECAP
+    name: 架构能力
+    semantic_id: "ECAP-{技术域}-{能力描述}"
+    short_code: "ECAP{3位}"
+    rules:
+      - "仅大型项目（多BC协作）使用；单BC用Enabler Feature"
+      - "与CAP区别：ECAP构建架构跑道，不直接交付用户可见的业务价值"
+
+  - prefix: SVC
+    name: 系统模块/微服务
+    semantic_id: "SVC-{服务名称(PascalCase)}"
+    short_code: "SVC{3位}"
+
+  - prefix: ADR
+    name: 架构决策记录
+    semantic_id: "ADR-{决策主题}"
+    short_code: "ADR{3位}"
+    rules: ["不可删除；被推翻时新增一条ADR记录新决策，原ADR标注'已被ADRxxx取代'"]
+
+  - prefix: APM
+    name: APM监控项
+    semantic_id: "APM-{类别}-{监控描述}"
+    short_code: "APM{3位}"
+    categories: [TRACE, METRIC, ALERT, HEALTH]
+    rules: ["应与NFR中的可观测性约束建立追溯关系"]
+
+  # ━━ 阶段5 BC详细需求 ━━
+  - prefix: FT
+    name: 特性
+    semantic_id: "FT-{业务域}-{功能集}"
+    short_code: "FT{3位}"
+    rules: ["Business Feature用业务域名称，Enabler Feature用技术域标识（与EPIC同理）"]
+
+  - prefix: US
+    name: 用户故事
+    semantic_id: "US-{业务域}-[{角色}-]{对象}-{功能/场景}"
+    short_code: "US{3位}"
+    rules: ["角色片段可选：仅当同一功能因角色不同而产生不同需求时嵌入角色标识（业务域后、对象前）"]
+    example: "US-GRC-compliance-officer-policy-review（嵌入角色） | US-ORDER-cart-add（无角色）"
+
+  - prefix: AC
+    name: 验收标准
+    semantic_id: "AC-{业务域}-{验收场景描述}"
+    short_code: "AC{3位}"
+    rules: ["AC定义'完成标准是什么'，TC定义'如何验证该标准'；一条AC可对应多条TC"]
+
+  - prefix: BR
+    name: 业务规则
+    semantic_id: "BR-{业务域}-{规则描述}"
+    short_code: "BR{3位}"
+    rules:
+      - "可被多个US/AC引用的独立规则；仅单个AC内生效的校验逻辑不应提取为独立BR"
+      - "BR定义'规则是什么'，AC定义'如何验证规则被正确实现'"
+      - "BR变更时须通过管理表追溯所有引用的US和AC，评估影响范围"
+
+  # ━━ 阶段6 BC总体设计 ━━
+  - prefix: DE
+    name: 数据实体
+    semantic_id: "DE-{业务域}-{实体名称(PascalCase)}"
+    short_code: "DE{3位}"
+    rules:
+      - "PascalCase命名，与BC/SVC风格一致"
+      - "与EN区别：EN是宏观需求层业务对象（如'租户''订单'），DE是详设层领域模型对象（如Tenant聚合根、Address值对象）"
+      - "宜标注DDD分类（聚合根/实体/值对象）"
+
+  # ━━ 阶段7 BC详细设计 ━━
+  - prefix: API
+    name: API接口
+    semantic_id: "API-{业务域}-{对象}-{动作}[-{限定词}]"
+    short_code: "API{3位}"
+
+  - prefix: INTG
+    name: 外部集成接口
+    semantic_id: "INTG-{业务域}-{外部方}-{接口描述}"
+    short_code: "INTG{3位}"
+    rules:
+      - "须记录外部方API版本号；版本变更时新增INTG条目标注替代关系"
+      - "应与内部API或US建立追溯关系，便于外部接口变更时评估影响"
+
+  # ━━ 阶段8 开发实现 ━━
+  - prefix: TASK
+    name: 任务
+    semantic_id: "TASK-{类型}-{任务描述}"
+    short_code: "TASK{3位}"
+    rules: ["已完成/已取消不删除，置状态"]
+
+  - prefix: STASK
+    name: 子任务
+    semantic_id: "STASK-{任务场景}-{子任务描述}"
+    short_code: "STASK{3位}"
+    rules: ["与所属Task的追溯关系通过管理表维护，不在语义ID中嵌入Task编号"]
+
+  - prefix: TC
+    name: 测试用例
+    semantic_id: "TC-{业务域}-{功能}-{测试点}"
+    short_code: "TC{4位}"
+
+  - prefix: BUG
+    name: 缺陷
+    semantic_id: "BUG-{影响模块}-{简要描述}"
+    short_code: "BUG{4位}"
+    rules: ["不可删除，已修复/确认无效置为'已关闭'"]
+
+  - prefix: CR
+    name: 变更请求
+    semantic_id: "CR-{模块}-{变更内容}"
+    short_code: "CR{3位}"
+    rules: ["仅针对已基线化的条目；未基线化的内容调整不需要CR"]
+
+  - prefix: RISK
+    name: 风险
+    semantic_id: "RISK-{类别}-{风险描述}"
+    short_code: "RISK{3位}"
+    rules: ["不可删除，已消除/已接受置为'已关闭'"]
+
+# ── 语义片段命名质量规则 ──
+naming_quality:
+  - "1-4个英文单词，连字符连接；超过4个单词时检查是否可精简"
+  - "不重复类型前缀或业务域已表达的信息（反例:BS-ORDER-standard-order-create，order与ORDER重复）"
+  - "不使用无实际区分作用的泛化词汇（反例:do-something、handle-data）"
+  - "同一层级多个条目保持一致的描述粒度和风格"
+  - "词汇优先使用各类型命名词典中的标准词汇；扩展新词汇时遵循现有风格并补充至词典"

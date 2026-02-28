@@ -1,0 +1,513 @@
+# S03 领域设计编写规范 — 编写规则 Schema
+# 来源规范：specs/software/meta/S03-领域设计编写规范_v0.10@202602252051.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供章节结构、内容模型和编写约束
+# 完整规则（章节目的详述、完整示例、ASCII图规范）：见原规范文件
+
+doc_id: S03
+doc_name: 领域设计编写规范
+target_doc: "03-领域设计"
+target_doc_name: 领域设计文档
+
+# ── 文档定位 ──
+positioning:
+  stage: 3
+  stage_name: 领域设计
+  upstream: [阶段2-宏观需求分析]
+  downstream: [阶段4-系统设计]
+  role: "阶段3'领域设计'的唯一正式输出物，运用DDD方法完成从问题空间到解决方案空间的战略设计，核心目标是明确子域分类与优先级、划定BC边界、定义BC间协作关系，并识别Enabler Epic"
+  methodology: "知识消化→统一语言→领域划分→BC识别→上下文映射→领域事件→领域模型概要→架构需求"
+
+# ── 上游输入 ──
+upstream_inputs:
+  - { item: "宏观需求文档", source: "阶段2", note: "Business Epic清单、三线分析成果、业务域归类、基础性需求、非功能需求框架" }
+  - { item: "核心业务流程图", source: "阶段2", note: "端到端业务流程图（PL1级）" }
+  - { item: "领域专家知识", source: "访谈/工作坊", note: "通过领域专家访谈、EventStorming工作坊等方式获取" }
+  - { item: "业务主题(THM)与业务域", source: "阶段1(经阶段2传递)", note: "子域识别的起点" }
+  - { item: "Strategic Theme清单", source: "阶段1(经阶段2传递)", note: "子域分类优先级判断参考" }
+missing_input_handling: "缺失内容记录为假设（AS-*），标注'来源：阶段2输出缺失'"
+
+# ── 核心概念 ──
+core_concepts:
+  subdomain: "子域（Subdomain）：业务领域的逻辑划分，按战略地位分为核心域/支撑域/通用域"
+  bounded_context: "限界上下文（BC）：统一语言术语具有唯一含义的模型边界，是自治的设计单元"
+  context_mapping: "上下文映射（Context Map）：BC之间的协作关系定义，反映技术集成方式和团队协作模式"
+  enabler_epic: "Enabler Epic（架构史诗）：领域设计过程中识别的跨BC架构需求，在阶段4分解为Enabler Capability和Enabler Feature"
+
+# ── 裁剪指引 ──
+tailoring:
+  不可裁剪: ["第4章(战略设计核心，BC识别前置基础)", "第5章(领域设计主体交付物)", "第6章(阶段4集成架构输入)", "第9章(N00明确要求)"]
+  小型项目: "BC<3且跨域交互≤1时：第2章可简化（省略EventStorming）；第7章可合并入第6章；第8章可省略（留至阶段6）"
+  裁剪后保障: "追溯链完整性（Business Epic→子域→BC→Enabler Epic不断裂）"
+  强制性标注: "(必选)=不可裁剪; (宜)/(可选)=可直接省略; 无标注=同(必选)"
+
+# ── 章节结构（9章 + 附录，顺序固定不可调整） ──
+chapters:
+
+  - chapter: 1
+    title: 概述
+    required: true
+    purpose: "导读章节：方法论框架和术语约定，不含领域分析内容"
+    sections:
+      - { id: "1.1", title: "文档目的", points: "编写目的和适用范围" }
+      - { id: "1.2", title: "方法论框架", points: "领域设计方法论框架图（知识消化→统一语言→领域划分→BC识别→上下文映射→领域事件→领域模型概要→架构需求的完整逻辑链）、各环节职责概述、与上下游阶段关系" }
+      - { id: "1.3", title: "术语约定", points: "通用术语引用索引（引用C99）、DDD战略设计相关术语定义（子域、BC、上下文映射、聚合等）" }
+      - { id: "1.4", title: "编号约定", points: "各类条目的编号体系说明（引用P01）" }
+
+  - chapter: 2
+    title: 业务知识消化
+    required: true
+    purpose: "领域设计起点：将阶段2三线分析成果和领域专家知识转化为领域设计输入。输出问题空间全景向后传递至第4章"
+    derivation: "2.1清点输入→2.2验收成果→2.3补充知识获取→2.4形成全景"
+    rules:
+      - "承接状态为'缺失'的条目，备注中记录假设编号（AS-{序号}），标注'来源：阶段2输出缺失'"
+      - "2.4节采用叙述段落+表格混合结构：首段为业务全景概述，之后为核心问题清单表"
+      - "本章不进行领域划分或子域识别，领域划分从第4章开始"
+    sections:
+      - { id: "2.1", title: "知识来源与获取策略", model: "structured_input_list + unstructured_input_plan" }
+      - { id: "2.2", title: "阶段2成果承接", points: "三线分析成果验收（活动线→PL1级、角色线→CL1级、实体线→核心实体级）、Business Epic清单承接、业务域归类承接", model: "acceptance_verification" }
+      - { id: "2.3", title: "知识消化方法", points: "(宜)EventStorming工作坊、领域故事讲述等方法与产出定义", model: "knowledge_digestion_method" }
+      - { id: "2.4", title: "问题空间全景", points: "业务全景理解、核心业务问题识别（粒度对应子域级别）、问题空间边界确认", model: "core_problem_list" }
+
+  - chapter: 3
+    title: 统一语言
+    required: true
+    purpose: "建立领域设计的语言基础：确保同一概念在代码、文档和团队沟通中使用同一术语。术语表是活文档，在第4~8章持续补充"
+    rules:
+      - "收录范围：DDD战略设计术语+本项目业务领域术语。通用技术术语引用C99"
+      - "收录判断：被两处及以上引用，或含义偏离常见用法"
+      - "定义应满足'可判断'标准"
+    sections:
+      - { id: "3.1", title: "统一语言原则", points: "统一语言的定义、适用范围和核心规则（同一术语全文唯一名称，别名仅在术语表记录）" }
+      - { id: "3.2", title: "领域术语表", model: "domain_term_table" }
+      - { id: "3.3", title: "术语治理规则", points: "术语新增/变更/废弃流程、冲突解决机制、跨BC术语一致性检查规则" }
+      - { id: "3.4", title: "与上游术语的衔接", model: "term_mapping_table" }
+
+  - chapter: 4
+    title: 领域划分与子域分类
+    required: true
+    non_reducible: true
+    purpose: "从问题空间到解决方案空间的第一步战略决策：识别子域并分类（核心域/支撑域/通用域），子域分类直接影响投资策略"
+    derivation: "4.1明确方法→4.2建立标准→4.3逐个定义→4.4映射业务域/4.5映射Epic（可并行）→4.6绘制全景图"
+    rules:
+      - "核心域数量不宜超过子域总数的1/3"
+      - "子域识别粒度判断：两个候选子域的核心业务规则高度耦合应合并；一个候选子域内部包含两组独立变化的业务规则应拆分"
+      - "每个Business Epic至少被一个子域覆盖"
+    sections:
+      - { id: "4.1", title: "子域识别方法", points: "从问题空间全景和业务域归类出发的子域识别步骤（以业务域归类为起点，允许拆分/合并/重划边界）" }
+      - { id: "4.2", title: "子域分类标准", points: "核心域/支撑域/通用域的判断维度（竞争差异性、业务复杂度、可替代性、变更频率）和决策矩阵", model: "subdomain_classification_matrix" }
+      - { id: "4.3", title: "子域定义", model: "subdomain_definition" }
+      - { id: "4.4", title: "子域与业务域映射", model: "subdomain_domain_mapping" }
+      - { id: "4.5", title: "子域与Business Epic映射", model: "subdomain_epic_mapping" }
+      - { id: "4.6", title: "子域全景图", points: "子域分布全景图（标注核心域/支撑域/通用域、主要依赖关系）。双线框=核心域、单线框=支撑域、虚线框=通用域" }
+
+  - chapter: 5
+    title: 限界上下文识别与定义
+    required: true
+    non_reducible: true
+    purpose: "战略设计核心决策：BC是后续所有阶段的基本组织单元。输出BC清单向后传递至第6/8/9章和阶段4"
+    derivation: "5.1明确方法→5.2建立原则→5.3逐个定义BC→5.4映射子域/5.5映射Epic→5.6内聚性验证"
+    rules:
+      - "实体所有权唯一：每个核心实体有且仅有一个BC作为所有者"
+      - "BC数量宜控制在子域总数的1~2倍；超过3倍应检查是否过度拆分"
+      - "BC识别粒度判断：BC内部统一语言术语应具有唯一含义，业务规则可独立变更。同一术语出现两种含义时应拆分"
+      - "一个BC不得跨两个核心域子域"
+      - "5.6验证不通过时应回退到5.3修正BC定义后重新验证"
+    sections:
+      - { id: "5.1", title: "BC识别方法", points: "BC识别的输入、步骤和判断标准" }
+      - { id: "5.2", title: "BC边界划定原则", points: "五个划定因素（语言边界、业务能力内聚、团队边界、数据所有权、变更频率）及其应用规则", model: "bc_boundary_principles" }
+      - { id: "5.3", title: "BC定义模板", model: "bc_definition" }
+      - { id: "5.4", title: "BC与子域的关系", model: "bc_subdomain_mapping" }
+      - { id: "5.5", title: "BC与Business Epic的映射", model: "bc_epic_mapping" }
+      - { id: "5.6", title: "BC内聚性验证", model: "bc_cohesion_rules + bc_cohesion_results" }
+
+  - chapter: 6
+    title: 上下文映射
+    required: true
+    non_reducible: true
+    purpose: "定义BC之间的协作关系：上下文映射不仅定义技术集成方式，还反映团队间的协作模式和权力关系。映射图是N00定义的阶段3交付物，向后传递至阶段4"
+    rules:
+      - "每对BC关系仅选择一种映射模式；多种交互场景需不同模式时分为多条记录"
+      - "映射模式选择应与团队组织结构一致"
+    sections:
+      - { id: "6.1", title: "上下文映射模式", points: "各映射模式（Partnership/Shared Kernel/Customer-Supplier/Conformist/ACL/OHS/Published Language/Separate Ways等，仅列实际使用的）的定义、适用场景和选择判据", model: "mapping_pattern_definition" }
+      - { id: "6.2", title: "上下文映射图", points: "BC间关系全景图（包含第5章所有BC，标注映射模式和数据流向）", model: "context_map_spec" }
+      - { id: "6.3", title: "BC间关系定义", model: "bc_relationship" }
+      - { id: "6.4", title: "跨BC数据流", model: "cross_bc_dataflow" }
+      - { id: "6.5", title: "集成策略汇总", model: "integration_strategy_summary" }
+
+  - chapter: 7
+    title: 领域事件全景
+    required: true
+    purpose: "从事件驱动视角识别领域中的关键业务事件：领域事件表示已经发生的、具有业务意义的事实，既是领域模型的组成部分，也是BC间异步集成的核心机制"
+    rules:
+      - "事件表示已发生的事实，不应包含'请求''命令'语义。候选事件带命令语义时应转化为结果事件"
+      - "每个事件对应一次状态变迁；包含两个独立业务含义的候选事件应拆分"
+      - "跨域事件应与第6章数据流表交叉验证"
+      - "事件命名：英文PascalCase+过去时态{Entity}{Action}ed；中文'{实体}已{动作}'"
+    sections:
+      - { id: "7.1", title: "领域事件识别方法", points: "事件识别来源（EventStorming产出/实体生命周期状态转换/跨BC异步集成场景）、步骤和命名规则" }
+      - { id: "7.2", title: "事件分类", model: "event_classification" }
+      - { id: "7.3", title: "领域事件清单", model: "domain_event_definition" }
+      - { id: "7.4", title: "事件流转全景图", points: "以BC为节点、跨域事件为连线的全景流转图（仅展示跨域事件）" }
+      - { id: "7.5", title: "事件驱动集成模式", points: "(宜)基于事件全景识别适用的集成模式（事件溯源、CQRS、Saga等）", model: "event_integration_pattern" }
+
+  - chapter: 8
+    title: 核心领域模型概要
+    required: true
+    purpose: "对各核心域BC进行聚合级的初步建模：在阶段3仅识别到聚合级别，不展开详细的属性定义和方法设计"
+    derivation: "8.1确定范围→8.2明确方法→8.3逐BC识别聚合→8.4映射阶段2实体/8.5梳理引用关系（可并行）"
+    rules:
+      - "建模深度选择：核心域→完整建模；支撑域→概要建模；通用域→不建模"
+      - "单个聚合宜控制在1个聚合根+不超过5个内部实体/值对象"
+      - "聚合根是唯一外部访问入口"
+      - "每个聚合完整归属于一个BC，不得跨BC"
+      - "跨聚合仅通过聚合根ID引用，禁止直接对象引用；跨BC禁用值对象快照"
+    sections:
+      - { id: "8.1", title: "建模范围与深度", model: "modeling_scope" }
+      - { id: "8.2", title: "聚合识别方法", points: "聚合识别的输入、步骤和聚合边界判断标准（事务一致性边界）" }
+      - { id: "8.3", title: "各BC聚合清单", points: "按BC分设子节（如'8.3.1 BC-01 订单管理聚合清单'）", model: "aggregate_list" }
+      - { id: "8.4", title: "阶段2实体映射", model: "phase2_entity_mapping" }
+      - { id: "8.5", title: "聚合间引用关系", points: "(宜)跨聚合引用规则和关系概览图", model: "aggregate_reference" }
+
+  - chapter: 9
+    title: 架构需求分析（Enabler Epic）
+    required: true
+    non_reducible: true
+    purpose: "将领域设计过程中识别的跨BC架构决策显性化为Enabler Epic：识别来源包括第6章集成需求、第7章基础设施需求、第5章共性技术需求"
+    derivation: "9.1梳理来源→9.2建立模板→9.3逐个识别并定义→9.4建立追溯/9.5记录ADR/9.6提取约束（可并行）"
+    rules:
+      - "每个Enabler Epic至少关联一个Business Epic"
+      - "每个Enabler Epic对应一个独立可交付的架构能力"
+      - "优先级判断：高=阻塞核心域BC；中=影响集成效率；低=优化性"
+      - "架构约束传递清单：每种集成模式至少一条约束；每条可被阶段4直接采纳"
+    sections:
+      - { id: "9.1", title: "Enabler Epic识别来源", model: "enabler_source_dimension" }
+      - { id: "9.2", title: "Enabler Epic定义模板", model: "enabler_epic_definition" }
+      - { id: "9.3", title: "Enabler Epic清单", model: "enabler_epic_list" }
+      - { id: "9.4", title: "Business Epic→Enabler Epic追溯", model: "epic_traceability" }
+      - { id: "9.5", title: "架构决策记录（ADR）", model: "adr_template" }
+      - { id: "9.6", title: "向阶段4的架构约束传递", model: "architecture_constraint_list" }
+
+# ── 附录 ──
+appendices:
+  - { id: A, title: "术语速查", type: "资料性", required: false, note: "DDD术语索引+本文档特有术语索引" }
+  - { id: B, title: "修订记录", type: "规范性", required: true }
+
+# ── 内容模型定义 ──
+content_models:
+
+  # ── 第2章 ──
+  structured_input_list:
+    note: "阶段2交付物逐项确认，每个独立交付物一行"
+    columns:
+      - "输入编号(SI-{序号})"
+      - "输入名称(阶段2交付物的具体名称)"
+      - "来源章节(该交付物在宏观需求文档中的章节编号)"
+      - "承接状态(已确认/待确认/缺失)"
+      - "备注(缺失项填AS-*，标注'来源：阶段2输出缺失')"
+
+  unstructured_input_plan:
+    columns:
+      - "计划编号(KA-{序号})"
+      - "获取方式(领域专家访谈/EventStorming工作坊/现有系统分析/其他)"
+      - "目标知识"
+      - "参与角色"
+      - "计划时间"
+      - "产出物"
+
+  acceptance_verification:
+    columns:
+      - "验收项(阶段2成果的具体条目名称)"
+      - "所属线(活动线/角色线/实体线/Epic清单/业务域归类)"
+      - "完整性(完整/部分完整/缺失)"
+      - "差异说明"
+      - "处理方式(直接使用/补充后使用/记录假设AS-*)"
+
+  knowledge_digestion_method:
+    columns:
+      - "方法名称(如EventStorming、领域故事讲述、领域走查)"
+      - "适用场景"
+      - "产出定义"
+      - "裁剪标记(必须/推荐/可选)"
+
+  core_problem_list:
+    note: "粒度对应子域级别，可映射到第4章子域"
+    columns:
+      - "问题编号(BP-{序号})"
+      - "问题描述(一句话)"
+      - "影响范围(涉及的业务域或流程范围)"
+      - "来源(阶段2成果/专家访谈/工作坊)"
+
+  # ── 第3章 ──
+  domain_term_table:
+    note: "术语表是活文档，在第4~8章持续补充。定义应满足'可判断'标准"
+    columns:
+      - "术语(中文)"
+      - "英文(PascalCase，用于代码命名)"
+      - "定义(一句话，满足'可判断'标准)"
+      - "所属子域(第4章确定后回填)"
+      - "所属BC(第5章确定后回填)"
+      - "阶段2术语映射(无对应填'-')"
+      - "别名(多个用顿号分隔，无别名填'-')"
+      - "状态(生效/废弃/待确认)"
+
+  term_mapping_table:
+    columns:
+      - "阶段2术语"
+      - "领域术语"
+      - "映射关系(等同/包含/被包含/重命名/拆分/合并)"
+      - "差异说明(映射关系非'等同'时填)"
+
+  # ── 第4章 ──
+  subdomain_classification_matrix:
+    note: "四维度判断矩阵"
+    columns:
+      - "判断维度(竞争差异性/业务复杂度/可替代性/变更频率)"
+      - "核心域(该维度下核心域的典型特征)"
+      - "支撑域(该维度下支撑域的典型特征)"
+      - "通用域(该维度下通用域的典型特征)"
+
+  subdomain_definition:
+    columns:
+      - "子域编号(格式由P01定义)"
+      - "子域名称"
+      - "分类(核心域/支撑域/通用域)"
+      - "职责定义(一句话：'管理/处理{业务对象}的{业务能力}')"
+      - "投资策略(核心域→自建; 通用域→采购/复用; 支撑域→视情况)"
+      - "关键理由(分类判断的关键依据，引用决策矩阵维度)"
+
+  subdomain_domain_mapping:
+    columns:
+      - "子域编号"
+      - "子域名称"
+      - "业务域编号(阶段2定义)"
+      - "业务域名称"
+      - "映射关系(一对一/拆分/合并/新增/重划边界)"
+      - "差异说明(非'一对一'时填)"
+
+  subdomain_epic_mapping:
+    note: "映射到Epic级别，不下沉到Feature；所有Epic至少被一个子域覆盖"
+    columns:
+      - "子域编号"
+      - "子域名称"
+      - "覆盖的Epic编号(Business Epic编号列表)"
+      - "未覆盖Epic检查(不属于任何子域的Epic→记录原因和处理方式)"
+
+  # ── 第5章 ──
+  bc_boundary_principles:
+    columns:
+      - "划定因素(语言边界/业务能力内聚/团队边界/数据所有权/变更频率)"
+      - "定义(该因素的判断含义)"
+      - "应用规则(如何根据该因素判断BC边界)"
+      - "优先级(当多个因素冲突时的优先级排序)"
+
+  bc_definition:
+    columns:
+      - "BC编号(格式由P01定义)"
+      - "BC名称"
+      - "英文名称(PascalCase，用于代码包名)"
+      - "所属子域(子域编号和名称)"
+      - "职责定义(一句话：'负责{业务对象}的{业务能力}，对外提供{服务}')"
+      - "边界描述(说明该BC包含什么、不包含什么)"
+      - "核心聚合(聚合名称列表，第8章细化)"
+      - "拥有的实体(仅所有者，承接阶段2实体线)"
+      - "关键业务规则(该BC内部的关键业务规则概述，1~3条)"
+      - "边界划定依据(引用5.2节划定因素)"
+
+  bc_subdomain_mapping:
+    note: "一个子域可含多个BC；多个小子域可合并为一个BC；一个BC不得跨两个核心域子域"
+    columns:
+      - "子域编号"
+      - "子域名称"
+      - "BC编号"
+      - "BC名称"
+      - "映射关系(一对一/一对多/多对一)"
+      - "说明(非一对一时的原因)"
+
+  bc_epic_mapping:
+    columns:
+      - "BC编号"
+      - "BC名称"
+      - "覆盖的Epic编号(Business Epic编号列表)"
+      - "覆盖度检查(完全覆盖/部分覆盖/未覆盖)"
+
+  bc_cohesion_rules:
+    columns:
+      - "规则编号(CV-{序号})"
+      - "验证规则(内聚性检查的具体规则描述)"
+      - "验证方法(如何执行该项检查)"
+
+  bc_cohesion_results:
+    columns:
+      - "BC编号"
+      - "规则编号(引用验证规则表)"
+      - "结果(通过/不通过/需关注)"
+      - "说明(不通过或需关注时的具体问题和处理建议)"
+
+  # ── 第6章 ──
+  mapping_pattern_definition:
+    columns:
+      - "模式名称(DDD标准映射模式名称，中英文)"
+      - "定义(一句话定义该模式的协作关系)"
+      - "适用场景(该模式的典型适用条件)"
+      - "权力关系(上游主导/下游主导/对等/无直接关系)"
+
+  context_map_spec:
+    note: "BC间关系全景图。节点标注BC编号+名称；实线箭头=同步调用，虚线箭头=异步事件；连线上方标注映射模式缩写。BC数量超过8个时宜按子域分区布局"
+
+  bc_relationship:
+    columns:
+      - "关系编号(CM-{序号})"
+      - "上游BC(编号+名称)"
+      - "下游BC(编号+名称)"
+      - "映射模式"
+      - "选择理由(1~2句)"
+      - "集成方式(同步API/异步事件/共享数据/其他)"
+      - "交互契约(契约类型和关键约定概述)"
+
+  cross_bc_dataflow:
+    columns:
+      - "数据流编号(DF-{序号})"
+      - "源BC(编号+名称)"
+      - "目标BC(编号+名称)"
+      - "数据对象"
+      - "流转方式(同步查询/异步事件/数据复制)"
+      - "一致性策略(强一致/最终一致/无一致性要求)"
+      - "一致性机制(非'无一致性要求'时填实现机制概述)"
+
+  integration_strategy_summary:
+    columns:
+      - "集成模式(同步API/异步事件/共享数据/其他)"
+      - "适用关系编号(引用6.3节关系编号列表)"
+      - "选择依据(该模式的整体选择理由)"
+      - "技术约束(该模式对阶段4系统设计的技术约束)"
+
+  # ── 第7章 ──
+  event_classification:
+    columns:
+      - "分类(域内事件/跨域事件)"
+      - "定义(该分类的判断标准)"
+      - "消费范围(BC内部消费/跨BC消费)"
+      - "典型用途"
+
+  domain_event_definition:
+    columns:
+      - "事件编号(格式由P01定义)"
+      - "事件名称(过去时态，{Entity}{Action}ed)"
+      - "中文名称('{实体}已{动作}')"
+      - "归属BC(发布该事件的BC编号+名称，唯一发布者)"
+      - "分类(域内事件/跨域事件)"
+      - "触发条件(什么业务操作或状态变迁触发该事件)"
+      - "核心载荷(事件携带的关键数据字段列表，仅字段名)"
+      - "消费者BC(消费该事件的BC编号+名称列表，域内事件填'本BC')"
+
+  event_integration_pattern:
+    columns:
+      - "模式名称(事件溯源/CQRS/Saga/简单事件通知)"
+      - "适用场景"
+      - "适用事件(本项目中适用该模式的事件编号列表)"
+      - "评估结论(推荐采用/待评估/不适用)"
+      - "备注(推荐理由或不适用原因)"
+
+  # ── 第8章 ──
+  modeling_scope:
+    columns:
+      - "BC编号"
+      - "BC名称"
+      - "所属子域分类(核心域/支撑域/通用域)"
+      - "建模深度(完整建模/概要建模/本章不建模)"
+      - "说明(建模深度选择的理由)"
+
+  aggregate_list:
+    note: "按BC分设子节。单个聚合宜控制在1个聚合根+不超过5个内部实体/值对象"
+    columns:
+      - "聚合编号(格式由P01定义)"
+      - "聚合名称"
+      - "英文名称(PascalCase)"
+      - "聚合根(聚合根实体名称)"
+      - "核心实体(聚合内的核心实体名称列表)"
+      - "关键值对象(聚合内的关键值对象名称列表)"
+      - "不变量(聚合维护的核心业务不变量，1~2条)"
+      - "边界依据(该聚合边界划定的关键理由)"
+
+  phase2_entity_mapping:
+    columns:
+      - "阶段2实体名称(阶段2实体线定义的核心实体)"
+      - "归属BC(BC编号+名称)"
+      - "映射为(聚合根/实体/值对象/拆分)"
+      - "所属聚合(聚合编号+名称)"
+      - "映射说明(映射为'拆分'时说明拆分为哪些建模元素)"
+
+  aggregate_reference:
+    columns:
+      - "引用方聚合(聚合编号+名称)"
+      - "被引用聚合(聚合编号+名称)"
+      - "引用方式(ID引用/值对象快照)"
+      - "跨BC标记(BC内/跨BC)"
+      - "说明(引用的业务原因)"
+
+  # ── 第9章 ──
+  enabler_source_dimension:
+    columns:
+      - "来源维度(上下文映射集成需求/跨域事件基础设施/BC共性需求)"
+      - "对应章节(本文档中提供输入的章节编号)"
+      - "识别方法(从该来源识别Enabler Epic的具体步骤)"
+      - "典型产出(该来源通常产出的Enabler Epic类型)"
+
+  enabler_epic_definition:
+    columns:
+      - "Epic编号(格式由P01定义)"
+      - "Epic名称"
+      - "架构能力描述(该Epic提供的架构能力，一句话)"
+      - "业务价值(该架构能力对业务的价值说明)"
+      - "识别来源(引用9.1节的来源维度和具体章节内容)"
+      - "关联Business Epic(该Enabler Epic支撑的Business Epic编号列表，至少一个)"
+      - "涉及BC(该Enabler Epic影响的BC编号列表)"
+      - "优先级(高/中/低)"
+      - "优先级依据(判断的关键理由：高=阻塞核心域BC; 中=影响集成效率; 低=优化性)"
+
+  enabler_epic_list:
+    note: "按优先级排列"
+    columns:
+      - "Epic编号"
+      - "Epic名称"
+      - "架构能力描述(一句话)"
+      - "优先级(高/中/低)"
+      - "关联Business Epic(编号列表)"
+      - "涉及BC(编号列表)"
+
+  epic_traceability:
+    columns:
+      - "Business Epic编号(阶段2定义)"
+      - "Business Epic名称"
+      - "Enabler Epic编号(支撑该Business Epic的Enabler Epic编号列表)"
+      - "追溯说明(追溯关系的业务逻辑说明)"
+
+  adr_template:
+    note: "覆盖第4~7章重大决策；初始状态为'已决定'或'待决定'"
+    columns:
+      - "ADR编号(ADR-{序号}，序号三位)"
+      - "标题(决策主题的一句话描述)"
+      - "状态(已决定/待决定/已废弃)"
+      - "背景(决策产生的背景和约束条件，2~3句)"
+      - "决策(做出的具体决策内容)"
+      - "备选方案(评估过的其他方案及未采纳理由)"
+      - "结果(该决策带来的正面影响和需要接受的权衡)"
+      - "关联Epic(该决策关联的Enabler Epic编号)"
+
+  architecture_constraint_list:
+    note: "每种集成模式至少一条约束；每条可被阶段4直接采纳，避免笼统表述"
+    columns:
+      - "约束编号(AC-{序号})"
+      - "约束类别(BC部署约束/集成约束/数据隔离约束/其他)"
+      - "约束描述(对阶段4系统设计的具体约束内容)"
+      - "来源(该约束的识别来源，引用本文档章节编号或ADR编号)"
+      - "影响范围(该约束影响的BC编号列表或系统模块)"
+
+# ── 交叉引用要求 ──
+required_xrefs:
+  upstream:
+    - { doc: "阶段2 宏观需求分析", check: "Business Epic清单、三线分析成果（活动线PL1级、角色线CL1级、实体线核心实体级）、业务域归类" }
+    - { doc: "阶段1 产品战略", check: "Strategic Theme清单、业务主题(THM)" }
+  downstream:
+    - { doc: "阶段4 系统设计", check: "BC清单、上下文映射图、Enabler Epic清单、架构约束传递清单" }

@@ -1,0 +1,170 @@
+# N00 软件研发过程规范 — 过程框架 Schema
+# 来源规范：specs/software/context/N00-软件研发过程规范_v0.22@202602231301.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供研发阶段定义和过程约束
+# 完整规则（BABOK/ISO/SAFe方法论对照、SAFe需求模型详解、追溯链全景图）：见原规范文件
+
+doc_id: N00
+doc_name: 软件研发过程规范
+
+# ── 需求域与阶段映射 ──
+domain_mapping:
+  业务需求域(StRS): [阶段1 产品战略, 阶段2 宏观需求]
+  系统架构需求域(SyRS): [阶段3 领域设计, 阶段4 系统设计]
+  软件开发需求域(SRS): [阶段5 BC详细需求, 阶段6 BC总体设计, 阶段7 BC详细设计, 阶段8 开发实现]
+
+# ── 8阶段定义 ──
+stages:
+
+  - id: 1
+    name: 产品战略
+    safe_level: Strategic Theme
+    goal: "明确战略定位、目标市场、核心价值主张和商业模式，定义Strategic Theme"
+    key_activities:
+      - 市场分析与竞品研究
+      - 产品愿景与定位确定
+      - Strategic Theme定义
+      - 商业模式设计与可行性评估
+      - 产品路线图规划
+      - KPI定义
+    inputs: [市场调研报告, 公司战略规划, 客户反馈与需求洞察, 技术趋势分析]
+    outputs:
+      - { name: 产品战略文档, content: "含愿景、目标市场、价值主张、商业模式、Strategic Theme清单" }
+      - { name: 产品路线图, content: "分阶段演进计划，各里程碑可追溯到Strategic Theme" }
+
+  - id: 2
+    name: 宏观需求
+    safe_level: Business Epic
+    goal: "将Strategic Theme分解为Business Epic，识别核心业务流程和关键用户场景"
+    key_activities:
+      - 业务流程梳理与建模
+      - 系统角色与场景分析
+      - Business Epic识别与定义
+      - 核心功能需求识别与分类
+      - 非功能需求初步定义
+      - Business Epic优先级排序
+    inputs: [产品战略文档(含Strategic Theme), 产品路线图, 利益相关方访谈记录, 现有系统分析]
+    outputs:
+      - { name: 宏观需求文档, content: "业务全景、核心流程、用户场景、Business Epic清单(含优先级与验收标准)、非功能需求" }
+      - { name: 业务流程图, content: "核心业务流程的可视化表达" }
+
+  - id: 3
+    name: 领域设计
+    safe_level: Enabler Epic
+    goal: "领域划分(核心/支撑/通用)，BC识别与边界划定，统一语言，识别Enabler Epic"
+    key_activities:
+      - 领域知识获取与统一语言建立
+      - 领域划分(核心域/支撑域/通用域)
+      - BC识别与边界划定
+      - BC间关系与上下文映射设计
+      - 领域事件识别
+      - Enabler Epic识别与定义
+    inputs: [宏观需求文档(含Business Epic), 业务流程图, 领域专家知识]
+    outputs:
+      - { name: 领域设计文档, content: "领域划分、BC识别、上下文映射图、统一语言词汇表、Enabler Epic清单及与Business Epic的追溯关系" }
+
+  - id: 4
+    name: 系统设计
+    safe_level: "Capability / Enabler Capability / Enabler Feature"
+    goal: "系统架构设计、技术选型，将Enabler Epic分解为Enabler Capability和Enabler Feature"
+    key_activities:
+      - 系统整体架构设计
+      - 技术选型与评估
+      - BC到服务/模块的映射
+      - 系统集成方案设计
+      - 基础设施与部署架构设计
+      - 系统级非功能需求方案设计
+      - Enabler Capability/Feature定义
+    inputs: [领域设计文档(含Enabler Epic), 宏观需求文档(非功能需求), 技术约束与现有架构资产]
+    outputs:
+      - { name: 系统设计文档, content: "系统架构图、技术选型、集成方案、部署架构、非功能需求方案、架构需求清单(Enabler Capability/Feature含验收标准)" }
+
+  - id: 5
+    name: BC详细需求
+    safe_level: "Feature → User Story"
+    goal: "将Business Epic和Capability拆分为Feature和User Story，产出可指导设计的详细需求"
+    key_activities:
+      - Capability拆分为Feature
+      - Feature定义(含业务价值假设和验收标准)
+      - User Story编写
+      - 验收标准定义(可测试)
+      - 业务规则详细定义
+      - 数据需求分析
+      - BC级非功能需求细化
+      - BC间交互需求明确
+    inputs: [宏观需求文档(含Business Epic), 领域设计文档(含Enabler Epic), 系统设计文档(含架构需求清单)]
+    outputs:
+      - { name: BC详细需求文档, content: "per BC，含Feature列表、User Story(含验收标准)、业务规则、数据需求" }
+
+  - id: 6
+    name: BC总体设计
+    safe_level: "Task(初步)"
+    goal: "BC内模块划分、核心领域模型、关键接口、数据存储方案，User Story分解为初步Task"
+    key_activities:
+      all_bc: [BC内模块/层次结构设计, 聚合根与领域模型总体设计, API概要定义, 数据存储方案设计, BC内关键技术方案, 与其他BC的集成接口设计, Task初步分解]
+      大BC_extra: [子领域划分, 跨子领域约束定义, 公共架构决策]
+    bc_scale:
+      大BC: "子领域划分 + 跨子领域约束 + 公共架构决策 + 概要级设计"
+      小BC: "按传统方式完成总体设计，无需子领域划分"
+      判定条件_任一即为大BC:
+        - "BC内包含多个可独立演进的业务关注点"
+        - "Feature数量或复杂度导致单份详设难以维护"
+        - "存在可由不同团队并行设计的独立模块"
+    inputs: [BC详细需求文档(含Feature/User Story), 系统设计文档(含Enabler Feature约束), 领域设计文档]
+    outputs:
+      - { name: BC总体设计文档, content: "per BC。小BC:模块结构、领域模型概要、接口概要、数据方案、Task清单。大BC:额外含子领域划分、跨子领域约束、公共架构决策" }
+
+  - id: 7
+    name: BC详细设计
+    safe_level: "Task(细化)"
+    goal: "详细技术设计，细化Task至可分配粒度"
+    key_activities:
+      - 详细领域模型设计(实体/值对象/聚合/领域服务)
+      - API详细设计(请求/响应/错误码/版本策略)
+      - 数据模型详细设计(表结构/索引/数据迁移)
+      - 核心业务逻辑与算法设计
+      - 异常处理与边界条件设计
+      - 单元测试策略设计
+      - Task细化与工作量估算
+    大BC额外要求:
+      - "各子领域详设遵循总体设计中的跨子领域约束和公共架构决策"
+      - "子领域间接口契约在各自详设中同步定义"
+    bc_output:
+      大BC: "每个子领域一份详细设计文档(N份/BC)"
+      小BC: "整个BC一份详细设计文档"
+    inputs: [BC总体设计文档(含Task清单; 大BC含子领域划分和约束), BC详细需求文档(含User Story验收标准)]
+    outputs:
+      - { name: BC详细设计文档, content: "详细领域模型、API规格、数据模型、算法设计、细化Task清单(含工作量估算)" }
+
+  - id: 8
+    name: 开发实现
+    goal: "按Task编码实现、测试、部署发布"
+    key_activities: [按Task编码实现, 代码审查, 单元测试与集成测试, CI/CD, 系统测试与验收测试, 缺陷修复与回归, 部署与发布]
+    inputs: [BC详细设计文档(含Task清单), BC总体设计文档, BC详细需求文档(含验收标准), 系统设计文档(含Enabler Feature非功能需求)]
+    outputs:
+      - { name: 源代码, content: "经代码审查，可追溯到Task和User Story" }
+      - { name: 测试报告, content: "覆盖User Story验收标准和Enabler Feature非功能需求" }
+      - { name: 部署包与部署文档 }
+      - { name: 用户手册/操作指南, content: "如适用" }
+
+# ── 过程管理要求 ──
+process_management:
+  阶段门禁: "每阶段完成后阶段评审，确认交付物质量和完整性"
+  变更管理: "变更需评估影响范围并获得确认，前序变更需同步更新后续阶段"
+  可追溯性: "各阶段交付物建立双向追溯关系"
+  质量保障: "各阶段遵循相应编写规范和质量标准"
+
+# ── 追溯链 ──
+traceability:
+  主链: "Strategic Theme → Business Epic → Enabler Epic → Enabler Capability/Feature → Capability → Feature → User Story → Task"
+  大BC额外: "BC总体设计 → 子领域划分 → 子领域详细设计"
+  全链路覆盖: "需求项 ↔ 设计文档 ↔ 源代码 ↔ 测试用例（正向追踪 + 反向溯源）"
+
+# ── Enabler说明 ──
+enabler:
+  定义: "架构、基础设施、合规等技术工作的显性管理"
+  与Business关系: "遵循相同规则(验收标准、优先级排序、增量交付)，区别仅价值导向：Business直接交付用户价值，Enabler构建架构跑道"
+  规模适配: "大型项目显式管理Enabler Epic/Capability/Feature；小型项目可简化(省略Capability层级或合并到Business项)"
+
+# ── 术语 ──
+terminology:
+  SAFe术语约定: "Business Epic/Enabler Epic等SAFe原生术语保留英文原名，首次标注中文译名"
