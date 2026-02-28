@@ -57,7 +57,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [ -z "$DOC_PATH" ]; then
-    echo "用法: $0 <文档路径> [--schema <schema.yaml>] [--max-depth <N>] [--max-lines <N>]"
+    echo "用法: $0 <文档路径> [--schema <schema.yaml>] [--max-depth <N>] [--max-chars <N>]"
     exit 1
 fi
 
