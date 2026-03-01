@@ -17,11 +17,17 @@
      - 示例：`/load-target /path/to/file.md`
      - 如果用户未提供路径参数，提示："请提供文件路径，用法：/load-target /path/to/file.md"
 2.   **读取目标文件**：使用 Read 工具读取步骤1中确定的文件路径的完整内容
+     - 单文件加载限制：100K tokens
+     - 超过限制时：显示 ⚠️ 告警但继续完整加载
 3.   **输出加载确认**：
    ```
    [LOADED target] {文件路径} | ~{tokens数量} tokens
    ```
    - tokens 估算：文件字节数 ÷ 3.5，向下取整
+   - 如果文件超过 100K tokens：
+     ```
+     ⚠️ [LOADED target] {文件路径} | ~{tokens数量} tokens (超过100K限制，已完整加载)
+     ```
 4.   **汇总已加载文件**：扫描本次会话中所有 `[LOADED *]` 记录，列出：
    - 文件清单（每个文件的路径和 tokens）
    - 合计 tokens 数量

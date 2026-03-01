@@ -5,26 +5,39 @@
 ## 用法
 
 ```
-/load-parallel /path/to/parallel-file.md       # 直接指定文件
-/load-parallel /path/to/project/               # 批量加载（需先 /load-target）
+/load-parallel /path/to/file.md                          # 单文件
+/load-parallel /path/a.md /path/b.md /path/c.md          # 多文件（对等模式，无需 load-target）
+/load-parallel /path/to/project/                         # 目录批量加载（需先 /load-target）
 ```
 
 ## 执行步骤
 
-### 文件模式（参数以 .md 结尾）
+### 单文件模式（参数为单个 .md 路径）
 
 1.   读取指定文件
+     - 单文件加载限制：100K tokens
+     - 超过限制时：显示 ⚠️ 告警但继续完整加载
 2.   输出加载确认：
    ```
    [LOADED parallel] {文件路径} | ~{字节数÷3.5取整} tokens
    ```
+   - 如果文件超过 100K tokens：
+   ```
+   ⚠️ [LOADED parallel] {文件路径} | ~{tokens数量} tokens (超过100K限制，已完整加载)
+   ```
+
+### 多文件模式（参数为多个 .md 路径）
+
+1.   按参数顺序逐一读取各文件
+2.   每加载一个文件输出一条 `[LOADED parallel]` 确认
+3.   与 `load-target` 无关，不检查也不依赖会话历史中的 target 记录
 
 ### 目录模式（参数为目录路径）
 
-1.   从会话历史找到最近一条 `[LOADED target]` 记录，获取目标文档文件名
-2.   读取该目录下的 `CLAUDE.md`，在关联关系表中找到目标文档的并行关联文档列表
-3.   按优先级（outputs/ 优先，其次 drafts/）逐一定位并读取各并行文档
-4.   每加载一个文件输出一条 `[LOADED parallel]` 确认
+1.   列出该目录下所有 `.md` 文件
+2.   逐一读取全部文件
+3.   每加载一个文件输出一条 `[LOADED parallel]` 确认
+4.   与 `load-target` 无关，不检查也不依赖会话历史中的 target 记录
 
 ### 加载后
 
