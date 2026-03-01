@@ -5,13 +5,19 @@
 ## 用法
 
 ```
-/load-style /path/to/style-spec.md
+/load-style [/path/to/style-spec.md]
 ```
+
+如果不提供参数，默认加载 `/home/1ding/claude/projects/specs/common/outputs` 目录下的 C02 文件（语言风格规范）。
 
 ## 执行步骤
 
-1.   读取 $ARGUMENTS 指定的文件
-2.   输出加载确认：
+1.   如果 $ARGUMENTS 为空：
+     -   查找 `/home/1ding/claude/projects/specs/common/outputs/C02*.md` 文件
+     -   选择最新版本（按文件名排序取最后一个）
+2.   如果 $ARGUMENTS 不为空：
+     -   读取 $ARGUMENTS 指定的文件
+3.   输出加载确认：
    ```
    [LOADED style] {文件路径} | ~{字节数÷3.5取整} tokens
    ```

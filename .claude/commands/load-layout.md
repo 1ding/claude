@@ -5,13 +5,21 @@
 ## 用法
 
 ```
-/load-layout /path/to/layout-spec.md
+/load-layout [/path/to/layout-spec.md]
 ```
+
+如果不提供参数，默认加载 `/home/1ding/claude/projects/specs/common/outputs` 下 C01 开头的文件。
 
 ## 执行步骤
 
-1.   读取 $ARGUMENTS 指定的文件
-2.   输出加载确认：
+1.   确定目标文件：
+     -   如果 $ARGUMENTS 非空：使用指定路径
+     -   如果 $ARGUMENTS 为空：
+         -   在 `/home/1ding/claude/projects/specs/common/outputs` 目录下查找 C01 开头的文件
+         -   如果找到多个，使用最新的（按文件名排序取最后一个）
+         -   如果未找到，报错提示
+2.   读取目标文件
+3.   输出加载确认：
    ```
    [LOADED layout] {文件路径} | ~{字节数÷3.5取整} tokens
    ```

@@ -5,30 +5,34 @@
 ## 用法
 
 ```
-/doc-promote {文件路径或文档名前缀} [{新版本号}]
+/doc-promote [{新版本号}]
 ```
 
 **参数**：
 
--   `{文件路径或文档名前缀}`（必填）：
-    -   完整文件路径：`projects/ClariSphere/drafts/02-宏观需求_v0.12_R09@202602271800.md`
-    -   文档名前缀（AI 自动查找 drafts/ 中的最新版本）：`projects/ClariSphere/drafts/02-宏观需求`
 -   `{新版本号}`（可选）：目标常规版本号（如 `v0.20`、`v1.00`）；未提供时自动 +0.01
 
 **示例**：
 
 ```
-/doc-promote projects/ClariSphere/drafts/02-宏观需求_v0.12_R09@202602271800.md
-/doc-promote projects/ClariSphere/drafts/02-宏观需求                    ← 自动查最新，版本号 +0.01
-/doc-promote projects/ClariSphere/drafts/S01-战略规划编写规范_v0.23_R03@... v1.00
+/doc-promote           ← 自动从 load-target 获取目标文档，版本号 +0.01
+/doc-promote v1.00     ← 指定升级到 v1.00
 ```
 
 ## 先决条件检查
 
-确认 $ARGUMENTS 非空，否则输出以下提示并**立即中止**：
+从会话历史中查找最近一条 `[LOADED target]` 记录：
 
-> ⚠️ 请指定 drafts/ 中的文件路径或文档名前缀，例如：
-> `/doc-promote projects/ClariSphere/drafts/02-宏观需求`
+-   **找到记录**：提取目标文档的完整文件路径
+-   **未找到记录**：输出以下提示并**立即中止**：
+
+> ⚠️ 未找到目标文档，请先使用 `/load-target` 加载要晋升的文档
+>
+> 示例：
+> ```
+> /load-target projects/ClariSphere/drafts/02-宏观需求_v0.12_R09@202602271800.md
+> /doc-promote
+> ```
 
 ## 执行步骤
 
@@ -99,7 +103,35 @@ bash .claude/scripts/promote-to-official.sh {项目路径} {文档名前缀}
 
 > 注：脚本自动取 `drafts/` 中按文件名排序的最新文件，因此步骤 3 创建的新常规版本会被正确识别。
 
-### 5. 输出结果报告
+### 5. 清理 drafts 中的历史版本
+
+晋升完成后，清理 drafts/ 中该文档的所有历史版本，仅保留最新的正式版本文件：
+
+```bash
+# 列出 drafts/ 中该文档的所有版本文件（按时间排序）
+ls -t {项目路径}/drafts/{文档名前缀}_v*.md
+
+# 保留最新文件（即刚创建的常规版本），删除其他所有历史版本
+ls -t {项目路径}/drafts/{文档名前缀}_v*.md | tail -n +2 | xargs -r rm -v
+```
+
+**清理逻辑**：
+- `ls -t` 按修改时间倒序排列（最新文件在最前）
+- `tail -n +2` 跳过第一行（最新文件），输出其余所有历史版本
+- `xargs -r rm -v` 删除这些历史文件，`-v` 显示删除的文件名，`-r` 确保列表为空时不执行
+- 最终 drafts/ 中只保留最新的常规版本文件
+
+**输出清理结果**：
+```
+已清理 drafts/ 历史版本：
+  - {文档名前缀}_v0.10_R01@...md
+  - {文档名前缀}_v0.10_R02@...md
+  - {文档名前缀}_v0.11_R01@...md
+  ...
+保留最新版本：drafts/{文档名前缀}_{新版本号}@{时间戳}.md
+```
+
+### 6. 输出结果报告
 
 ```
 ---晋升完成---
@@ -108,4 +140,5 @@ bash .claude/scripts/promote-to-official.sh {项目路径} {文档名前缀}
       直接晋升（{版本号}）                               ← 已是常规版本时
 新正式版：outputs/{文件名}
 归档旧版：history/{旧文件名}（若无旧版则省略）
+已清理 drafts/ 历史版本 {数量} 个，保留最新版本
 ```
