@@ -5,8 +5,11 @@
 ## 用法
 
 ```
-/load-refs /path/to/ref-file.md                       # 单文件
-/load-refs /path/to/ref-file.md 用途：提供接口定义    # 注明用途（可选）
+/load-refs /path/to/ref-file.md                            # 单文件
+/load-refs /path/to/ref-file.md 4                          # 只加载第4章
+/load-refs /path/to/ref-file.md 1-2                        # 只加载第1、2章
+/load-refs /path/to/ref-file.md 用途：提供接口定义          # 注明用途（可选）
+/load-refs /path/to/ref-file.md 1-2 用途：提供接口定义      # 章节 + 用途
 ```
 
 参数为文件路径（必填）。不支持目录模式；参考材料通常是外部来源，不在项目 `CLAUDE.md` 的关联关系中。
@@ -16,12 +19,14 @@
 1.   读取指定文件
      - 单文件加载限制：100K tokens
      - 超过限制时：显示 ⚠️ 告警但继续完整加载
-2.   提取用途说明（若参数中有说明则使用；否则标记为"未指定"）
+     - **章节过滤**（有章节参数时）：按 `# ` 一级标题切分，序号从1开始，只保留指定章节；若无一级标题或序号越界，加载全文并告警。token 估算和超量检查仅针对保留内容
+2.   提取章节参数和用途说明（章节参数为路径后的纯数字或 `N-M`；用途说明以 `用途：` 开头；均为可选）
 3.   输出加载确认：
    ```
    [LOADED refs] {文件路径} | ~{字节数÷3.5取整} tokens  ← 参考材料，用途：{用途说明}
+   [LOADED refs] {文件路径} [章节 N] | ~{tokens数量} tokens  ← 参考材料，用途：{用途说明}
    ```
-   - 如果文件超过 100K tokens：
+   - 如果超过 100K tokens：
    ```
    ⚠️ [LOADED refs] {文件路径} | ~{tokens数量} tokens (超过100K限制，已完整加载) ← 参考材料，用途：{用途说明}
    ```

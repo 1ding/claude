@@ -80,6 +80,7 @@ $ARGUMENTS
 -   收到确认后，按 `/doc-write` 或 `/doc-revise` 定义的批次流程继续执行
 -   遵循计划文件中记录的基准变更（硬约束）
 -   每批完成后更新计划文件
+-   任务全部完成后（阶段二完成），执行计划文件与大纲文件清理（参见 `/doc-write` 或 `/doc-revise` 步骤5）
 
 ## 与 /doc-write、/doc-revise 的关系
 
