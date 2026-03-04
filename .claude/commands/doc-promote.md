@@ -75,7 +75,7 @@ DOC_PREFIX=$(basename {src_file} | sed 's/_v[0-9].*//')
 从 src_file 文件名判断：
 
 -   **R 版本**（文件名匹配 `_R\d+@`）→ 执行步骤 3（R 转常规版本号）
--   **常规版本**（不含 `_R\d+@`）→ 跳至步骤 4
+-   **常规版本**（不含 `_R\d+@`）→ 跳至步骤 4（此时 version_arg 若非空，忽略并提示用户）
 
 ### 3. R 转常规版本号（调用脚本）
 
@@ -100,25 +100,7 @@ bash .claude/scripts/promote-to-official.sh {PROJECT_DIR} {DOC_PREFIX}
 -   若 `outputs/` 已有旧正式版 → 移动到 `history/`
 -   将 `drafts/` 中按文件名排序最新的常规版本复制到 `outputs/`
 
-### 5. 清理 drafts/ 历史版本
-
-晋升完成后，仅保留最新版本文件（步骤 3 创建的常规版本），删除所有历史版本：
-
-```bash
-# 按修改时间倒序，保留第一个（最新），删除其余
-ls -t {PROJECT_DIR}/drafts/{DOC_PREFIX}_v*.md | tail -n +2 | xargs -r rm -v
-```
-
-**输出删除的文件列表**：
-
-```
-已清理 drafts/ 历史版本：
-  - {文件名1}
-  - {文件名2}
-保留最新版本：drafts/{新文件名}
-```
-
-### 6. 输出结果报告
+### 5. 输出结果报告
 
 ```
 ---晋升完成---
@@ -127,5 +109,4 @@ ls -t {PROJECT_DIR}/drafts/{DOC_PREFIX}_v*.md | tail -n +2 | xargs -r rm -v
       直接晋升（{版本号}）                                   ← 已是常规版本时
 新正式版：outputs/{文件名}
 归档旧版：history/{旧文件名}（若无旧版则省略）
-已清理 drafts/ 历史版本 {数量} 个，保留最新版本
 ```

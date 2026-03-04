@@ -25,7 +25,7 @@ projects/{项目名}/
 ├── decisions.md       ← 决策日志（格式见 .claude/rules-ext/decisions-template.md）
 ├── refs/              ← 参考材料
 ├── drafts/            ← 工作目录（所有版本历史）
-├── plans/             ← 计划文件、大纲、交接文件
+├── plans/             ← 大纲、交接文件
 ├── outputs/           ← 当前正式版（每个文档只有一个文件）
 └── history/           ← 旧正式版归档
 ```
@@ -40,7 +40,7 @@ projects/{项目名}/
 
 若用户未提供文档清单，生成带占位说明的模板，提示用户后续补充。
 
-同时读取 `.claude/rules-ext/decisions-template.md`，按其格式生成空的 `projects/{项目名}/decisions.md` 决策日志。
+同时读取 `.claude/rules-ext/decisions-template.md`，按其格式生成空的 `projects/{项目名}/decisions.md` 决策日志。每写入一个文件后，立即输出 `[CAP DELTA]` 标记（见容量管理规范）。
 
 ### 4. 验证领域配置
 

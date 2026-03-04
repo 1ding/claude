@@ -85,6 +85,13 @@ def main():
     today = datetime.now().strftime("%Y-%m-%d")
     merged_line = f"| {new_version}  | {today} | {merged_summary} | AI     |\n"
 
+    # 检查行宽（版本管理规范要求 ≤200 显示宽度；中文字符占 2，英文字符占 1）
+    display_width = sum(2 if '\u4e00' <= c <= '\u9fff' or '\u3400' <= c <= '\u4dbf'
+                        or '\uf900' <= c <= '\ufaff' or '\uff00' <= c <= '\uffef'
+                        else 1 for c in merged_line.rstrip('\n'))
+    if display_width > 200:
+        print(f"  [警告] 合并后修订记录行显示宽度 {display_width} > 200，建议手动精简修订内容描述", file=sys.stderr)
+
     new_content = content[:m.start()] + merged_line + content[m.end():]
 
     with open(dst_path, "w", encoding="utf-8") as f:

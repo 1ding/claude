@@ -62,10 +62,9 @@ $ARGUMENTS
 
 ### 2. 辅助规范加载
 
-以下文件立即读取（始终需要，约 4.5K tokens，不产生 `[LOADED *]` 标记）：
+以下文件立即读取（始终需要，不产生 `[LOADED *]` 标记）：
 
--   `.claude/rules-ext/capacity-management.md`（容量评估与分批策略）
--   `.claude/rules-ext/structure-constraints.md`（每批修订后执行章节拆分判断）
+-   `.claude/rules-ext/structure-constraints.md`（修订完成后执行章节拆分判断）
 -   `.claude/rules-ext/quality-checklist.md`（阶段二复核时使用）
 
 > 注：`.claude/rules/version-management.md` 由 Claude Code 自动加载，无需重复读取。
@@ -80,8 +79,8 @@ $ARGUMENTS
 
 按以下阶段执行：
 
--   阶段零：会话初始化（输入识别、内部准备、输入评估与确认、容量评估、修订方案与规划）
--   阶段一：逐批后台修改（按容量管理规范定义的分批策略执行）
+-   阶段零：会话初始化（输入识别、内部准备、输入评估与确认、修订方案与规划）
+-   阶段一：执行修订
 -   阶段二：修订汇总（按质量检查清单全面复核、修订总览、遗留事项）
 
 支持的驱动类型（9种）：
@@ -102,11 +101,10 @@ $ARGUMENTS
 > R 转常规版本号须用户明确指令（"R转常规版本号"、"转常规版本"等）。
 > 提交到 `outputs/` 须用户明确指令（"提交到 outputs"、"发布正式版本"等）。
 
--   修订计划文件写入 `projects/{项目}/plans/修订计划_{文档名}.md`
+每次向 `drafts/` 写入文件后，立即输出 `[CAP DELTA]` 标记（见容量管理规范）。
 
-### 5. 清理计划与大纲文件
+### 5. 清理大纲文件
 
 阶段二完成、验证通过后：
 
-1.   删除 `projects/{项目}/plans/修订计划_{文档名}.md`（如存在）
-2.   如本次修订使用了大纲文件（`[LOADED outline]` 记录存在），删除对应大纲文件 `projects/{项目}/plans/大纲_{文档名}.md`（如存在）
+1.   如本次修订使用了大纲文件（`[LOADED outline]` 记录存在），删除对应大纲文件 `projects/{项目}/plans/大纲_{文档名}.md`（如存在）

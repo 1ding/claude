@@ -56,11 +56,6 @@ $ARGUMENTS
 -   扫描会话历史，识别已加载的规范文档（`[LOADED spec]`、`[LOADED layout]`、`[LOADED style]` 等），作为检查基准
 -   读取 `.claude/rules-ext/quality-checklist.md`
 
-**容量评估**：扫描会话历史中所有 `[LOADED *]` 记录，估算合计 tokens（字节数 ÷ 3.5）：
--   ≤ 120K → 继续执行
--   120K–160K → ⚠️ 容量偏紧，建议按章节分批评审（`/doc-review /path N` 仅评审第 N 章）
--   > 160K → 🔴 容量紧张：分批评审可能遗漏跨章节问题，建议优先切换模型（`/model sonnet-1m`）
-
 ### 2. 执行质量检查
 
 按质量检查清单中的**文档内部检查维度**逐项检查：
