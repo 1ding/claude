@@ -36,16 +36,10 @@
 
 ### 目录模式（参数为目录路径）
 
-1.   从会话历史找到最近一条 `[LOADED target]` 记录，获取目标文档
-2.   推断项目路径（从文件路径向上找到含 `CLAUDE.md` 的目录）
-3.   读取该项目的 `CLAUDE.md`，找到目标文档的全部关联列表
-4.   按以下顺序加载，文件定位优先从 `outputs/`，其次 `drafts/`：
-   ```
-   [LOADED upstream]    {文件路径} | ~{tokens}
-   [LOADED downstream]  {文件路径} | ~{tokens}
-   [LOADED parallel]    {文件路径} | ~{tokens}
-   [LOADED context]     {文件路径} | ~{tokens}
-   ```
+1.   检查该目录下是否有 `CLAUDE.md`：
+     -   **有 CLAUDE.md**：读取关联关系表，按 upstream / downstream / parallel / context 分类加载；文件定位优先 outputs/，其次 drafts/
+     -   **无 CLAUDE.md**：列出该目录下所有 `.md` 文件（同名前缀取最新版本），对每个文件执行文件模式中的 AI 判断步骤
+2.   每加载一个文件输出对应 `[LOADED {类型}]` 确认
 
 ### 加载后
 
@@ -53,6 +47,6 @@
 
 容量检查（以 200K 为基准）：
 -   合计 > 120K tokens → ⚠️ 已超过 60%，谨慎继续加载
--   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载
+-   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载；可输入 `/model <sonnet-1m>` 切换大上下文模型（无需重开会话）
 
 > 提示：关联文档体积通常较大，加载前建议先执行 /cap-status 确认剩余容量。

@@ -5,22 +5,28 @@
 ## 用法
 
 ```
-/load-style [/path/to/style-spec.md]
+/load-style                                    # 无参：自动查找 C02 语言风格规范
+/load-style /path/to/style-spec.md             # 单文件（支持 .md 和 .yaml）
+/load-style /path/to/style-spec.md 3           # 只加载第3章
+/load-style /path/to/style-spec.md 1-2         # 只加载第1、2章
+/load-style /path/a.md /path/b.md              # 多文件
+/load-style /path/to/dir/                      # 目录（加载所有支持的文件）
 ```
-
-如果不提供参数，默认加载 `/home/1ding/claude/projects/specs/common/outputs` 目录下的 C02 文件（语言风格规范）。
 
 ## 执行步骤
 
-1.   如果 $ARGUMENTS 为空：
-     -   查找 `/home/1ding/claude/projects/specs/common/outputs/C02*.md` 文件
-     -   选择最新版本（按文件名排序取最后一个）
-2.   如果 $ARGUMENTS 不为空：
-     -   读取 $ARGUMENTS 指定的文件
-3.   读取文件时：
-     -   单文件加载限制：100K tokens
-     -   超过限制时：显示 ⚠️ 告警但继续完整加载
-4.   输出加载确认：
+### 无参模式
+
+1.   在 `/home/1ding/claude/projects/specs/common/outputs` 目录下查找 C02 开头的文件，取最新版本（按文件名排序取最后一个）；未找到则报错
+2.   执行单文件模式步骤
+
+### 单文件模式（参数为单个文件路径，支持 .md 和 .yaml）
+
+1.   读取指定文件
+     - 单文件加载限制：100K tokens
+     - 超过限制时：显示 ⚠️ 告警但继续完整加载
+     - **章节过滤**（有章节参数时，仅 .md 文件支持）：按 `# ` 一级标题切分，序号从1开始，只保留指定章节；若无一级标题或序号越界，加载全文并告警。token 估算和超量检查仅针对保留内容
+2.   输出加载确认：
    ```
    [LOADED style] {文件路径} | ~{字节数÷3.5取整} tokens
    ```
@@ -29,10 +35,20 @@
    ⚠️ [LOADED style] {文件路径} | ~{tokens数量} tokens (超过100K限制，已完整加载)
    ```
 
+### 多文件模式（`路径1 路径2 ...`）
+
+1.   依次识别参数中的多个路径（不支持章节参数）
+2.   对每个文件逐一执行单文件模式步骤
+
+### 目录模式（参数为目录路径）
+
+1.   列出该目录下所有 `.md` 和 `.yaml` 文件（按文件名排序，同名前缀取最新版本）
+2.   逐一读取，每个文件输出一条 `[LOADED style]` 确认
+
 ### 加载后
 
 扫描本次会话全部 `[LOADED *]` 记录，列出已加载文件清单及估算合计。
 
 容量检查（以 200K 为基准）：
 -   合计 > 120K tokens → ⚠️ 已超过 60%，谨慎继续加载
--   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载
+-   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载；可输入 `/model <sonnet-1m>` 切换大上下文模型（无需重开会话）

@@ -5,15 +5,16 @@
 ## 用法
 
 ```
-/load-context /path/to/context-file.md         # 直接指定文件
+/load-context /path/to/context-file.md         # 单文件
 /load-context /path/to/context-file.md 4       # 只加载第4章
 /load-context /path/to/context-file.md 1-2     # 只加载第1、2章
-/load-context /path/to/context-dir/            # 加载目录下全部文件
+/load-context /path/a.md /path/b.md            # 多文件
+/load-context /path/to/context-dir/            # 目录（加载所有 .md）
 ```
 
 ## 执行步骤
 
-### 文件模式（参数以 .md 或 .yaml 结尾）
+### 单文件模式（参数为单个文件路径，支持 .md 和 .yaml）
 
 1.   读取指定文件
      - 单文件加载限制：100K tokens
@@ -29,9 +30,14 @@
    ⚠️ [LOADED context] {文件路径} | ~{tokens数量} tokens (超过100K限制，已完整加载)
    ```
 
+### 多文件模式（`路径1 路径2 ...`）
+
+1.   依次识别参数中的多个路径（不支持章节参数）
+2.   对每个文件逐一执行单文件模式步骤
+
 ### 目录模式（参数为目录路径）
 
-1.   扫描目录，加载全部 `.md` 文件（按文件名排序，同前缀取最新版本）
+1.   扫描目录，加载全部 `.md` 文件（按文件名排序，同名前缀取最新版本）
 2.   逐一读取，每个文件输出一条 `[LOADED context]` 确认
 
 ### 加载后
@@ -40,4 +46,4 @@
 
 容量检查（以 200K 为基准）：
 -   合计 > 120K tokens → ⚠️ 已超过 60%，谨慎继续加载
--   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载
+-   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载；可输入 `/model <sonnet-1m>` 切换大上下文模型（无需重开会话）

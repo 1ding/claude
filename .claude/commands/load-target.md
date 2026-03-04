@@ -5,12 +5,13 @@
 ## 用法
 
 ```
-/load-target /path/to/file.md
-/load-target /path/to/file.md 4        # 只加载第4章
-/load-target /path/to/file.md 1-2      # 只加载第1、2章
+/load-target /path/to/file.md          # .md 文件
+/load-target /path/to/file.yaml        # .yaml 文件
+/load-target /path/to/file.md 4        # 只加载第4章（仅 .md）
+/load-target /path/to/file.md 1-2      # 只加载第1、2章（仅 .md）
 ```
 
-参数为具体文件路径（必填，不支持目录）。章节参数可选，置于路径之后。
+参数为具体文件路径（必填，不支持目录，支持 .md 和 .yaml）。章节参数可选，置于路径之后（仅 .md 文件支持）。
 
 ## 执行步骤
 
@@ -38,7 +39,7 @@
    - 合计 tokens 数量
 5.   **容量检查**（以 200K 为基准）：
    - 合计 > 120K tokens (60%) → ⚠️ 警告：已超过 60%，谨慎继续加载
-   - 合计 > 160K tokens (80%) → 🔴 严重警告：已超过 80%，强烈建议停止加载
+   - 合计 > 160K tokens (80%) → 🔴 严重警告：已超过 80%，强烈建议停止加载；可输入 `/model <sonnet-1m>` 切换大上下文模型（无需重开会话）
 
 ## 重要说明
 

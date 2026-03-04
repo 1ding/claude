@@ -5,17 +5,21 @@
 ## 用法
 
 ```
-/load-domain /path/to/domain-spec.md
-/load-domain /path/to/specs-dir/
+/load-domain /path/to/domain-spec.md           # 单文件（支持 .md 和 .yaml）
+/load-domain /path/to/domain-spec.md 3         # 只加载第3章（仅 .md）
+/load-domain /path/to/domain-spec.md 1-2       # 只加载第1、2章（仅 .md）
+/load-domain /path/a.yaml /path/b.yaml         # 多文件
+/load-domain /path/to/specs-dir/               # 目录（加载所有支持的文件）
 ```
 
 ## 执行步骤
 
-### 文件模式（参数为文件路径）
+### 单文件模式（参数为单个文件路径，支持 .md 和 .yaml）
 
-1.   读取 $ARGUMENTS 指定的文件
+1.   读取指定文件
      - 单文件加载限制：100K tokens
      - 超过限制时：显示 ⚠️ 告警但继续完整加载
+     - **章节过滤**（有章节参数时，仅 .md 文件支持）：按 `# ` 一级标题切分，序号从1开始，只保留指定章节；若无一级标题或序号越界，加载全文并告警。token 估算和超量检查仅针对保留内容
 2.   输出加载确认：
    ```
    [LOADED domain] {文件路径} | ~{字节数÷3.5取整} tokens
@@ -25,9 +29,14 @@
    ⚠️ [LOADED domain] {文件路径} | ~{tokens数量} tokens (超过100K限制，已完整加载)
    ```
 
+### 多文件模式（`路径1 路径2 ...`）
+
+1.   依次识别参数中的多个路径（不支持章节参数）
+2.   对每个文件逐一执行单文件模式步骤
+
 ### 目录模式（参数为目录路径）
 
-1.   列出该目录下所有 `.md` 文件（按文件名排序，同前缀取最新版本）
+1.   列出该目录下所有 `.md` 和 `.yaml` 文件（按文件名排序，同名前缀取最新版本）
 2.   逐一读取，每个文件输出 `[LOADED domain]` 确认
 
 ### 加载后
@@ -36,4 +45,4 @@
 
 容量检查（以 200K 为基准）：
 -   合计 > 120K tokens → ⚠️ 已超过 60%，谨慎继续加载
--   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载
+-   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载；可输入 `/model <sonnet-1m>` 切换大上下文模型（无需重开会话）

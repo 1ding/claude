@@ -5,15 +5,16 @@
 ## 用法
 
 ```
-/load-downstream /path/to/downstream-file.md        # 直接指定文件
+/load-downstream /path/to/downstream-file.md        # 单文件
 /load-downstream /path/to/downstream-file.md 4      # 只加载第4章
 /load-downstream /path/to/downstream-file.md 1-2    # 只加载第1、2章
-/load-downstream /path/to/project/                  # 批量加载（需先 /load-target）
+/load-downstream /path/a.md /path/b.md              # 多文件
+/load-downstream /path/to/dir/                      # 目录（加载所有 .md）
 ```
 
 ## 执行步骤
 
-### 文件模式（参数以 .md 结尾）
+### 单文件模式
 
 1.   读取指定文件
      - 单文件加载限制：100K tokens
@@ -29,12 +30,15 @@
    ⚠️ [LOADED downstream] {文件路径} | ~{tokens数量} tokens (超过100K限制，已完整加载)
    ```
 
+### 多文件模式（`路径1 路径2 ...`）
+
+1.   依次识别参数中的多个路径（不支持章节参数）
+2.   对每个文件逐一执行单文件模式步骤
+
 ### 目录模式（参数为目录路径）
 
-1.   从会话历史找到最近一条 `[LOADED target]` 记录，获取目标文档文件名
-2.   读取该目录下的 `CLAUDE.md`，在关联关系表中找到目标文档的下游文档列表
-3.   按优先级（outputs/ 优先，其次 drafts/）逐一定位并读取各下游文档
-4.   每加载一个文件输出一条 `[LOADED downstream]` 确认
+1.   列出该目录下所有 `.md` 文件（按文件名排序，同名前缀取最新版本）
+2.   逐一读取，每个文件输出一条 `[LOADED downstream]` 确认
 
 ### 加载后
 
@@ -42,4 +46,4 @@
 
 容量检查（以 200K 为基准）：
 -   合计 > 120K tokens → ⚠️ 已超过 60%，谨慎继续加载
--   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载
+-   合计 > 160K tokens → 🔴 已超过 80%，强烈建议停止加载；可输入 `/model <sonnet-1m>` 切换大上下文模型（无需重开会话）
