@@ -37,8 +37,9 @@ $ARGUMENTS
 ### 文件定位规则
 
 -   从规范文档路径自动推导 schema 文件路径
+-   Schema 文件名 = 规范文档完整文件名（含版本号、时间戳、`.md` 后缀）+ `.schema.yaml`
 -   规范文档：`.claude/specs/common/C01-内容表达规范_v0.22@202602241415.md`
-  → Schema 文件：`.claude/specs/schema/C01-内容表达规范_v0.22@202602241415.schema.yaml`
+  → Schema 文件：`.claude/specs/schema/C01-内容表达规范_v0.22@202602241415.md.schema.yaml`
 
 ## 先决条件检查
 
@@ -70,9 +71,14 @@ $ARGUMENTS
 -   规范文档路径已在先决条件检查中确定（来自 $ARGUMENTS 或会话历史 `[LOADED target]` 记录）
 -   从规范文档路径推导 schema 文件路径：
     -   提取规范文档目录（如 `.claude/specs/common/`）
-    -   构建 schema 路径：`{规范文档目录}/../schema/{规范文档名}.schema.yaml`
+    -   构建 schema 路径：`{规范文档目录}/../schema/{规范文档完整文件名（含.md）}.schema.yaml`
+    -   示例：规范 `outputs/N00-规范_v0.23@202603051007.md` → schema `schema/N00-规范_v0.23@202603051007.md.schema.yaml`
 -   读取规范文档内容
--   读取 schema 文件内容（如不存在，提示用户先执行 `/spec-to-schema`）
+-   查找 schema 文件：
+    -   若精确路径存在 → 正常加载
+    -   若精确路径不存在 → 在 schema 目录搜索同文档前缀的其他版本 schema（glob `{文档编号}-*schema.yaml`）
+        -   找到旧版本 → 加载旧版本，并在验证报告中将**文件名版本不匹配**列为 [!!] 严重问题，在步骤4修正时将 schema 文件重命名为新版本名
+        -   完全找不到 → 提示用户先执行 `/spec-to-schema`
 
 ### 2. 执行一致性检查
 
@@ -144,6 +150,7 @@ Schema 文件：{schema 文件路径}
 -   修正不一致的规则描述
 -   删除过时或冗余的规则
 -   更新示例
+-   **若存在文件名版本不匹配**：使用 Bash `mv` 将 schema 文件重命名为正确的版本名（`{规范文档完整文件名}.schema.yaml`），并更新 schema 文件头部的 `来源规范` 注释
 
 修正后：
 -   保存修正后的 schema 文件，立即输出 `[CAP DELTA]` 标记（见容量管理规范）

@@ -55,6 +55,21 @@ echo "复制最新草稿到 outputs/..."
 cp "$LATEST_DRAFT" "$PROJECT_DIR/outputs/"
 echo "  已复制: $(basename "$LATEST_DRAFT") -> outputs/"
 
+# 清理 drafts/：旧常规版本和所有 R 版本移入 history/
+MOVED_COUNT=0
+for f in "$PROJECT_DIR/drafts/${DOC_PREFIX}"_v*.md; do
+    [ -f "$f" ] || continue
+    if [[ "$(basename "$f")" =~ _R[0-9]+@ ]]; then
+        mv "$f" "$PROJECT_DIR/history/"
+        echo "  已归档: $(basename "$f") -> history/"
+        MOVED_COUNT=$((MOVED_COUNT + 1))
+    elif [ "$f" != "$LATEST_DRAFT" ]; then
+        mv "$f" "$PROJECT_DIR/history/"
+        echo "  已归档: $(basename "$f") -> history/"
+        MOVED_COUNT=$((MOVED_COUNT + 1))
+    fi
+done
+
 echo ""
 echo "========================================"
 echo "转正式版本完成！"
@@ -63,4 +78,7 @@ echo "当前正式版本: $(basename "$LATEST_DRAFT")"
 echo "位置: $PROJECT_DIR/outputs/$(basename "$LATEST_DRAFT")"
 if [ -n "$OLD_OFFICIAL" ]; then
     echo "旧版本已归档: $PROJECT_DIR/history/$(basename "$OLD_OFFICIAL")"
+fi
+if [ "$MOVED_COUNT" -gt 0 ]; then
+    echo "drafts/ 已清理: ${MOVED_COUNT} 个旧版本文件移入 history/"
 fi

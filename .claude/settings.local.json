@@ -8,5 +8,17 @@
       "Glob(*)",
       "Grep(*)"
     ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/1ding/claude/.claude/hooks/cap-check.sh"
+          }
+        ]
+      }
+    ]
   }
 }

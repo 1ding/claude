@@ -1,0 +1,329 @@
+# 软件研发过程规范 Schema
+# 来源规范：.claude/specs/domain/software/context/outputs/N00-软件研发过程规范_v0.24@202603051426.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供研发过程框架约束
+# 完整规则（更多示例和详细说明）：见原规范文件
+# 修订日期：2026-03-05
+
+doc_id: N00
+doc_name: 软件研发过程规范
+
+# ── 管辖范围 ──
+scope:
+  管辖: [阶段划分, 各阶段目标, 关键活动, 输入输出, 交付物要求, 过程管理要求]
+  不管辖: [具体编写规范(见各交付物专用规范), 编号体系(P01), 术语定义(C99), 错误代码(P02)]
+
+# ── 研发阶段总览 ──
+stages:
+  count: 8
+  顺序: 阶段1产品战略 → 阶段2宏观需求 → 阶段3领域设计 → 阶段4系统设计 → 阶段5BC详细需求 → 阶段6BC总体设计 → 阶段7BC详细设计 → 阶段8开发实现
+  关系: 顺序依赖，可根据项目特点迭代和并行
+
+# ── 各阶段定义 ──
+stage_details:
+  阶段1_产品战略:
+    目标: 战略定位、目标市场、价值主张、商业模式；定义 Strategic Theme
+    关键输出:
+      - 产品战略文档（含产品愿景、价值主张、Strategic Theme 清单）
+      - 产品路线图（各里程碑可追溯到 Strategic Theme）
+    SAFe层级: Strategic Theme
+
+  阶段2_宏观需求:
+    目标: 将 Strategic Theme 分解为 Business Epic，识别核心业务流程和用户场景
+    关键活动补充: 需求演化——承接Strategic Theme拆分为Business Epic；废弃不符战略的Epic候选；允许新增市场洞察或用户访谈驱动的新Epic
+    关键输出:
+      - 宏观需求文档（含 Business Epic 清单+优先级+验收标准+非功能需求初步定义）
+      - 业务流程图
+    SAFe层级: Business Epic
+
+  阶段3_领域设计:
+    目标: 领域划分（核心域/支撑域/通用域）、BC识别与边界划定、统一语言；识别 Enabler Epic
+    关键活动补充: 需求演化——Business Epic可废弃但须留痕（记录废弃原因，不得静默删除）；Enabler Epic为本阶段新识别的架构需求，与业务Epic并行管理
+    关键输出:
+      - 领域设计文档（含领域划分+BC识别+上下文映射图+统一语言词汇表+Enabler Epic清单及与Business Epic的追溯关系）
+    SAFe层级: Enabler Epic
+
+  阶段4_系统设计:
+    目标: 系统整体架构设计；将 Enabler Epic 分解为 Enabler Capability 和 Enabler Feature
+    关键活动补充: 需求演化——Enabler Epic承接并细化为Enabler Capability/Feature；架构约束若影响业务Epic范围，反馈至宏观需求文档
+    关键输出:
+      - 系统设计文档（含系统架构图+技术选型+集成方案+部署架构+非功能需求方案+Enabler Capability/Feature清单及验收标准+上游追溯关系）
+    SAFe层级: [Enabler Capability, Enabler Feature]
+
+  阶段5_BC详细需求:
+    目标: 将 Business Epic 和 Capability 拆分为 Feature 和 User Story，针对每个BC细粒度需求分析
+    关键活动补充: 需求演化——上游Business Epic/Capability细化为Feature/User Story（承接、细化、废弃、新增）；Enabler Feature约束承接并细化为BC级非功能需求指标
+    关键输出:
+      - BC详细需求文档（per BC，含Feature列表+User Story+验收标准+业务规则+数据需求）
+    追溯要求: Feature/User Story → 上游 Business Epic；标注受 Enabler Feature 约束的非功能需求
+    SAFe层级: [Feature, User Story]
+
+  阶段6_BC总体设计:
+    目标: BC内模块划分、领域模型、关键接口、数据方案；将 User Story 初步分解为 Task
+    关键活动补充: 需求演化——Feature/User Story逐条留痕处置（承接/废弃），废弃须注明原因；如设计发现需求冲突或边界问题，反馈BC详细需求文档修订
+    关键输出:
+      - BC总体设计文档（per BC）
+      - 小BC内容: 模块结构+领域模型概要+接口概要+数据方案+初步Task清单
+      - 大BC额外内容: 子领域划分方案+跨子领域约束+公共架构决策+各子领域概要设计
+    追溯要求: 设计方案 → Feature/User Story；标注对 Enabler Feature 的落实方式
+    SAFe层级: Task（初步分解）
+
+  阶段7_BC详细设计:
+    目标: 完成可直接指导编码的详细技术设计；细化 Task 至可分配粒度
+    关键活动补充: 需求落位——逐条确定User Story处置方式（承接、细化、废弃、新增），形成BC详细需求文档（S05）与详细设计之间的追溯基线；废弃或新增须经§11.2变更管理流程确认
+    关键输出:
+      - 小BC: 1份/BC（含详细领域模型+API规格+数据模型+算法设计+细化Task清单+工作量估算）
+      - 大BC: N份/子领域，各子领域文档须遵循总体设计的跨子领域约束
+    SAFe层级: Task（细化）
+
+  阶段8_开发实现:
+    目标: 按 Task 完成编码、测试、部署，交付可部署软件产品
+    关键活动补充: 需求验收——以User Story验收标准验证实现完整性；发现需求偏差时通过变更管理流程处理
+    关键输出:
+      - 源代码（经代码审查，可追溯到 Task 和 User Story）
+      - 测试报告（覆盖 User Story 验收标准和 Enabler Feature 非功能需求）
+      - 部署包与部署文档
+      - 用户手册（如适用）
+
+# ── 大BC / 小BC 判定 ──
+bc_scale:
+  策略: 粗粒度BC策略——BC通常对应一个微服务，不宜拆分过细；规模超出单ART单PI交付能力时在BC内部引入子领域（Capability/SD-xx），而非拆分为更小的BC
+  大BC判定: 满足以下任一条件
+    - BC规模超出单个ART在一个PI内的正常交付能力
+    - BC内包含多个可独立演进的业务关注点，且各自有独立的聚合根边界
+    - BC内存在可由不同团队或人员并行设计的独立模块
+  小BC: 不满足大BC任一条件，按传统方式处理（阶段7产出1份文档）
+  决策时机: 阶段5（BC详细需求）做出决策；阶段6（BC总体设计）落实划分方案
+
+# ── SAFe 需求层级体系 ──
+safe_hierarchy:
+  总览:
+    推荐模型: SAFe 需求层级体系
+    原则: Business 和 Enabler 遵循相同规则（均需验收标准、参与优先级排序、可增量交付），区别仅在价值导向
+    Business: 直接交付用户价值
+    Enabler: 构建架构跑道以支撑未来业务交付
+
+  层级定义:
+    Strategic_Theme:
+      中文: 战略主题
+      含义: 投资组合级的战略方向与业务目标
+      粒度: 最粗，跨产品/跨组织
+      所在域: 业务需求域
+      对应阶段: 阶段1
+      分解为: Business Epic
+
+    Business_Epic:
+      中文: 业务史诗
+      含义: 端到端的业务目标或价值流，跨ART的大粒度业务价值交付
+      所在域: 业务需求域
+      对应阶段: 阶段2
+      上游: Strategic Theme
+      分解为: Capability → Feature
+
+    Enabler_Epic:
+      中文: 架构史诗
+      含义: 架构/基础设施/合规类大粒度技术决策，跨BC的架构决策（如领域边界划定、BC间通信模式、共享内核策略）
+      所在域: 系统架构需求域
+      对应阶段: 阶段3（识别）
+      上游: Business Epic（基于Business Epic和领域划分结果识别）
+      分解为: Enabler Capability → Enabler Feature
+
+    Capability:
+      中文: 能力
+      含义: BC内部的子域分层，对应DDD解决方案空间的BC子域（SD-xx）；引入Capability的BC即为大BC，不引入则为小BC；可选层级，仅在特定条件下引入
+      所在域: 软件开发需求域
+      对应阶段: 阶段5（引入判断）；阶段6（落实子域划分）
+      上游: Business Epic
+      分解为: Feature（BC子域内的可交付功能集）
+      注意: Capability是BC内子域分层（非跨BC协作层）；Capability=BC子域SD-xx（交付视角与设计视角的不同表达）
+
+    Enabler_Capability:
+      中文: 架构能力
+      含义: 跨BC的架构级能力，如统一认证体系、跨服务事件总线、可观测性平台
+      所在域: 系统架构需求域
+      对应阶段: 阶段4
+      上游: Enabler Epic
+      分解为: Enabler Feature
+
+    Enabler_Feature:
+      中文: 架构特性
+      含义: 系统架构约束、集成接口规范、非功能需求指标、基础设施要求等系统层面要求
+      所在域: 系统架构需求域
+      对应阶段: 阶段4（定义）；阶段5-6（被BC承接落实）
+      上游: Enabler Capability
+      作用: 约束下游各BC的详细需求和设计
+
+    Feature:
+      中文: 特性
+      含义: BC级别的可交付功能集，单ART内可交付的功能单元
+      所在域: 软件开发需求域
+      对应阶段: 阶段5
+      上游: Capability（由Capability拆分而来）
+      分解为: User Story
+
+    User_Story:
+      中文: 用户故事
+      含义: 最小可交付价值单元，单个可验收需求项
+      所在域: 软件开发需求域
+      对应阶段: 阶段5
+      上游: Feature
+      分解为: Task
+
+    Task:
+      中文: 任务
+      含义: 可分配给开发人员的具体实现任务，迭代内可完成
+      所在域: 软件开发需求域
+      对应阶段: 阶段6（初步分解）→ 阶段7（细化）→ 阶段8（执行）
+      上游: User Story
+
+  三域与阶段对应:
+    业务需求域（对应StRS）:
+      - Strategic Theme → 阶段1
+      - Business Epic → 阶段2
+    系统架构需求域（对应SyRS）:
+      - Enabler Epic → 阶段3
+      - Enabler Capability → 阶段4
+      - Enabler Feature → 阶段4
+      - Capability（BC内子域） → 阶段5
+    软件开发需求域（对应SRS）:
+      - Feature → 阶段5
+      - User Story → 阶段5
+      - Task → 阶段6-8
+
+  分解链路:
+    业务链: "Strategic Theme → Business Epic → Capability → Feature → User Story → Task"
+    架构链: "Enabler Epic → Enabler Capability → Enabler Feature（约束下游BC）"
+
+# ── 可追溯链路 ──
+traceability:
+  主链: "Strategic Theme → Business Epic → Enabler Epic → Enabler Capability/Feature → Capability → Feature → User Story → Task"
+  大BC追加: "BC总体设计 → 子领域划分 → 子领域详细设计文档"
+  全链路覆盖: "需求项 ↔ 设计文档 ↔ 源代码 ↔ 测试用例"（支持正向追踪和反向溯源）
+
+# ── 过程管理要求 ──
+process_mgmt:
+  阶段门禁: 每阶段完成后进行阶段评审（正式评审/同行评审/检查单），确认交付物质量和完整性后方可进入下一阶段
+  变更管理: 产出物变更须遵循变更管理流程；前序阶段变更需评估对后续阶段影响并同步更新
+  可追溯性: 各阶段交付物建立可追溯关联，确保从产品战略到代码实现的双向追溯能力
+
+# ── 各阶段需求演化处置模式（规范性） ──
+# 来源：附录A.6
+requirement_evolution:
+  操作类型: [承接（直接沿用上游需求）, 细化（拆分或补充细节）, 废弃（超出边界或需求变更须记录原因）, 新增（本阶段新发现须标注来源）]
+  留痕约束: 上游任意需求项在下游文档中须有明确的处置记录（承接、细化或废弃），可废弃但不得静默删除；废弃须注明原因
+  变更管理约束: 阶段7及之后发生的废弃或新增，须经§11.2变更管理流程确认，并评估对下游产物的影响范围
+  各阶段模式:
+    阶段1产品战略:  { 承接来源: —（起点）, 产出: Strategic Theme, 演化: "新增：来自市场分析与战略决策" }
+    阶段2宏观需求:  { 承接来源: Strategic Theme, 产出: Business Epic, 演化: "承接·废弃·新增；废弃不符战略的候选；允许新增市场洞察或用户访谈驱动的新Epic" }
+    阶段3领域设计:  { 承接来源: Business Epic, 产出: "Business Epic（含废弃记录）；Enabler Epic（本阶段新识别）", 演化: "承接·废弃（留痕，须记录原因）；新识别Enabler Epic" }
+    阶段4系统设计:  { 承接来源: Enabler Epic, 产出: "Enabler Capability/Feature", 演化: "承接分解；细化为可验收特性；架构约束影响业务Epic时反馈上游" }
+    阶段5BC详细需求: { 承接来源: "Business Epic/Capability, Enabler Feature", 产出: "Feature/User Story", 演化: "承接；细化为Feature/Story；废弃BC边界外需求；新增边界场景" }
+    阶段6BC总体设计: { 承接来源: "Feature/User Story", 产出: Task（初步）, 演化: "承接·废弃（留痕）·拆分为Task；设计发现冲突时反馈至BC详细需求文档" }
+    阶段7BC详细设计: { 承接来源: "User Story（S05）", 产出: "设计方案+Task细化", 演化: "落位：承接/细化/废弃/新增；形成S05与设计之间的追溯基线；废弃/新增须经§11.2变更管理" }
+    阶段8开发实现:  { 承接来源: "Task+User Story AC", 产出: 可交付软件, 演化: "验收：以AC验证完整性；偏差走变更管理流程" }
+  废弃规则: 废弃操作须在阶段文档中明确记录原因，并通知上游文档维护者
+  新增规则: 新增操作须标注来源（用户反馈/技术约束/设计发现等），并与上游文档建立追溯关系
+
+# ── 需求推导方法论（规范性，附录A） ──
+# 注：此为规范性约束，编写阶段2-5相关文档时须遵循
+
+# 三线分析框架（贯穿Epic/Feature/Story三层）
+three_line_framework:
+  说明: 三线在各层级的主导角色不同；不同层级共用三条分析线，颗粒度从粗到细
+  三线定义:
+    业务线: 从业务活动/流程视角——CL0→CL2业务活动树（Epic层）/业务场景内聚分组（Feature层，主线）/主场景及分支（Story层）
+    角色线: 从角色职责视角——角色期望与目标（Epic层，**主线**）/角色业务目标覆盖（Feature层）/角色操作路径差异（Story层）
+    实体线: 从实体状态流转视角——实体全生命周期（Epic层）/实体状态机覆盖（Feature层）/状态迁移节点（Story层）
+  各层主导角色:
+    Epic层: 角色线主导（从角色期望推导Epic）
+    Feature层: 业务线主导（从场景分组驱动Feature）
+    User Story层: 三线并立（各自独立推导后合并）
+
+# Business Epic识别（阶段2，附录A.2）
+epic_identification:
+  模型: 三线三级对齐模型
+  推导主线: 角色线
+  步骤:
+    1: 业务线——梳理CL0→CL1→CL2三级活动树，形成业务活动全景
+    2: 角色线——对每个CL2活动识别参与角色及期望；合并同质期望，形成Business Epic候选清单
+    3: 实体线——梳理核心实体生命周期（创建→状态变更→删除），检查每个状态转换是否有Epic承载
+  完整性验证:
+    业务线: 所有CL1场景组均有Epic承载；CL2活动均被某Epic覆盖
+    角色线: 每个核心角色的关键业务目标均有Epic对应
+    实体线: 核心实体的创建/状态变更/查询/删除生命周期事件均有Epic覆盖
+
+# Capability层引入判断准则（阶段5，附录A.3）
+capability_introduction:
+  语义说明: Capability是BC内部的子域分层（对应SD-xx），引入Capability的BC为大BC；与Enabler Capability（跨BC架构能力）完全不同
+  核心判断问题: "这个BC，一个ART在一个PI内能交付完吗？"
+  判断结果:
+    - { 结果: 能, 决策: 不引入Capability, 说明: "直接Epic→Feature，保持简洁" }
+    - { 结果: 不能, 决策: 引入Capability, 说明: "BC内部按业务关注点划分为若干子域SD-xx，每个子域对应一个Capability，每个Capability下再拆Feature" }
+  判断矩阵:
+    - { 场景: "一个ART一个PI可交付整个BC", 引入Capability: 不引入, 说明: "直接Epic→Feature，保持简洁" }
+    - { 场景: "BC规模超出单ART单PI交付能力", 引入Capability: 引入, 说明: "BC内部按子域分层，每个子域一个Capability" }
+  决策时机: 阶段5（BC详细需求）做出决策；阶段6（BC总体设计）落实子域划分方案
+
+# Feature识别（阶段5，附录A.4）
+feature_identification:
+  推导主线: 业务线（场景内聚分组）
+  场景归组条件: 满足以下任一条件的场景可归为同一Feature
+    - 共用同一实体的状态转换路径
+    - 执行前提与后置结果之间存在依赖关系（前序输出是后续输入）
+    - 服务于同一角色的同一关键业务目标
+  命名规则: "[角色] + [业务动词] + [业务对象]"（避免API动词如upload/download，改用提交/审核/发布）
+  业务规则处理: 作为场景内部约束随场景归入对应Feature，不单独构成推导线
+  验证维度:
+    实体线: 核心实体状态机每个状态转换事件须有Feature承载；否则补充Feature或扩展边界
+    角色线: 每个核心角色的关键业务目标须有Feature承载；否则补充Feature或扩展边界
+  完整性核查:
+    - 每个BC承接的业务场景都有Feature覆盖
+    - 核心实体的每个状态转换都有Feature承载
+    - 每个核心角色的关键业务目标有Feature承载
+    - 每个Feature的业务价值假设可独立表述
+
+# User Story识别（阶段5，附录A.5）
+user_story_identification:
+  模型: 三线并立推导（各自独立运行，结果合并）
+  三线说明:
+    业务线: 推导功能型Story——主场景及有独立业务价值的分支（含场景内业务规则约束作为AC）
+    角色线: 推导角色专属型Story——不同角色操作路径本质不同（非权限差异）时各自独立Story
+    实体线: 推导状态迁移型Story——业务线未覆盖的状态迁移节点
+  推导规则:
+    业务线:
+      - "主场景（正常流程）→ 功能型Story（一个Feature至少一个主Story）"
+      - "有独立业务价值的分支场景 → 独立功能型Story"
+      - "技术性异常/边界条件（无独立业务价值）→ 纳入相关Story的AC，不拆Story"
+      - "业务规则 → 纳入关联Story的AC，不构成独立推导线"
+    角色线:
+      - "不同角色操作路径本质不同（非权限差异）→ 各角色独立角色专属型Story"
+      - "不同角色仅权限/视图不同、操作路径相同 → 同一Story，AC中按角色分别描述"
+    实体线:
+      - "触发状态迁移的操作未被业务线Story覆盖 → 独立状态迁移型Story"
+      - "查询类操作 → 合入相关场景Story的AC，或Story充足时独立成Story"
+      - "若有状态转换完全未被业务线覆盖 → 补充状态迁移型Story"
+  story类型格式:
+    功能型: "As [角色]，I want [功能]，so that [业务价值]"
+    角色专属型: "As [专属角色]，I want [专属操作]，so that [角色专属业务价值]"
+    状态迁移型: "当[触发条件/角色操作]，系统完成[状态迁移]，结果为[新状态/业务效果]"
+  INVEST质量门禁:
+    I: Independent——Story之间无强依赖，可任意排序交付
+    N: Negotiable——实现细节可协商，业务意图明确不变
+    V: Valuable——每个Story对用户有可感知的独立业务价值
+    E: Estimable——团队可以合理估算工作量
+    S: Small——一个迭代内可完成
+    T: Testable——有明确、可执行的验收标准（AC）
+  完整性核查:
+    - 每个Feature有至少一个主流程功能型Story
+    - 核心实体的重要状态转换有Story或AC覆盖
+    - 不同角色的差异化操作路径有独立Story区分
+    - 每个Story满足INVEST原则
+    - 每个Story的AC明确、可执行、可验证
+
+# ── 追溯链完整性要求（规范性，§11.3可追溯性） ──
+traceability_requirements:
+  各层级完整性:
+    Business_Epic: 可追溯到Strategic Theme；三线（业务/角色/实体）均已验证
+    Capability: 可追溯到Business Epic；分解的Feature均可在该BC子域内独立交付
+    Feature: 可追溯到Epic或Capability；业务/角色/实体三线覆盖均已核查
+    User_Story: 可追溯到Feature；满足INVEST原则；有可执行AC
+    Task: 可追溯到User Story；在一个迭代内可完成

@@ -100,7 +100,20 @@ bash .claude/scripts/promote-to-official.sh {PROJECT_DIR} {DOC_PREFIX}
 -   若 `outputs/` 已有旧正式版 → 移动到 `history/`
 -   将 `drafts/` 中按文件名排序最新的常规版本复制到 `outputs/`
 
-### 5. 输出结果报告
+### 5. 清理 drafts/ 中的 R 版本文件
+
+```bash
+# 将该文档的所有 R 版本文件移入 history/
+R_FILES=$(ls "{PROJECT_DIR}/drafts/{DOC_PREFIX}"_v*_R*@*.md 2>/dev/null)
+if [ -n "$R_FILES" ]; then
+    mv {PROJECT_DIR}/drafts/{DOC_PREFIX}_v*_R*@*.md {PROJECT_DIR}/history/
+fi
+```
+
+-   仅移动带 `_R\d+@` 的临时版本文件；常规版本（不带 `_R`）保留在 drafts/
+-   移动后记录清理数量，纳入最终报告
+
+### 6. 输出结果报告
 
 ```
 ---晋升完成---
@@ -109,4 +122,5 @@ bash .claude/scripts/promote-to-official.sh {PROJECT_DIR} {DOC_PREFIX}
       直接晋升（{版本号}）                                   ← 已是常规版本时
 新正式版：outputs/{文件名}
 归档旧版：history/{旧文件名}（若无旧版则省略）
+清理R版本：已将 {N} 个 R 版本文件移入 history/（若无则省略此行）
 ```

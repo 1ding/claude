@@ -1,0 +1,182 @@
+# 系统设计编写规范 Schema
+# 来源规范：.claude/specs/domain/software/phase-specs/outputs/S04-系统设计编写规范_v0.12@202603051845.md
+# 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供系统设计文档的结构与内容约束
+# 完整规则（更多示例和详细说明）：见原规范文件
+
+doc_id: S04
+doc_name: 系统设计编写规范
+
+# ── 文档定位 ──
+positioning:
+  output_of: 阶段4"系统设计"的唯一正式输出物，文档编号04-系统设计
+  upstream: 阶段3领域设计（BC识别、上下文映射、领域事件全景、Enabler Epic清单）
+  downstream: 阶段5 BC详细需求（各BC）；阶段6 BC总体设计；阶段7 BC详细设计
+
+# ── 文档结构总览 ──
+structure:
+  mandatory_chapters: [1, 2, 4, 5, 11]   # 不可裁剪
+  optional_chapters:
+    3: "BC数量 < 3 可简化，但需保留BC间接口定义"
+    6: "无容器化部署需求可简化，但需保留环境规划"
+    8: "数据模型简单可简化，但需保留核心数据流"
+    9: "内部系统无外部暴露可简化，但需保留基本安全要求"
+    10: "无明确演进计划可省略"
+  chapters:
+    - {no: 1,  title: 总则,           required: true,  note: S00总则格式，文档编号/名称/目的/范围/管理要点/文档密级}
+    - {no: 2,  title: 系统概述,        required: true,  note: 三段式：2.1前置背景 + 2.2系统设计基础 + 2.3需求落位}
+    - {no: 3,  title: 集成架构设计,    required: cond,  note: 全局上下文映射图、映射关系总览、内部通信、事件驱动、外部集成、依赖治理}
+    - {no: 4,  title: BC与服务映射,    required: true,  note: BC→微服务→数据库映射（默认1:1:1）、微服务清单、数据库清单}
+    - {no: 5,  title: 系统架构设计,    required: true,  note: 架构风格、拓扑图、DDD分层、全局技术选型、技术选型约束}
+    - {no: 6,  title: 部署架构设计,    required: cond,  note: 部署架构图、基础设施清单、环境规划、CI/CD、容器化}
+    - {no: 7,  title: 非功能需求方案,  required: true,  note: 性能基线、可用性目标、可扩展性、可观测性、与阶段2映射}
+    - {no: 8,  title: 数据架构设计,    required: cond,  note: 数据隔离、数据库规范、迁移策略、一致性策略}
+    - {no: 9,  title: 安全架构设计,    required: cond,  note: 认证、授权、数据安全、网络安全、审计}
+    - {no: 10, title: 演进规划,         required: cond,  note: 版本路线图、BC版本覆盖矩阵、架构演进预留、技术债务追踪}
+    - {no: 11, title: 架构需求清单,     required: true,  note: Enabler Epic承接、EC定义、EF定义、三级追溯、优先级与版本分配}
+    - {no: 12, title: 内容边界与追溯,   required: true,  note: 与上下游文档的内容归属边界、架构需求追溯矩阵}
+  appendices:
+    - {id: A, title: 术语表,      required: 推荐}
+    - {id: B, title: 架构决策记录, required: 可选}
+    - {id: C, title: 修订记录,    required: 必选}
+
+# ── 编号规范 ──
+id_formats:
+  Enabler_Capability: "EC-{序号}"
+  Enabler_Feature: "EF-{序号}"
+  mapping_relation: "CM-{序号}"
+  external_system: "EXT-{序号}"
+  perf_metric: "PERF-{序号}"
+  constraint: "C-{序号}"
+  assumption: "AS-{序号}"
+  acceptance_item: "ACP-{序号}"
+  biz_goal: "BG-{序号}"
+  tech_goal: "TG-{序号}"
+  map_decision: "MAP-{序号}"
+  tech_debt: "TD-{序号}"
+  evo_direction: "EVO-{序号}"
+  ADR: "ADR-{序号}"
+  microservice_name: "svc-{业务名}"
+  database_name: "{项目缩写}_{业务名}"
+  table_name: "{bc_prefix}_{业务表名}（全小写，下划线分隔）"
+
+# ── 第2章 系统概述 ──
+ch2_system_overview:
+  structure: "三段式：2.1前置背景 → 2.2系统设计基础 → 2.3需求落位"
+  ch2_1_prerequisites:
+    2_1_1: "上游基线引用：引用阶段3文档版本、Enabler Epic清单（EE编号+名称）"
+    2_1_2: "版本范围：文档覆盖的版本范围和功能范围"
+    2_1_3: "约束条件与假设：来自阶段3的架构约束；输入缺失时记录假设（AS-*），标注'来源：阶段N输出缺失'"
+  ch2_2_foundation:
+    2_2_1: "上游承接验收：逐项确认阶段3领域设计输出完整性；缺失项记录为假设（AS-*）；验收粒度为章节级输出物"
+    2_2_2: "项目基本信息：项目名称/编号/所属产品线/项目阶段/当前设计版本范围"
+    2_2_3: "设计目标：业务目标（BG-*）+ 技术目标（TG-*）；量化指标列不可为空；无法量化时填'待细化'并标注时间节点"
+    2_2_4: "利益相关方：角色/关注点/影响程度/代表人；承接阶段2角色线CL0/CL1"
+    2_2_5: "设计约束：技术/业务/组织约束；约束描述应具体可指导设计；影响范围列应指向具体章节编号"
+  ch2_3_requirement_mapping:
+    purpose: "阶段4需求演化权威基线，记录每条 Enabler Epic 的演化处置"
+    writing_order: "先填 Enabler Epic 清单和预建表格（EC列暂留空）→ 第11章完成后回填EC编号"
+    columns: [EE编号, EE名称, 处置方式, 分解为EC, 说明]
+    处置方式:
+      承接: "分解为一个或多个EC；EC编号在第11章定义后回填"
+      废弃: "说明列必须填写废弃原因"
+      新增: "EE编号/名称填'-'；说明列必须填写识别来源"
+    mandatory: "阶段3所有 Enabler Epic 必须出现，不得静默缺失"
+
+# ── 第3章 集成架构设计 ──
+ch3_integration:
+  global_hard_constraints:
+    - 禁止循环依赖
+    - 禁止跨BC分布式事务（2PC/XA）
+    - 外部系统集成必须通过ACL隔离
+    - 上游模型变更时下游必须通过ACL隔离
+  message_envelope_mandatory_fields:
+    - eventId
+    - eventType
+    - eventVersion
+    - occurredOn
+    - source
+    - aggregateId
+    - aggregateType
+    - payload
+  consistency_rule: "上下文映射图中每条映射线，必须在映射关系总览表中有对应记录；两者不一致时以总览表为准"
+  key_tables:
+    mapping_overview: "CM-{序号}；列：上游BC/下游BC/映射模式/集成方式/协议/数据流向/协作场景"
+    external_system: "EXT-{序号}；列：集成方向/集成方式/对接BC/防腐层要求/SLA要求"
+    dependency_governance: "列：治理场景/治理规则/违规后果"
+
+# ── 第4章 BC与服务映射 ──
+ch4_bc_service_mapping:
+  default_rule: "1:1:1（一个BC对应一个微服务对应一个数据库）"
+  deviation: "任何偏离1:1:1的映射须在映射决策说明表（MAP-*）中记录原因和风险缓解"
+  bc_completeness: "阶段3 BC清单中的每个BC必须在映射表中有对应记录；BC编号与阶段3完全一致"
+  allowed_exceptions:
+    - 多BC合并微服务：BC职责高度内聚、变更频率一致、团队相同
+    - 一BC多数据库：读写分离、冷热数据分离、异构存储需求
+    - 多BC共享数据库：小型BC、成本敏感（须明确Schema或表前缀隔离策略）
+  naming:
+    microservice: "svc-{业务名}"
+    database: "{项目缩写}_{业务名}"
+  mapping_table_columns: [BC编号, BC名称, BC英文名, 微服务名称, 微服务端口, 数据库名称, 代码包路径, 代码仓库]
+
+# ── 第5章 系统架构设计 ──
+ch5_system_arch:
+  ddd_layer_rule: "领域层不依赖任何外层；基础设施层通过依赖反转实现领域层定义的接口"
+  ddd_layers: [接口层(interfaces), 应用层(application), 领域层(domain), 基础设施层(infrastructure)]
+  tech_stack_rule: "技术栈在系统设计中统一决策；各BC不得自行引入未列出的技术依赖"
+  tech_stack_columns: [技术类别, 技术名称, 版本(精确到次版本号), 用途, 适用范围, 选型依据]
+
+# ── 第7章 非功能需求方案 ──
+ch7_nfr:
+  global_baseline_rule: "非功能约束对所有BC具有约束力；各BC可设更严格本地目标但不得放宽全局基线"
+  perf_columns: [指标编号PERF-*, 指标名称, 目标值(量化), 适用场景, 测量方式, 级别(必达/期望)]
+  sla_columns: [服务级别, 服务范围, 可用性目标, 最大宕机时间, RTO, RPO]
+  observability_required: "全局标准：日志格式、指标命名、链路追踪规范、告警级别和升级策略"
+  phase2_mapping: "必须建立阶段2非功能需求框架→本章量化指标的映射关系表（含覆盖状态）"
+
+# ── 第8章 数据架构设计 ──
+ch8_data_arch:
+  core_principle: "拥抱最终一致性；强一致性范围应限制在单个BC内"
+  forbidden:
+    - 禁止跨BC分布式事务（2PC/XA）
+    - 禁止通过共享数据库表实现跨BC数据同步
+    - 禁止在应用代码中手动管理跨数据库事务
+  audit_fields: "公共审计字段为全局强制字段，所有业务表必须包含"
+  consistency_scenarios: [BC内单库事务, BC内跨聚合, 跨BC事务, 跨BC数据同步]
+
+# ── 第11章 架构需求清单 ──
+ch11_arch_requirements:
+  decomposition_logic: "Enabler Epic → Enabler Capability（EC-*）→ Enabler Feature（EF-*）"
+  completeness: "阶段3所有 Enabler Epic 须逐项验收（11.1 Enabler Epic 承接验收表）"
+  ec_columns: [EC-{序号}, Capability名称, 能力定义(一句话), 业务价值, 关联EE编号, 涉及BC, 优先级P0/P1/P2]
+  ef_columns: [EF-{序号}, Feature名称, Feature描述, 验收标准(1-3条), 关联EC, 关联BC, 版本归属, 优先级]
+  ef_acceptance_required: true   # 每个EF须有可验证的验收标准
+  traceability_table: "三级分解追溯表：EE编号+名称 → EC编号+名称 → EF编号+名称（11.4节）"
+  priority_table: "11.7节：Capability/Feature的优先级和版本归属（含WSJF评分，如适用）"
+  consistency_rule: "本章分解产出须与第3-9章设计方案保持一致"
+  write_order_note: "第11章完成后回填第2.3节需求落位表的EC列"
+
+# ── 第12章 内容边界与追溯 ──
+ch12_boundary_traceability:
+  boundary_tables:
+    - 系统设计 vs 宏观需求
+    - 系统设计 vs 领域设计
+    - 系统设计 vs BC总体设计
+    - 当前版本 vs 未来版本详略度
+  traceability_matrix:
+    columns: [Strategic Theme, Business Epic, Enabler Epic, Enabler Capability, Enabler Feature]
+    rule: "追溯链每一级必须填写编号+名称，禁止留空"
+    capabilities: [正向追溯, 反向追溯, 变更影响分析]
+
+# ── 关键表格一览 ──
+key_tables_summary:
+  ch2: [上游基线引用表, 文档版本范围表, 上游承接验收表, 项目基本信息表, 设计目标表, 利益相关方表, 设计约束表, 需求落位表]
+  ch3: [全局上下文映射图, 映射关系总览表, 映射模式选型指南表, 通信方式选型矩阵, 统一消息信封格式表, 外部系统集成清单, 全局依赖治理原则表]
+  ch4: [BC→微服务→数据库映射表, 映射例外情形表, 微服务清单表, 数据库清单表, 映射决策说明表]
+  ch5: [架构风格决策表, DDD分层架构定义表, 全局技术栈清单表]
+  ch6: [基础设施清单表, 环境清单表, CI/CD流水线设计表, K8s资源规划表]
+  ch7: [系统级性能目标表, SLA定义表, 可观测性标准表, 告警级别定义表, 与阶段2非功能框架映射表]
+  ch8: [多租户隔离方案选型表, 字段命名规范表, 公共审计字段定义表, 全局数据一致性策略表]
+  ch9: [认证方案表, 授权模型选型表, 数据分级表, 审计范围定义表]
+  ch10: [版本计划表, BC版本覆盖矩阵, 架构演进预留表, 技术债务追踪表]
+  ch11: [Enabler Epic承接验收表, Enabler Capability定义表, Enabler Feature定义表, 三级分解追溯表, EF→BE约束映射表, EF→设计方案映射表, 架构需求优先级与版本分配表]
+  ch12: [内容归属边界表×3, 当前版本vs未来版本详略度表, 架构需求追溯矩阵]

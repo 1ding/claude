@@ -37,9 +37,9 @@ $ARGUMENTS
 ### 输出规则
 
 -   Schema 文件自动保存到规范文档所在目录的 `../schema/` 目录
--   文件名格式：`{规范文档名}.schema.yaml`
+-   文件名格式：`{规范文档完整文件名（含版本号、时间戳、.md 后缀）}.schema.yaml`
 -   示例：规范文档 `.claude/specs/common/C01-内容表达规范_v0.22@202602241415.md`
-  → Schema 文件 `.claude/specs/schema/C01-内容表达规范_v0.22@202602241415.schema.yaml`
+  → Schema 文件 `.claude/specs/schema/C01-内容表达规范_v0.22@202602241415.md.schema.yaml`
 
 ## 先决条件检查
 
@@ -118,7 +118,9 @@ group2:
     -   从规范文档路径提取目录（如 `.claude/specs/common/`）
     -   构建 schema 目录路径：`{规范文档目录}/../schema/`（如 `.claude/specs/schema/`）
     -   如 schema 目录不存在，创建该目录
-    -   文件名为 `{规范文档名}.schema.yaml`
+    -   文件名为 `{规范文档完整文件名（含版本号、时间戳、.md 后缀）}.schema.yaml`
+    -   示例：`N00-软件研发过程规范_v0.23@202603051007.md` → `N00-软件研发过程规范_v0.23@202603051007.md.schema.yaml`
+    -   若 schema 目录已存在同文档前缀的旧版本 schema，输出提示：旧版本 schema `{旧文件名}` 已过时，建议删除
 -   保存 schema 文件，立即输出 `[CAP DELTA]` 标记（见容量管理规范）
 -   输出生成报告：
 

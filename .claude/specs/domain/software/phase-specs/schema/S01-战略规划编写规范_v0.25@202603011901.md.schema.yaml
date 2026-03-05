@@ -1,0 +1,445 @@
+# S01 战略规划编写规范 Schema
+# 来源规范：.claude/specs/domain/software/phase-specs/outputs/S01-战略规划编写规范_v0.25@202603011901.md
+# 用途：AI 编写阶段加载此 schema（替代完整规范），提供战略规划报告编写约束
+# 完整规则（更多示例和详细说明）：见原规范文件
+
+doc_id: S01
+doc_name: 战略规划编写规范
+
+# ── 总体结构 ──
+report_overview:
+  output_doc: "01-战略规划（阶段1唯一正式输出物）"
+  downstream: "阶段2宏观需求分析"
+  chapters_order_fixed: true  # 章节顺序固定，不得调整
+
+  mandatory_chapters:
+    - "第1章 执行摘要"
+    - "第2章 市场分析"
+    - "第3章 客户分析"
+    - "第4章 价值主张"
+    - "第5章 商业模式"
+    - "第6章 版本路线图"
+    - "第7章 风险分析"
+    - "第8章 资源需求"
+    - "附录A 业务主题与业务域（规范性，必选）"
+
+  optional_appendices:
+    附录B_术语速查:
+      trim_condition: "术语 < 10个时可省略，在正文中解释"
+    附录C_核心概念:
+      trim_condition: "概念简单无复杂关系时可省略"
+    附录D_业务架构:
+      trim_condition: "模块 < 3个时可省略，在第4章说明"
+    附录E_竞品分析:
+      trim_condition: "竞品 < 3个时可省略，在第2章说明"
+    附录F_财务模型详情:
+      trim_condition: "财务模型简单时可省略"
+    附录G_技术方案详情:
+      trim_condition: "技术方案标准化无特殊选型时可省略"
+
+  mandatory_trim_rule: "必选章节不可裁剪；确实不适用须保留标题并注明'本产品不适用，原因：{具体原因}'"
+
+# ── 跨章节一致性约束 ──
+cross_chapter_consistency:
+  customer_tier_baseline:
+    source: "2.2.2 客户分层"
+    must_align:
+      - "3.2 客户画像（子章节数=客户分层数）"
+      - "3.3 决策链分析（子章节数=客户分层数）"
+      - "3.4 购买行为分析（子章节数=客户分层数）"
+      - "5.2.1 定价模型（客户分类）"
+
+  financial_data:
+    source: "5.6 盈利模型"
+    must_align:
+      - "8.2 预算规划"
+      - "8.4 投入产出分析"
+      - "1.5 分期投入规划"
+      - "1.6 财务预测"
+
+  roadmap_summary:
+    full_version: "第6章 版本路线图"
+    compressed_version: "1.9 决策建议各子节（压缩版）"
+    rules:
+      - "1.9.1 MVP范围 对应 6.2 版本规划（首版本）"
+      - "1.9.3 产品路线图 对应 6.2 路线图总览"
+      - "1.9.4 关键里程碑 对应 6.4 关键里程碑"
+
+  risk_summary:
+    full_version: "第7章 风险分析"
+    compressed_version: "1.7 关键风险（仅P0/P1，压缩为一行）"
+    must_align: "两处风险等级和应对措施保持一致"
+
+  exec_summary_traceability:
+    rule: "执行摘要不产生新信息——每项数据和结论均应来自正文对应章节"
+    mapping:
+      "1.1 核心理念": "第4章 价值主张"
+      "1.2 项目概述": "全报告核心数据汇总"
+      "1.3 市场机会": "第2章 市场分析"
+      "1.4 产品与商业": "第4章+第5章"
+      "1.5 分期投入规划": "8.2 预算规划"
+      "1.6 财务预测": "5.6+5.3+8.4"
+      "1.7 关键风险": "第7章（压缩版）"
+      "1.8 可行性评估": "综合第2-8章关键结论"
+
+  appendix_a_consistency:
+    - "A.1 业务主题版本对应关系 = 3.6.2 版本规划"
+    - "A.2 业务域范围完整覆盖A.1所有业务主题"
+    - "A.3 关系图包含A.2所有业务域"
+    - "业务域与阶段3限界上下文不必然一一对应（须在文中明确标注）"
+
+# ── 第1章 执行摘要 ──
+ch1_exec_summary:
+  structure:
+    required: [1.1核心理念, 1.2项目概述, 1.3市场机会, 1.4产品与商业, 1.5分期投入规划, 1.6财务预测, 1.7关键风险, 1.8可行性评估, 1.9决策建议]
+    "1.9_subsections": [1.9.1MVP范围, 1.9.2团队规划, 1.9.3产品路线图, 1.9.4关键里程碑]
+
+  compress_rules:
+    "1.9.1": "仅展示P1版本功能范围和核心验收指标，不展开后续版本"
+    "1.9.2": "仅呈现各期团队总人数和关键岗位变化，不展开全部岗位"
+    "1.9.3": "仅呈现各期核心目标和关键功能，不展开功能明细"
+    "1.9.4": "仅列出各期Go/No-Go决策点和核心验收标准"
+
+  expression_norms:
+    quantify_compare:  # 量化对比规范（传统vs产品）
+      columns: [对比维度, 传统方式, 产品方式, 提升幅度, 实现前提]
+      rule: "实现前提不可省略"
+
+    phased_budget:  # 分期预算规范
+      columns: [期数, 时间范围, 期间投入, 累计投入, 主要目标]
+
+    core_metrics:  # 项目核心数据规范
+      columns: [指标, 数值, 说明]
+      rule: "数值须具体，不得模糊表述"
+
+    customer_growth:  # 客户增长预测规范
+      columns: [时间节点, 目标客户数, 新增客户数, 客户类型, 关键假设]
+
+    financial_summary:  # 财务汇总规范
+      columns: [时间节点, 收入, 成本, 净利润, 累计净利润, 关键假设]
+
+    risk_summary:  # 风险摘要规范（1.7节专用）
+      columns: [风险等级, 风险名称, 一句话描述, 应对策略]
+      rule: "仅摘录P0/P1级风险"
+
+    feasibility_score:  # 可行性评分规范
+      columns: [评估维度, 评分, 关键依据]
+      rule: "评分制须全文统一（建议1-5分或百分制）"
+
+    decision_point:  # 阶段性决策点规范
+      columns: [决策点, 验收标准, 继续条件, 止损条件]
+
+    mvp_acceptance:  # MVP验收指标规范
+      columns: [指标名称, 目标值, 度量方式, 数据来源]
+
+    team_by_phase:  # 分期团队构成规范
+      columns: [期数, 团队总人数, 岗位构成, 关键变化]
+
+    position_requirements:  # 岗位能力要求规范
+      columns: [岗位名称, 职责简述, 能力要求, 优先级]
+
+    milestone:  # 里程碑规范（第1章和第6章共用）
+      columns: [里程碑, 目标日期, 验收标准, "Go/No-Go"]
+
+# ── 第2章 市场分析 ──
+ch2_market_analysis:
+  structure:
+    sections: [2.1核心痛点分析, 2.2目标市场定义, 2.3市场窗口期, 2.4增长驱动因素]
+    "2.2_subsections": [2.2.1市场选择逻辑, 2.2.2客户分层, 2.2.3市场容量估算]
+
+  rules:
+    - "困境还原须以具体场景为基础，读者应能'看见'目标客户真实困境"
+    - "市场容量估算须标注数据来源与估算方法，不得有无出处数据"
+    - "客户分层定义为全报告客户分类基准（向后传递至第3章和第5章）"
+
+  expression_norms:
+    adversity_scene:  # 困境还原规范
+      elements: [场景标题, 角色, 背景, 流程还原, 结果]
+      rule: "流程还原须逐步标注耗时和痛点"
+
+    adversity_table:  # 困境表现规范
+      columns: [表现维度, 现状数据, 影响范围, 数据来源]
+
+    adversity_cause_graph:  # 困境归因图规范
+      format: "ASCII图"
+      structure: "左=困境节点 → 中=共同根源 → 右=解决方案"
+
+    scene_selection:  # 场景选择依据规范
+      columns: [候选场景, 市场规模, 痛点强度, 竞争程度, 进入难度, 综合评估]
+
+    customer_tier:  # 客户分层规范
+      columns: [客户类型, 典型特征, 产品形态, 客单价区间, 目标客户数]
+
+    market_capacity:  # 市场容量估算规范
+      columns: [客户类型, 潜在客户总数, 客单价, TAM, 目标渗透率, SAM, 估算依据]
+
+# ── 第3章 客户分析 ──
+ch3_customer_analysis:
+  structure:
+    sections: [3.1客户真实场景, 3.2客户画像, 3.3决策链分析, 3.4购买行为分析]
+    rule: "3.2/3.3/3.4各按客户分层分设子章节，子章节数=客户分层数"
+
+  expression_norms:
+    scene_narrative:  # 场景叙事规范
+      elements: [主角, 背景, 日常挑战, 尝试过的方案, 未被满足的需求]
+
+    daily_log:  # 一天实录规范
+      columns: [时间段, 工作活动, 使用工具, 痛点标注, 耗时占比]
+
+    trigger_factors:  # 触发因素规范
+      columns: [触发事件, 触发频率, 紧迫程度, 关联痛点]
+
+    customer_portrait:  # 客户画像规范
+      elements: [客户类型, 行业特征, 角色特征, 规模指标, 核心痛点, 决策特征, 预算区间]
+
+    decision_chain:  # 决策链规范
+      columns: [决策角色, 关注点, 影响力权重, 触达方式]
+
+    purchase_process:  # 购买流程规范
+      columns: [阶段, 客户动作, 我方动作, 典型周期, 关键物料]
+
+# ── 第4章 价值主张 ──
+ch4_value_proposition:
+  structure:
+    sections: [4.1核心价值主张, 4.2业务价值生态, 4.3核心能力模型, 4.4差异化优势, 4.5客户ROI分析, 4.6竞争壁垒总结]
+
+  rules:
+    one_liner_format: '"{产品名}是面向{目标客户}的、{核心技术特征}的、{核心能力}的{品类名称}"'
+    - "量化价值承诺表中实现前提不可省略"
+    - "差异化优势各子章节须有量化数据支撑，纯定性视为不完整"
+    - "生态系统图（4.2.2）为产品架构核心源点，标注[核心视图]"
+
+  expression_norms:
+    problem_compare:  # 问题对比规范
+      columns: [问题维度, 传统方式, 传统方式痛点, 产品方案, 改善效果]
+
+    value_compare:  # 价值主张对比规范
+      columns: [对比维度, 传统方案, 竞品A, 本产品, 差异化说明]
+
+    quantified_promise:  # 量化价值承诺规范
+      columns: [应用场景, 传统耗时, 产品耗时, 提升倍数, 实现前提]
+      rule: "实现前提不可省略"
+
+    ecosystem_participants:  # 生态参与方规范
+      columns: [参与方, 角色定位, 核心诉求, 价值获取, 价值贡献]
+
+    ecosystem_graph:  # 生态系统图规范
+      format: "ASCII图，标注[核心视图]"
+      structure: "供给侧 → 数据层 → 消费侧"
+
+    data_asset_classification:  # 数据资产分类规范
+      columns: [资产类别, 数据来源, 预估规模, 核心价值, 关联资产]
+
+    capability_definition:  # 能力定义规范
+      columns: [能力名称, 能力层级, 定义, 技术基础, 业务价值]
+
+    capability_pain_mapping:  # 能力痛点映射规范
+      columns: [核心能力, 对应痛点, 解决方式, 量化效果]
+
+    barrier_description:  # 壁垒描述规范（4.4.1-4.4.3复用）
+      elements: [壁垒名称, 壁垒来源, 量化指标, 竞品复制难度, 持续性]
+
+    customer_roi:  # 客户ROI规范
+      elements: [投入成本表, 节省成本表, ROI计算, 回本周期, 计算假设]
+      roi_formula: "ROI = (节省成本 - 投入成本) / 投入成本 × 100%"
+      rule: "计算假设不可省略"
+
+# ── 第5章 商业模式 ──
+ch5_business_model:
+  structure:
+    sections: [5.1商业模式概述, 5.2定价策略, 5.3获客策略, 5.4客户成功, 5.5成本结构, 5.6盈利模型]
+
+  rules:
+    - "定价策略须说明定价锚点（客户参照物）和定价依据"
+    - "获客策略各阶段须标注目标客户数、预期转化率、CAC"
+    - "5.6盈利模型财务数据须与8.2预算规划和8.4投入产出分析一致"
+
+  expression_norms:
+    mode_compare:  # 模式对比规范
+      columns: [对比维度, 传统模式, 本产品模式, 优势说明]
+
+    revenue_structure:  # 收入结构规范
+      columns: [收入类型, 收费模式, 目标占比, 说明]
+
+    pricing_model_overview:  # 定价模型规范（总览）
+      columns: [客户类型, 定价模式, 定价锚点, 定价依据, 价格区间]
+
+    pricing_detail:  # 客户定价明细规范
+      columns: [费用项目, 金额, 包含内容, 计费方式]
+
+    pricing_compare:  # 定价对比规范
+      columns: [对比对象, 对比对象价格, 本产品价格, 价格差异, 价值差异]
+
+    acquisition_stage:  # 获客阶段规范
+      elements: [阶段名称, 时间范围, 目标客户数, 转化率, CAC, 核心渠道, 具体动作]
+
+    acquisition_summary:  # 获客策略汇总规范
+      columns: [阶段, 时间范围, 目标客户数, 核心策略, CAC]
+
+    cost_structure:  # 成本结构规范
+      columns: [成本类别, "固定/变动", 金额或占比, 母体复用, 说明]
+
+    phased_revenue:  # 分期收益预测规范
+      columns: [期数, 客户数, 期间收入, 期间成本, 期间利润, 累计利润, 关键假设]
+
+    financial_targets:  # 财务指标目标规范
+      columns: [指标名称, 目标值, 行业基准, 达成时间, 关键前提]
+
+# ── 第6章 版本路线图 ──
+ch6_roadmap:
+  structure:
+    sections: [6.1产品架构概述, 6.2版本规划, 6.3数据资产建设路线, 6.4关键里程碑]
+    "6.2_pattern": "总览表 + 各版本（Px）详情"
+
+  rules:
+    - "版本规划须采用'总览表+各版本详情'方式"
+    - "各版本功能范围须与附录A.1业务主题版本对应关系表一致"
+    - "本章与执行摘要1.9节一致：执行摘要为压缩版，本章为完整版"
+
+  expression_norms:
+    roadmap_overview:  # 路线图总览规范
+      format: "矩阵表"
+      row: "功能模块维度（与产品架构或业务主题对应）"
+      column: "版本期数（P1、P2、P3...）"
+      annotation: "新增=实心标记，增强=空心标记（全表统一）"
+
+    version_detail:  # 版本详情规范
+      elements: [版本编号, 时间范围, 版本目标, 核心交付功能, 业务主题覆盖, 团队配置, 版本验收标准, "Go/No-Go条件"]
+      core_functions_table: "含功能名称、所属模块、优先级、验收标准"
+      team_align: "须与8.1节一致"
+
+    data_asset_build:  # 数据资产建设规范
+      columns: [数据资产, 建设阶段, 初始来源, 转化机制, 预估规模]
+
+# ── 第7章 风险分析 ──
+ch7_risk:
+  structure:
+    sections: [7.1风险总览, 7.2P0级风险, 7.3P1级风险, 7.4P2级风险, 7.5风险监控机制]
+
+  risk_levels:
+    P0: "红色，必须立即处理"
+    P1: "黄色，需要关注"
+    P2: "绿色，可控"
+
+  rules:
+    - "每项风险采用'风险详情表+应对措施列表'的统一结构"
+    - "执行摘要1.7节的关键风险为本章P0/P1的压缩版，两处须保持一致"
+
+  expression_norms:
+    risk_overview:  # 风险总览规范
+      columns: [风险等级, 风险数量, 风险领域, 整体评估]
+
+    risk_detail:  # 风险详情规范（每项风险详情表）
+      columns: [风险编号, 风险名称, 风险描述, 发生概率, 影响程度, 触发条件, 影响后果]
+      number_format: "P{等级}-{序号}，如P0-1"
+
+    mitigation_measures:  # 应对措施列表（紧跟风险详情表后）
+      columns: [措施类型, 措施描述, 责任人, 时间要求]
+      measure_types: [规避, 缓解, 转移, 接受]
+
+    risk_monitor:  # 风险监控规范
+      columns: [监控指标, 关联风险, 预警阈值, 监控频率, 责任人, 升级路径]
+
+# ── 第8章 资源需求 ──
+ch8_resources:
+  structure:
+    sections: [8.1团队资源需求, 8.2预算规划, 8.3时间规划, 8.4投入产出分析]
+
+  rules:
+    - "预算规划须区分期间预算和累计预算，注明为规划区间还是精确预测"
+    - "8.1团队配置须与1.9.2节团队规划保持一致"
+    - "8.2预算数据须与5.5成本结构和5.6盈利模型财务假设一致"
+    - "8.3时间规划须与6.4关键里程碑一致"
+
+  expression_norms:
+    personnel_by_phase:  # 分期人员构成规范
+      columns: [期数, 岗位名称, 人数, 较上期变化, 说明]
+
+    roi_summary:  # 投入产出汇总规范
+      columns: [年度或期数, 累计投入, 累计收入, 累计净利润, ROI, 标注]
+      roi_formula: "累计净利润 / 累计投入 × 100%"
+      annotation: "须注明'规划区间'或'精确预测'"
+
+    stop_loss_line:  # 分期止损线规范
+      columns: [期数, 期末验证标准, 最大累计亏损, 止损决策, 沉没成本]
+      rule: "期末验证标准须与6.2版本验收标准一致"
+
+# ── 附录A（规范性，必选）业务主题与业务域 ──
+appendix_a:
+  required: true
+  note: "向阶段2宏观需求分析传递的关键输入，不作为AI辅助编写的输入"
+
+  consistency: "A.1版本对应关系=6.2版本规划；A.2完整覆盖A.1所有主题；A.3包含A.2所有域"
+
+  expression_norms:
+    business_theme:  # 业务主题编号规范
+      columns: [语义ID, 短号, 名称, 战略意图, 优先级, 所属业务域]
+      id_format: "语义ID如THM-CONTENT-MGMT，短号如THM01"
+      priority: "P0/P1/P2"
+
+    theme_version_mapping:  # 主题版本对应规范
+      columns: [业务主题, P1版本, P2版本, P3版本, 说明]
+      cell_values: [实现, 部分实现, 不涉及]
+
+    business_domain:  # 业务域清单规范
+      columns: [语义ID, 短号, 域名称, 范围要点, 边界说明, 包含主题, 关键数据]
+      id_format: "语义ID格式DOM{业务域名称}，短号格式DOM{2~3位数字}"
+      boundary_rule: "边界说明须明确'本域做什么'和'本域不做什么'"
+
+    domain_relation_graph:  # 业务域关系图规范
+      format: "ASCII图"
+      elements: [域节点, 数据流向箭头, 流向标注, 边界标注, BC约束标注]
+      mandatory_annotation: "图注须标注'业务域与阶段3限界上下文不必然一一对应'"
+
+# ── 附录B（可选）术语速查 ──
+appendix_b:
+  expression_norms:
+    term_quick_ref:
+      columns: [术语, 简要定义, 首次出现]
+    english_mapping:
+      columns: [中文, 英文, 缩写]
+
+# ── 附录C（可选）核心概念 ──
+appendix_c:
+  expression_norms:
+    term_relation_graph:
+      format: "ASCII图，标注层级关系和关联关系类型"
+    concept_definition:
+      elements: [概念名称, 详细定义, 层级归属, 核心属性, 与其他概念的关系, 示例(宜)]
+
+# ── 附录D（可选）业务架构 ──
+appendix_d:
+  expression_norms:
+    architecture_graph:
+      format: "ASCII图，含分层展示和边界标注"
+    module_description:
+      elements: [模块名称, 业务职责, 核心功能, 输入输出, 关联模块]
+
+# ── 附录E（可选）竞品分析 ──
+appendix_e:
+  expression_norms:
+    competitor_classification:
+      columns: [竞品名称, 分类维度1(代际), 分类维度2(类型), 市场地位, 核心特点]
+    competitor_compare:
+      columns: [对比维度, 本产品, 竞品A, 竞品B, 差异化结论]
+    competition_strategy:
+      elements: [品类定位, 代际策略, 壁垒构建, 竞争节奏]
+
+# ── 附录F（可选）财务模型详情 ──
+appendix_f:
+  consistency: "须与5.6盈利模型、8章预算规划和投入产出分析保持一致"
+  expression_norms:
+    revenue_model:
+      elements: [收入公式, 关键参数表, 分期预测, 敏感性变量, 假设清单]
+    cost_model:
+      elements: [成本分类, 成本公式, 关键参数表, 分期预测, 母体复用]
+    profit_model:
+      elements: [盈利公式, 分期盈利预测, 盈亏平衡分析, 敏感性分析, 情景分析(乐观/基准/悲观)]
+
+# ── 附录G（可选）技术方案详情 ──
+appendix_g:
+  expression_norms:
+    architecture_selection:
+      columns: [选型领域, 候选方案, 选定方案, 选择理由, 风险评估]
+    performance_indicators:
+      columns: [指标名称, 目标值, 度量方式, 基准参考]
