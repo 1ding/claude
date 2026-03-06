@@ -15,6 +15,7 @@ symbols:
   "```": "代码块/图块起止标记"
   indent: "4空格/层"
   rule: "除标题(#)、列表项(-)、代码块(```)外，所有内容行应以+开头"
+  no_empty_paragraph: "不应使用空段落；内容行不得缺少+前缀而留空"
 
 # ── 禁用语法 ──
 prohibited:
@@ -52,7 +53,7 @@ figures:
   type: "ASCII文本图 only"
   code_fence: "```graph"  # graph为自定义语言标识
   max_line_width: 360
-  required_chars: "─│┌┐└┘├┤┬┴┼▶▼◆●"
+  推荐字符: "─│┌┐└┘├┤┬┴┼▶▼◆●"
   prohibited_chars: "+-|*（作为图形元素）"
   alignment: "同级元素水平/垂直对齐，同类元素大小相同"
 
