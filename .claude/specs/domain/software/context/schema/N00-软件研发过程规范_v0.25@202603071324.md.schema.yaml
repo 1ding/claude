@@ -1,8 +1,8 @@
 # 软件研发过程规范 Schema
-# 来源规范：.claude/specs/domain/software/context/outputs/N00-软件研发过程规范_v0.24@202603051426.md
+# 来源规范：.claude/specs/domain/software/context/drafts/N00-软件研发过程规范_v0.25@202603071324.md
 # 用途：AI 内容编写阶段加载此 schema（替代完整规范），提供研发过程框架约束
 # 完整规则（更多示例和详细说明）：见原规范文件
-# 修订日期：2026-03-05
+# 修订日期：2026-03-07
 
 doc_id: N00
 doc_name: 软件研发过程规范
@@ -28,19 +28,19 @@ stage_details:
     SAFe层级: Strategic Theme
 
   阶段2_宏观需求:
-    目标: 将 Strategic Theme 分解为 Business Epic，识别核心业务流程和用户场景
-    关键活动补充: 需求演化——承接Strategic Theme拆分为Business Epic；废弃不符战略的Epic候选；允许新增市场洞察或用户访谈驱动的新Epic
+    目标: 将 Strategic Theme 分解为 Business Epic，识别核心业务流程和用户场景；初步识别 Enabler Epic
+    关键活动补充: 需求演化——承接Strategic Theme拆分为Business Epic；废弃不符战略的Epic候选；允许新增市场洞察或用户访谈驱动的新Epic；基于基础性需求和非功能需求分析初步识别Enabler Epic
     关键输出:
-      - 宏观需求文档（含 Business Epic 清单+优先级+验收标准+非功能需求初步定义）
+      - 宏观需求文档（含 Business Epic 清单+优先级+验收标准+Enabler Epic 清单（初步识别）+非功能需求初步定义）
       - 业务流程图
-    SAFe层级: Business Epic
+    SAFe层级: [Business Epic, Enabler Epic（初步识别）]
 
   阶段3_领域设计:
-    目标: 领域划分（核心域/支撑域/通用域）、BC识别与边界划定、统一语言；识别 Enabler Epic
-    关键活动补充: 需求演化——Business Epic可废弃但须留痕（记录废弃原因，不得静默删除）；Enabler Epic为本阶段新识别的架构需求，与业务Epic并行管理
+    目标: 领域划分（核心域/支撑域/通用域）、BC识别与边界划定、统一语言；验证和分解阶段2初步识别的 Enabler Epic
+    关键活动补充: 需求演化——Business Epic可废弃但须留痕（记录废弃原因，不得静默删除）；承接阶段2初步识别的Enabler Epic，基于领域划分结果进行验证、调整和补充；Enabler Epic与业务Epic并行管理
     关键输出:
-      - 领域设计文档（含领域划分+BC识别+上下文映射图+统一语言词汇表+Enabler Epic清单及与Business Epic的追溯关系）
-    SAFe层级: Enabler Epic
+      - 领域设计文档（含领域划分+BC识别+上下文映射图+统一语言词汇表+Enabler Epic清单（验证后）及与Business Epic的追溯关系）
+    SAFe层级: Enabler Epic（验证与分解）
 
   阶段4_系统设计:
     目标: 系统整体架构设计；将 Enabler Epic 分解为 Enabler Capability 和 Enabler Feature
@@ -121,10 +121,10 @@ safe_hierarchy:
 
     Enabler_Epic:
       中文: 架构史诗
-      含义: 架构/基础设施/合规类大粒度技术决策，跨BC的架构决策（如领域边界划定、BC间通信模式、共享内核策略）
+      含义: 架构/基础设施/合规类大粒度技术决策，跨BC的架构决策（如统一认证体系、审计日志平台、性能基线保障）
       所在域: 系统架构需求域
-      对应阶段: 阶段3（识别）
-      上游: Business Epic（基于Business Epic和领域划分结果识别）
+      对应阶段: 阶段2（初步识别，基于基础性需求和非功能需求分析）→ 阶段3（验证与分解，基于领域划分结果调整）
+      上游: Business Epic（支撑关系）+ 基础性需求(FR-*) + 非功能需求(NFR-*)
       分解为: Enabler Capability → Enabler Feature
 
     Capability:
@@ -180,11 +180,11 @@ safe_hierarchy:
       - Strategic Theme → 阶段1
       - Business Epic → 阶段2
     系统架构需求域（对应SyRS）:
-      - Enabler Epic → 阶段3
+      - Enabler Epic → 阶段2（初步识别）→ 阶段3（验证分解）
       - Enabler Capability → 阶段4
       - Enabler Feature → 阶段4
-      - Capability（BC内子域） → 阶段5
     软件开发需求域（对应SRS）:
+      - Capability（BC内子域） → 阶段5
       - Feature → 阶段5
       - User Story → 阶段5
       - Task → 阶段6-8
@@ -213,8 +213,8 @@ requirement_evolution:
   变更管理约束: 阶段7及之后发生的废弃或新增，须经§11.2变更管理流程确认，并评估对下游产物的影响范围
   各阶段模式:
     阶段1产品战略:  { 承接来源: —（起点）, 产出: Strategic Theme, 演化: "新增：来自市场分析与战略决策" }
-    阶段2宏观需求:  { 承接来源: Strategic Theme, 产出: Business Epic, 演化: "承接·废弃·新增；废弃不符战略的候选；允许新增市场洞察或用户访谈驱动的新Epic" }
-    阶段3领域设计:  { 承接来源: Business Epic, 产出: "Business Epic（含废弃记录）；Enabler Epic（本阶段新识别）", 演化: "承接·废弃（留痕，须记录原因）；新识别Enabler Epic" }
+    阶段2宏观需求:  { 承接来源: Strategic Theme, 产出: "Business Epic；Enabler Epic（初步识别）", 演化: "承接·废弃·新增；废弃不符战略的候选；允许新增市场洞察或用户访谈驱动的新Epic；基于基础性需求和非功能需求分析初步识别Enabler Epic" }
+    阶段3领域设计:  { 承接来源: "Business Epic；Enabler Epic（阶段2初步识别）", 产出: "Business Epic（含废弃记录）；Enabler Epic（验证后）", 演化: "承接·废弃（留痕，须记录原因）；承接阶段2 Enabler Epic，基于领域划分验证和调整" }
     阶段4系统设计:  { 承接来源: Enabler Epic, 产出: "Enabler Capability/Feature", 演化: "承接分解；细化为可验收特性；架构约束影响业务Epic时反馈上游" }
     阶段5BC详细需求: { 承接来源: "Business Epic/Capability, Enabler Feature", 产出: "Feature/User Story", 演化: "承接；细化为Feature/Story；废弃BC边界外需求；新增边界场景" }
     阶段6BC总体设计: { 承接来源: "Feature/User Story", 产出: Task（初步）, 演化: "承接·废弃（留痕）·拆分为Task；设计发现冲突时反馈至BC详细需求文档" }
@@ -230,24 +230,29 @@ requirement_evolution:
 three_line_framework:
   说明: 三线在各层级的主导角色不同；不同层级共用三条分析线，颗粒度从粗到细
   三线定义:
-    业务线: 从业务活动/流程视角——CL0→CL2业务活动树（Epic层）/业务场景内聚分组（Feature层，主线）/主场景及分支（Story层）
-    角色线: 从角色职责视角——角色期望与目标（Epic层，**主线**）/角色业务目标覆盖（Feature层）/角色操作路径差异（Story层）
-    实体线: 从实体状态流转视角——实体全生命周期（Epic层）/实体状态机覆盖（Feature层）/状态迁移节点（Story层）
+    业务线: 从业务环节/流程视角——PL0→PL2业务环节树（Epic层）/业务场景内聚分组（Feature层，主线）/主场景及分支（Story层）
+    角色线: 从角色职责视角——RL0→RL2角色期望与目标（Epic层，**主线**）/角色业务目标覆盖（Feature层）/角色操作路径差异（Story层）
+    实体线: 从实体状态流转视角——EL0→EL2实体全生命周期（Epic层）/实体状态机覆盖（Feature层）/状态迁移节点（Story层）
   各层主导角色:
     Epic层: 角色线主导（从角色期望推导Epic）
     Feature层: 业务线主导（从场景分组驱动Feature）
     User Story层: 三线并立（各自独立推导后合并）
+  跨层级对照表:
+    - { 分析维度: Epic层（A.2）, 业务线: "PL0→PL2 业务环节树", 实体线: "EL0→EL2 实体生命周期", 角色线: "RL0→RL2 角色期望（推导主线）" }
+    - { 分析维度: Feature层（A.4）, 业务线: "业务场景内聚分组（推导主线）", 实体线: "实体状态机覆盖", 角色线: "角色业务目标覆盖" }
+    - { 分析维度: User Story层（A.5）, 业务线: "主场景及分支流程", 实体线: "状态迁移节点", 角色线: "角色操作路径差异" }
 
 # Business Epic识别（阶段2，附录A.2）
 epic_identification:
   模型: 三线三级对齐模型
   推导主线: 角色线
+  三线三级: 业务线PL（PL0业务生态全景→PL1端到端流程→PL2业务环节）；角色线RL（RL0利益相关方全景→RL1特定利益相关方→RL2用户角色）；实体线EL（EL0实体关系全景→EL1核心实体→EL2生命周期阶段）
   步骤:
-    1: 业务线——梳理CL0→CL1→CL2三级活动树，形成业务活动全景
-    2: 角色线——对每个CL2活动识别参与角色及期望；合并同质期望，形成Business Epic候选清单
+    1: 业务线——梳理PL0→PL1→PL2三级业务环节树，形成业务环节全景
+    2: 角色线——对每个PL2业务环节识别参与角色(RL2)及期望；合并同质期望，形成Business Epic候选清单
     3: 实体线——梳理核心实体生命周期（创建→状态变更→删除），检查每个状态转换是否有Epic承载
   完整性验证:
-    业务线: 所有CL1场景组均有Epic承载；CL2活动均被某Epic覆盖
+    业务线: 所有PL1端到端流程均有Epic承载；PL2业务环节均被某Epic覆盖
     角色线: 每个核心角色的关键业务目标均有Epic对应
     实体线: 核心实体的创建/状态变更/查询/删除生命周期事件均有Epic覆盖
 

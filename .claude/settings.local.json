@@ -6,7 +6,10 @@
       "Write(*)",
       "Edit(*)",
       "Glob(*)",
-      "Grep(*)"
+      "Grep(*)",
+      "mcp__multi-reviewer__review_document",
+      "mcp__multi-reviewer__list_models",
+      "mcp__multi-reviewer__start_review_session"
     ]
   },
   "hooks": {

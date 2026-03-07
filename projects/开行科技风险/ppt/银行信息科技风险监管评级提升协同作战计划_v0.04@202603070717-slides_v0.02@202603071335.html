@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=800">
+<title>银行信息科技风险监管评级提升协同作战计划（2026—2030）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:#e5e7eb;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+.ppt-container{width:800px;height:450px;margin:20px auto;position:relative;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.ppt-content{width:100%;height:100%;position:relative;background:#fff}
+.title-bar{position:absolute;top:30px;left:30px;width:740px;height:25px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0}
+.breadcrumb-title{font-size:14px;font-weight:600;color:#1e293b;display:flex;align-items:center;gap:6px}
+.breadcrumb-title .level-1{color:#6366f1}
+.breadcrumb-title .level-2{color:#334155}
+.breadcrumb-title .level-3{color:#8b5cf6}
+.breadcrumb-title .separator{color:#94a3b8;font-weight:400}
+.company-logo{font-size:12px;font-weight:600;color:#6366f1;letter-spacing:1px}
+.ppt-footer{position:absolute;bottom:5px;left:30px;right:30px;height:20px;display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:100;color:#94a3b8}
+.content-box{position:absolute;top:66px;left:30px;width:740px;max-height:349px}
+.two-column-wrapper{position:absolute;top:66px;left:30px;width:740px;height:349px;display:flex;gap:30px}
+.two-column-wrapper .left-column,.two-column-wrapper .right-column{flex:1;height:100%;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:16px}
+.column-title{font-size:14px;font-weight:600;color:#1e293b;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #e2e8f0}
+.column-content{font-size:12px;color:#334155;line-height:1.6}
+.list-items{list-style:none;padding:0;margin:0}
+.list-items li{display:flex;align-items:flex-start;margin-bottom:10px;font-size:13px;color:#334155;line-height:1.6}
+.list-items li:last-child{margin-bottom:0}
+.list-items.spacious li{margin-bottom:16px}
+.list-items.expanded li{margin-bottom:20px;font-size:14px;line-height:1.8}
+.list-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#6366f1;margin-right:10px;margin-top:7px;flex-shrink:0}
+.list-dot.green{background:#10b981}.list-dot.amber{background:#f59e0b}.list-dot.red{background:#ef4444}.list-dot.blue{background:#3b82f6}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:14px}
+.card-title{font-size:14px;font-weight:600;color:#1e293b;margin-bottom:8px}
+.card-key{background:#fff;border:1px solid #e2e8f0;border-left:3px solid #6366f1;border-radius:6px;padding:12px 14px;margin-bottom:10px}
+.card-key:last-child{margin-bottom:0}
+.card-key .card-title{color:#6366f1;margin-bottom:4px;font-size:13px}
+.card-key .card-content{font-size:12px;color:#334155;line-height:1.5}
+.data-card{background:#fff;border-radius:6px;padding:14px;border:1px solid #e2e8f0;border-left:3px solid #6366f1;text-align:center}
+.data-value{font-size:22px;font-weight:700;color:#6366f1;margin-bottom:4px}
+.data-label{font-size:11px;color:#64748b;font-weight:500}
+.data-grid{display:grid;gap:12px}
+.data-grid.cols-2{grid-template-columns:1fr 1fr}
+.data-grid.cols-3{grid-template-columns:1fr 1fr 1fr}
+.highlight{background:#eff6ff;padding:2px 6px;border-radius:3px;font-weight:500;color:#6366f1}
+.highlight-row{background:#f0f0ff;border-left:3px solid #6366f1;padding:10px 14px;border-radius:0 4px 4px 0;font-size:13px;color:#334155;line-height:1.6;margin-bottom:10px}
+.highlight-row:last-child{margin-bottom:0}
+.section-label{font-size:13px;font-weight:600;color:#6366f1;margin-bottom:8px;padding-bottom:4px}
+.flow-container{display:flex;align-items:center;gap:6px}
+.flow-box{background:#fff;border:1px solid #6366f1;border-radius:6px;padding:8px 10px;font-size:11px;color:#334155;text-align:center;flex:1}
+.flow-arrow{color:#6366f1;font-size:16px;flex-shrink:0}
+.compare-container{display:flex;gap:14px;align-items:stretch}
+.compare-item{flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:14px}
+.compare-item.current{border-left:3px solid #ef4444}
+.compare-item.target{border-left:3px solid #10b981}
+.compare-item .compare-label{font-size:12px;font-weight:700;margin-bottom:6px}
+.compare-item.current .compare-label{color:#ef4444}
+.compare-item.target .compare-label{color:#10b981}
+.timeline-bar{display:flex;gap:6px;align-items:stretch}
+.timeline-item{flex:1;border-radius:6px;padding:8px 6px;text-align:center;color:#fff}
+.timeline-item .timeline-year{font-size:12px;font-weight:700}
+.timeline-item .timeline-desc{font-size:9px;margin-top:3px;opacity:.9}
+.grid-table{display:grid;gap:6px}
+.grid-table-header{font-size:11px;font-weight:600;color:#64748b;padding:4px 6px;background:#f8fafc;border-radius:4px;text-align:center}
+.grid-table-cell{font-size:11px;padding:4px 6px;border-radius:4px;border:1px solid #e2e8f0;color:#334155}
+.grid-table-cell.label{color:#6366f1;font-weight:600;text-align:center}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.tag-red{background:#fef2f2;color:#ef4444;border:1px solid #fecaca}
+.tag-green{background:#f0fdf4;color:#10b981;border:1px solid #bbf7d0}
+.tag-blue{background:#eff6ff;color:#3b82f6;border:1px solid #bfdbfe}
+.tag-purple{background:#faf5ff;color:#8b5cf6;border:1px solid #ddd6fe}
+.tag-amber{background:#fffbeb;color:#f59e0b;border:1px solid #fde68a}
+.divider{width:100%;height:1px;background:#e2e8f0;margin:10px 0}
+.icon-text{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;background:#6366f1;color:#fff;font-size:14px;font-weight:600;margin-right:8px}
+.icon-text.green{background:#10b981}.icon-text.blue{background:#3b82f6}.icon-text.orange{background:#f59e0b}.icon-text.red{background:#ef4444}
+.layout-title .ppt-content{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)}
+.layout-title .ppt-content::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%);border-radius:50%;top:-100px;right:-100px}
+.layout-title .ppt-content::after{content:'';position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%);border-radius:50%;bottom:-80px;left:-80px}
+.title-main{position:absolute;top:140px;left:50%;transform:translateX(-50%);font-size:24px;font-weight:700;color:#fff;text-align:center;text-shadow:0 2px 8px rgba(0,0,0,.2);letter-spacing:.5px;z-index:1;width:700px}
+.title-subtitle{position:absolute;top:200px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:400;color:rgba(255,255,255,.9);text-align:center;z-index:1}
+.title-author{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);font-size:8px;color:rgba(255,255,255,.7);text-align:center;z-index:1}
+.title-badge{position:absolute;top:240px;left:50%;transform:translateX(-50%);display:flex;gap:16px;z-index:1}
+.title-badge .badge{background:rgba(255,255,255,.15);color:#fff;padding:6px 18px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid rgba(255,255,255,.25)}
+.layout-section .ppt-content{background:linear-gradient(135deg,#818cf8 0%,#a78bfa 100%)}
+.section-title{position:absolute;top:155px;left:50%;transform:translateX(-50%);font-size:22px;font-weight:700;color:#fff;text-align:center;text-shadow:0 2px 6px rgba(0,0,0,.15);letter-spacing:.5px;z-index:1;width:700px}
+.section-sub{position:absolute;top:195px;left:50%;transform:translateX(-50%);font-size:12px;color:rgba(255,255,255,.85);text-align:center;z-index:1}
+.section-keywords{position:absolute;top:225px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:1;flex-wrap:wrap;justify-content:center}
+.section-keywords .keyword{background:rgba(255,255,255,.2);color:#fff;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:500;border:1px solid rgba(255,255,255,.3)}
+.section-progress{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;z-index:1}
+.section-progress .progress-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3)}
+.section-progress .progress-dot.active{background:#fff;width:24px;border-radius:4px}
+.section-progress .progress-text{font-size:10px;color:rgba(255,255,255,.7);margin-left:8px}
+.grid-4{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.grid-card{background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:12px}
+.grid-card-title{font-size:12px;font-weight:600;color:#6366f1;margin-bottom:4px}
+.grid-card-text{font-size:11px;color:#334155;line-height:1.5}
+</style>
+</head>
+<body>
+
+<!-- ===== P1: 封面 ===== -->
+<div class="ppt-container layout-title"><div class="ppt-content">
+<div class="title-main">银行信息科技风险监管评级提升<br>协同作战计划（2026—2030）</div>
+<div class="title-subtitle">2026—2030 五年行动纲领</div>
+<div class="title-badge"><span class="badge">五年规划</span><span class="badge">十大战役</span><span class="badge">八大维度</span></div>
+<div class="title-author">2026年3月</div>
+</div></div>
+
+<!-- ===== P2: 第一章 综述 ===== -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第一章 综述</div>
+<div class="section-keywords"><span class="keyword">目标定位</span><span class="keyword">方案逻辑</span><span class="keyword">适用范围</span></div>
+<div class="section-progress"><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 1 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P3: LOGIC:progressive → timeline-bar + spacious list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">综述</span><span class="separator">›</span><span class="level-2">制定目的与核心目标</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="timeline-bar" style="margin-bottom:14px">
+<div class="timeline-item" style="background:#6366f1"><div class="timeline-year">2026</div><div class="timeline-desc">攻坚评级</div></div>
+<div class="timeline-item" style="background:#8b5cf6"><div class="timeline-year">2027</div><div class="timeline-desc">深化体系</div></div>
+<div class="timeline-item" style="background:#a78bfa"><div class="timeline-year">2028</div><div class="timeline-desc">争创优良</div></div>
+<div class="timeline-item" style="background:#3b82f6"><div class="timeline-year">2029</div><div class="timeline-desc">数字赋能</div></div>
+<div class="timeline-item" style="background:#10b981"><div class="timeline-year">2030</div><div class="timeline-desc">持续优化</div></div>
+</div>
+<ul class="list-items spacious">
+<li><span class="list-dot"></span><span><span class="highlight">五年周期定位</span>：以"超越底线、质量优先"为核心，系统提升信息科技风险管理的实质有效性，推动监管评级持续改善</span></li>
+<li><span class="list-dot"></span><span><span class="highlight">2026年核心目标</span>：严格对照《商业银行信息科技风险管理指引》八大评级维度，聚焦监管高频扣分项，推动评级从当前级别显著提升</span></li>
+<li><span class="list-dot"></span><span><strong>五年战略愿景</strong>：至2030年监管评级稳定保持优良等级，建立可持续运转的科技风险治理长效机制</span></li>
+<li><span class="list-dot"></span><span><strong>对标方向</strong>：力争达到政策性银行同业先进水平，形成可输出的最佳实践</span></li>
+</ul>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 3 页</span></div></div>
+
+<!-- P4: LOGIC:cause-effect→progressive → card-key top + flow bottom -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">综述</span><span class="separator">›</span><span class="level-2">方案整体逻辑</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="section-label">立论起点：两个核心判断</div>
+<div class="card-key" style="margin-bottom:8px"><div class="card-title">判断一（质量问题）</div><div class="card-content">核心矛盾不在于"有没有"，而在于底线思维过重——各项工作以满足监管最低要求为隐性目标</div></div>
+<div class="card-key" style="margin-bottom:12px"><div class="card-title">判断二（缺口问题）</div><div class="card-content">少量缺口确实存在，如数据治理层面的数据资产目录、数据分类分级等基础工作尚未系统落地</div></div>
+<div class="section-label">应对路径：五阶段演进</div>
+<div class="flow-container">
+<div class="flow-box"><strong>夯实基础</strong><br><span style="font-size:9px;color:#64748b">2026</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>深化体系</strong><br><span style="font-size:9px;color:#64748b">2027</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>争创优良</strong><br><span style="font-size:9px;color:#64748b">2028</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>数字赋能</strong><br><span style="font-size:9px;color:#64748b">2029</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>持续优化</strong><br><span style="font-size:9px;color:#64748b">2030</span></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 4 页</span></div></div>
+
+<!-- P5: LOGIC:hierarchy → card-key + expanded list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">综述</span><span class="separator">›</span><span class="level-2">适用范围与组织覆盖</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:14px"><div class="card-title">核心覆盖：四大关键职能</div><div class="card-content">信息科技部、风险管理部、审计部、数据管理部——承担本计划90%以上的任务执行与监督职责</div></div>
+<div class="section-label">全面覆盖</div>
+<ul class="list-items spacious">
+<li><span class="list-dot"></span><span><strong>全行范围</strong>：覆盖全行各部门、各分支机构，不留管理盲区</span></li>
+<li><span class="list-dot"></span><span><strong>业务协同</strong>：明确业务部门在特定战役中的协同职责，如业务影响分析（BIA）、数据Owner确认等</span></li>
+<li><span class="list-dot"></span><span><strong>落地要求</strong>：各项工作落地到岗、责任到人，确保执行可追踪、可问责</span></li>
+</ul>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 5 页</span></div></div>
+
+<!-- ===== P6: 第二章 现状诊断 ===== -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第二章 现状诊断</div>
+<div class="section-keywords"><span class="keyword">基础能力</span><span class="keyword">核心问题</span><span class="keyword">底线思维</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 2 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P7: LOGIC:classify → grid cards -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">现状诊断</span><span class="separator">›</span><span class="level-2">现有基础能力总览</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="grid-4">
+<div class="grid-card" style="border-left:3px solid #10b981">
+<div class="grid-card-title" style="color:#10b981">管理体系认证</div>
+<div class="grid-card-text">ITIL/ISO 20000 已实施<br>ISMS/ISO 27001 已认证<br>ITMIS平台覆盖事件/变更/配置</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #10b981">
+<div class="grid-card-title" style="color:#10b981">合规测评通过</div>
+<div class="grid-card-text">等保2.0测评已通过<br>核心系统密评已完成<br>CMMi软件成熟度已评估</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #3b82f6">
+<div class="grid-card-title" style="color:#3b82f6">安全运营平台</div>
+<div class="grid-card-text">SOC态势感知平台已部署<br>EDR/DLP/PAM已上线<br>漏洞扫描平台运行中</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #3b82f6">
+<div class="grid-card-title" style="color:#3b82f6">基础设施保障</div>
+<div class="grid-card-text">容灾中心具备异地灾备能力<br>防火墙/IDS/IPS/WAF齐备<br>核心制度体系已发布生效</div>
+</div>
+</div>
+<div class="highlight-row" style="margin-top:12px"><span class="highlight">核心结论</span>：基础框架与安全设施已解决"有没有"的问题，本计划以此为起点深化提升</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 7 页</span></div></div>
+
+<!-- P8: LOGIC:cause-effect→classify → top-bottom with cause card + effect grid -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">现状诊断</span><span class="separator">›</span><span class="level-2">核心问题诊断</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">根因：底线思维过重</div><div class="card-content">核心矛盾不在于"有没有"而在于"好不好"——各项工作以满足监管最低要求为隐性目标</div></div>
+<div class="grid-3" style="margin-bottom:10px">
+<div class="grid-card" style="border-left:3px solid #ef4444">
+<div class="grid-card-title" style="color:#ef4444">后果一（合规层面）</div>
+<div class="grid-card-text">等保/密评重在"通过"而非"整改落地"，合规水平接近监管底线</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #f59e0b">
+<div class="grid-card-title" style="color:#f59e0b">后果二（能力层面）</div>
+<div class="grid-card-text">"已购未用"突出——安全产品高级功能长期闲置，检测视野存在盲区</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #8b5cf6">
+<div class="grid-card-title" style="color:#8b5cf6">后果三（评级层面）</div>
+<div class="grid-card-text">各维度"执行多在边缘"，缺乏质量优势，难以实现跨档提升</div>
+</div>
+</div>
+<div class="highlight-row"><span class="highlight">独立缺口</span>：数据资产目录、数据分类分级等基础工作尚未系统落地（对应战役八）</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 8 页</span></div></div>
+
+<!-- ===== P9: 第三章 监管动态与趋势 ===== -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第三章 监管动态与趋势</div>
+<div class="section-keywords"><span class="keyword">政策演进</span><span class="keyword">监管预测</span><span class="keyword">阶段映射</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 3 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P10: LOGIC:hierarchy → section-label groups -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">监管动态与趋势</span><span class="separator">›</span><span class="level-2">现行监管框架要点</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="section-label">法律法规层（强制约束）</div>
+<ul class="list-items" style="margin-bottom:10px">
+<li><span class="list-dot"></span><span><span class="highlight">三大基础法律</span>：《网络安全法》《数据安全法》《个人信息保护法》构成法律底线</span></li>
+<li><span class="list-dot"></span><span><strong>行政法规</strong>：《关键信息基础设施安全保护条例》明确关基运营者安全保护义务</span></li>
+</ul>
+<div class="section-label">监管指引与规范层（评级依据）</div>
+<ul class="list-items" style="margin-bottom:10px">
+<li><span class="list-dot"></span><span><span class="highlight">核心评级依据</span>：银监发〔2009〕19号定义IT治理三道防线与八大评级维度</span></li>
+<li><span class="list-dot"></span><span><strong>外包+数据安全</strong>：银保监办发〔2021〕141号外包管控 · 金规〔2024〕24号数据分类分级强制化</span></li>
+</ul>
+<div class="section-label">技术标准层</div>
+<ul class="list-items">
+<li><span class="list-dot"></span><span><strong>等保与密评</strong>：等保2.0（GB/T 22239）二级及以上系统测评 · 密评（GB/T 39786）核心系统评估</span></li>
+</ul>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 10 页</span></div></div>
+
+<!-- P11: LOGIC:classify → grid cards -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">监管动态与趋势</span><span class="separator">›</span><span class="level-2">2026年近期监管动向</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="grid-4">
+<div class="grid-card" style="border-left:3px solid #ef4444">
+<div class="grid-card-title" style="color:#ef4444">数据安全双规落地 <span class="tag tag-red">高确定性</span></div>
+<div class="grid-card-text">金监总局与人民银行数据安全办法相继施行，2026年是执法检查关键之年，数据分类分级将是检查重点</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #f59e0b">
+<div class="grid-card-title" style="color:#f59e0b">AI算法风险监管 <span class="tag tag-red">高确定性</span></div>
+<div class="grid-card-text">大模型备案管理、算法审计纳入信息科技审计范围，AI模型风险管理专项指引有望出台</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #3b82f6">
+<div class="grid-card-title" style="color:#3b82f6">金科规划换届 <span class="tag tag-amber">中确定性</span></div>
+<div class="grid-card-text">《金融科技发展规划（2026-2030年）》预计发布，明确AI+深度应用和数据资产价值释放方向</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #8b5cf6">
+<div class="grid-card-title" style="color:#8b5cf6">指引修订压力 <span class="tag tag-amber">中确定性</span></div>
+<div class="grid-card-text">银监发〔2009〕19号历经15年未修订，预期增加AI治理专章和数据资产化框架</div>
+</div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 11 页</span></div></div>
+
+<!-- P12: LOGIC:evolution → timeline -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">监管动态与趋势</span><span class="separator">›</span><span class="level-2">2027—2030中长期趋势</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="timeline-bar" style="margin-bottom:16px">
+<div class="timeline-item" style="background:#8b5cf6;flex:2"><div class="timeline-year">2027-2028</div><div class="timeline-desc">体系深化期</div></div>
+<div class="timeline-item" style="background:#3b82f6;flex:2"><div class="timeline-year">2029-2030</div><div class="timeline-desc">智能管控期</div></div>
+</div>
+<div class="grid-4">
+<div class="grid-card">
+<div class="grid-card-title">AI审计常态化</div>
+<div class="grid-card-text">AI算法审计成为信息科技审计常规检查项，银行需建立算法全生命周期管理制度</div>
+</div>
+<div class="grid-card">
+<div class="grid-card-title">密评覆盖扩展</div>
+<div class="grid-card-text">覆盖范围向重要业务系统扩展，核心系统密评覆盖率成为现场检查重要指标</div>
+</div>
+<div class="grid-card">
+<div class="grid-card-title">实时监管演进</div>
+<div class="grid-card-text">EAST系统向实时数据采集演进，银行需具备监管数据自动采集和实时校验能力</div>
+</div>
+<div class="grid-card">
+<div class="grid-card-title">数据资产化</div>
+<div class="grid-card-text">数据资产入表配套实施细则落地，金融数据流通交易规则明确，管理能力全面评估</div>
+</div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 12 页</span></div></div>
+
+<!-- P13: LOGIC:matrix → timeline + list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">监管动态与趋势</span><span class="separator">›</span><span class="level-2">监管趋势与阶段映射</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="timeline-bar" style="margin-bottom:12px">
+<div class="timeline-item" style="background:#6366f1"><div class="timeline-year">2026</div><div class="timeline-desc">夯实基础</div></div>
+<div class="timeline-item" style="background:#8b5cf6"><div class="timeline-year">2027</div><div class="timeline-desc">深化体系</div></div>
+<div class="timeline-item" style="background:#a78bfa"><div class="timeline-year">2028</div><div class="timeline-desc">争创优良</div></div>
+<div class="timeline-item" style="background:#3b82f6"><div class="timeline-year">2029</div><div class="timeline-desc">数字赋能</div></div>
+<div class="timeline-item" style="background:#10b981"><div class="timeline-year">2030</div><div class="timeline-desc">持续优化</div></div>
+</div>
+<ul class="list-items">
+<li><span class="list-dot blue"></span><span><strong>2026</strong>：数据安全双规执法 + AI算法风险检查 → 重点突破战役二/三，数据治理确认（战役八）</span></li>
+<li><span class="list-dot blue"></span><span><strong>2027</strong>：新金科规划落地 + 密评覆盖提升 → DevSecOps成熟化（战役四重点突破）</span></li>
+<li><span class="list-dot blue"></span><span><strong>2028</strong>：算法审计常态化 + 数字金融能力评估 → 内部模拟检查里程碑（战役二重点突破）</span></li>
+<li><span class="list-dot blue"></span><span><strong>2029</strong>：实时监管升级 + 数据资产化规则 → 监管数据实时接口上线（战役二/八重点突破）</span></li>
+<li><span class="list-dot blue"></span><span><strong>2030</strong>：AI伦理框架成熟 + 可持续治理 → 量化预测模型验证（战役二重点突破）</span></li>
+</ul>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 13 页</span></div></div>
+
+<!-- ===== P14: 第四章 方针原则与战略路径 ===== -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第四章 方针原则与战略路径</div>
+<div class="section-keywords"><span class="keyword">核心原则</span><span class="keyword">维度映射</span><span class="keyword">演进路径</span><span class="keyword">关键指标</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 4 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P15: LOGIC:classify → grid cards for principles -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">方针原则与战略路径</span><span class="separator">›</span><span class="level-2">核心原则（上）</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="grid-4">
+<div class="grid-card" style="border-left:3px solid #6366f1">
+<div class="grid-card-title">超越底线，质量优先</div>
+<div class="grid-card-text">以"实质有效"而非"形式达标"为交付标准——任务动词优先采用"深化、提升、落地"</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #8b5cf6">
+<div class="grid-card-title">提标聚焦，重点突破</div>
+<div class="grid-card-text">核心问题是质量标尺偏低而非基础缺失，须每年选定方向集中投入形成跨档优势</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #3b82f6">
+<div class="grid-card-title">对标监管，全量覆盖</div>
+<div class="grid-card-text">建立"评级维度→战役→任务→交付物"四级映射关系，不留覆盖盲区</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #10b981">
+<div class="grid-card-title">协同联动，打破壁垒</div>
+<div class="grid-card-text">以三角联席、科委会、整改销号三大机制为抓手，推动跨部门协同作战</div>
+</div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 15 页</span></div></div>
+
+<!-- P16: LOGIC:classify → grid cards for principles (continued) -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">方针原则与战略路径</span><span class="separator">›</span><span class="level-2">核心原则（下）</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="grid-4">
+<div class="grid-card" style="border-left:3px solid #6366f1">
+<div class="grid-card-title">务实落地，量化可考</div>
+<div class="grid-card-text">所有战役明确"牵头板块+协同部门+交付物+量化验收标准+完成时限"，可穿透验证</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #ef4444">
+<div class="grid-card-title">机制兜底，闭环管控</div>
+<div class="grid-card-text">以"整改销号"机制为保障，强化审计独立验证，形成发现→认领→整改→验证→销号全闭环</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #f59e0b">
+<div class="grid-card-title">聚焦提升，证据先行</div>
+<div class="grid-card-text">优先启动需长周期积累执行记录的维度（开发测试、运行管理），确保迎检证据链充足</div>
+</div>
+<div class="grid-card" style="border-left:3px solid #10b981">
+<div class="grid-card-title">跟踪监管，动态优化</div>
+<div class="grid-card-text">以年度复盘和监管政策跟踪为驱动，滚动调整各年度目标，始终对准监管前沿</div>
+</div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 16 页</span></div></div>
+
+<!-- P17: LOGIC:matrix → highlight-rows for mapping -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">方针原则与战略路径</span><span class="separator">›</span><span class="level-2">评级维度与战役映射</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="highlight-row"><span class="highlight">D1治理</span> → 战役一：治理架构与履职深化 · 风险管理-制度处/风险管理部 · 2026-2027</div>
+<div class="highlight-row"><span class="highlight">D2风险</span> → 战役二：IT风险管理体系深化 · 风险管理-制度处/风险管理部 · 贯穿2026-2030</div>
+<div class="highlight-row"><span class="highlight">D3安全</span> → 战役三：信息安全深化攻坚 · 网络安全 · 2026-2029</div>
+<div class="highlight-row"><span class="highlight">D4开发</span> → 战役四：开发测试安全基线提升 · 开发测试 · 2026-2028</div>
+<div class="highlight-row"><span class="highlight">D5运行</span> → 战役五：IT运行管理深化 · 系统运行 · 2026-2027</div>
+<div class="highlight-row"><span class="highlight">D6连续性</span> → 战役六：业务连续性与灾备实战 · 系统运行 · 贯穿2026-2030</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 17 页</span></div></div>
+
+<!-- P18: mapping continued -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">方针原则与战略路径</span><span class="separator">›</span><span class="level-2">评级维度与战役映射（续）</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="highlight-row"><span class="highlight">D7外包</span> → 战役七：供应链安全与外包管理 · 规划/科技资源 · 2026-2028</div>
+<div class="highlight-row"><span class="highlight">D8审计</span> → 独立保障机制 · 审计部（独立）· 贯穿全计划</div>
+<div class="highlight-row"><span class="highlight">数据治理</span> → 战役八：数据治理与隐私保护 · 数据管理部 · 2026-2027</div>
+<div class="highlight-row"><span class="highlight">前瞻风险</span> → 战役九：新技术应用与AI安全 · 风险管理-制度处 · 贯穿2026-2030</div>
+<div class="highlight-row"><span class="highlight">人才文化</span> → 战役十：人才队伍与文化培育 · 信息科技部 · 贯穿2026-2030</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 18 页</span></div></div>
+
+<!-- P19: LOGIC:evolution → timeline + spacious list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">方针原则与战略路径</span><span class="separator">›</span><span class="level-2">五年战略演进路径</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="timeline-bar" style="margin-bottom:14px">
+<div class="timeline-item" style="background:#6366f1"><div class="timeline-year">2026</div><div class="timeline-desc">夯实基础·攻坚</div></div>
+<div class="timeline-item" style="background:#8b5cf6"><div class="timeline-year">2027</div><div class="timeline-desc">深化·成型</div></div>
+<div class="timeline-item" style="background:#a78bfa"><div class="timeline-year">2028</div><div class="timeline-desc">争创优良</div></div>
+<div class="timeline-item" style="background:#3b82f6"><div class="timeline-year">2029</div><div class="timeline-desc">数字赋能</div></div>
+<div class="timeline-item" style="background:#10b981"><div class="timeline-year">2030</div><div class="timeline-desc">长效治理</div></div>
+</div>
+<ul class="list-items spacious">
+<li><span class="list-dot blue"></span><span><strong>2026</strong>：补齐数据治理唯一空白，激活现有安全产品能力，以重点突破驱动评级跨档提升</span></li>
+<li><span class="list-dot blue"></span><span><strong>2027</strong>：工具和流程成熟化，DevSecOps覆盖≥60%形成重点突破，各战役质量标尺全面提升</span></li>
+<li><span class="list-dot blue"></span><span><strong>2028</strong>：内部模拟检查机制首次全面运作，以可核验数据支撑争创优良评级</span></li>
+<li><span class="list-dot blue"></span><span><strong>2029</strong>：监管数据实时采集接口上线，从人工报送到系统直连，量化预测模型启动</span></li>
+<li><span class="list-dot blue"></span><span><strong>2030</strong>：四年数据积累形成量化模型，从"描述风险"跨越到"预测风险"</span></li>
+</ul>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 19 页</span></div></div>
+
+<!-- P20: LOGIC:matrix → data cards -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">方针原则与战略路径</span><span class="separator">›</span><span class="level-2">五年关键指标演进</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="data-grid cols-3" style="margin-bottom:10px">
+<div class="data-card"><div class="data-value">≥99.99%</div><div class="data-label">核心系统可用率（2030）</div></div>
+<div class="data-card"><div class="data-value">≤7天</div><div class="data-label">高危漏洞修复周期（2030）</div></div>
+<div class="data-card"><div class="data-value">≥99%</div><div class="data-label">SAST/DAST闭环率（2030）</div></div>
+<div class="data-card"><div class="data-value">≥95%</div><div class="data-label">KRI自动采集率（2030）</div></div>
+<div class="data-card"><div class="data-value">≤0.5%</div><div class="data-label">缺陷逃逸率（2030）</div></div>
+<div class="data-card"><div class="data-value" style="color:#10b981">优良稳定</div><div class="data-label">监管评级目标（2030）</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 20 页</span></div></div>
+
+<!-- P21: LOGIC:evolution→classify → card-key top + list bottom -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">方针原则与战略路径</span><span class="separator">›</span><span class="level-2">十大战役强度映射</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">2026年（攻坚年）</div><div class="card-content">攻坚·重点突破：战役二（IT风险管理）+ 战役三（信息安全）双线并行 · 战役六候选 · 战役八待确认 · 其余底线保障</div></div>
+<div class="section-label">2027—2030年重点突破方向</div>
+<div class="grid-4">
+<div class="grid-card"><div class="grid-card-title">2027 深化体系</div><div class="grid-card-text">战役四 DevSecOps覆盖≥60%</div></div>
+<div class="grid-card"><div class="grid-card-title">2028 争创优良</div><div class="grid-card-text">战役二 内部模拟检查机制</div></div>
+<div class="grid-card"><div class="grid-card-title">2029 数字赋能</div><div class="grid-card-text">战役二/八 监管实时接口</div></div>
+<div class="grid-card"><div class="grid-card-title">2030 长效治理</div><div class="grid-card-text">战役二 量化预测模型验证</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 21 页</span></div></div>
+
+<!-- ===== P22: 第五章 十大战役框架 ===== -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第五章 十大战役框架</div>
+<div class="section-keywords"><span class="keyword">战役定位</span><span class="keyword">五年路径</span><span class="keyword">工作机制</span><span class="keyword">交付物</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 5 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P23-P42: 10 campaigns × 2 pages each — using varied layouts per LOGIC type -->
+
+<!-- P23: 战役一 LOGIC:hierarchy → card-key + list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役一：治理架构与履职深化</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">D1 信息科技治理 — 核心定位</div><div class="card-content">IT治理基础架构（CIO设置、三道防线、委员会机制）均已具备——核心不是"有没有"，而是<strong>履职记录的完整性与可查验性</strong></div></div>
+<div class="section-label">五年路径与牵头责任</div>
+<div class="flow-container" style="margin-bottom:10px">
+<div class="flow-box" style="background:#6366f1;color:#fff;border-color:#6366f1">底线保障<br><span style="font-size:9px;opacity:.8">2026</span></div><span class="flow-arrow">→</span>
+<div class="flow-box">深化<br><span style="font-size:9px;color:#64748b">2027</span></div><span class="flow-arrow">→</span>
+<div class="flow-box">成熟<br><span style="font-size:9px;color:#64748b">2028</span></div><span class="flow-arrow">→</span>
+<div class="flow-box">适应<br><span style="font-size:9px;color:#64748b">2029</span></div><span class="flow-arrow">→</span>
+<div class="flow-box">长效<br><span style="font-size:9px;color:#64748b">2030</span></div>
+</div>
+<div class="highlight-row"><strong>牵头</strong>：信息科技部·风险管理-制度处（部门层面）/ 风险管理部（全行层面）</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 23 页</span></div></div>
+
+<!-- P24: 战役一机制 LOGIC:classify → grid cards -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">战役一</span><span class="separator">›</span><span class="level-3">核心机制与交付物</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="grid-4" style="margin-bottom:10px">
+<div class="grid-card"><div class="grid-card-title">CIO汇报路径</div><div class="grid-card-text">向行长直接汇报的制度保障，确保科技风险议题直达最高决策层</div></div>
+<div class="grid-card"><div class="grid-card-title">岗位分离管控</div><div class="grid-card-text">开发/测试/运维三类岗位职责分离执行质量管控，零交叉</div></div>
+<div class="grid-card"><div class="grid-card-title">委员会运作</div><div class="grid-card-text">IT管理委员会季度例会与决策留痕（≥4次/年），形成连续记录</div></div>
+<div class="grid-card"><div class="grid-card-title">董事会汇报</div><div class="grid-card-text">科技风险专题汇报≥4次/年，确保董事会对科技风险知情权</div></div>
+</div>
+<div class="highlight-row"><strong>典型交付物</strong>：CIO职责说明书 · 岗位分离矩阵 · IT委员会纪要 · 科技风险治理手册</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 24 页</span></div></div>
+
+<!-- P25: 战役二 LOGIC:hierarchy → card-key + flow -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役二：IT风险管理体系深化</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">D2 信息科技风险管理 — 核心定位</div><div class="card-content">从"有制度有框架"升级到"数据真实、指标有效、预警及时"——以2026年为起点持续积累高质量数据，支撑2030年量化预测模型</div></div>
+<div class="section-label">五年路径（五年贯穿，多次重点突破）</div>
+<div class="flow-container" style="margin-bottom:10px">
+<div class="flow-box" style="background:#ef4444;color:#fff;border-color:#ef4444">攻坚突破<br><span style="font-size:9px;opacity:.8">2026</span></div><span class="flow-arrow">→</span>
+<div class="flow-box">深化<br><span style="font-size:9px;color:#64748b">2027</span></div><span class="flow-arrow">→</span>
+<div class="flow-box" style="background:#f59e0b;color:#fff;border-color:#f59e0b">重点突破<br><span style="font-size:9px;opacity:.8">2028</span></div><span class="flow-arrow">→</span>
+<div class="flow-box" style="background:#3b82f6;color:#fff;border-color:#3b82f6">重点突破<br><span style="font-size:9px;opacity:.8">2029</span></div><span class="flow-arrow">→</span>
+<div class="flow-box" style="background:#10b981;color:#fff;border-color:#10b981">重点突破<br><span style="font-size:9px;opacity:.8">2030</span></div>
+</div>
+<div class="highlight-row"><strong>最终成果</strong>：科技风险量化预测模型成熟验证——四年数据"播种→积累→收获"的完整闭环</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 25 页</span></div></div>
+
+<!-- P26: 战役二机制 LOGIC:classify → grid cards -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">战役二</span><span class="separator">›</span><span class="level-3">核心机制与交付物</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="grid-4" style="margin-bottom:10px">
+<div class="grid-card"><div class="grid-card-title">KRI体系双维度优化</div><div class="grid-card-text">指标质量（领先指标优先）+ 采集质量（自动采集率持续提升），双维度确保数据可信</div></div>
+<div class="grid-card"><div class="grid-card-title">分层分级风险报告</div><div class="grid-card-text">周报/月报/季报三级体系，各层级按频次和受众定制内容与粒度</div></div>
+<div class="grid-card"><div class="grid-card-title">年度风险评估</div><div class="grid-card-text">全行信息系统RCSA方法论评估，覆盖率100%，输出风险热力图</div></div>
+<div class="grid-card"><div class="grid-card-title">平台能力激活</div><div class="grid-card-text">ITMIS/SOC已有但未充分使用模块的系统性激活，消除隐性浪费</div></div>
+</div>
+<div class="highlight-row"><strong>典型交付物</strong>：KRI指标体系 · 年度风险评估报告（含热力图）· 各层级风险报告 · 风险事件损失分析报告</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 26 页</span></div></div>
+
+<!-- P27: 战役三 LOGIC:hierarchy -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役三：信息安全深化攻坚</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">D3 信息安全 — 核心定位</div><div class="card-content">在ISMS认证、等保、密评已通过的基础上，重点提升安全体系的执行实质性——以<strong>穿透检查通过</strong>（而非证书维护）为验收标准，激活现有安全产品完整功能</div></div>
+<div class="flow-container" style="margin-bottom:10px">
+<div class="flow-box" style="background:#ef4444;color:#fff;border-color:#ef4444">攻坚突破<br><span style="font-size:9px;opacity:.8">2026</span></div><span class="flow-arrow">→</span>
+<div class="flow-box">深化<br><span style="font-size:9px;color:#64748b">2027-28</span></div><span class="flow-arrow">→</span>
+<div class="flow-box" style="background:#3b82f6;color:#fff;border-color:#3b82f6">智能化<br><span style="font-size:9px;opacity:.8">2029</span></div><span class="flow-arrow">→</span>
+<div class="flow-box" style="background:#10b981;color:#fff;border-color:#10b981">领先<br><span style="font-size:9px;opacity:.8">2030</span></div>
+</div>
+<div class="highlight-row"><strong>牵头</strong>：信息科技部·网络安全 · 协同：风险管理-制度处、风险管理部、数据管理部</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 27 页</span></div></div>
+
+<!-- P28: 战役三机制 LOGIC:classify → grid cards -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">战役三</span><span class="separator">›</span><span class="level-3">核心机制与交付物</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="grid-3">
+<div class="grid-card"><div class="grid-card-title">功能激活路线图</div><div class="grid-card-text">逐产品梳理已购能力与实际启用差距，制定按季度推进的激活计划</div></div>
+<div class="grid-card"><div class="grid-card-title">PAM全链路管控</div><div class="grid-card-text">申请→审批→记录→审计闭环，共享账号100%清零，特权行为100%可审计</div></div>
+<div class="grid-card"><div class="grid-card-title">安全基线自动化</div><div class="grid-card-text">基线检测覆盖核心系统≥95%，发现偏差自动触发整改工单</div></div>
+<div class="grid-card"><div class="grid-card-title">零信任架构</div><div class="grid-card-text">分阶段落地——2026 POC验证→核心系统覆盖，持续验证每次访问</div></div>
+<div class="grid-card"><div class="grid-card-title">红蓝对抗</div><div class="grid-card-text">无预告实战演练，检验防御体系在真实攻击条件下的有效性</div></div>
+<div class="grid-card"><div class="grid-card-title">典型交付物</div><div class="grid-card-text">激活路线图 · PAM报告 · 红蓝复盘 · 漏洞台账</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 28 页</span></div></div>
+
+<!-- P29: 战役四 LOGIC:cause-effect → top-bottom -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役四：开发测试安全基线提升</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="section-label">问题根因</div>
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">D4 信息系统开发、测试和维护</div><div class="card-content">安全基线质量标尺系统性偏低——SAST/DAST扫描以默认规则运行、以"无高危即通过"为标准、安全需求停留在检查清单层面</div></div>
+<div class="section-label">解决路径</div>
+<div class="card-key"><div class="card-title">DevSecOps成熟度提升</div><div class="card-content">以DevSecOps为中期重点突破目标，推动安全基线从"形式嵌入"走向"实质有效"</div></div>
+<div class="flow-container" style="margin-top:10px">
+<div class="flow-box">底线保障<br><span style="font-size:9px;color:#64748b">2026</span></div><span class="flow-arrow">→</span>
+<div class="flow-box" style="background:#ef4444;color:#fff;border-color:#ef4444">重点突破<br><span style="font-size:9px;opacity:.8">2027</span></div><span class="flow-arrow">→</span>
+<div class="flow-box">成熟<br><span style="font-size:9px;color:#64748b">2028</span></div><span class="flow-arrow">→</span>
+<div class="flow-box">持续<br><span style="font-size:9px;color:#64748b">2029</span></div><span class="flow-arrow">→</span>
+<div class="flow-box" style="background:#10b981;color:#fff;border-color:#10b981">领先<br><span style="font-size:9px;opacity:.8">2030</span></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 29 页</span></div></div>
+
+<!-- P30: 战役四机制 LOGIC:progressive → flow -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">战役四</span><span class="separator">›</span><span class="level-3">核心机制与交付物</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="flow-container" style="margin-bottom:14px">
+<div class="flow-box"><strong>规则定制化</strong><br><span style="font-size:9px">超越默认配置</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>闭环提标</strong><br><span style="font-size:9px">中危以上全量</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>安全门禁</strong><br><span style="font-size:9px">不过不上线</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>数据清零</strong><br><span style="font-size:9px">测试环境脱敏</span></div>
+</div>
+<ul class="list-items spacious">
+<li><span class="list-dot"></span><span><strong>检测规则定制化</strong>：逐项目梳理默认规则与实际风险差距，提升检测深度——发现"默认规则看不到的问题"</span></li>
+<li><span class="list-dot"></span><span><strong>闭环整改提标</strong>：从"无高危即通过"提升为"中危以上全量闭环"，闭环率≥90%（2026）→≥99%（2030）</span></li>
+<li><span class="list-dot"></span><span><strong>安全门禁强化</strong>：安全评审不通过不得进入下一SDLC阶段，形成"不安全不上线"的刚性约束</span></li>
+<li><span class="list-dot"></span><span><strong>测试数据清零</strong>：测试环境数据脱敏自动化，确保零真实客户数据，消除数据泄露隐患</span></li>
+</ul>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 30 页</span></div></div>
+
+<!-- P31: 战役五 LOGIC:hierarchy → card-key + section groups -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役五：IT运行管理深化</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">D5 信息科技运行 — 核心定位</div><div class="card-content">在ITMIS平台已运行基础上，聚焦提升数据质量与流程执行深度——<strong>证据链不可中断</strong>，事件工单台账须连续积累≥6个月</div></div>
+<div class="section-label">六子方向覆盖</div>
+<div class="grid-3">
+<div class="grid-card"><div class="grid-card-title">事件+问题管理</div><div class="grid-card-text">P1/P2 RCA 5日内完成<br>问题管理独立运作<br>重复故障追溯根因</div></div>
+<div class="grid-card"><div class="grid-card-title">CMDB+容量</div><div class="grid-card-text">自动发现与实时同步<br>准确率≥95%→≥98%<br>容量趋势预警月报</div></div>
+<div class="grid-card"><div class="grid-card-title">监控+日志</div><div class="grid-card-text">虚假告警率≤5%<br>批处理异常全量监控<br>核心日志保留≥1年</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 31 页</span></div></div>
+
+<!-- P32: 战役六 LOGIC:compare → two-column -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役六：业务连续性与灾备实战</span></div><div class="company-logo">TENWARD</div></div>
+<div class="two-column-wrapper">
+<div class="left-column" style="border-left:3px solid #ef4444">
+<h3 class="column-title" style="color:#ef4444">传统方式（现状）</h3>
+<div class="column-content">
+<ul class="list-items">
+<li><span class="list-dot red"></span><span>重大灾难全切换的脚本式演练</span></li>
+<li><span class="list-dot red"></span><span>按预设脚本走流程</span></li>
+<li><span class="list-dot red"></span><span>演练结果可预知</span></li>
+<li><span class="list-dot red"></span><span>无法验证真实应急能力</span></li>
+</ul>
+</div>
+</div>
+<div class="right-column" style="border-left:3px solid #10b981">
+<h3 class="column-title" style="color:#10b981">升级方向（目标）</h3>
+<div class="column-content">
+<ul class="list-items">
+<li><span class="list-dot green"></span><span>场景化重大故障应急</span></li>
+<li><span class="list-dot green"></span><span>数据库单点/中间件崩溃/网络分区等独立场景</span></li>
+<li><span class="list-dot green"></span><span>覆盖比全灾更宽的故障谱</span></li>
+<li><span class="list-dot green"></span><span>审计部现场见证，防止走过场</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 32 页</span></div></div>
+
+<!-- P33: 战役七 LOGIC:cause-effect → top-bottom -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役七：供应链安全</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">为什么聚焦供应链而非传统外包管理</div><div class="card-content">外包基础制度框架成熟可例行维持；真正风险在于软件供应链（开源组件漏洞）和服务供应链（第三方API依赖）——近年重大安全事件（Log4j类）高频根源正是供应链环节</div></div>
+<div class="section-label">核心工作机制</div>
+<div class="grid-4">
+<div class="grid-card"><div class="grid-card-title">依赖清单建立</div><div class="grid-card-text">第三方软件与关键服务依赖清单动态维护，与战役四SCA协同</div></div>
+<div class="grid-card"><div class="grid-card-title">可替代性评估</div><div class="grid-card-text">关键第三方API/数据服务依赖深度分析，避免单一供应商绑定</div></div>
+<div class="grid-card"><div class="grid-card-title">SBOM逐步建立</div><div class="grid-card-text">软件物料清单覆盖核心系统，实现组件级风险可追溯</div></div>
+<div class="grid-card"><div class="grid-card-title">外包例行维持</div><div class="grid-card-text">分级评估、集中度监控、离场权限48小时回收核验</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 33 页</span></div></div>
+
+<!-- P34: 战役八 LOGIC:condition → flow + list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役八：数据治理与隐私保护</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">前置条件：确认缺口范围</div><div class="card-content">数据治理是否仍存在基础性缺口有待确认（据了解2025年部分工作已启动但尚未落实到系统层面）</div></div>
+<div class="compare-container" style="margin-bottom:10px">
+<div class="compare-item current"><div class="compare-label">若缺口存在</div><div style="font-size:12px;color:#334155">2026年完成数据资产目录系统落地，属于基础补建性质</div></div>
+<div class="compare-item target"><div class="compare-label">若已基本具备</div><div style="font-size:12px;color:#334155">重点转向分类分级精细度与数据质量管控的实质有效性</div></div>
+</div>
+<ul class="list-items">
+<li><span class="list-dot"></span><span><strong>数据资产目录</strong>：全行覆盖率≥95% · 以双规为标准超越"打标签" · 测试环境真实客户数据清零</span></li>
+<li><span class="list-dot"></span><span><strong>牵头责任</strong>：数据管理部 · 路径：待确认→深化→成熟→重点突破→引领</span></li>
+</ul>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 34 页</span></div></div>
+
+<!-- P35: 战役九 LOGIC:progressive → flow + list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役九：新技术应用与AI安全</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">前瞻性风险防范</div><div class="card-content">防范AI、云等新技术新型风险，建立管控基础框架，满足AI算法风险监管的前瞻性要求</div></div>
+<div class="flow-container" style="margin-bottom:12px">
+<div class="flow-box"><strong>框架发布</strong><br><span style="font-size:9px">2026</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>落地深化</strong><br><span style="font-size:9px">2027-28</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>量化协同</strong><br><span style="font-size:9px">2029</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>行业输出</strong><br><span style="font-size:9px">2030</span></div>
+</div>
+<ul class="list-items">
+<li><span class="list-dot"></span><span><strong>AI上线评估</strong>：AI模型上线前100%评估——准入→运行→验证→退出全生命周期管理</span></li>
+<li><span class="list-dot"></span><span><strong>安全测试深度</strong>：含对抗样本测试、数据投毒测试，验证模型在恶意输入下的鲁棒性</span></li>
+<li><span class="list-dot"></span><span><strong>可解释性探索</strong>：算法可解释性与审计路径建设，为未来算法审计常态化做准备</span></li>
+</ul>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 35 页</span></div></div>
+
+<!-- P36: 战役十 LOGIC:cause-effect → card-key + data cards -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">十大战役框架</span><span class="separator">›</span><span class="level-2">战役十：人才队伍与文化培育</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:12px"><div class="card-title">核心挑战不在数量</div><div class="card-content">国有大行人员规模和稳定性不构成制约——真正挑战在于<strong>激活效能与建立风险文化</strong>，将科技风险意识从培训覆盖推向行为改变</div></div>
+<div class="section-label">可量化的文化成效指标</div>
+<div class="data-grid cols-3">
+<div class="data-card"><div class="data-value">≤8%</div><div class="data-label">钓鱼演练点击率（2027）</div></div>
+<div class="data-card"><div class="data-value">≥95%</div><div class="data-label">全员安全培训完成率</div></div>
+<div class="data-card"><div class="data-value">≤5%</div><div class="data-label">安全事件重复率（2030）</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 36 页</span></div></div>
+
+<!-- ===== P37: 第六章 2026年作战计划 ===== -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第六章 2026年作战计划</div>
+<div class="section-keywords"><span class="keyword">攻坚评级</span><span class="keyword">重点突破</span><span class="keyword">底线保障</span><span class="keyword">Q1—Q4</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 6 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P38: LOGIC:hierarchy → card-key + section groups -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2026年作战计划</span><span class="separator">›</span><span class="level-2">年度目标与定位</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">年度主线</div><div class="card-content">突破底线思维，激活现有能力；补齐唯一真正空白（数据治理）；以重点突破驱动评级跨档</div></div>
+<div class="grid-4">
+<div class="grid-card" style="border-left:3px solid #ef4444"><div class="grid-card-title" style="color:#ef4444">攻坚·重点突破</div><div class="grid-card-text">战役二（风险体系）+ 战役三（信息安全）双线并行</div></div>
+<div class="grid-card" style="border-left:3px solid #f59e0b"><div class="grid-card-title" style="color:#f59e0b">重点突破候选</div><div class="grid-card-text">战役六（场景化应急演练）若执行质量充分可并行</div></div>
+<div class="grid-card" style="border-left:3px solid #8b5cf6"><div class="grid-card-title" style="color:#8b5cf6">待确认强度</div><div class="grid-card-text">战役八（数据治理）——缺口范围有待确认</div></div>
+<div class="grid-card" style="border-left:3px solid #10b981"><div class="grid-card-title" style="color:#10b981">底线保障</div><div class="grid-card-text">战役一四五七九十——关键红线不破</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 38 页</span></div></div>
+
+<!-- P39: 战役二执行 LOGIC:progressive → timeline + list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2026年作战计划</span><span class="separator">›</span><span class="level-2">战役二执行计划（攻坚）</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="highlight-row" style="margin-bottom:8px"><span class="highlight">KRI体系双维度完善</span>：指标质量提升（领先指标优先）+ 自动采集率≥60%</div>
+<div class="timeline-bar" style="margin-bottom:10px">
+<div class="timeline-item" style="background:#6366f1"><div class="timeline-year">Q1</div><div class="timeline-desc">修订框架·KRI优化</div></div>
+<div class="timeline-item" style="background:#8b5cf6"><div class="timeline-year">Q2</div><div class="timeline-desc">全行RCSA·分层报告</div></div>
+<div class="timeline-item" style="background:#a78bfa"><div class="timeline-year">Q3</div><div class="timeline-desc">事件管理·SOC扩展</div></div>
+<div class="timeline-item" style="background:#3b82f6"><div class="timeline-year">Q4</div><div class="timeline-desc">成果验收</div></div>
+</div>
+<ul class="list-items">
+<li><span class="list-dot"></span><span><strong>Q1</strong>：修订《信息科技风险管理框架》；启动KRI指标优化，逐一明确数据采集路径</span></li>
+<li><span class="list-dot"></span><span><strong>Q2</strong>：全行RCSA风险评估覆盖率100%；完善分层分级报告；ITMIS/SOC告警与KRI自动关联</span></li>
+<li><span class="list-dot"></span><span><strong>Q3</strong>：完善事件管理与损失记录模块；SOC关联分析规则扩展提升检测覆盖面</span></li>
+</ul>
+<div class="highlight-row" style="margin-top:8px"><strong>验收</strong>：KRI≥30个 · 自动采集≥60% · 风险评估覆盖100% · 报告按频次完整输出</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 39 页</span></div></div>
+
+<!-- P40: 战役三执行 LOGIC:progressive → timeline + list -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2026年作战计划</span><span class="separator">›</span><span class="level-2">战役三执行计划（攻坚）</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="highlight-row" style="margin-bottom:8px"><span class="highlight">安全产品功能系统性激活</span>：消除"已购未用"，核心功能启用率提升至≥80%</div>
+<div class="timeline-bar" style="margin-bottom:10px">
+<div class="timeline-item" style="background:#6366f1"><div class="timeline-year">Q1</div><div class="timeline-desc">功能清单·双规差距</div></div>
+<div class="timeline-item" style="background:#8b5cf6"><div class="timeline-year">Q2</div><div class="timeline-desc">PAM深化·基线自动化</div></div>
+<div class="timeline-item" style="background:#a78bfa"><div class="timeline-year">Q3</div><div class="timeline-desc">零信任·红蓝对抗</div></div>
+<div class="timeline-item" style="background:#3b82f6"><div class="timeline-year">Q4</div><div class="timeline-desc">启用率验收</div></div>
+</div>
+<ul class="list-items">
+<li><span class="list-dot"></span><span><strong>Q1</strong>：全行安全产品已购功能与启用率梳理；数据安全双规合规差距分析</span></li>
+<li><span class="list-dot"></span><span><strong>Q2</strong>：PAM全链路管控（共享账号清零）；安全基线自动化检测覆盖核心系统≥95%</span></li>
+<li><span class="list-dot"></span><span><strong>Q3</strong>：零信任覆盖核心业务系统；红蓝对抗实战演练（无预告）</span></li>
+</ul>
+<div class="highlight-row" style="margin-top:8px"><strong>验收</strong>：功能启用率≥80% · 共享账号清零 · 特权可审计率100% · 基线覆盖≥95%</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 40 页</span></div></div>
+
+<!-- P41: 底线保障 LOGIC:classify → highlight-rows -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2026年作战计划</span><span class="separator">›</span><span class="level-2">底线保障战役年度要点</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="highlight-row"><strong>战役一（治理）</strong>：CIO履职记录完整可查 · 开发测试人员零生产权限 · IT委员会≥4次/年纪要</div>
+<div class="highlight-row"><strong>战役四（开发测试）</strong>：SAST/DAST闭环整改率≥90% · 核心系统上线前安全测试100% · 测试数据清零</div>
+<div class="highlight-row"><strong>战役五（运行）</strong>：P1/P2 RCA完成率100%（5日内）· CMDB准确率≥95% · 事件台账连续积累≥6个月</div>
+<div class="highlight-row"><strong>战役七（供应链）</strong>：离场权限48小时回收率100% · 代码安全审查100% · 第三方依赖清单初版</div>
+<div class="highlight-row"><strong>战役九（新技术）</strong>：新技术风险框架经高管层审批 · AI模型上线前100%评估</div>
+<div class="highlight-row"><strong>战役十（人才）</strong>：信息科技人员占比达标 · 全员安全培训完成率≥95% · 钓鱼演练点击率逐次下降</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 41 页</span></div></div>
+
+<!-- P42: 年度路线图 LOGIC:progressive → timeline + card-key groups -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2026年作战计划</span><span class="separator">›</span><span class="level-2">年度实施路线图</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="timeline-bar" style="margin-bottom:12px">
+<div class="timeline-item" style="background:#6366f1"><div class="timeline-year">Q1</div><div class="timeline-desc">机制启动</div></div>
+<div class="timeline-item" style="background:#8b5cf6;flex:2"><div class="timeline-year">Q2—Q3</div><div class="timeline-desc">全力攻坚</div></div>
+<div class="timeline-item" style="background:#10b981"><div class="timeline-year">Q4</div><div class="timeline-desc">固化迎检</div></div>
+</div>
+<div class="grid-3">
+<div class="grid-card" style="border-left:3px solid #6366f1"><div class="grid-card-title">Q1 基础先行</div><div class="grid-card-text">三大协作机制发布<br>整改销号平台上线<br>各部门模拟自测差距分析</div></div>
+<div class="grid-card" style="border-left:3px solid #8b5cf6"><div class="grid-card-title">Q2-Q3 攻坚积累</div><div class="grid-card-text">周通报、月调度<br>Q2：KRI/安全激活/BIA/数据目录<br>Q3：红蓝对抗/场景演练/血缘追踪</div></div>
+<div class="grid-card" style="border-left:3px solid #10b981"><div class="grid-card-title">Q4 证据冲刺</div><div class="grid-card-text">战役四/五证据链≥6个月<br>审计"整改回头看"<br>模拟监管进场访谈</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 42 页</span></div></div>
+
+<!-- ===== P43-P55: 2027-2030年 + 分工协作 + 保障机制 + 附则 ===== -->
+<!-- Using section pages + concise content pages with varied layouts -->
+
+<!-- P43: 第七章 -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第七章 2027年作战计划</div>
+<div class="section-keywords"><span class="keyword">深化体系</span><span class="keyword">DevSecOps突破</span><span class="keyword">工具成熟</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 7 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P44: 2027 目标 LOGIC:hierarchy → card-key + grid -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2027年作战计划</span><span class="separator">›</span><span class="level-2">年度目标与战役重点</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">重点突破：战役四 DevSecOps</div><div class="card-content">DevSecOps覆盖主要项目≥60%，上线后缺陷逃逸率较2026基准下降≥30%——安全左移成效可量化</div></div>
+<div class="grid-3" style="font-size:11px">
+<div class="grid-card"><div class="grid-card-title">战役一 治理</div><div class="grid-card-text">IT管理委员会运作规范化，三道防线履职质量提升</div></div>
+<div class="grid-card"><div class="grid-card-title">战役二 风险</div><div class="grid-card-text">KRI自动采集率≥80%，风险量化方法论引入</div></div>
+<div class="grid-card"><div class="grid-card-title">战役三 安全</div><div class="grid-card-text">零信任覆盖核心系统，漏洞修复周期≤15天</div></div>
+<div class="grid-card"><div class="grid-card-title">战役五 运行</div><div class="grid-card-text">CMDB准确率≥98%，问题管理机制成熟化</div></div>
+<div class="grid-card"><div class="grid-card-title">战役六 BCM</div><div class="grid-card-text">场景演练制度化，RTO/RPO达标率≥90%</div></div>
+<div class="grid-card"><div class="grid-card-title">战役七-十</div><div class="grid-card-text">供应链评估 · 数据精细化 · AI审计探索 · 钓鱼≤8%</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 44 页</span></div></div>
+
+<!-- P45: 第八章 -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第八章 2028年作战计划</div>
+<div class="section-keywords"><span class="keyword">争创优良</span><span class="keyword">模拟检查</span><span class="keyword">体系成熟</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 8 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P46: 2028 LOGIC:hierarchy -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2028年作战计划</span><span class="separator">›</span><span class="level-2">年度目标与战役重点</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">重点突破：战役二 内部模拟检查</div><div class="card-content">内部监管模拟检查机制建立并完成首次全面运作，整改完成率≥95%——以可核验数据支撑争创优良评级</div></div>
+<div class="grid-3" style="font-size:11px">
+<div class="grid-card"><div class="grid-card-title">战役一 治理</div><div class="grid-card-text">信息科技管理体系3年综合评估，AI治理专章纳入框架</div></div>
+<div class="grid-card"><div class="grid-card-title">战役三 安全</div><div class="grid-card-text">AI模型安全管控框架完善，攻防演练常态化≥2次/年</div></div>
+<div class="grid-card"><div class="grid-card-title">战役四 开发</div><div class="grid-card-text">DevSecOps覆盖率≥80%，密评覆盖核心系统，推进CMMi L4</div></div>
+<div class="grid-card"><div class="grid-card-title">战役五 运行</div><div class="grid-card-text">巡检自动化≥90%，MTTR较基准降低30%</div></div>
+<div class="grid-card"><div class="grid-card-title">战役六-八</div><div class="grid-card-text">演练≥6场景 · SBOM覆盖 · 数据质量检核≥99%</div></div>
+<div class="grid-card"><div class="grid-card-title">战役九-十</div><div class="grid-card-text">AI治理合规评估 · 安全事件重复率≤10%</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 46 页</span></div></div>
+
+<!-- P47: 第九章 -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第九章 2029年作战计划</div>
+<div class="section-keywords"><span class="keyword">数字赋能</span><span class="keyword">智能管控</span><span class="keyword">实时接口</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 9 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P48: 2029 -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2029年作战计划</span><span class="separator">›</span><span class="level-2">年度目标与战役重点</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">重点突破：战役二 监管数据实时接口</div><div class="card-content">从人工报送到系统直连监管机构的跨越式升级，力争在政策性银行同业中形成领先；为2030年量化预测模型打好数据基础</div></div>
+<div class="grid-3" style="font-size:11px">
+<div class="grid-card"><div class="grid-card-title">战役三 安全</div><div class="grid-card-text">SOC关联规则扩展，UEBA引入，威胁响应时效-50%</div></div>
+<div class="grid-card"><div class="grid-card-title">战役四 开发</div><div class="grid-card-text">AI辅助测试引入，覆盖率≥30%</div></div>
+<div class="grid-card"><div class="grid-card-title">战役五 运行</div><div class="grid-card-text">AIOps探索启动，MTTR较基准降低40%</div></div>
+<div class="grid-card"><div class="grid-card-title">战役六 BCM</div><div class="grid-card-text">场景全面扩展，联合演练≥2次/年</div></div>
+<div class="grid-card"><div class="grid-card-title">战役八 数据</div><div class="grid-card-text">监管数据实时对接（数据侧，与战役二互补）</div></div>
+<div class="grid-card"><div class="grid-card-title">战役九-十</div><div class="grid-card-text">量化评估模型推进 · 数据安全文化评估</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 48 页</span></div></div>
+
+<!-- P49: 第十章 -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第十章 2030年作战计划</div>
+<div class="section-keywords"><span class="keyword">持续优化</span><span class="keyword">量化预测</span><span class="keyword">长效治理</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 10 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P50: 2030 -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">2030年作战计划</span><span class="separator">›</span><span class="level-2">年度目标与战役重点</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">重点突破：战役二 量化预测模型验证</div><div class="card-content">四年数据积累形成可训练的量化模型——从"描述已发生的风险"跨越到"预测将要发生的风险"，形成"播种→积累→收获"的完整闭环</div></div>
+<div class="grid-3" style="font-size:11px">
+<div class="grid-card"><div class="grid-card-title">战役一 治理</div><div class="grid-card-text">治理成熟度综合评估，长效机制固化</div></div>
+<div class="grid-card"><div class="grid-card-title">战役三 安全</div><div class="grid-card-text">AI伦理审查机制，安全事件重复率≤5%</div></div>
+<div class="grid-card"><div class="grid-card-title">战役四 开发</div><div class="grid-card-text">缺陷逃逸率≤0.5%，AI辅助测试规模化</div></div>
+<div class="grid-card"><div class="grid-card-title">战役五 运行</div><div class="grid-card-text">核心系统可用率≥99.99%，运维自动化成熟</div></div>
+<div class="grid-card"><div class="grid-card-title">战役六-八</div><div class="grid-card-text">完整故障谱 · 供应链行业先进 · 数据治理行业参考</div></div>
+<div class="grid-card"><div class="grid-card-title">战役九-十</div><div class="grid-card-text">参与行业标准制定 · 人才文化体系成熟</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 50 页</span></div></div>
+
+<!-- P51: 第十一章 分工协作 -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第十一章 分工协作</div>
+<div class="section-keywords"><span class="keyword">部门分工</span><span class="keyword">三角联席</span><span class="keyword">整改闭环</span><span class="keyword">审计独立</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-text">第 11 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P52: 三角联席 LOGIC:progressive → flow -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">分工协作</span><span class="separator">›</span><span class="level-2">三角联席工作制</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">核心日常执行机制</div><div class="card-content">解决"事前谁定标、事中谁监控、事后谁评价"——风险管理部定标准 · 信息科技部落执行 · 数据管理部保质量</div></div>
+<div class="flow-container" style="margin-bottom:12px">
+<div class="flow-box" style="border-color:#ef4444"><strong style="color:#ef4444">事前会签</strong><br><span style="font-size:9px">数据标准+技术设计+合规审核<br>三方会签方可立项</span></div>
+<span class="flow-arrow">→</span>
+<div class="flow-box" style="border-color:#f59e0b"><strong style="color:#f59e0b">事中监控</strong><br><span style="font-size:9px">运行保稳定+威胁监测<br>+KRI实时预警</span></div>
+<span class="flow-arrow">→</span>
+<div class="flow-box" style="border-color:#10b981"><strong style="color:#10b981">事后评价</strong><br><span style="font-size:9px">审计独立后评价<br>结论反馈至下轮改进</span></div>
+</div>
+<div class="highlight-row"><strong>工作节奏</strong>：双周例会（三方碰头）+ 月度联合风险报告（三方共同输出，上报科委会备案）</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 52 页</span></div></div>
+
+<!-- P53: 整改闭环 LOGIC:cause-effect→progressive → flow -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">分工协作</span><span class="separator">›</span><span class="level-2">科委会与整改闭环机制</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="card-key" style="margin-bottom:10px"><div class="card-title">科委会定位</div><div class="card-content">依托现有科技委员会作为高层治理背书——批准资源方案 · 裁决跨部门争议 · 审议应急调整（不新设机构）</div></div>
+<div class="section-label">整改销号强制流程</div>
+<div class="flow-container" style="margin-bottom:10px">
+<div class="flow-box"><strong>发起</strong><br><span style="font-size:9px">生成问题清单</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>认领</strong><br><span style="font-size:9px">3日内响应+SLA</span></div><span class="flow-arrow">→</span>
+<div class="flow-box"><strong>验证</strong><br><span style="font-size:9px">审计穿透测试</span></div><span class="flow-arrow">→</span>
+<div class="flow-box" style="background:#10b981;color:#fff;border-color:#10b981"><strong>销号</strong><br><span style="font-size:9px">审计通过方可</span></div>
+</div>
+<div class="highlight-row"><span class="highlight">红线</span>：未通过审计验证严禁销号 · 逾期自动升级至科委会督办 · 与绩效挂钩</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 53 页</span></div></div>
+
+<!-- P54: 审计独立 LOGIC:compare → two-column -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">分工协作</span><span class="separator">›</span><span class="level-2">审计独立性保障</span></div><div class="company-logo">TENWARD</div></div>
+<div class="two-column-wrapper">
+<div class="left-column" style="border-left:3px solid #10b981">
+<h3 class="column-title" style="color:#10b981">审计部参与的领域</h3>
+<div class="column-content"><ul class="list-items">
+<li><span class="list-dot green"></span><span>对任何战役整改成效独立质疑</span></li>
+<li><span class="list-dot green"></span><span>每年Q1制定年度审计计划</span></li>
+<li><span class="list-dot green"></span><span>三年滚动IT审计计划</span></li>
+<li><span class="list-dot green"></span><span>全年≥3次专项审计</span></li>
+<li><span class="list-dot green"></span><span>高风险领域外部复核</span></li>
+</ul></div>
+</div>
+<div class="right-column" style="border-left:3px solid #ef4444">
+<h3 class="column-title" style="color:#ef4444">审计部不参与的领域</h3>
+<div class="column-content"><ul class="list-items">
+<li><span class="list-dot red"></span><span>科委会决策表决</span></li>
+<li><span class="list-dot red"></span><span>三角联席事前会签</span></li>
+<li><span class="list-dot red"></span><span>三角联席事中监控</span></li>
+<li><span class="list-dot red"></span><span>整改标准制定</span></li>
+<li><span class="list-dot red"></span><span>任何影响独立判断的决策</span></li>
+</ul></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 54 页</span></div></div>
+
+<!-- P55: 第十二章 保障机制 -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第十二章 保障机制</div>
+<div class="section-keywords"><span class="keyword">组织保障</span><span class="keyword">资源保障</span><span class="keyword">考核激励</span><span class="keyword">应急调整</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-text">第 12 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P56: 考核 LOGIC:classify → grid -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">保障机制</span><span class="separator">›</span><span class="level-2">考核与激励</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="grid-4">
+<div class="grid-card" style="border-left:3px solid #6366f1"><div class="grid-card-title">双向打分制</div><div class="grid-card-text">信息科技部绩效30%由风险管理部打分<br>风险管理部绩效20%由信息科技部打分<br>打破部门壁垒</div></div>
+<div class="grid-card" style="border-left:3px solid #8b5cf6"><div class="grid-card-title">审计独立评价</div><div class="grid-card-text">审计部绩效由审计委员会独立评价<br>不纳入双向打分体系<br>保障审计独立性</div></div>
+<div class="grid-card" style="border-left:3px solid #ef4444"><div class="grid-card-title">红线问责</div><div class="grid-card-text">部门推诿致评级下降→负责人一票否决<br>虚假整改→移交纪检监察<br>零容忍</div></div>
+<div class="grid-card" style="border-left:3px solid #10b981"><div class="grid-card-title">正向激励</div><div class="grid-card-text">攻坚成效显著的板块和个人<br>绩效加分+评优表彰<br>激发攻坚动力</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 56 页</span></div></div>
+
+<!-- P57: 保底四战役 LOGIC:classify → grid cards -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">保障机制</span><span class="separator">›</span><span class="level-2">保底四战役原则</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="highlight-row" style="margin-bottom:12px"><span class="highlight">无论何种冲击，以下四个战役的执行不得中断</span></div>
+<div class="grid-4">
+<div class="grid-card" style="border-left:3px solid #ef4444"><div class="grid-card-title" style="color:#ef4444">战役三 · 信息安全</div><div class="grid-card-text">一级关注领域<br>直接决定评级底线<br>安全失守=评级坍塌</div></div>
+<div class="grid-card" style="border-left:3px solid #f59e0b"><div class="grid-card-title" style="color:#f59e0b">战役四 · 开发测试</div><div class="grid-card-text">证据链不可中断<br>一旦断裂无法补救<br>6个月连续积累不可重来</div></div>
+<div class="grid-card" style="border-left:3px solid #3b82f6"><div class="grid-card-title" style="color:#3b82f6">战役五 · 运行管理</div><div class="grid-card-text">证据链不可中断<br>事件工单台账须连续<br>断裂=评级证据缺失</div></div>
+<div class="grid-card" style="border-left:3px solid #10b981"><div class="grid-card-title" style="color:#10b981">战役六 · 业务连续性</div><div class="grid-card-text">一级关注领域<br>直接决定评级底线<br>灾备=银行核心生命线</div></div>
+</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 57 页</span></div></div>
+
+<!-- P58: 第十三章 附则 -->
+<div class="ppt-container layout-section"><div class="ppt-content">
+<div class="section-title">第十三章 附则与附录</div>
+<div class="section-keywords"><span class="keyword">实施生效</span><span class="keyword">年度复盘</span><span class="keyword">监管条文映射</span></div>
+<div class="section-progress"><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot active"></span><span class="progress-text">第 13 章 / 共 13 章</span></div>
+</div></div>
+
+<!-- P59: 战役与监管条文映射 LOGIC:matrix → highlight-rows -->
+<div class="ppt-container layout-content"><div class="ppt-content">
+<div class="title-bar"><div class="breadcrumb-title"><span class="level-1">附则与附录</span><span class="separator">›</span><span class="level-2">战役与监管条文映射</span></div><div class="company-logo">TENWARD</div></div>
+<div class="content-box">
+<div class="highlight-row"><span class="highlight">战役一/二</span>：银监发〔2009〕19号 第二章（治理）+ 第三章（风险管理）——三道防线、CIO、风险评估</div>
+<div class="highlight-row"><span class="highlight">战役三</span>：银监发〔2009〕19号 第四章 + 金规〔2024〕24号 + 等保2.0 + 密评——访问控制、应急响应</div>
+<div class="highlight-row"><span class="highlight">战役四</span>：银监发〔2009〕19号 第五章 + 数字化转型指导意见——SDLC管理、DevSecOps</div>
+<div class="highlight-row"><span class="highlight">战役五/六</span>：银监发〔2009〕19号 第六七章 + 灾难恢复规范——事件管理、RTO/RPO</div>
+<div class="highlight-row"><span class="highlight">战役七/八</span>：银保监办发〔2021〕141号 + 数据治理指引 + 分级指南——供应链、数据分类分级</div>
+<div class="highlight-row"><span class="highlight">战役九/十</span>：数字化转型指导意见 + AI算法风险监管趋势——新技术治理、人才培训</div>
+</div>
+</div><div class="ppt-footer"><span>上海天帷智慧数字技术有限公司 / www.tenward.com</span><span>第 59 页</span></div></div>
+
+<script>
+document.addEventListener('keydown',function(e){
+if(e.key==='ArrowDown'||e.key==='PageDown'){window.scrollBy({top:470,behavior:'smooth'});e.preventDefault()}
+else if(e.key==='ArrowUp'||e.key==='PageUp'){window.scrollBy({top:-470,behavior:'smooth'});e.preventDefault()}
+});
+</script>
+</body>
+</html>

@@ -19,7 +19,7 @@ usage_rules:
 terms:
   业务价值生态(Business Value Ecosystem): "产品所处的业务生态系统全景，是推导业务域、实体、利益相关方的共同源头"
   业务域(Business Domain, DOM): "系统按业务职能划分的顶层分区，按业务价值链或职能域划分"
-  业务环节(Business Segment, BS): "客观发生的业务节点，不依赖系统存在；描述业务域内'在什么情境下发生什么'，是活动线最细粒度"
+  业务环节(Business Segment, BS): "客观发生的业务节点，不依赖系统存在；描述业务域内'在什么情境下发生什么'，是业务线最细粒度"
   工作场景(Work Scenario, WS): "角色进入系统的切入点；分直接作业场景(关联业务环节)和间接作业场景(管理/分析/协调)"
   关键实体(Key Entity, EN): "价值生态中的核心业务对象，具有明确业务含义、归属和生命周期状态流转"
   困境(Dilemma, DLM): "业务层面达成目标的系统性障碍，描述'为什么目标难以实现'，是宏观需求分析的输入"
@@ -35,7 +35,7 @@ terms:
   双轨标识(Dual-Track Identification): "同一条目同时拥有语义ID和短号，两者一一对应"
   类型前缀(Type Prefix): "语义ID和短号的首段，标识条目所属类型(如EPIC/US/API)"
   语义片段(Semantic Segment): "语义ID中类型前缀之后的各组成部分，表达业务含义"
-  三线演绎(Three-Line Deduction): "宏观需求分析方法论，通过活动线、角色线、实体线推导和验证Epic"
+  三线演绎(Three-Line Deduction): "宏观需求分析方法论，通过业务线、角色线、实体线推导和验证Epic"
   抽象过滤(Abstraction Filtering): "Epic推导中将候选需求按粒度分类：Epic级保留，Feature级降级为候选项"
   宏观需求(Macro Requirements): "产品全局视角的需求，定义Epic级业务能力，不涉及具体交付"
   基础性需求(Foundation Requirements, FR): "跨BC的通用能力需求(认证/权限/审计等)，是功能性横切关注点"
