@@ -5,12 +5,11 @@
 # 选项:
 #   --schema <schema.yaml>   使用 Schema 文件进行结构校验
 #   --max-depth <N>          最大层级深度（默认4，Schema 指定时以 Schema 为准）
-#   --max-chars <N>          每章最大汉字数（默认10000，≈16K tokens）
 #
 # 功能:
 #   1. 检查标题层级是否合理（无跳级）
 #   2. 检查层级深度是否超限
-#   3. 检查各章节字数是否超过单章上限（≈16K tokens）
+#   3. 章节字数统计（仅信息展示，无硬性上限）
 #   4. 检查是否存在空章节或占位符
 #   5. 检查 Markdown 格式基本规范
 #   6. [Schema] 检查必须章节是否存在
@@ -24,7 +23,6 @@ set -euo pipefail
 DOC_PATH=""
 SCHEMA_PATH=""
 MAX_DEPTH=""
-MAX_CHARS_PER_SECTION=""
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -37,11 +35,11 @@ while [[ $# -gt 0 ]]; do
             shift 2
             ;;
         --max-chars)
-            MAX_CHARS_PER_SECTION="${2:?--max-chars 需要指定数字}"
+            # 保留参数兼容性但不再使用
             shift 2
             ;;
         -h|--help)
-            echo "用法: $0 <文档路径> [--schema <schema.yaml>] [--max-depth <N>] [--max-chars <N>]"
+            echo "用法: $0 <文档路径> [--schema <schema.yaml>] [--max-depth <N>]"
             exit 0
             ;;
         *)
@@ -57,7 +55,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [ -z "$DOC_PATH" ]; then
-    echo "用法: $0 <文档路径> [--schema <schema.yaml>] [--max-depth <N>] [--max-chars <N>]"
+    echo "用法: $0 <文档路径> [--schema <schema.yaml>] [--max-depth <N>]"
     exit 1
 fi
 
@@ -164,7 +162,6 @@ fi
 
 # 默认值
 MAX_DEPTH="${MAX_DEPTH:-4}"
-MAX_CHARS_PER_SECTION="${MAX_CHARS_PER_SECTION:-10000}"
 
 # ── 输出头部 ──
 echo "=== 文档结构校验 ==="
@@ -173,7 +170,6 @@ if [ -n "$SCHEMA_PATH" ]; then
     echo "Schema: $SCHEMA_DOC_TYPE - $SCHEMA_DOC_NAME"
 fi
 echo "最大层级深度: $MAX_DEPTH"
-echo "每章最大汉字数: $MAX_CHARS_PER_SECTION（≈16K tokens）"
 echo ""
 
 ISSUES=0
@@ -230,8 +226,8 @@ else
 fi
 echo ""
 
-# ---- 3. 章节字数检查（单章上限 ≈16K tokens） ----
-echo "--- 3. 章节字数检查 ---"
+# ---- 3. 章节字数统计（仅信息展示） ----
+echo "--- 3. 章节字数统计 ---"
 
 # 获取所有一级标题的行号
 H1_LINES=$(grep -n '^# ' "$DOC_PATH" | cut -d: -f1 || true)
@@ -258,7 +254,7 @@ if [ -n "$H1_LINES" ]; then
         SECTION_NAMES+=("$PREV_NAME")
     fi
 
-    # 统计各章节汉字数（UTF-8 中文字符，3字节/字）并检查
+    # 统计各章节汉字数（仅展示，无硬性上限）
     BALANCE_ISSUES=0
     echo "章节字数统计（汉字数）:"
     for i in "${!SECTIONS[@]}"; do
@@ -273,17 +269,14 @@ if [ -n "$H1_LINES" ]; then
 
         printf "  %-40s %d 字\n" "$NAME" "$CHAR_COUNT"
 
-        if [ "$CHAR_COUNT" -gt "$MAX_CHARS_PER_SECTION" ]; then
-            echo "  [!] 章节「$NAME」: ${CHAR_COUNT} 字，超过上限 ${MAX_CHARS_PER_SECTION} 字（≈16K tokens），建议拆分"
-            BALANCE_ISSUES=$((BALANCE_ISSUES + 1))
-        elif [ "$CHAR_COUNT" -lt 50 ] && [ "$END_L" -gt "$START_L" ]; then
+        if [ "$CHAR_COUNT" -lt 50 ] && [ "$END_L" -gt "$START_L" ]; then
             echo "  [!] 章节「$NAME」: ${CHAR_COUNT} 字，内容过少，可能为空章节"
             BALANCE_ISSUES=$((BALANCE_ISSUES + 1))
         fi
     done
 
     if [ $BALANCE_ISSUES -eq 0 ]; then
-        echo "[OK] 各章节字数在上限以内"
+        echo "[OK] 章节字数统计完成"
     else
         ISSUES=$((ISSUES + BALANCE_ISSUES))
     fi
@@ -490,7 +483,7 @@ echo "=== 校验汇总 ==="
 if [ $ISSUES -eq 0 ]; then
     echo "[OK] 文档结构检查通过，未发现问题"
 else
-    echo "[!] 发现 $ISSUES 个结构问题，建议使用 /doc-revise 处理（超字数章节按 .claude/rules-ext/structure-constraints.md 拆分）"
+    echo "[!] 发现 $ISSUES 个结构问题，建议使用 /doc-revise 处理"
 fi
 
 exit $ISSUES
