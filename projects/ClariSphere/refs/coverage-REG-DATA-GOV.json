@@ -1,0 +1,1402 @@
+{
+  "law_id": "REG-DATA-GOV",
+  "law_name": "银行业金融机构数据治理指引",
+  "perspective": "law",
+  "generated_at": "2026-03-10",
+  "total_records": 45,
+  "records": [
+    {
+      "regulation_id": "数据治理指引§4",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①将数据治理纳入公司治理范畴",
+          "②建立自上而下、协调一致的数据治理体系"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§5",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①遵循全覆盖原则：数据治理覆盖数据全生命周期、全部业务数据、内外部数据、监管数据及所有分支机构",
+            "②遵循匹配性原则：数据治理与管理模式、业务规模、风险状况等相适应并根据情况变化调整",
+            "③遵循持续性原则：数据治理持续开展，建立长效机制",
+            "④遵循有效性原则：数据治理推动数据真实准确客观，并有效应用于经营管理"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①遵循全覆盖原则：数据治理覆盖数据全生命周期、全部业务数据、内外部数据、监管数据及所有分支机构",
+          "②遵循匹配性原则：数据治理与管理模式、业务规模、风险状况等相适应并根据情况变化调整",
+          "③遵循持续性原则：数据治理持续开展，建立长效机制",
+          "④遵循有效性原则：数据治理推动数据真实准确客观，并有效应用于经营管理"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§6",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①将监管数据纳入数据治理",
+          "②建立工作机制和流程，确保监管数据报送工作有效组织开展",
+          "③确保监管数据质量持续提升",
+          "④法定代表人或主要负责人对监管数据质量承担最终责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§8",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-002",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立组织架构健全、职责边界清晰的数据治理架构",
+            "②明确董事会、监事会、高级管理层和相关部门的职责分工",
+            "③建立多层次、相互衔接的运行机制"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立组织架构健全、职责边界清晰的数据治理架构",
+          "②明确董事会、监事会、高级管理层和相关部门的职责分工",
+          "③建立多层次、相互衔接的运行机制"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§9",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①制定数据战略",
+          "②审批或授权审批与数据治理相关的重大事项",
+          "③督促高级管理层提升数据治理有效性",
+          "④对数据治理承担最终责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§10",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①对董事会和高级管理层在数据治理方面的履职尽责情况进行监督评价"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§11",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①负责建立数据治理体系，确保数据治理资源配置",
+            "②制定和实施问责和激励机制",
+            "③建立数据质量控制机制",
+            "④组织评估数据治理的有效性和执行情况",
+            "⑤定期向董事会报告"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①负责建立数据治理体系，确保数据治理资源配置",
+          "②制定和实施问责和激励机制",
+          "③建立数据质量控制机制",
+          "④组织评估数据治理的有效性和执行情况",
+          "⑤定期向董事会报告"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§12",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①确定并授权归口管理部门牵头负责实施数据治理体系建设",
+          "②协调落实数据管理运行机制，组织推动数据在经营管理流程中发挥作用",
+          "③负责监管数据相关工作，设置监管数据相关工作专职岗位"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§13",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①负责本业务领域的数据治理",
+            "②管理业务条线数据源，确保准确记录和及时维护",
+            "③落实数据质量控制机制，执行监管数据相关工作要求",
+            "④加强数据应用，实现数据价值"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①负责本业务领域的数据治理",
+            "②管理业务条线数据源，确保准确记录和及时维护",
+            "③落实数据质量控制机制，执行监管数据相关工作要求",
+            "④加强数据应用，实现数据价值"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①负责本业务领域的数据治理",
+            "②管理业务条线数据源，确保准确记录和及时维护",
+            "③落实数据质量控制机制，执行监管数据相关工作要求",
+            "④加强数据应用，实现数据价值"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①负责本业务领域的数据治理",
+            "②管理业务条线数据源，确保准确记录和及时维护",
+            "③落实数据质量控制机制，执行监管数据相关工作要求",
+            "④加强数据应用，实现数据价值"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①负责本业务领域的数据治理",
+            "②管理业务条线数据源，确保准确记录和及时维护",
+            "③落实数据质量控制机制，执行监管数据相关工作要求",
+            "④加强数据应用，实现数据价值"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①负责本业务领域的数据治理",
+            "②管理业务条线数据源，确保准确记录和及时维护",
+            "③落实数据质量控制机制，执行监管数据相关工作要求",
+            "④加强数据应用，实现数据价值"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-005",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①负责本业务领域的数据治理",
+            "②管理业务条线数据源，确保准确记录和及时维护",
+            "③落实数据质量控制机制，执行监管数据相关工作要求",
+            "④加强数据应用，实现数据价值"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①负责本业务领域的数据治理",
+          "②管理业务条线数据源，确保准确记录和及时维护",
+          "③落实数据质量控制机制，执行监管数据相关工作要求",
+          "④加强数据应用，实现数据价值"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§14",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①在数据治理归口管理部门设立满足工作需要的专职岗位",
+          "②在其他相关业务部门设置专职或兼职岗位"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§15",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-016",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立一支满足数据治理工作需要的专业队伍",
+            "②至少按年度对人员进行系统培训",
+            "③科学规划职业成长通道，确定合理薪酬水平"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②至少按年度对人员进行系统培训"
+          ],
+          "uncovered_rules": [
+            "①建立一支满足数据治理工作需要的专业队伍",
+            "③科学规划职业成长通道，确定合理薪酬水平"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.33,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立一支满足数据治理工作需要的专业队伍",
+          "③科学规划职业成长通道，确定合理薪酬水平"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§16",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立良好的数据文化，树立数据是重要资产和数据应真实客观的理念与准则",
+          "②强化用数意识，遵循依规用数、科学用数的职业操守"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§17",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①结合自身发展战略、监管要求等制定数据战略",
+          "②确保数据战略有效执行和修订"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§18",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定全面科学有效的数据管理制度，涵盖组织管理、部门职责、协调机制、安全管控、系统保障、监督检查和数据质量控制等方面",
+            "②根据监管要求和实际需要，持续评价更新数据管理制度"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①制定全面科学有效的数据管理制度，涵盖组织管理、部门职责、协调机制、安全管控、系统保障、监督检查和数据质量控制等方面",
+          "②根据监管要求和实际需要，持续评价更新数据管理制度"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§19",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定与监管数据相关的监管统计管理制度和业务制度",
+            "②及时发布并定期评价和更新",
+            "③报银行业监督管理机构备案",
+            "④制度出现重大变化的，应当及时向银行业监督管理机构报告"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定与监管数据相关的监管统计管理制度和业务制度",
+          "②及时发布并定期评价和更新",
+          "③报银行业监督管理机构备案",
+          "④制度出现重大变化的，应当及时向银行业监督管理机构报告"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§20",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-014",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-021",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-022",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-023",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-005",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②遵循统一的业务规范和技术标准"
+          ],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-007",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-011",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-015",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-016",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-032",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-048",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-050",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-007",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立覆盖全部数据的标准化规划",
+            "②遵循统一的业务规范和技术标准",
+            "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.33,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立覆盖全部数据的标准化规划",
+          "③数据标准应当符合国家标准化政策及监管规定，并确保被有效执行"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§21",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续完善信息系统，覆盖各项业务和管理数据",
+            "②信息系统应当有完备的数据字典和维护流程，并具有可拓展性"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-021",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续完善信息系统，覆盖各项业务和管理数据",
+            "②信息系统应当有完备的数据字典和维护流程，并具有可拓展性"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①持续完善信息系统，覆盖各项业务和管理数据",
+          "②信息系统应当有完备的数据字典和维护流程，并具有可拓展性"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§22",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立适应监管数据报送工作需要的信息系统",
+            "②实现流程控制的程序化，提高监管数据加工的自动化程度"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立适应监管数据报送工作需要的信息系统",
+          "②实现流程控制的程序化，提高监管数据加工的自动化程度"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§23",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①加强数据采集的统一管理",
+          "②明确系统间数据交换流程和标准",
+          "③实现各类数据有效共享"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§24",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立数据安全策略与标准",
+          "②依法合规采集、应用数据，依法保护客户隐私",
+          "③划分数据安全等级，明确访问和拷贝等权限",
+          "④监控访问和拷贝等行为",
+          "⑤完善数据安全技术",
+          "⑥定期审计数据安全",
+          "⑦涉及个人信息的，应遵循国家个人信息保护法律法规要求，符合相关国家标准"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§25",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①加强数据资料统一管理",
+          "②建立全面严密的管理流程、归档制度",
+          "③明确存档交接、口径梳理等要求",
+          "④保证数据可比性"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§26",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立数据应急预案",
+          "②根据业务影响分析，组织开展应急演练",
+          "③完善处置流程",
+          "④保证在系统服务异常以及危机等情景下数据的完整、准确和连续"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§27",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立数据治理自我评估机制，明确评估周期、流程、结果应用、组织保障等要素要求",
+          "②评估内容应覆盖数据治理架构、数据管理、数据安全、数据质量和数据价值实现等方面",
+          "③按年度向银行业监督管理机构报送评估结果"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§28",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立问责机制，定期排查数据管理、数据质量控制、数据价值实现等方面问题",
+          "②依据有关规定对高级管理层和相关部门及责任人进行问责",
+          "③建立激励机制，保障数据治理工作有效推进"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§29",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①确立数据质量管理目标",
+          "②建立控制机制",
+          "③确保数据的真实性、准确性、连续性、完整性和及时性"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§30",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①各项业务制度应当充分考虑数据质量管理需要",
+            "②涉及指标含义清晰明确，取数规则统一",
+            "③根据业务变化及时更新"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①各项业务制度应当充分考虑数据质量管理需要",
+          "②涉及指标含义清晰明确，取数规则统一",
+          "③根据业务变化及时更新"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§31",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①加强数据源头管理，确保将业务信息全面准确及时录入信息系统",
+          "②信息系统应当能自动提示异常变动及错误情况"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§32",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立数据质量监控体系，覆盖数据全生命周期",
+          "②对数据质量持续监测、分析、反馈和纠正"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§33",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-012",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.67,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②定期组织实施，原则上不低于每年一次",
+            "③对重大问题要按照既定的报告路径提交，并按流程实施整改"
+          ],
+          "uncovered_rules": [
+            "①建立数据质量现场检查制度"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.67,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立数据质量现场检查制度"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§34",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立数据质量考核评价体系",
+          "②考核结果纳入本机构绩效考核体系",
+          "③实现数据质量持续提升"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§35",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立数据质量整改机制",
+          "②对日常监控、检查和考核评价过程中发现的问题，及时组织整改",
+          "③对整改情况跟踪评价，确保整改落实到位"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§36",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①按照监管要求报送法人和集团的相关数据",
+          "②保证同一监管指标在监管报送与对外披露之间的一致性",
+          "③如有重大差异，应当及时向银行业监督管理机构解释说明"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§37",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立监管数据质量管控制度，包含：关键监管指标数据质量承诺、数据异常变动分析和报告、重大差错通报以及问责等"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§38",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①在风险管理、业务经营与内部控制中加强数据应用，实现数据驱动"
+          ],
+          "uncovered_rules": [
+            "②提高管理精细化程度，发挥数据价值"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在风险管理、业务经营与内部控制中加强数据应用，实现数据驱动",
+            "②提高管理精细化程度，发挥数据价值"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.5,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②提高管理精细化程度，发挥数据价值"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§39",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①充分运用数据分析，合理制定风险管理策略、风险偏好、风险限额以及风险管理政策和程序",
+            "②监控执行情况并适时优化调整，提升风险管理体系的有效性"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①充分运用数据分析，合理制定风险管理策略、风险偏好、风险限额以及风险管理政策和程序",
+            "②监控执行情况并适时优化调整，提升风险管理体系的有效性"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§40",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①加强数据应用，持续改善风险管理方法",
+            "②有效识别、计量、评估、监测、报告和控制各类风险"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②有效识别、计量、评估、监测、报告和控制各类风险"
+          ],
+          "uncovered_rules": [
+            "①加强数据应用，持续改善风险管理方法"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§41",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①提高数据加总能力，明确数据加总范围、方法、流程和加总结果要求",
+          "②满足在正常经营、压力情景以及危机状况下风险管理的数据需要",
+          "③数据加总技术应当主要采取自动化方式"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§42",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①加强数据分析应用能力，提高风险报告质量"
+          ],
+          "uncovered_rules": [
+            "②明确风险报告数据准确性保障措施",
+            "③覆盖重要风险领域和新风险，提供风险处置的决策与建议以及未来风险发展趋势"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "③覆盖重要风险领域和新风险，提供风险处置的决策与建议以及未来风险发展趋势"
+          ],
+          "uncovered_rules": [
+            "①加强数据分析应用能力，提高风险报告质量",
+            "②明确风险报告数据准确性保障措施"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.67,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②明确风险报告数据准确性保障措施"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§43",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②持续完善风险定价模型，优化风险定价体系"
+          ],
+          "uncovered_rules": [
+            "①加强数据积累，优化风险计量"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①加强数据积累，优化风险计量",
+            "②持续完善风险定价模型，优化风险定价体系"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.5,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①加强数据积累，优化风险计量"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§44",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①充分评估兼并收购、资产剥离等业务对自身数据治理能力的影响",
+          "②有重大影响的，应当明确整改计划和时间表，满足银行集团风险管理要求"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§45",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①明确新产品新服务的数据管理相关要求，确保清晰评估成本、风险和收益，并作为准入标准",
+          "②通过数据分析挖掘，准确理解客户需求，提供精准产品服务，提升客户服务质量和服务水平"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§47",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①通过量化分析业务流程，减少管理冗余，提高经营效率，降低经营成本"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§48",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①充分运用大数据技术，实现业务创新、产品创新和服务创新"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①充分运用大数据技术，实现业务创新、产品创新和服务创新"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§49",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按照可量化导向，完善内部控制评价制度和内部控制评价质量控制机制",
+          "②前瞻性识别内部控制流程的缺陷，评估影响程度并及时处理",
+          "③持续提升内部控制的有效性"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据治理指引§51",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①通过内部审计机构或委托外部审计机构对其数据治理情况进行审计",
+          "②及时报送审计报告"
+        ]
+      }
+    }
+  ]
+}

@@ -2,7 +2,12 @@
 
 将 `ppt-slides-theme.html` 模板生成的 HTML 幻灯片转换为 .pptx 文件。
 
-**架构**：基础脚本（`.claude/tools/html_to_pptx.py`）处理所有已知组件；遇到未知组件时 AI 现写 renderer 并注册。
+**架构（组件模板架构 v4）**：
+-   转换工具：`.claude/tools/html-to-pptx/index.js`（Node.js + Puppeteer + pptxgenjs）
+-   组件注册表：`.claude/tools/html-to-pptx/components/registry.json`
+-   路由策略：`data-block` 属性 → CSS class → tag → `data-ppt` → 占位框（兜底）
+-   浏览器负责：`getBoundingClientRect()` 精确位置 + 结构化内容提取
+-   Node.js 负责：预定义模板 renderer → pptxgenjs 输出
 
 ## 用法
 
@@ -20,7 +25,7 @@ $ARGUMENTS
 
 若 $ARGUMENTS 首个词为文件路径（含 `/` 或以 `.html` 结尾）：
 1.  提取 HTML 文件路径
-2.  **容量预检**：用 `ls -l` 获取文件大小，估算 tokens = 字节数 / 3.5；计算当前已用量；若超限且模型不含 "1m" → 拒绝
+2.  **容量预检**：用 `ls -l` 获取文件大小，估算 tokens = 字节数 / 3.5；计算当前已用量；若已用量 + 估算 > 950K → 拒绝
 3.  验证文件存在且为 `.html` 文件
 4.  若第二个参数以 `.pptx` 结尾，作为输出路径；否则自动生成到 `../doc/` 目录，文件名格式：`{原文件名主体部分}_v{原文件版本标识}@{当前时间戳}.pptx`
 5.  剩余内容视为附加指令
@@ -30,79 +35,46 @@ $ARGUMENTS
 ### 依赖检查
 
 ```bash
-/home/1ding/claude/.venv/bin/python3 -c "import pptx, bs4, lxml; print('OK')"
+node --version 2>/dev/null && \
+ls /home/1ding/claude/.claude/tools/html-to-pptx/node_modules/pptxgenjs 2>/dev/null && \
+echo "OK" || echo "MISSING"
 ```
 
-若失败 → 安装：`pip install python-pptx beautifulsoup4 lxml`
+若缺失 → 在工具目录执行：
+```bash
+cd /home/1ding/claude/.claude/tools/html-to-pptx && npm install puppeteer-core pptxgenjs
+```
 
 ## 执行步骤
 
-### 1. 扫描未知组件
-
-运行基础脚本的扫描功能：
+### 1. 执行转换
 
 ```bash
-/home/1ding/claude/.venv/bin/python3 -c "
-import sys; sys.path.insert(0, '.claude/tools')
-from html_to_pptx import scan_unknown_components
-all_cls, unknown = scan_unknown_components('{HTML路径}')
-print(f'总 class 数: {len(all_cls)}')
-print(f'未知 class: {unknown if unknown else \"无\"}')
-"
+TS=$(date +%Y%m%d%H%M)
+node /home/1ding/claude/.claude/tools/html-to-pptx/index.js \
+  "{HTML路径}" \
+  "{输出目录}/{文件名主体}_v{版本}@${TS}.pptx"
 ```
 
-### 2. 判断执行路径
+转换器自动处理所有已知组件（见注册表），未识别组件生成占位框，不中断流程。
 
--   **无未知组件** → 直接执行基础脚本（步骤 3A）
--   **有未知组件** → AI 读取 HTML 中该组件的 CSS 和使用方式，编写 renderer 函数，生成包装脚本（步骤 3B）
+### 2. 处理未识别组件（可选）
 
-### 3A. 直接执行（无未知组件）
+若输出 PPTX 有灰色占位框（`⚠ component-name`），说明该 HTML 中有未注册组件：
 
-```bash
-/home/1ding/claude/.venv/bin/python3 .claude/tools/html_to_pptx.py "{HTML路径}" "{PPTX路径}"
-```
+**方案 A（推荐）**：在下次 /md-to-html 时将该内容改用注册表中已有组件表达
 
-### 3B. 生成包装脚本（有未知组件）
+**方案 B**：向注册表添加新组件：
+1.  在 `.claude/tools/html-to-pptx/components/registry.json` 添加组件定义
+2.  在 `.claude/tools/html-to-pptx/index.js` 中添加对应 renderer 函数（参照现有函数写法）
+3.  在 `extractEl()` 的 switch 中添加 case
+4.  重新执行转换
 
-AI 需要：
-1.  读取 HTML 文件，找到未知 class 的 CSS 定义（在 `<style>` 中）和 HTML 使用位置
-2.  分析组件的视觉结构（背景色、圆角、padding、字号、子元素结构）
-3.  编写 renderer 函数，函数签名必须为 `def render_xxx(slide, el, bx=0, by=0):`
-4.  生成包装脚本写入 `/tmp/html_to_pptx_ext.py`：
-
-```python
-#!/usr/bin/env python3
-import sys
-sys.path.insert(0, '.claude/tools')
-from html_to_pptx import *
-
-# ── Custom renderers for unknown components ──
-
-def render_my_widget(slide, el, bx=0, by=0):
-    lx, ty, w, h = coords(el)
-    ax, ay = bx+lx, by+ty
-    # ... 使用基础脚本提供的工具函数：
-    # add_rrect, add_rect, add_tb, add_run, render_rich, css_pt, etc.
-    ...
-
-register_renderer('my-widget', render_my_widget)
-
-# ── Execute ──
-if __name__ == '__main__':
-    convert(sys.argv[1], sys.argv[2])
-```
-
-5.  执行包装脚本：
-
-```bash
-/home/1ding/claude/.venv/bin/python3 /tmp/html_to_pptx_ext.py "{HTML路径}" "{PPTX路径}"
-```
-
-### 4. 错误处理
+### 3. 错误处理
 
 若脚本报错 → 阅读错误信息，修复后重试（最多 3 次）。
 
-### 5. 报告
+### 4. 报告
 
 ```
 ---转换完成---
@@ -110,39 +82,28 @@ if __name__ == '__main__':
 输出文件：{PPTX 文件路径}
 总页数：{N}
 文件大小：{N} KB
-自定义组件：{列出 AI 额外编写的 renderer 名称，或"无"}
 ```
 
-## 基础脚本可用工具函数
+## 组件开发规范（添加新组件时）
 
-AI 编写自定义 renderer 时可直接使用以下函数（均已从基础脚本 export）：
+新 renderer 须遵循以下模式：
 
-| 函数 | 用途 |
-|------|------|
-| `px(val)` | HTML px → PPT Inches |
-| `css_pt(css_px)` | CSS px → PPT Pt（×0.75） |
-| `coords(el)` | 获取元素 (left, top, width, height) in px |
-| `sty(el)` | 解析 inline style → dict |
-| `hcls(el, cls)` | 检查元素是否有某 class |
-| `txt(el)` | 获取元素文本（处理 HTML 实体） |
-| `parse_c(style_val)` | 解析 CSS 颜色值 → RGBColor |
-| `parse_fs(style_val)` | 解析 CSS font-size → Pt |
-| `parse_lh(style_val)` | 解析 CSS line-height → float |
-| `add_tb(slide, l, t, w, h)` | 添加文本框 |
-| `add_rrect(slide, l, t, w, h, fill, border, bw, radius)` | 添加圆角矩形 |
-| `add_rect(slide, l, t, w, h, fill)` | 添加矩形 |
-| `add_run(para, text, font, size, color, bold)` | 添加文本 Run |
-| `render_rich(para, el, color, size, font, bold_color)` | 渲染富文本（处理 strong/span） |
-| `set_tf(tf)` | 设置 TextFrame 属性 |
-| `set_para_spacing(p, line_height, space_before, space_after)` | 设置段落间距 |
-| `set_bullet(p, char, color, size, indent_level)` | 设置 PPT 原生项目符号 |
-| `COLORS` | 颜色常量字典 |
-| `FONT_T` / `FONT_B` | 标题/正文字体名 |
+```javascript
+// 1. 在 registry.json 添加组件元数据
+// 2. 在 index.js 添加提取逻辑（browser 侧 extractEl switch）
+// 3. 添加渲染函数
+function renderMyComponent(slide, c) {
+  const { p } = c;                         // p = {x, y, w, h}（slide 绝对像素坐标）
+  addRRect(slide, p.x, p.y, p.w, p.h, C.navyMid);  // 背景
+  addTB(slide, p.x+20, p.y+10, p.w-40, 30, c.text, {  // 文字
+    color: C.gold, fontSize: ptOf(14), bold: true, fontFace: F.serif });
+}
+// 4. 在 renderComponent switch 中添加 case
+// 5. 在 md-to-html 组件选择表中添加说明
+```
 
-## 精度保障原则
-
-1.  **颜色零偏差**：使用 `COLORS` 字典中的精确 RGB 值
-2.  **字号严格对应**：统一使用 `css_pt(css_px_value)` 换算
-3.  **布局精确还原**：使用 `coords()` 读取 HTML 中的绝对定位坐标
-4.  **行高同步**：使用 `set_para_spacing(line_height=...)` 还原 CSS line-height
-5.  **文本完整性**：所有可见文本必须出现在 PPTX 中
+**设计约束**（与 HTML 保持一致）：
+- 背景色：`C.navy` / `C.navyMid` / `C.navyLight`
+- 强调色：`C.gold` / `C.goldL` / `C.red` / `C.blue` / `C.green` / `C.teal` / `C.orange`
+- 字体：`F.serif`（标题）/ `F.sans`（正文）
+- 位置：`inOf(px)` 转换，字号：`ptOf(px)` 转换

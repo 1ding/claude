@@ -1,0 +1,1758 @@
+{
+  "law_id": "LAW-DS",
+  "law_name": "数据安全法",
+  "perspective": "law",
+  "generated_at": "2026-03-10",
+  "total_records": 44,
+  "records": [
+    {
+      "regulation_id": "数据安全法§5",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①负责国家数据安全工作的决策和议事协调",
+          "②研究制定、指导实施国家数据安全战略和有关重大方针政策",
+          "③统筹协调国家数据安全的重大事项和重要工作",
+          "④建立国家数据安全工作协调机制"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§6-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①各地区、各部门对本地区、本部门工作中收集和产生的数据及数据安全负责"
+          ],
+          "uncovered_rules": [
+            "②工业、电信、交通、金融等主管部门承担本行业、本领域数据安全监管职责",
+            "③公安机关、国家安全机关在各自职责范围内承担数据安全监管职责"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①各地区、各部门对本地区、本部门工作中收集和产生的数据及数据安全负责"
+          ],
+          "uncovered_rules": [
+            "②工业、电信、交通、金融等主管部门承担本行业、本领域数据安全监管职责",
+            "③公安机关、国家安全机关在各自职责范围内承担数据安全监管职责"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①各地区、各部门对本地区、本部门工作中收集和产生的数据及数据安全负责",
+            "②工业、电信、交通、金融等主管部门承担本行业、本领域数据安全监管职责",
+            "③公安机关、国家安全机关在各自职责范围内承担数据安全监管职责"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①各地区、各部门对本地区、本部门工作中收集和产生的数据及数据安全负责",
+            "②工业、电信、交通、金融等主管部门承担本行业、本领域数据安全监管职责",
+            "③公安机关、国家安全机关在各自职责范围内承担数据安全监管职责"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①各地区、各部门对本地区、本部门工作中收集和产生的数据及数据安全负责",
+            "②工业、电信、交通、金融等主管部门承担本行业、本领域数据安全监管职责",
+            "③公安机关、国家安全机关在各自职责范围内承担数据安全监管职责"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①各地区、各部门对本地区、本部门工作中收集和产生的数据及数据安全负责",
+            "②工业、电信、交通、金融等主管部门承担本行业、本领域数据安全监管职责",
+            "③公安机关、国家安全机关在各自职责范围内承担数据安全监管职责"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-005",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①各地区、各部门对本地区、本部门工作中收集和产生的数据及数据安全负责",
+            "②工业、电信、交通、金融等主管部门承担本行业、本领域数据安全监管职责",
+            "③公安机关、国家安全机关在各自职责范围内承担数据安全监管职责"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.33,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②工业、电信、交通、金融等主管部门承担本行业、本领域数据安全监管职责",
+          "③公安机关、国家安全机关在各自职责范围内承担数据安全监管职责"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§6-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①负责统筹协调网络数据安全和相关监管工作"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§8-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①遵守法律、法规",
+            "②尊重社会公德和伦理，遵守商业道德和职业道德",
+            "③履行数据安全保护义务",
+            "④承担社会责任"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①遵守法律、法规",
+          "②尊重社会公德和伦理，遵守商业道德和职业道德",
+          "③履行数据安全保护义务",
+          "④承担社会责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§8-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得危害国家安全、公共利益",
+          "②不得损害个人、组织的合法权益"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§12-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①及时依法处理"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①及时依法处理"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§12-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①对投诉、举报人的相关信息予以保密",
+          "②保护投诉、举报人的合法权益"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§14",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①将数字经济发展纳入本级国民经济和社会发展规划",
+          "②根据需要制定数字经济发展规划"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§17",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-014",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-021",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-022",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-023",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-005",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-007",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-011",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-015",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-016",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-032",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-048",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准"
+          ],
+          "uncovered_rules": [
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-050",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-007",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①组织制定有关数据开发利用技术、产品和数据安全相关标准"
+          ],
+          "uncovered_rules": [
+            "②适时修订相关标准"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.5,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②适时修订相关标准"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§21-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①统筹协调有关部门制定重要数据目录",
+          "②加强对重要数据的保护"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§21-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按照数据分类分级保护制度，确定本地区、本部门及相关行业、领域的重要数据具体目录",
+          "②对列入目录的数据进行重点保护"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§22",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立集中统一、高效权威的数据安全风险评估、报告、信息共享、监测预警机制",
+            "②统筹协调有关部门加强数据安全风险信息的获取、分析、研判、预警工作"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立集中统一、高效权威的数据安全风险评估、报告、信息共享、监测预警机制",
+            "②统筹协调有关部门加强数据安全风险信息的获取、分析、研判、预警工作"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-012",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立集中统一、高效权威的数据安全风险评估、报告、信息共享、监测预警机制",
+            "②统筹协调有关部门加强数据安全风险信息的获取、分析、研判、预警工作"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立集中统一、高效权威的数据安全风险评估、报告、信息共享、监测预警机制",
+          "②统筹协调有关部门加强数据安全风险信息的获取、分析、研判、预警工作"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§23-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立数据安全应急处置机制"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§23-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-026",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-030",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-041",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-050",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①依法启动应急预案"
+          ],
+          "uncovered_rules": [
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-051",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大"
+          ],
+          "uncovered_rules": [
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-056",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①依法启动应急预案"
+          ],
+          "uncovered_rules": [
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②采取相应的应急处置措施，防止危害扩大"
+          ],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依法启动应急预案",
+            "②采取相应的应急处置措施，防止危害扩大",
+            "③消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.5,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "③消除安全隐患",
+          "④及时向社会发布与公众有关的警示信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§27-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①依照法律、法规建立健全全流程数据安全管理制度",
+            "②组织开展数据安全教育培训",
+            "③采取相应的技术措施和其他必要措施保障数据安全"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①依照法律、法规建立健全全流程数据安全管理制度",
+          "②组织开展数据安全教育培训",
+          "③采取相应的技术措施和其他必要措施保障数据安全"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§27-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-002",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①明确数据安全负责人",
+            "②建立数据安全管理机构",
+            "③落实数据安全保护责任"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①明确数据安全负责人",
+          "②建立数据安全管理机构",
+          "③落实数据安全保护责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§28",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①数据处理活动及研究开发新技术，应当有利于促进经济社会发展，增进人民福祉",
+          "②符合社会公德和伦理"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§29-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-009",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-012",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-013",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①持续加强数据安全风险监测"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-014",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①持续加强数据安全风险监测"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-015",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-025",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-038",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-040",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-064",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①持续加强数据安全风险监测"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-015",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-016",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-028",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续加强数据安全风险监测"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "数据安全法§29-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-044",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-057",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①立即采取补救措施"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§29-C",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-026",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-030",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-041",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-050",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-051",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-056",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取处置措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①立即采取处置措施",
+          "②按规定及时告知用户",
+          "③向有关主管部门报告"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§30",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①定期对数据处理活动开展风险评估",
+          "②向有关主管部门报送风险评估报告",
+          "③报告应包含：处理的重要数据种类和数量；开展数据处理活动的情况；面临的数据安全风险及其应对措施"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§31",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①重要数据出境须遵守国家网信部门会同国务院有关部门制定的安全管理办法"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§32-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①采取合法、正当的方式收集数据",
+          "②在法律、行政法规规定的目的和范围内收集、使用数据"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§32-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得窃取或以其他非法方式获取数据"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§33",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①要求数据提供方说明数据来源",
+          "②审核交易双方的身份",
+          "③留存审核、交易记录"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§34",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①依法取得行政许可后方可提供数据处理相关服务"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§35-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按照国家有关规定，经过严格的批准手续，依法进行数据调取"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§35-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①予以配合"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§36",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得向外国司法或执法机构提供存储于中华人民共和国境内的数据"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§38-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①在履行法定职责的范围内收集、使用数据",
+          "②依照法律、行政法规规定的条件和程序进行"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§38-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①对在履行职责中知悉的个人隐私、个人信息、商业秘密、保密商务信息等数据依法予以保密",
+          "②不得泄露或非法向他人提供"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§39",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立健全数据安全管理制度",
+            "②落实数据安全保护责任",
+            "③保障政务数据安全"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立健全数据安全管理制度",
+          "②落实数据安全保护责任",
+          "③保障政务数据安全"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§40-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①经过严格的批准程序",
+          "②监督受托方履行相应的数据安全保护义务"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§40-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①依照法律法规的规定和合同约定履行数据安全保护义务",
+          "②不得擅自留存、使用、泄露或向他人提供政务数据"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§41",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①遵循公正、公平、便民的原则",
+          "②按规定及时、准确地公开政务数据"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§44",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-012",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①按规定的权限和程序对有关组织、个人进行约谈",
+            "②要求有关组织、个人采取措施进行整改，消除隐患"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按规定的权限和程序对有关组织、个人进行约谈",
+          "②要求有关组织、个人采取措施进行整改，消除隐患"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§45",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，给予警告，可并处五万元以上五十万元以下罚款",
+          "②拒不改正或造成大量数据泄露等严重后果的，处五十万元以上二百万元以下罚款，并可责令暂停业务、停业整顿、吊销许可证或营业执照",
+          "③违反国家核心数据管理制度的，处二百万元以上一千万元以下罚款"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§46",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，给予警告，可并处十万元以上一百万元以下罚款",
+          "②情节严重的，处一百万元以上一千万元以下罚款，并可责令暂停业务、停业整顿、吊销许可证或营业执照"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§47",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，没收违法所得",
+          "②处违法所得一倍以上十倍以下罚款，违法所得不足十万元的处十万元以上一百万元以下罚款",
+          "③可责令暂停相关业务、停业整顿、吊销许可证或营业执照"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§48",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①拒不配合调取的，责令改正，给予警告，并处五万元以上五十万元以下罚款",
+          "②未经批准向外国提供数据的，给予警告，可并处十万元以上一百万元以下罚款",
+          "③造成严重后果的，处一百万元以上五百万元以下罚款，并可责令暂停业务、停业整顿、吊销许可证或营业执照"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§49",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①对直接负责的主管人员和其他直接责任人员依法给予处分"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§50",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①依法给予处分"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§51",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①依照有关法律、行政法规的规定处罚"
+        ]
+      }
+    },
+    {
+      "regulation_id": "数据安全法§52",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①给他人造成损害的，依法承担民事责任",
+          "②构成违反治安管理行为的，依法给予治安管理处罚",
+          "③构成犯罪的，依法追究刑事责任"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2890 @@
+{
+  "law_id": "LAW-CSL",
+  "law_name": "网络安全法",
+  "perspective": "law",
+  "generated_at": "2026-03-10",
+  "total_records": 77,
+  "records": [
+    {
+      "regulation_id": "网络安全法§8-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①统筹协调网络安全工作",
+          "②负责相关监督管理工作"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§8-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①在各自职责范围内负责网络安全保护和监督管理工作"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①在各自职责范围内负责网络安全保护和监督管理工作"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-003",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①在各自职责范围内负责网络安全保护和监督管理工作"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在各自职责范围内负责网络安全保护和监督管理工作"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在各自职责范围内负责网络安全保护和监督管理工作"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在各自职责范围内负责网络安全保护和监督管理工作"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-005",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在各自职责范围内负责网络安全保护和监督管理工作"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "网络安全法§9",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①遵守法律、行政法规",
+            "②履行网络安全保护义务",
+            "③接受政府和社会监督",
+            "④承担社会责任"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①遵守法律、行政法规",
+          "②履行网络安全保护义务",
+          "③接受政府和社会监督",
+          "④承担社会责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§10",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①采取技术措施和其他必要措施",
+          "②保障网络安全、稳定运行",
+          "③有效应对网络安全事件",
+          "④防范网络违法犯罪活动",
+          "⑤维护网络数据完整性、保密性和可用性"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§12",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得危害网络安全",
+          "②不得利用网络从事危害国家安全、荣誉和利益的活动",
+          "③不得煽动颠覆国家政权、推翻社会主义制度或煽动分裂国家",
+          "④不得宣扬恐怖主义、极端主义，宣扬民族仇恨、民族歧视",
+          "⑤不得传播暴力、淫秽色情信息",
+          "⑥不得编造、传播虚假信息扰乱经济秩序和社会秩序",
+          "⑦不得侵害他人名誉、隐私、知识产权和其他合法权益"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§14-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①及时依法作出处理",
+            "②不属于本部门职责的，及时移送有权处理部门"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①及时依法作出处理",
+          "②不属于本部门职责的，及时移送有权处理部门"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§14-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①对举报人的相关信息予以保密",
+          "②保护举报人的合法权益"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§15",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-014",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-021",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-022",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-023",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-005",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准"
+          ],
+          "uncovered_rules": [
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-007",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-011",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-015",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-016",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-032",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-048",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准"
+          ],
+          "uncovered_rules": [
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-050",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-007",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①组织制定有关网络安全管理及产品服务运行安全的国家标准、行业标准",
+            "②适时修订相关标准"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.5,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②适时修订相关标准"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§16",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①统筹规划、加大投入，扶持重点网络安全技术产业和项目",
+          "②支持网络安全技术研究开发和应用",
+          "③推广安全可信的网络产品和服务",
+          "④保护网络技术知识产权"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§19-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-016",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①组织开展经常性的网络安全宣传教育",
+            "②指导、督促有关单位做好网络安全宣传教育工作"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①组织开展经常性的网络安全宣传教育",
+            "②指导、督促有关单位做好网络安全宣传教育工作"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "网络安全法§19-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-016",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①有针对性地面向社会进行网络安全宣传教育"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①有针对性地面向社会进行网络安全宣传教育"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "网络安全法§21-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定内部安全管理制度和操作规程",
+            "②确定网络安全负责人",
+            "③落实网络安全保护责任"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①制定内部安全管理制度和操作规程",
+          "②确定网络安全负责人",
+          "③落实网络安全保护责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§21-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "②采取监测、记录网络运行状态和安全事件的技术措施"
+          ],
+          "uncovered_rules": [
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②采取监测、记录网络运行状态和安全事件的技术措施"
+          ],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-016",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②采取监测、记录网络运行状态和安全事件的技术措施"
+          ],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-059",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "②采取监测、记录网络运行状态和安全事件的技术措施",
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "②采取监测、记录网络运行状态和安全事件的技术措施",
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-062",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②采取监测、记录网络运行状态和安全事件的技术措施"
+          ],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②采取监测、记录网络运行状态和安全事件的技术措施"
+          ],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "②采取监测、记录网络运行状态和安全事件的技术措施",
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-010",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "③按规定留存网络日志不少于六个月"
+          ],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "②采取监测、记录网络运行状态和安全事件的技术措施",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-030",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②采取监测、记录网络运行状态和安全事件的技术措施",
+            "③按规定留存网络日志不少于六个月"
+          ],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-011",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②采取监测、记录网络运行状态和安全事件的技术措施"
+          ],
+          "uncovered_rules": [
+            "①采取防范计算机病毒和网络攻击、网络侵入的技术措施",
+            "③按规定留存网络日志不少于六个月",
+            "④采取数据分类、重要数据备份和加密等措施"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.75,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "④采取数据分类、重要数据备份和加密等措施"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§22-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①不得在产品、服务中设置恶意程序"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得在产品、服务中设置恶意程序"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§22-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-044",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-057",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①立即采取补救措施",
+          "②及时告知用户",
+          "③向有关主管部门报告"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§22-C",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①持续提供安全维护",
+            "②在规定或约定期限内不得终止安全维护"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①持续提供安全维护",
+          "②在规定或约定期限内不得终止安全维护"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§22-D",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①向用户明示收集信息功能",
+          "②取得用户同意",
+          "③遵守个人信息保护相关法律法规"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§23",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①须经具备资格的机构安全认证合格，或安全检测符合要求后，方可销售或提供网络关键设备和网络安全专用产品"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§24",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①与用户签订协议或确认提供服务时，要求用户提供真实身份信息",
+          "②用户不提供真实身份信息的，不得为其提供相关服务"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§25-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①制定网络安全事件应急预案",
+          "②及时处置系统漏洞、计算机病毒、网络攻击、网络侵入等安全风险"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§25-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-026",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-030",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-041",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-050",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即启动应急预案"
+          ],
+          "uncovered_rules": [
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-051",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①立即启动应急预案"
+          ],
+          "uncovered_rules": [
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-056",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即启动应急预案"
+          ],
+          "uncovered_rules": [
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动应急预案",
+            "②采取相应的补救措施",
+            "③按规定向有关主管部门报告"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.33,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②采取相应的补救措施",
+          "③按规定向有关主管部门报告"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§26",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①遵守国家有关规定"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①遵守国家有关规定"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①遵守国家有关规定"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§27",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得非法侵入他人网络、干扰网络正常功能、窃取网络数据",
+          "②不得提供专门用于危害网络安全活动的程序、工具",
+          "③明知他人从事危害网络安全活动的，不得提供技术支持、广告推广、支付结算等帮助"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§28",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①为公安机关、国家安全机关提供技术支持和协助"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§29",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立健全本行业网络安全保护规范和协作机制",
+            "②加强对网络安全风险的分析评估",
+            "③定期向会员进行风险警示",
+            "④支持、协助会员应对网络安全风险"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立健全本行业网络安全保护规范和协作机制",
+          "②加强对网络安全风险的分析评估",
+          "③定期向会员进行风险警示",
+          "④支持、协助会员应对网络安全风险"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§30",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①履行网络安全保护职责中获取的信息，只能用于维护网络安全的需要，不得用于其他用途"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§32",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①编制本行业、本领域的关键信息基础设施安全规划",
+            "②组织实施安全规划",
+            "③指导和监督关键信息基础设施运行安全保护工作"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①编制本行业、本领域的关键信息基础设施安全规划",
+          "②组织实施安全规划",
+          "③指导和监督关键信息基础设施运行安全保护工作"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§33",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①确保具有支持业务稳定、持续运行的性能",
+          "②安全技术措施与建设同步规划",
+          "③安全技术措施与建设同步实施",
+          "④安全技术措施与系统同步投入使用"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§34-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-002",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①设置专门安全管理机构",
+            "②设置安全管理负责人",
+            "③对安全负责人和关键岗位人员进行安全背景审查"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①设置专门安全管理机构",
+          "②设置安全管理负责人",
+          "③对安全负责人和关键岗位人员进行安全背景审查"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§34-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-016",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.67,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①定期对从业人员进行网络安全教育、技术培训和技能考核",
+            "③制定网络安全事件应急预案并定期进行演练"
+          ],
+          "uncovered_rules": [
+            "②对重要系统和数据库进行容灾备份"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.67,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①定期对从业人员进行网络安全教育、技术培训和技能考核",
+            "③制定网络安全事件应急预案并定期进行演练"
+          ],
+          "uncovered_rules": [
+            "②对重要系统和数据库进行容灾备份"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-043",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②对重要系统和数据库进行容灾备份"
+          ],
+          "uncovered_rules": [
+            "①定期对从业人员进行网络安全教育、技术培训和技能考核",
+            "③制定网络安全事件应急预案并定期进行演练"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "网络安全法§35",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①须通过国家网信部门会同国务院有关部门组织的国家安全审查"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§36",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按规定与产品和服务提供者签订安全保密协议",
+          "②明确安全和保密义务与责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§37",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①个人信息和重要数据应当在境内存储",
+          "②因业务需要确需向境外提供的，须按规定进行安全评估"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§38",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①自行或委托网络安全服务机构每年至少进行一次安全性和风险检测评估",
+          "②将检测评估情况和改进措施报送相关负责部门"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§39",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①对关键信息基础设施安全风险进行抽查检测，提出改进措施",
+            "②定期组织运营者进行网络安全应急演练",
+            "③促进相关主体之间的网络安全信息共享",
+            "④对网络安全事件应急处置提供技术支持和协助"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①对关键信息基础设施安全风险进行抽查检测，提出改进措施",
+            "②定期组织运营者进行网络安全应急演练",
+            "③促进相关主体之间的网络安全信息共享",
+            "④对网络安全事件应急处置提供技术支持和协助"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "网络安全法§40",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①对收集的用户信息严格保密",
+          "②建立健全用户信息保护制度"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§41-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①遵循合法、正当、必要的原则",
+          "②公开收集、使用规则",
+          "③明示收集、使用信息的目的、方式和范围",
+          "④经被收集者同意"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§41-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得收集与其提供的服务无关的个人信息",
+          "②不得违反法律法规和双方约定收集、使用个人信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§42-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得泄露、篡改、毁损收集的个人信息",
+          "②未经被收集者同意，不得向他人提供个人信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§42-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①采取技术措施和其他必要措施，确保收集的个人信息安全",
+          "②防止信息泄露、毁损、丢失"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§42-C",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-026",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-030",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-041",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-050",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-051",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-056",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取补救措施",
+            "②按规定及时告知用户",
+            "③向有关主管部门报告"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①立即采取补救措施",
+          "②按规定及时告知用户",
+          "③向有关主管部门报告"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§43",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①采取措施予以删除",
+          "②采取措施予以更正"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§44",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得窃取或以其他非法方式获取个人信息",
+          "②不得非法出售或非法向他人提供个人信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§45",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①对在履行职责中知悉的个人信息、隐私和商业秘密严格保密",
+          "②不得泄露、出售或非法向他人提供"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§46",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①不得设立用于实施诈骗、传授犯罪方法、制作或销售违禁物品等违法犯罪活动的网站、通讯群组",
+            "②不得利用网络发布涉及实施违法犯罪活动的信息"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得设立用于实施诈骗、传授犯罪方法、制作或销售违禁物品等违法犯罪活动的网站、通讯群组",
+          "②不得利用网络发布涉及实施违法犯罪活动的信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§47-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-011",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①加强对用户发布信息的管理"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①加强对用户发布信息的管理"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§47-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①立即停止传输该信息",
+          "②采取消除等处置措施，防止信息扩散",
+          "③保存有关记录",
+          "④向有关主管部门报告"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§48-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①发送的电子信息、提供的应用软件不得设置恶意程序",
+            "②不得含有法律、行政法规禁止发布或传输的信息"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①发送的电子信息、提供的应用软件不得设置恶意程序",
+          "②不得含有法律、行政法规禁止发布或传输的信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§48-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①履行安全管理义务",
+          "②停止向用户提供服务",
+          "③采取消除等处置措施",
+          "④保存有关记录",
+          "⑤向有关主管部门报告"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§49-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立网络信息安全投诉、举报制度",
+            "②公布投诉、举报方式等信息",
+            "③及时受理并处理有关网络信息安全的投诉和举报"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立网络信息安全投诉、举报制度",
+          "②公布投诉、举报方式等信息",
+          "③及时受理并处理有关网络信息安全的投诉和举报"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§49-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①配合网信部门和有关部门依法实施的监督检查"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§50",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①要求网络运营者停止传输，采取消除等处置措施",
+          "②保存有关记录",
+          "③对来自境外的违禁信息，通知有关机构采取技术措施阻断传播"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§51",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①统筹协调有关部门加强网络安全信息收集、分析和通报工作",
+            "②按规定统一发布网络安全监测预警信息"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①统筹协调有关部门加强网络安全信息收集、分析和通报工作",
+          "②按规定统一发布网络安全监测预警信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§52",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立健全本行业、本领域的网络安全监测预警和信息通报制度",
+            "②按规定报送网络安全监测预警信息"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立健全本行业、本领域的网络安全监测预警和信息通报制度",
+          "②按规定报送网络安全监测预警信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§53-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立健全网络安全风险评估和应急工作机制",
+          "②制定网络安全事件应急预案",
+          "③定期组织演练"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§53-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定本行业、本领域的网络安全事件应急预案",
+          "②定期组织演练"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§54",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度",
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.67,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度"
+          ],
+          "uncovered_rules": [
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-016",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度",
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-059",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度",
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度",
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-062",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.67,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度",
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ],
+          "uncovered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度"
+          ],
+          "uncovered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度",
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度",
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.67,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①要求有关部门、机构和人员及时收集、报告安全风险信息，加强监测",
+            "②组织对网络安全风险信息进行分析评估，预测事件可能性、影响和危害程度"
+          ],
+          "uncovered_rules": [
+            "③向社会发布网络安全风险预警及避免、减轻危害的措施"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "网络安全法§55",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.75,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患"
+          ],
+          "uncovered_rules": [
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.75,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患"
+          ],
+          "uncovered_rules": [
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-026",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估"
+          ],
+          "uncovered_rules": [
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-030",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患"
+          ],
+          "uncovered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-041",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-050",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即启动网络安全事件应急预案"
+          ],
+          "uncovered_rules": [
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-051",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①立即启动网络安全事件应急预案"
+          ],
+          "uncovered_rules": [
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-056",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即启动网络安全事件应急预案"
+          ],
+          "uncovered_rules": [
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估"
+          ],
+          "uncovered_rules": [
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即启动网络安全事件应急预案",
+            "②对网络安全事件进行调查和评估",
+            "③要求网络运营者采取技术措施和其他必要措施消除安全隐患",
+            "④及时向社会发布与公众有关的警示信息"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.75,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "④及时向社会发布与公众有关的警示信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§56-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-012",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①按规定权限和程序对网络运营者的法定代表人或主要负责人进行约谈"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按规定权限和程序对网络运营者的法定代表人或主要负责人进行约谈"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§56-B",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按照要求采取措施，进行整改，消除隐患"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§59",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，给予警告",
+          "②拒不改正或导致危害网络安全等后果的，处以罚款",
+          "③对直接负责的主管人员处以罚款"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§60",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，给予警告",
+          "②拒不改正或导致危害网络安全等后果的，处五万元以上五十万元以下罚款",
+          "③对直接负责主管人员处一万元以上十万元以下罚款"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§61",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正",
+          "②拒不改正或情节严重的，处五万元以上五十万元以下罚款",
+          "③可责令暂停相关业务、停业整顿、关闭网站、吊销许可证或营业执照"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§62",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，给予警告",
+          "②拒不改正或情节严重的，处一万元以上十万元以下罚款",
+          "③可责令暂停相关业务、停业整顿、关闭网站、吊销许可证或营业执照"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§63",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①公安机关没收违法所得，处五日以下拘留，可并处五万元以上五十万元以下罚款",
+          "②情节较重的，处五日以上十五日以下拘留，可并处十万元以上一百万元以下罚款",
+          "③单位处十万元以上一百万元以下罚款"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§64",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，可单处或并处警告、没收违法所得、罚款",
+          "②违反§41至§43的，处违法所得一倍以上十倍以下罚款，没有违法所得的处一百万元以下罚款",
+          "③情节严重的，责令暂停相关业务、停业整顿、关闭网站、吊销许可证或营业执照"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§65",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令停止使用",
+          "②处采购金额一倍以上十倍以下罚款",
+          "③对直接负责主管人员和其他直接责任人员处一万元以上十万元以下罚款"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§66",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，给予警告，没收违法所得",
+          "②处五万元以上五十万元以下罚款",
+          "③可责令暂停相关业务、停业整顿、关闭网站、吊销许可证或营业执照"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§67",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①公安机关处五日以下拘留，可并处一万元以上十万元以下罚款",
+          "②情节较重的，处五日以上十五日以下拘留，可并处五万元以上五十万元以下罚款",
+          "③关闭用于实施违法犯罪活动的网站、通讯群组"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§68",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正，给予警告，没收违法所得",
+          "②拒不改正或情节严重的，处十万元以上五十万元以下罚款",
+          "③可责令暂停相关业务、停业整顿、关闭网站、吊销许可证或营业执照"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§69",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①责令改正",
+          "②拒不改正或情节严重的，处五万元以上五十万元以下罚款",
+          "③对直接负责主管人员和其他直接责任人员处一万元以上十万元以下罚款"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§70",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①依照有关法律、行政法规的规定处罚"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§71",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①依照有关法律法规记入信用档案，并予以公示"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§72",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①由其上级机关或有关机关责令改正",
+          "②对直接负责的主管人员和其他直接责任人员依法给予处分"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§73",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①对直接负责的主管人员和其他直接责任人员依法给予处分"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§74",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①给他人造成损害的，依法承担民事责任",
+          "②构成违反治安管理行为的，依法给予治安管理处罚",
+          "③构成犯罪的，依法追究刑事责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "网络安全法§77",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①除遵守本法外，还应当遵守保密法律、行政法规的规定"
+        ]
+      }
+    }
+  ]
+}

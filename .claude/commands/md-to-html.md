@@ -18,7 +18,7 @@ $ARGUMENTS
 
 若 $ARGUMENTS 首个词为文件路径（含 `/` 或以 `.md` 结尾）：
 1.  提取文件路径
-2.  **容量预检**：用 `ls -l` 获取文件大小，估算 tokens = 字节数 / 3.5；计算当前已用量（[LOADED *] 记录 + [CAP DELTA] chars / 3.5 + 30K）；若 已用量 + 估算 > 180K 且模型名称不含 "1m" → 拒绝执行并告知用户
+2.  **容量预检**：用 `ls -l` 获取文件大小，估算 tokens = 字节数 / 3.5；计算当前已用量（[LOADED *] 记录 + [CAP DELTA] chars / 3.5 + 50K）；若 已用量 + 估算 > 950K → 拒绝执行并告知用户
 3.  读取源文档
 4.  输出 `[LOADED target] {文件路径} | ~{tokens} tokens`
 5.  路径之后的剩余内容视为附加指令
@@ -140,25 +140,60 @@ AI 须为 body 区内每个组件计算绝对坐标（px），填入 `style="pos
 -   布局层（slide-body 内元素的定位）：禁止 flex/grid，必须用绝对定位
 -   叶子组件内（flow-box、metric-card、battle-card 等固定尺寸组件）：允许 `display:flex;align-items:center;justify-content:center;` 实现文字垂直水平居中
 
-### data-ppt 属性标记
+### data-block 属性（组件路由键，必须添加）
 
-每个需要转换为 PPT 对象的元素必须加 `data-ppt` 属性：
+**每个标准组件必须加 `data-block` 属性**，html-to-pptx 转换器以此为首要路由键。
 
-| data-ppt 值 | 含义 | PPT 对应 |
-|-------------|------|---------|
-| `text` | 文本框 | TextBox |
-| `shape` | 装饰性形状（卡片、强调框） | Shape (RoundedRectangle) |
-| `table` | 表格 | Table |
-| `line` | 装饰线 | Shape (Rectangle) |
-| `image` | 图片 | Picture |
-| `group` | 容器（不直接转换，子元素独立转换） | 无 |
-| `skip` | 跳过不转换（如导航栏） | 无 |
+```
+data-block="[组件 id]"
+```
 
-示例：
+完整组件注册表见：`.claude/tools/html-to-pptx/components/registry.json`
+
+| data-block 值 | 组件类型 | PPT 渲染器 |
+|---------------|---------|-----------|
+| `col-card` | 卡片（带金色顶条） | renderColCard |
+| `table` | 数据表格（有/无 thead） | renderTable |
+| `bullet-list` | 项目符号列表 | renderBulletList |
+| `emphasis-box` | 强调框（金色左边框） | renderEmphasisBox |
+| `metric-card` | 指标卡（大数字 + 标签） | renderMetricCard |
+| `phase-block` | 阶段块（时间轴用） | renderPhaseBlock |
+| `arrow-right` | 右箭头（阶段间连接） | renderArrowRight |
+| `section-header` | 节标题（金色 + 下划线） | renderSectionHeader |
+| `panel` | 通用面板容器 | renderPanel |
+| `text` | 独立文本框 | renderText |
+| `custom:描述` | 临时自定义组件 | 转换器自动尝试，或留占位框 |
+
+**临时/非标准组件**：若内容需要但注册表中无合适组件，使用 `data-block="custom:brief-desc"`。转换器会尝试用 getComputedStyle 渲染，失败则生成灰色占位框（`⚠ brief-desc`），不影响其他页面。
+
+### data-ppt 属性标记（保留，辅助标记）
+
+| data-ppt 值 | 含义 |
+|-------------|------|
+| `text` | 文本框 |
+| `shape` | 形状（卡片、强调框） |
+| `table` | 表格 |
+| `line` | 装饰线 |
+| `group` | 容器（子元素独立转换） |
+| `skip` | 跳过不转换（导航栏等） |
+
+**示例（同时带 data-block 和 data-ppt）**：
 ```html
-<div data-ppt="shape" style="position:absolute; left:0; top:0; width:560px; height:270px; background:var(--navy-mid); border-radius:10px;">
+<div class="col-card" data-block="col-card" data-ppt="shape"
+     style="position:absolute; left:0; top:0; width:560px; height:270px;">
+    <div class="card-bar" data-ppt="line"></div>
     <h3 data-ppt="text">标题</h3>
     <p data-ppt="text">内容</p>
+</div>
+
+<!-- panel 内子组件用流式布局（无 position:absolute），转换器用 getBoundingClientRect 算实际位置 -->
+<div data-block="panel"
+     style="position:absolute; left:0; top:0; width:564px; height:300px;
+            background:var(--navy-mid); border-radius:10px; padding:20px;">
+    <div class="section-header" data-block="section-header">节标题</div>
+    <ul class="bullet-list" data-block="bullet-list">
+        <li><strong>要点：</strong>说明</li>
+    </ul>
 </div>
 ```
 
@@ -187,18 +222,22 @@ AI 须为 body 区内每个组件计算绝对坐标（px），填入 `style="pos
 -   内容不足时：① 增大组件高度（卡片、列表、强调框）② 扩充内容文字 ③ 添加辅助组件 ④ 增加组件间距（最后手段）
 -   内容过多时：拆分为多页，不缩小字号
 
-**组件选择策略**：
+**组件选择策略**（优先从注册表标准组件选取）：
 
-| 内容特征 | 推荐组件 | 布局 |
-|---------|---------|------|
-| 2-3 个并列概念 | col-card | 两栏 / 三栏 |
-| 4+ 个并列概念 | col-card / battle-card | 网格 |
-| 有明确要点的说明 | bullet-list + emphasis-box | 单栏 / 两栏一侧 |
-| 结构化数据 | mini-table | 单栏 |
-| 对比/矩阵数据 | heat-table | 单栏 |
-| 时间线/阶段 | timeline + metric-row | 单栏 |
-| 流程/步骤 | flow-row | 单栏 |
-| 关键数字指标 | metric-row | 单栏 |
+| 内容特征 | 推荐组件（data-block） | 布局 |
+|---------|----------------------|------|
+| 2-3 个并列概念 | `col-card` | 两栏 / 三栏 |
+| 4+ 个并列概念 | `col-card`（网格排列） | 网格 |
+| 有明确要点的说明 | `bullet-list` + `emphasis-box` | 单栏 / 两栏一侧 |
+| 结构化数据（有表头） | `table`（带 `<thead>`） | 单栏 |
+| 对比/矩阵数据（热力图） | `table`（加 `heat-table` class + `h-*` cell class） | 单栏 |
+| 独立背景容器（含多子组件） | `panel`（子组件流式布局） | 两栏 / 单栏 |
+| 时间轴 / 五阶段演进 | `phase-block` × N + `arrow-right` × (N-1) | 横排 |
+| 关键数字指标 | `metric-card` | 横排 2-4 个 |
+| 节内分组标题 | `section-header`（panel 内） | 流式 |
+| 关键结论 / 注意事项 | `emphasis-box` | 单栏 |
+| 独立说明文字 | `text`（`<p data-block="text">`） | 单栏 |
+| 无合适组件的自定义内容 | `custom:描述`（临时，下次补充到注册表） | 视情况 |
 
 ## 组件使用规则（方案 C：锁定层 + 开放层）
 
@@ -220,12 +259,18 @@ AI 须为 body 区内每个组件计算绝对坐标（px），填入 `style="pos
 -   每个 slide 有 `data-slide="N"` 和 `data-type="cover|toc|content"`
 -   导航栏加 `data-ppt="skip"`
 -   每个 slide 内部使用 `position:relative`，子元素用 `position:absolute` + 精确 px 坐标
+-   **每个标准组件必须同时带 `data-block="[id]"` 和 `data-ppt="[type]"` 两个属性**
 
 **样式规则**：
 -   优先用模板预定义 class + inline style 定位
 -   颜色用 CSS 变量（如 `var(--accent-red)`），不硬编码色值
 -   所有颜色、背景必须为**纯色**（禁止 `linear-gradient`、`radial-gradient`）
 -   **HTML-PPT 一致性原则**：只使用 PPT 能精确还原的 CSS 特性
+
+**data-block 使用规则**：
+-   从注册表（`.claude/tools/html-to-pptx/components/registry.json`）选取 `id`，写入 `data-block`
+-   `panel` 组件内的子组件用**流式布局**（无 `position:absolute`）；转换器用 `getBoundingClientRect` 获取实际位置
+-   找不到合适组件时：`data-block="custom:简短描述"`，转换器自动处理或生成占位框
 
 ## 输出
 

@@ -1,0 +1,17 @@
+{
+  "name": "pptx-convert",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dom-to-pptx": "^1.1.5",
+    "pptxgenjs": "^4.0.1",
+    "puppeteer-core": "^24.38.0"
+  }
+}

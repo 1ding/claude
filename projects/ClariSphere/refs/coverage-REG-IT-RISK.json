@@ -1,0 +1,2133 @@
+{
+  "law_id": "REG-IT-RISK",
+  "law_name": "商业银行信息科技风险管理指引",
+  "perspective": "law",
+  "generated_at": "2026-03-10",
+  "total_records": 68,
+  "records": [
+    {
+      "regulation_id": "信息科技风险管理指引§6",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①法定代表人是本机构信息科技风险管理的第一责任人",
+          "②负责组织本指引的贯彻落实"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§7-A",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-002",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①设立由高级管理层、信息科技部门和主要业务部门代表组成的专门信息科技管理委员会"
+          ],
+          "uncovered_rules": [
+            "②建立分工合理、职责明确、相互制衡、报告关系清晰的信息科技治理组织结构",
+            "③确保内部审计部门进行独立有效的信息科技风险管理审计",
+            "④加强信息科技专业队伍建设，建立人才激励机制"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.25,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②建立分工合理、职责明确、相互制衡、报告关系清晰的信息科技治理组织结构",
+          "③确保内部审计部门进行独立有效的信息科技风险管理审计",
+          "④加强信息科技专业队伍建设，建立人才激励机制"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§7-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.2,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "④确保银行所有员工充分理解和遵守信息科技风险管理制度和流程，并安排相关培训"
+          ],
+          "uncovered_rules": [
+            "①审查批准信息科技战略，确保与银行总体业务战略一致",
+            "②掌握主要的信息科技风险，确定可接受的风险级别",
+            "③每年审阅并向银监会及其派出机构报送信息科技风险管理的年度报告",
+            "⑤确保信息科技风险管理工作所需资金"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①审查批准信息科技战略，确保与银行总体业务战略一致",
+            "②掌握主要的信息科技风险，确定可接受的风险级别",
+            "③每年审阅并向银监会及其派出机构报送信息科技风险管理的年度报告",
+            "④确保银行所有员工充分理解和遵守信息科技风险管理制度和流程，并安排相关培训",
+            "⑤确保信息科技风险管理工作所需资金"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-016",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①审查批准信息科技战略，确保与银行总体业务战略一致",
+            "②掌握主要的信息科技风险，确定可接受的风险级别",
+            "③每年审阅并向银监会及其派出机构报送信息科技风险管理的年度报告",
+            "④确保银行所有员工充分理解和遵守信息科技风险管理制度和流程，并安排相关培训",
+            "⑤确保信息科技风险管理工作所需资金"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.2,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "④确保银行所有员工充分理解和遵守信息科技风险管理制度和流程，并安排相关培训"
+          ],
+          "uncovered_rules": [
+            "①审查批准信息科技战略，确保与银行总体业务战略一致",
+            "②掌握主要的信息科技风险，确定可接受的风险级别",
+            "③每年审阅并向银监会及其派出机构报送信息科技风险管理的年度报告",
+            "⑤确保信息科技风险管理工作所需资金"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.2,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①审查批准信息科技战略，确保与银行总体业务战略一致",
+          "②掌握主要的信息科技风险，确定可接受的风险级别",
+          "③每年审阅并向银监会及其派出机构报送信息科技风险管理的年度报告",
+          "⑤确保信息科技风险管理工作所需资金"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§7-C",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件"
+          ],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-026",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限"
+          ],
+          "uncovered_rules": [
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-030",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-041",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-050",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限"
+          ],
+          "uncovered_rules": [
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-051",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件"
+          ],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-056",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件"
+          ],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①确保涉及客户信息、账务信息及产品信息等的核心系统在中国境内独立运行，并保持最高管理权限",
+            "②及时向银监会及其派出机构报告本机构发生的重大信息科技事故或突发事件",
+            "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.67,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "③配合银监会及其派出机构做好信息科技风险监督检查工作，并按照监管意见整改"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§8",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-002",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②首席信息官负责建立切实有效的信息科技部门，承担信息科技职责（含预算、标准流程、内控、安全管理、灾难恢复、外包等）"
+          ],
+          "uncovered_rules": [
+            "①设立首席信息官，直接向行长汇报并参与决策",
+            "③确保信息科技风险管理的有效性，并使管理措施落实到每一个内设机构和分支机构"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.33,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①设立首席信息官，直接向行长汇报并参与决策",
+          "③确保信息科技风险管理的有效性，并使管理措施落实到每一个内设机构和分支机构"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§9",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①明确信息科技部门内部管理职责，各岗位人员应具有相应专业知识和技能",
+          "②验证个人信息（含身份证件、学历证明、工作经历和专业资格证书等）",
+          "③审核信息科技员工的道德品行",
+          "④确保员工了解并遵守信息科技策略、信息保密、授权使用等要求，并签订相关协议",
+          "⑤评估关键岗位员工流失风险，做好候补员工和岗位接替计划",
+          "⑥员工岗位发生变化后及时变更相关信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§10",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-002",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①设立或指派特定部门负责信息科技风险管理工作，直接向首席信息官或首席风险官报告",
+            "②该部门应为信息科技突发事件应急响应小组成员之一",
+            "③负责协调制定信息科技风险管理策略（尤其是信息安全、业务连续性计划和合规性风险）",
+            "④实施持续信息科技风险评估，跟踪整改意见落实，监控信息安全威胁和不合规事件"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①设立或指派特定部门负责信息科技风险管理工作，直接向首席信息官或首席风险官报告",
+          "②该部门应为信息科技突发事件应急响应小组成员之一",
+          "③负责协调制定信息科技风险管理策略（尤其是信息安全、业务连续性计划和合规性风险）",
+          "④实施持续信息科技风险评估，跟踪整改意见落实，监控信息安全威胁和不合规事件"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§11",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①在内部审计部门设立专门的信息科技风险审计岗位",
+          "②负责信息科技审计制度和流程的实施",
+          "③制订和执行信息科技审计计划",
+          "④对信息科技整个生命周期和重大事件等进行审计"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§12",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按照知识产权相关法律法规制定本机构信息科技知识产权保护策略和制度",
+          "②使所有员工充分理解并遵照执行",
+          "③确保购买和使用合法的软硬件产品，禁止侵权盗版",
+          "④采取有效措施保护本机构自主知识产权"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§13",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①依据有关法律法规的要求，规范和及时披露信息科技风险状况"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§14",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①制定符合银行总体业务规划的信息科技战略",
+          "②制定信息科技运行计划和信息科技风险评估计划",
+          "③确保配置足够人力、财力资源，维持稳定、安全的信息科技环境"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§15",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①制定全面的信息科技风险管理策略，涵盖信息分级与保护、信息系统开发测试维护、信息科技运行与维护、访问控制、物理安全、人员安全、业务连续性计划与应急处置等领域"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§16",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定持续的风险识别和评估流程",
+          "②确定信息科技中存在隐患的区域，评价风险对业务的潜在影响",
+          "③对风险进行排序，确定风险防范措施及所需资源的优先级别（包括外包供应商、产品供应商和服务商）"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§17",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-006",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.67,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①制定明确的信息科技风险管理制度、技术标准和操作规程，定期更新和公示",
+            "③建立适当的控制框架，包括最高权限用户审查、物理和逻辑访问控制、最小授权原则、审批授权、验证和调节"
+          ],
+          "uncovered_rules": [
+            "②确定潜在风险区域并进行详细和独立的监控，实现风险最小化"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-007",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定明确的信息科技风险管理制度、技术标准和操作规程，定期更新和公示",
+            "②确定潜在风险区域并进行详细和独立的监控，实现风险最小化",
+            "③建立适当的控制框架，包括最高权限用户审查、物理和逻辑访问控制、最小授权原则、审批授权、验证和调节"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-008",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定明确的信息科技风险管理制度、技术标准和操作规程，定期更新和公示",
+            "②确定潜在风险区域并进行详细和独立的监控，实现风险最小化",
+            "③建立适当的控制框架，包括最高权限用户审查、物理和逻辑访问控制、最小授权原则、审批授权、验证和调节"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-009",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定明确的信息科技风险管理制度、技术标准和操作规程，定期更新和公示",
+            "②确定潜在风险区域并进行详细和独立的监控，实现风险最小化",
+            "③建立适当的控制框架，包括最高权限用户审查、物理和逻辑访问控制、最小授权原则、审批授权、验证和调节"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定明确的信息科技风险管理制度、技术标准和操作规程，定期更新和公示",
+            "②确定潜在风险区域并进行详细和独立的监控，实现风险最小化",
+            "③建立适当的控制框架，包括最高权限用户审查、物理和逻辑访问控制、最小授权原则、审批授权、验证和调节"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.67,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②确定潜在风险区域并进行详细和独立的监控，实现风险最小化",
+            "③建立适当的控制框架，包括最高权限用户审查、物理和逻辑访问控制、最小授权原则、审批授权、验证和调节"
+          ],
+          "uncovered_rules": [
+            "①制定明确的信息科技风险管理制度、技术标准和操作规程，定期更新和公示"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-025",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "③建立适当的控制框架，包括最高权限用户审查、物理和逻辑访问控制、最小授权原则、审批授权、验证和调节"
+          ],
+          "uncovered_rules": [
+            "①制定明确的信息科技风险管理制度、技术标准和操作规程，定期更新和公示",
+            "②确定潜在风险区域并进行详细和独立的监控，实现风险最小化"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§18",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立信息科技项目实施前及实施后的评价机制",
+          "②建立定期检查系统性能的程序和标准",
+          "③建立信息科技服务投诉和事故处理的报告机制",
+          "④建立内部审计、外部审计和监管发现问题的整改处理机制",
+          "⑤安排对服务水平协议完成情况进行定期审查",
+          "⑥定期评估新技术发展可能造成的影响和已使用软件面临的新威胁",
+          "⑦定期检查信息科技外包项目的风险状况"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§19",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①遵守境内外监管机构关于信息科技风险管理的要求",
+            "②防范因监管差异所造成的风险"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①遵守境内外监管机构关于信息科技风险管理的要求",
+          "②防范因监管差异所造成的风险"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§20",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立和实施信息分类和保护体系",
+          "②使所有员工了解信息安全的重要性",
+          "③组织提供必要的培训，让员工充分了解其职责范围内的信息保护流程"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§21",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①落实信息安全管理职能，建立信息安全计划和保持长效管理机制",
+            "②提高全体员工信息安全意识，就安全问题向其他部门提供建议",
+            "③定期向信息科技管理委员会提交本银行信息安全评估报告",
+            "④信息安全管理机制应包括安全标准、策略、实施计划和持续维护计划",
+            "⑤信息安全策略应涵盖安全制度、组织、资产、人员、物理环境、通信运营、访问控制、系统开发维护、安全事故、业务连续性、合规性等领域"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①落实信息安全管理职能，建立信息安全计划和保持长效管理机制",
+          "②提高全体员工信息安全意识，就安全问题向其他部门提供建议",
+          "③定期向信息科技管理委员会提交本银行信息安全评估报告",
+          "④信息安全管理机制应包括安全标准、策略、实施计划和持续维护计划",
+          "⑤信息安全策略应涵盖安全制度、组织、资产、人员、物理环境、通信运营、访问控制、系统开发维护、安全事故、业务连续性、合规性等领域"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§22",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-006",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.75,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①建立有效管理用户认证和访问控制的流程",
+            "②用户对数据和系统的访问选择与信息访问级别相匹配的认证机制",
+            "③确保用户在信息系统内的活动只限于相关业务能合法开展所要求的最低限度"
+          ],
+          "uncovered_rules": [
+            "④用户调动到新岗位或离开时，应在系统中及时检查、更新或注销用户身份"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-007",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②用户对数据和系统的访问选择与信息访问级别相匹配的认证机制"
+          ],
+          "uncovered_rules": [
+            "①建立有效管理用户认证和访问控制的流程",
+            "③确保用户在信息系统内的活动只限于相关业务能合法开展所要求的最低限度",
+            "④用户调动到新岗位或离开时，应在系统中及时检查、更新或注销用户身份"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①建立有效管理用户认证和访问控制的流程",
+            "②用户对数据和系统的访问选择与信息访问级别相匹配的认证机制"
+          ],
+          "uncovered_rules": [
+            "③确保用户在信息系统内的活动只限于相关业务能合法开展所要求的最低限度",
+            "④用户调动到新岗位或离开时，应在系统中及时检查、更新或注销用户身份"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-009",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立有效管理用户认证和访问控制的流程",
+            "②用户对数据和系统的访问选择与信息访问级别相匹配的认证机制",
+            "③确保用户在信息系统内的活动只限于相关业务能合法开展所要求的最低限度",
+            "④用户调动到新岗位或离开时，应在系统中及时检查、更新或注销用户身份"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立有效管理用户认证和访问控制的流程",
+            "②用户对数据和系统的访问选择与信息访问级别相匹配的认证机制",
+            "③确保用户在信息系统内的活动只限于相关业务能合法开展所要求的最低限度",
+            "④用户调动到新岗位或离开时，应在系统中及时检查、更新或注销用户身份"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②用户对数据和系统的访问选择与信息访问级别相匹配的认证机制",
+            "③确保用户在信息系统内的活动只限于相关业务能合法开展所要求的最低限度"
+          ],
+          "uncovered_rules": [
+            "①建立有效管理用户认证和访问控制的流程",
+            "④用户调动到新岗位或离开时，应在系统中及时检查、更新或注销用户身份"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-025",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①建立有效管理用户认证和访问控制的流程",
+            "②用户对数据和系统的访问选择与信息访问级别相匹配的认证机制",
+            "③确保用户在信息系统内的活动只限于相关业务能合法开展所要求的最低限度",
+            "④用户调动到新岗位或离开时，应在系统中及时检查、更新或注销用户身份"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-025",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①建立有效管理用户认证和访问控制的流程",
+            "②用户对数据和系统的访问选择与信息访问级别相匹配的认证机制",
+            "③确保用户在信息系统内的活动只限于相关业务能合法开展所要求的最低限度",
+            "④用户调动到新岗位或离开时，应在系统中及时检查、更新或注销用户身份"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§23",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-021",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①设立物理安全保护区域（含计算机中心、数据中心、存储机密信息或放置重要设备的区域）",
+            "②明确相应的职责",
+            "③采取必要的预防、检测和恢复控制措施"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-045",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①设立物理安全保护区域（含计算机中心、数据中心、存储机密信息或放置重要设备的区域）",
+            "②明确相应的职责",
+            "③采取必要的预防、检测和恢复控制措施"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-047",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①设立物理安全保护区域（含计算机中心、数据中心、存储机密信息或放置重要设备的区域）",
+            "②明确相应的职责",
+            "③采取必要的预防、检测和恢复控制措施"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①设立物理安全保护区域（含计算机中心、数据中心、存储机密信息或放置重要设备的区域）",
+          "②明确相应的职责",
+          "③采取必要的预防、检测和恢复控制措施"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§24",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①根据信息安全级别，将网络划分为不同的逻辑安全域",
+          "②对每个域和整个网络进行物理或逻辑分区",
+          "③实现网络内容过滤、逻辑访问控制、传输加密、网络监控、记录活动日志等安全控制"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§25",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-045",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定每种类型操作系统的基本安全要求，确保所有系统满足要求",
+            "②明确定义不同用户组的访问权限",
+            "③制定最高权限系统账户的审批、验证和监控流程，确保操作日志被记录和监察",
+            "④要求技术人员定期检查可用的安全补丁并报告补丁管理状态",
+            "⑤在系统日志中记录不成功的登录、重要系统文件的访问等重要事项，手动或自动监控异常事件"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-047",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定每种类型操作系统的基本安全要求，确保所有系统满足要求",
+            "②明确定义不同用户组的访问权限",
+            "③制定最高权限系统账户的审批、验证和监控流程，确保操作日志被记录和监察",
+            "④要求技术人员定期检查可用的安全补丁并报告补丁管理状态",
+            "⑤在系统日志中记录不成功的登录、重要系统文件的访问等重要事项，手动或自动监控异常事件"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定每种类型操作系统的基本安全要求，确保所有系统满足要求",
+          "②明确定义不同用户组的访问权限",
+          "③制定最高权限系统账户的审批、验证和监控流程，确保操作日志被记录和监察",
+          "④要求技术人员定期检查可用的安全补丁并报告补丁管理状态",
+          "⑤在系统日志中记录不成功的登录、重要系统文件的访问等重要事项，手动或自动监控异常事件"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§26",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.29,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②根据信息系统重要性和敏感程度，采取有效的身份验证方法",
+            "⑤采取安全的方式处理保密信息的输入和输出，防止信息泄露或被盗取、篡改"
+          ],
+          "uncovered_rules": [
+            "①明确定义终端用户和信息科技技术人员在信息系统安全中的角色和职责",
+            "③加强职责划分，对关键或敏感岗位进行双重控制",
+            "④在关键接合点进行输入验证或输出核对",
+            "⑥以书面或电子格式保存审计痕迹",
+            "⑦用户管理员监控和审查未成功的登录和用户账户的修改"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.29,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①明确定义终端用户和信息科技技术人员在信息系统安全中的角色和职责",
+          "③加强职责划分，对关键或敏感岗位进行双重控制",
+          "④在关键接合点进行输入验证或输出核对",
+          "⑥以书面或电子格式保存审计痕迹",
+          "⑦用户管理员监控和审查未成功的登录和用户账户的修改"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§27",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-010",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.17,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "③系统日志保存期限按系统风险等级确定，但不能少于一年"
+          ],
+          "uncovered_rules": [
+            "①制定相关策略和流程，管理所有生产系统的活动日志",
+            "②交易日志按照国家会计准则要求予以保存",
+            "④保证交易日志和系统日志包含足够内容，以完成有效的内部控制、解决系统故障和满足审计需要",
+            "⑤采取适当措施保证所有日志同步计时，并确保其完整性",
+            "⑥例外情况发生后应及时复查系统日志"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-030",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定相关策略和流程，管理所有生产系统的活动日志",
+            "②交易日志按照国家会计准则要求予以保存",
+            "③系统日志保存期限按系统风险等级确定，但不能少于一年",
+            "④保证交易日志和系统日志包含足够内容，以完成有效的内部控制、解决系统故障和满足审计需要",
+            "⑤采取适当措施保证所有日志同步计时，并确保其完整性",
+            "⑥例外情况发生后应及时复查系统日志"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-011",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.17,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "④保证交易日志和系统日志包含足够内容，以完成有效的内部控制、解决系统故障和满足审计需要"
+          ],
+          "uncovered_rules": [
+            "①制定相关策略和流程，管理所有生产系统的活动日志",
+            "②交易日志按照国家会计准则要求予以保存",
+            "③系统日志保存期限按系统风险等级确定，但不能少于一年",
+            "⑤采取适当措施保证所有日志同步计时，并确保其完整性",
+            "⑥例外情况发生后应及时复查系统日志"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.33,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定相关策略和流程，管理所有生产系统的活动日志",
+          "②交易日志按照国家会计准则要求予以保存",
+          "⑤采取适当措施保证所有日志同步计时，并确保其完整性",
+          "⑥例外情况发生后应及时复查系统日志"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§28",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-021",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①采取加密技术，防范涉密信息在传输、处理、存储过程中泄露或被篡改",
+            "②建立密码设备管理制度，使用符合国家要求的加密技术和加密设备",
+            "③管理和使用密码设备的员工经过专业培训和严格审查",
+            "④制定并落实有效的密钥和证书生命周期管理流程"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①采取加密技术，防范涉密信息在传输、处理、存储过程中泄露或被篡改",
+          "②建立密码设备管理制度，使用符合国家要求的加密技术和加密设备",
+          "③管理和使用密码设备的员工经过专业培训和严格审查",
+          "④制定并落实有效的密钥和证书生命周期管理流程"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§29",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①配备切实有效的系统，确保所有终端用户设备（含PC、便携计算机、柜员终端、ATM、POS等）的安全",
+          "②定期对所有设备进行安全检查"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§30",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①制定相关制度和流程，严格管理客户信息的采集、处理、存贮、传输、分发、备份、恢复、清理和销毁"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§31",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-016",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①对所有员工进行必要的培训，使其充分掌握信息科技风险管理制度和流程",
+            "②使员工了解违反规定的后果",
+            "③对违反安全规定的行为采取零容忍政策"
+          ]
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①对所有员工进行必要的培训，使其充分掌握信息科技风险管理制度和流程"
+          ],
+          "uncovered_rules": [
+            "②使员工了解违反规定的后果",
+            "③对违反安全规定的行为采取零容忍政策"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.33,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②使员工了解违反规定的后果",
+          "③对违反安全规定的行为采取零容忍政策"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§32",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①具备对信息系统进行需求分析、规划、采购、开发、测试、部署、维护、升级和报废的能力",
+          "②制定制度和流程，管理信息科技项目的优先排序、立项、审批和控制",
+          "③项目实施部门定期向信息科技管理委员会提交重大项目进度报告",
+          "④在信息系统投产后一定时期内，组织对系统的后评价，并及时对系统功能进行调整和优化"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§33",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①认识信息科技项目相关风险（含操作风险、财务损失风险和机会成本）",
+          "②采取适当的项目管理方法，控制信息科技项目相关风险"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§34",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①采取适当的系统开发方法，控制信息系统的生命周期",
+            "②所采用的系统开发方法应符合信息科技项目的规模、性质和复杂度"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-010",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①采取适当的系统开发方法，控制信息系统的生命周期",
+            "②所采用的系统开发方法应符合信息科技项目的规模、性质和复杂度"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§35",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-009",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定控制信息系统变更的制度和流程，确保系统可靠性、完整性和可维护性",
+            "②生产系统与开发系统、测试系统有效隔离，管理职能相分离",
+            "③除管理层批准的紧急修复外，禁止开发和维护人员进入生产系统，所有紧急修复应立即记录和审核",
+            "④将变更应用到生产系统时，应得到信息科技部门和业务部门联合批准，并对变更进行记录和定期复查"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-013",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.75,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①制定控制信息系统变更的制度和流程，确保系统可靠性、完整性和可维护性",
+            "③除管理层批准的紧急修复外，禁止开发和维护人员进入生产系统，所有紧急修复应立即记录和审核",
+            "④将变更应用到生产系统时，应得到信息科技部门和业务部门联合批准，并对变更进行记录和定期复查"
+          ],
+          "uncovered_rules": [
+            "②生产系统与开发系统、测试系统有效隔离，管理职能相分离"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.75,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "②生产系统与开发系统、测试系统有效隔离，管理职能相分离"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§36",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-007",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①制定并落实相关制度、标准和流程，确保信息系统开发、测试、维护过程中数据的完整性、保密性和可用性"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-034",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①制定并落实相关制度、标准和流程，确保信息系统开发、测试、维护过程中数据的完整性、保密性和可用性"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§37",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立并完善有效的问题管理流程，全面追踪、分析和解决信息系统问题",
+          "②对问题进行记录、分类和索引",
+          "③对完成紧急恢复至关重要的任务和指令集，应有清晰的描述和说明并通知相关人员"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§38",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定相关制度和流程，控制系统升级过程",
+          "②当设备或软件必须升级时，应及时进行系统升级，并将该类升级活动纳入信息科技项目管理，包括用户验收测试"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§39",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-021",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在选择数据中心地理位置时，充分考虑环境威胁（如自然灾害多发区、危险设施、繁忙公路等）",
+            "②采取物理控制措施，监控对信息处理设备运行构成威胁的环境状况",
+            "③防止因意外断电或供电干扰影响数据中心的正常运行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-045",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在选择数据中心地理位置时，充分考虑环境威胁（如自然灾害多发区、危险设施、繁忙公路等）",
+            "②采取物理控制措施，监控对信息处理设备运行构成威胁的环境状况",
+            "③防止因意外断电或供电干扰影响数据中心的正常运行"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-047",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在选择数据中心地理位置时，充分考虑环境威胁（如自然灾害多发区、危险设施、繁忙公路等）",
+            "②采取物理控制措施，监控对信息处理设备运行构成威胁的环境状况",
+            "③防止因意外断电或供电干扰影响数据中心的正常运行"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①在选择数据中心地理位置时，充分考虑环境威胁（如自然灾害多发区、危险设施、繁忙公路等）",
+          "②采取物理控制措施，监控对信息处理设备运行构成威胁的环境状况",
+          "③防止因意外断电或供电干扰影响数据中心的正常运行"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§40",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①严格控制第三方人员进入安全区域，确需进入应得到适当批准且活动受到监控",
+          "②针对长期或临时聘用的技术人员和承包商（尤其是从事敏感性技术工作的人员），制定严格的审查程序（含身份验证和背景调查）"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§41",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-011",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①将信息科技运行与系统开发和维护分离，确保信息科技部门内部的岗位制约",
+            "②对数据中心的岗位和职责做出明确规定"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①将信息科技运行与系统开发和维护分离，确保信息科技部门内部的岗位制约",
+          "②对数据中心的岗位和职责做出明确规定"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§42",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①按照有关法律法规要求保存交易记录",
+          "②采取必要的程序和技术，确保存档数据的完整性",
+          "③满足安全保存和可恢复要求"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§43",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-017",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①制定详尽的信息科技运行操作说明（含计算机操作人员任务、工作日程、执行步骤等）",
+            "②在信息科技运行手册中说明生产与开发环境中数据、软件的现场及非现场备份流程和要求（备份频率、范围和保留周期）"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①制定详尽的信息科技运行操作说明（含计算机操作人员任务、工作日程、执行步骤等）",
+          "②在信息科技运行手册中说明生产与开发环境中数据、软件的现场及非现场备份流程和要求（备份频率、范围和保留周期）"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§44",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①建立事故管理及处置机制，及时响应信息系统运行事故",
+          "②逐级向相关信息科技管理人员报告事故，并进行记录、分析和跟踪，直到完成彻底处置和根本原因分析",
+          "③建立服务台，为用户提供技术问题的在线支持"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§45",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立服务水平管理相关的制度和流程",
+          "②对信息科技运行服务水平进行考核"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§46",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-015",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立连续监控信息系统性能的相关程序",
+            "②及时、完整地报告例外情况",
+            "③该程序应提供预警功能，在例外情况对系统性能造成影响前进行识别和修正"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立连续监控信息系统性能的相关程序",
+          "②及时、完整地报告例外情况",
+          "③该程序应提供预警功能，在例外情况对系统性能造成影响前进行识别和修正"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§47",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①制定容量规划，以适应由于外部环境变化产生的业务发展和交易量增长",
+          "②容量规划应涵盖生产系统、备份系统及相关设备"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§48",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①及时进行维护和适当的系统升级，以确保与技术相关服务的连续可用性",
+          "②完整保存记录（含疑似和实际的故障、预防性和补救性维护记录），以确保有效维护设备和设施"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§49",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-009",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "④紧急变更成功后，应通过正常验收测试和变更管理流程，采用恰当的修正以取代紧急变更"
+          ],
+          "uncovered_rules": [
+            "①制定有效的变更管理流程，以确保生产环境的完整性和可靠性",
+            "②包括紧急变更在内的所有变更都应记入日志，由信息科技部门和业务部门共同审核签字",
+            "③变更前应事先进行备份，以便必要时恢复原来的系统版本和数据文件"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-013",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①制定有效的变更管理流程，以确保生产环境的完整性和可靠性",
+            "②包括紧急变更在内的所有变更都应记入日志，由信息科技部门和业务部门共同审核签字",
+            "③变更前应事先进行备份，以便必要时恢复原来的系统版本和数据文件",
+            "④紧急变更成功后，应通过正常验收测试和变更管理流程，采用恰当的修正以取代紧急变更"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§50",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①根据自身业务的性质、规模和复杂程度制定适当的业务连续性规划",
+          "②确保在出现无法预见的中断时，系统仍能持续运行并提供服务",
+          "③定期对规划进行更新和演练，以保证其有效性"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§51",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①评估因意外事件导致业务运行中断的可能性及其影响",
+          "②评估内外部资源故障或缺失、信息丢失或受损、外部事件（战争、地震等）可能导致的破坏"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§52",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①采取系统恢复和双机热备处理等措施降低业务中断的可能性",
+          "②通过应急安排和保险等方式降低业务中断的影响"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§53",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立维持运营连续性策略的文档，制定规范的业务连续性计划",
+          "②计划应明确资源需求及获取方式、运行恢复优先顺序、与内外部各方的沟通安排",
+          "③建立更新实施业务连续性计划的流程及相关联系信息",
+          "④明确验证受中断影响的信息完整性的步骤",
+          "⑤当业务或风险状况发生变化时，对计划进行审核并升级"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§54",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①对业务连续性计划进行确认",
+          "②对年度应急演练结果进行确认"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§55",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不得将信息科技管理责任外包",
+          "②应合理谨慎监督外包职能的履行"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§56",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①实施重要外包应格外谨慎",
+          "②在准备实施重要外包时应以书面材料正式报告银监会或其派出机构"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§57",
+      "matched_policies": [
+        {
+          "internal_policy_id": "软件供应链安全技术规范§SSC-009",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.4,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "③充分审查、评估外包服务商的财务稳定性和专业经验，进行风险评估",
+            "⑤关注集中风险（如多家商业银行共用同一外包服务商带来的潜在风险）"
+          ],
+          "uncovered_rules": [
+            "①分析外包是否适合组织结构、业务战略和总体风险控制",
+            "②考虑外包协议是否允许对操作风险进行监测和控制",
+            "④考虑外包协议变更前后实施的平稳过渡（包括终止合同的情况）"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.4,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①分析外包是否适合组织结构、业务战略和总体风险控制",
+          "②考虑外包协议是否允许对操作风险进行监测和控制",
+          "④考虑外包协议变更前后实施的平稳过渡（包括终止合同的情况）"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§58",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①明确对外包服务商的报告要求和谈判必要条件",
+          "②确保监管机构和内外部审计能执行足够的监督",
+          "③通过界定信息所有权、签署保密协议和采取技术防护措施保护客户信息和其他信息",
+          "④外包服务商应遵守商业银行有关信息科技风险制度和流程",
+          "⑤明确外包服务商提供的业务连续性保障水平",
+          "⑥明确变更外包协议的流程及选择变更或终止的条件"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§59",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①提出定性和定量的绩效指标，评估外包服务商提供服务的充分性",
+          "②通过服务水平报告、定期自我评估、内外部独立审计进行绩效考核",
+          "③针对绩效不达标的情况调整流程，采取整改措施"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§60",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①实现本银行客户资料与外包服务商其他客户资料的有效隔离",
+          "②按照必需知道和最小授权原则对外包服务商相关人员授权",
+          "③要求外包服务商保证其相关人员遵守保密规定",
+          "④涉及本银行客户资料的外包应作为重要外包，并告知相关客户",
+          "⑤严格控制外包服务商再次对外转包，采取足够措施确保相关信息的安全",
+          "⑥确保在中止外包协议时收回或销毁外包服务商保存的所有客户资料"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§61",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立恰当的应急措施，应对外包服务商在服务中可能出现的重大缺失",
+          "②尤其需要考虑外包服务商的重大资源损失、重大财务损失、重要人员变动，以及外包协议的意外终止"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§62",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①所有信息科技外包合同应由信息科技风险管理部门、法律部门和信息科技管理委员会审核通过",
+          "②设立流程定期审阅和修订服务水平协议"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§63",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①根据业务性质、规模和复杂程度，对相关系统及其控制的适当性和有效性进行监测",
+          "②配备足够的资源和具有专业能力的信息科技审计人员",
+          "③独立于本银行的日常活动，具有适当的授权访问本银行的记录"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§64",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定、实施和调整审计计划，检查和评估信息科技系统和内控机制的充分性和有效性",
+          "②提出整改意见，检查整改意见是否得到落实",
+          "③执行信息科技专项审计（含安全事故调查分析评估）",
+          "④根据业务性质、规模等决定信息科技内部审计范围和频率，但至少应每三年进行一次全面审计"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§66",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①要求信息科技风险管理部门和内部审计部门参与",
+          "②保证系统开发符合本银行信息科技风险管理标准"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§67",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-012",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在符合法律、法规和监管要求的情况下，委托具备相应资质的外部审计机构进行信息科技外部审计"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①在符合法律、法规和监管要求的情况下，委托具备相应资质的外部审计机构进行信息科技外部审计"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§68",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①确保外部审计机构能够对本银行的硬件、软件、文档和数据进行检查，以发现信息科技存在的风险"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§69",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①实施外部审计前应与外部审计机构进行充分沟通，详细确定审计范围",
+          "②不应故意隐瞒事实或阻挠审计检查"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§70",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①配合银监会指定的外部审计机构进行信息科技审计或相关检查"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§71",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①根据审计报告提出整改计划",
+          "②在规定的时间内实施整改"
+        ]
+      }
+    },
+    {
+      "regulation_id": "信息科技风险管理指引§72",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①与外部审计机构签订保密协议",
+          "②督促外部审计机构严格遵守法律法规，保守本银行的商业秘密和信息科技风险信息",
+          "③防止外部审计机构擅自对本银行提供的任何文件进行修改、复制或带离现场"
+        ]
+      }
+    }
+  ]
+}

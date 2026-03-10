@@ -1,0 +1,153 @@
+{
+  "_comment": "Component registry: single source of truth for HTML ↔ PPT components.",
+  "_usage": "AI uses 'htmlSnippet' as reference when generating HTML slides. Converter uses 'pptRenderer' to dispatch.",
+
+  "components": [
+    {
+      "id": "col-card",
+      "label": "卡片（带顶条）",
+      "whenToUse": "2-4 个并列概念，每个有标题和说明文字",
+      "htmlTag": "div",
+      "dataBlock": "col-card",
+      "pptRenderer": "renderColCard",
+      "pptEquivalent": "roundRect(fill=navyMid) + topBar(gold,3px) + h3(goldLight,16px,serif) + content(text/list)",
+      "htmlSnippet": "<div class=\"col-card\" data-block=\"col-card\" style=\"position:absolute;left:Xpx;top:Ypx;width:Wpx;height:Hpx;\"><div class=\"card-bar\" data-ppt=\"line\"></div><h3 data-ppt=\"text\">标题</h3><p data-ppt=\"text\">说明文字</p></div>",
+      "notes": "card-bar 颜色可用 style 覆盖以区分不同状态（red/blue/teal/orange）"
+    },
+    {
+      "id": "mini-table",
+      "label": "数据表格",
+      "whenToUse": "多列对比数据；有 thead 时第一行金色高亮",
+      "htmlTag": "table",
+      "dataBlock": "table",
+      "pptRenderer": "renderTable",
+      "pptEquivalent": "pptxgenjs table，th=navyMid/gold，td=navy/white，热力图 h-* class",
+      "htmlSnippet": "<table class=\"mini-table\" data-block=\"table\" style=\"position:absolute;left:Xpx;top:Ypx;width:Wpx;\"><thead><tr><th>列1</th></tr></thead><tbody><tr><td>值</td></tr></tbody></table>",
+      "notes": "支持无 thead（全数据行）；支持 heat-table h-attack/break/deep/base/mature/lead/tbd；status-tag 可用于单元格"
+    },
+    {
+      "id": "bullet-list",
+      "label": "项目符号列表",
+      "whenToUse": "3-6 条要点，每条可有 strong 高亮",
+      "htmlTag": "ul",
+      "dataBlock": "bullet-list",
+      "pptRenderer": "renderBulletList",
+      "pptEquivalent": "textbox with • (gold) + white text, strong → goldLight",
+      "htmlSnippet": "<ul class=\"bullet-list\" data-block=\"bullet-list\" style=\"position:absolute;left:Xpx;top:Ypx;width:Wpx;\"><li><strong>要点：</strong>说明</li></ul>",
+      "notes": "li 内可嵌套 strong（金色加粗）、span（带颜色）"
+    },
+    {
+      "id": "emphasis-box",
+      "label": "强调框",
+      "whenToUse": "关键结论、注意事项，需视觉突出",
+      "htmlTag": "div",
+      "dataBlock": "emphasis-box",
+      "pptRenderer": "renderEmphasisBox",
+      "pptEquivalent": "暗色矩形 + 金色左边框(3px) + 白色文字",
+      "htmlSnippet": "<div class=\"emphasis-box\" data-block=\"emphasis-box\" style=\"position:absolute;left:Xpx;top:Ypx;width:Wpx;height:Hpx;\"><p data-ppt=\"text\">内容</p></div>",
+      "notes": "可包含多个 <p>，每个 p 单独成段"
+    },
+    {
+      "id": "metric-card",
+      "label": "指标卡",
+      "whenToUse": "单个关键数字/指标，配简短说明标签",
+      "htmlTag": "div",
+      "dataBlock": "metric-card",
+      "pptRenderer": "renderMetricCard",
+      "pptEquivalent": "roundRect + large value(gold,serif,26px) + label(muted,11px)",
+      "htmlSnippet": "<div class=\"metric-card\" data-block=\"metric-card\" style=\"position:absolute;left:Xpx;top:Ypx;width:Wpx;height:Hpx;\"><div class=\"metric-value\">99%</div><div class=\"metric-label\">标签</div></div>"
+    },
+    {
+      "id": "phase-block",
+      "label": "阶段块",
+      "whenToUse": "时间轴/阶段展示，通常5个横排",
+      "htmlTag": "div",
+      "dataBlock": "phase-block",
+      "pptRenderer": "renderPhaseBlock",
+      "pptEquivalent": "roundRect + 居中三行：title(gold,serif,16px) / sub(white,11px) / desc(muted,10px)",
+      "htmlSnippet": "<div class=\"phase-block\" data-block=\"phase-block\" style=\"position:absolute;left:Xpx;top:Ypx;width:Wpx;height:Hpx;\"><div class=\"phase-title\">2026</div><div class=\"phase-sub\">夯实基础</div><div class=\"phase-desc\">攻坚评级</div></div>"
+    },
+    {
+      "id": "arrow-right",
+      "label": "右箭头",
+      "whenToUse": "阶段块之间的连接符",
+      "htmlTag": "div",
+      "dataBlock": "arrow-right",
+      "pptRenderer": "renderArrowRight",
+      "pptEquivalent": "文本框 ▶ 居中，gold，18px",
+      "htmlSnippet": "<div class=\"arrow-right\" data-block=\"arrow-right\" style=\"position:absolute;left:Xpx;top:Ypx;width:30px;height:Hpx;\">▶</div>"
+    },
+    {
+      "id": "section-header",
+      "label": "节标题（带下划线）",
+      "whenToUse": "panel 内部的分节标题",
+      "htmlTag": "div",
+      "dataBlock": "section-header",
+      "pptRenderer": "renderSectionHeader",
+      "pptEquivalent": "text(gold,serif,14px,bold) + 1px gold line below",
+      "htmlSnippet": "<div class=\"section-header\" data-block=\"section-header\">标题</div>",
+      "notes": "流式布局，不需要 position:absolute"
+    },
+    {
+      "id": "section-label",
+      "label": "上标签",
+      "whenToUse": "小节的顶部金色全大写标签",
+      "htmlTag": "div",
+      "dataBlock": "section-label",
+      "pptRenderer": "renderSectionLabel",
+      "pptEquivalent": "text(gold,12px,bold,letterSpacing=3)",
+      "htmlSnippet": "<div class=\"section-label\" data-block=\"section-label\">LABEL</div>"
+    },
+    {
+      "id": "toc-item",
+      "label": "目录项",
+      "whenToUse": "目录页的章节条目",
+      "htmlTag": "div",
+      "dataBlock": "toc-item",
+      "pptRenderer": "renderTocItem",
+      "pptEquivalent": "roundRect(navyMid) + num(gold,serif,14px) + text(white,14px)",
+      "htmlSnippet": "<div class=\"toc-item\" data-block=\"toc-item\" style=\"position:absolute;...\"><span class=\"toc-num\">01</span><span class=\"toc-text\">章节名</span></div>"
+    },
+    {
+      "id": "panel",
+      "label": "通用面板容器",
+      "whenToUse": "包含多个子组件的背景容器",
+      "htmlTag": "div",
+      "dataBlock": "panel",
+      "pptRenderer": "renderPanel",
+      "pptEquivalent": "roundRect(navyMid, border) + 递归渲染子组件",
+      "htmlSnippet": "<div data-block=\"panel\" style=\"position:absolute;left:Xpx;top:Ypx;width:Wpx;height:Hpx;background:var(--navy-mid);border-radius:10px;border:1px solid rgba(201,168,76,0.12);padding:20px;\"><!-- 子组件 --></div>",
+      "notes": "子组件使用流式布局（无 position:absolute），converter 用 getBoundingClientRect 获取实际位置"
+    },
+    {
+      "id": "text",
+      "label": "文本框",
+      "whenToUse": "独立的说明文字、标签",
+      "htmlTag": "p or div",
+      "dataBlock": "text",
+      "pptRenderer": "renderText",
+      "pptEquivalent": "文本框，读取 inline font-size 和 color",
+      "htmlSnippet": "<p data-block=\"text\" style=\"position:absolute;left:Xpx;top:Ypx;font-size:12px;color:var(--text-muted);\">说明文字</p>"
+    }
+  ],
+
+  "colorTokens": {
+    "navy":     "#0A1628",
+    "navyMid":  "#132240",
+    "navyLight":"#1A3058",
+    "gold":     "#C9A84C",
+    "goldLight":"#E8CC6A",
+    "white":    "#F0ECE4",
+    "muted":    "#8A9BB5",
+    "red":      "#D94F4F",
+    "blue":     "#3B7DD8",
+    "green":    "#3AAD6B",
+    "teal":     "#2BA8A8",
+    "orange":   "#E08A3C"
+  },
+
+  "fontTokens": {
+    "sans":   "Noto Sans SC",
+    "serif":  "Noto Serif SC"
+  }
+}

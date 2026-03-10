@@ -1,0 +1,1247 @@
+{
+  "law_id": "STD-JRT-0171",
+  "law_name": "个人金融信息保护技术规范JR/T 0171-2020",
+  "perspective": "law",
+  "generated_at": "2026-03-10",
+  "total_records": 28,
+  "records": [
+    {
+      "regulation_id": "JR/T 0171§5",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①遵循权责一致、目的明确、选择同意、最少够用、公开透明、确保安全、主体参与的原则",
+          "②设计并实施覆盖个人金融信息全生命周期的安全保护策略"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.1",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不应委托或授权无金融业相关资质的机构收集C3、C2类别信息",
+          "②确保收集信息来源的可追溯性",
+          "③采取技术措施引导个人金融信息主体查阅隐私政策，并获得明示同意",
+          "④对C3类别信息收集时，应使用加密等技术措施保证数据保密性",
+          "⑤收集银行卡密码等敏感信息时，应采取展示屏蔽等措施防止明文显示",
+          "⑥网络支付业务系统应采用安全控件对支付敏感信息输入进行安全保护，并防止合作机构获取留存",
+          "⑦停止提供金融产品或服务时，应及时停止收集个人金融信息"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.2",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立个人金融信息传输安全策略和规程，采用安全通道、数据加密等技术措施",
+          "②传输前，通信双方应通过有效技术手段进行身份鉴别和认证",
+          "③通过公共网络传输时，C2、C3类别信息应使用加密通道或数据加密方式",
+          "④C3类支付敏感信息的安全传输技术控制措施应符合有关行业技术标准",
+          "⑤接收方应对接收信息进行完整性校验",
+          "⑥建立有效机制对传输安全策略进行审核、监控和优化",
+          "⑦采取有效措施保证数据传输可靠性和网络传输服务可用性"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.3",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①不应留存非本机构的银行卡磁道数据等C3类别信息（确需留存须取得授权）",
+          "②根据信息类别采用技术手段保证存储安全",
+          "③C3类别信息应采用加密措施确保存储保密性",
+          "④受理终端、个人终端及客户端不应存储磁道数据等支付敏感信息和生物识别信息样本",
+          "⑤采取必要的技术和管控措施保证存储转移过程安全性",
+          "⑥去标识化、匿名化数据与可用于恢复识别个人的信息采取逻辑隔离方式存储",
+          "⑦停止运营时，对所存储个人金融信息进行妥善处置或移交"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.4.1",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①依据规定对展示的个人金融信息采取信息屏蔽（或截词）等处理措施",
+          "②处于未登录状态时，不应展示与个人金融信息主体相关的C3类别信息",
+          "③已登录状态：除银行卡有效期外，C3类别信息不应明文展示",
+          "④对银行卡号、手机号码等可识别个人的信息应进行屏蔽展示；如需完整展示，应进行用户身份验证",
+          "⑤后台系统应采取技术措施防范个人金融信息在展示过程中泄露或被未经授权的拷贝",
+          "⑥后台系统不应具备开放式查询能力，应严格限制批量查询",
+          "⑦所有查询操作应进行细粒度授权与行为审计"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.4.2",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①共享和转让前，开展个人金融信息安全影响评估",
+          "②评估接收方信息安全保障能力，并与其签署数据保护责任承诺",
+          "③支付账号及等效信息共享转让时，应使用支付标记化技术进行脱敏处理",
+          "④部署信息防泄露监控工具，监控及报告违规外发行为",
+          "⑤部署流量监控技术措施，对共享、转让信息进行监控和审计",
+          "⑥对信息导出操作进行细粒度访问控制与全过程审计，并采用两种以上鉴别技术",
+          "⑦定期检查或评估信息导出通道及共享工具、服务组件和共享通道的安全性",
+          "⑧准确记录和保存共享和转让情况，确保可追溯",
+          "⑨采取有效技术防护措施，防范信息转移过程中被第三方截获"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.4.3",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①个人金融信息原则上不得公开披露",
+          "②确需公开披露前，应事先开展个人金融信息安全影响评估",
+          "③不应公开披露个人生物识别信息",
+          "④准确记录和保存个人金融信息的公开披露情况（日期、规模、目的、内容、公开范围等）"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.4.4",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①委托行为不应超出已征得个人金融信息主体授权同意的范围",
+          "②C3及C2类别中的用户鉴别辅助信息，不应委托给第三方机构处理",
+          "③委托处理的信息应采用去标识化等方式进行脱敏处理",
+          "④对委托行为进行个人金融信息安全影响评估，确保受委托者具备足够数据安全能力",
+          "⑤对第三方机构通过合同约束其责任义务，并定期进行安全检查和评估",
+          "⑥对外部嵌入或接入的自动化工具开展技术检测，发现超出约定行为及时切断接入"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.4.5",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①采取必要技术手段和管理措施，确保信息清洗和转换过程中对信息进行保护，C2、C3类别信息应采取更严格的保护措施",
+          "②对匿名化或去标识化数据集汇聚后重新识别个人的风险进行识别和评价，并采取相应保护措施",
+          "③建立个人金融信息防泄露控制规范和机制，防止调试信息、日志记录等不受控制的输出",
+          "④对个人金融信息滥用行为进行有效的识别、监控和预警",
+          "⑤具备完整的个人金融信息加工处理操作记录和管理能力"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.4.6",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①汇聚融合的数据不应超出收集时所声明的使用范围；因业务需要确需超范围使用的，应再次征得明示同意",
+          "②根据汇聚融合后的信息类别及使用目的，开展个人金融信息安全影响评估，并采取有效技术保护措施"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.4.7",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-007",
+          "pair_result": "全覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①对开发测试环境与生产环境进行有效隔离",
+            "②开发环境、测试环境不应使用真实的个人金融信息，应使用虚构的或经过去标识化脱敏处理的数据"
+          ],
+          "uncovered_rules": []
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-034",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 1.0,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①对开发测试环境与生产环境进行有效隔离",
+            "②开发环境、测试环境不应使用真实的个人金融信息，应使用虚构的或经过去标识化脱敏处理的数据"
+          ],
+          "uncovered_rules": []
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.5",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①采取技术手段，在相关系统中去除个人金融信息，使其不可被检索和访问",
+          "②个人金融信息主体要求删除时，应依据国家法律法规、行业主管部门有关规定及约定予以响应"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.1.6",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立个人金融信息销毁策略和管理制度，明确销毁对象、流程、方式和要求",
+          "②对销毁过程进行监督与控制，对登记、审批、介质交接、销毁执行等过程进行监督",
+          "③销毁过程应保留有关记录",
+          "④不再使用的存储介质应采用不可恢复的方式（如消磁、焚烧、粉碎等）进行销毁",
+          "⑤继续使用的介质应通过多次覆写等方式安全擦除，确保个人金融信息不可再被恢复",
+          "⑥云环境下数据清除应依据JR/T 0167-2018的9.6执行"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.2.1",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-021",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②存储个人金融信息的数据库应处于金融业机构可控网络内，并进行有效的访问控制"
+          ],
+          "uncovered_rules": [
+            "①承载与处理个人金融信息的信息系统应符合国家网络安全相关规定与GB/T 22239-2019、JR/T 0071的要求"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.5,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①承载与处理个人金融信息的信息系统应符合国家网络安全相关规定与GB/T 22239-2019、JR/T 0071的要求"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.2.2",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①具备对已知漏洞（页面篡改、SQL注入、XSS、重放攻击等）的防范能力"
+          ],
+          "uncovered_rules": [
+            "②处理个人金融信息相关的Web应用系统与组件上线前应进行安全评估",
+            "③具备对处理个人金融信息的系统组件进行实时监测的能力，有效识别和阻止非法访问"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.33,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "②处理个人金融信息相关的Web应用系统与组件上线前应进行安全评估",
+          "③具备对处理个人金融信息的系统组件进行实时监测的能力，有效识别和阻止非法访问"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.2.3",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-020",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①客户端应用软件及SDK应符合JR/T 0092-2019、JR/T 0068-2020有关安全技术要求",
+            "②上线前应进行安全评估"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①客户端应用软件及SDK应符合JR/T 0092-2019、JR/T 0068-2020有关安全技术要求",
+          "②上线前应进行安全评估"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§6.2.4",
+      "matched_policies": [
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-045",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①使用的密码技术及产品应符合国家密码管理部门与行业主管部门要求"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-047",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①使用的密码技术及产品应符合国家密码管理部门与行业主管部门要求"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①使用的密码技术及产品应符合国家密码管理部门与行业主管部门要求"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.1.1",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①遵循合法、正当、必要的原则",
+          "②向个人金融信息主体明示收集与使用信息的目的、方式、范围和规则，获得明示同意",
+          "③不应欺诈、诱骗，或以默认授权、功能捆绑等方式误导强迫提供信息",
+          "④不应隐瞒金融产品或服务具有收集个人金融信息的功能",
+          "⑤不应通过非法渠道间接获取个人金融信息",
+          "⑥不应收集法律法规明令禁止收集的个人金融信息",
+          "⑦收集个人金融信息应遵循最小化要求，与实现和优化金融产品或服务有直接关联",
+          "⑧间接获取个人金融信息时，应要求提供方说明来源，确认合法性，了解已获得的授权范围"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.1.2",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①存储时限应满足国家法律法规与行业主管部门有关规定要求",
+          "②符合个人金融信息主体授权使用目的所必需的最短时间要求",
+          "③超过期限后，应对收集的个人金融信息进行删除或匿名化处理"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.1.3",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①原则上不应共享、转让收集的个人金融信息；确需共享或转让：应告知目的和接收方类型，事先征得明示同意",
+          "②C3类别信息及C2类别中的用户鉴别辅助信息不应共享、转让",
+          "③原则上不应公开披露收集的个人金融信息；确需公开披露：应告知目的、类别，事先征得同意",
+          "④C3类别信息及C2类别中的用户鉴别辅助信息不应公开披露",
+          "⑤委托第三方处理时，对受委托者应提出严格要求，包括未经授权不得再次委托、协助响应主体请求、发生安全事件及时告知等",
+          "⑥境内收集和产生的个人金融信息应在境内存储、处理和分析",
+          "⑦确需向境外机构提供时：应符合国家法规，获得明示同意，开展出境安全评估，并通过协议明确境外机构义务"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.2.1",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定个人金融信息保护管理规定，提出本机构工作方针、目标和原则",
+          "②开展个人金融信息分类分级管理，针对不同类别实施相应的安全策略",
+          "③建立日常管理及操作流程，覆盖收集、传输、存储、使用、删除、销毁全生命周期",
+          "④建立信息系统分级授权管理机制",
+          "⑤建立个人金融信息脱敏管理规范和制度",
+          "⑥建立个人金融信息安全影响评估制度，定期（至少每年一次）开展评估",
+          "⑦建立外包服务机构与外部合作机构管理制度，不应将存储个人金融信息的数据库交由外部合作机构运维",
+          "⑧建立个人金融信息安全检查及监督机制",
+          "⑨将个人金融信息泄露等事件处理纳入应急处置工作机制，制定专门流程和预案",
+          "⑩建立个人金融信息投诉与申诉处理程序",
+          "⑪明确个人金融信息共享、存储、使用和销毁的期限"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.2.2",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-002",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①建立个人金融信息保护组织架构，明确各层级内设部门与相关岗位职责",
+            "②明确个人金融信息保护责任人和保护责任机构",
+            "③保护责任机构负责：制定管理制度、制定和更新隐私政策、监督内外部安全管理、开展内部审计、组织安全影响评估、金融产品上线前技术检测、受理投诉",
+            "④明确知悉个人金融信息的岗位，并对相关岗位明确安全管理责任与保密责任"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①建立个人金融信息保护组织架构，明确各层级内设部门与相关岗位职责",
+          "②明确个人金融信息保护责任人和保护责任机构",
+          "③保护责任机构负责：制定管理制度、制定和更新隐私政策、监督内外部安全管理、开展内部审计、组织安全影响评估、金融产品上线前技术检测、受理投诉",
+          "④明确知悉个人金融信息的岗位，并对相关岗位明确安全管理责任与保密责任"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.2.3",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①录用员工前，进行必要的背景调查，并签署保密协议或设置保密条款",
+          "②定期开展内外部个人金融信息保护培训与意识教育活动，并保留相关记录",
+          "③人员调离岗位时，立即调整并完成相关访问权限配置",
+          "④终止劳动合同时，立即终止并收回对个人金融信息的访问权限，并明确保密义务",
+          "⑤系统开发人员、测试人员与运维人员之间不应相互兼岗",
+          "⑥定期（至少每年一次）或隐私政策重大变化时，对相关人员开展专业化培训和考核"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.3",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-006",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.56,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
+            "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
+            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存",
+            "⑥对生产、开发测试、办公及非生产网络进行访问控制",
+            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制"
+          ],
+          "uncovered_rules": [
+            "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
+            "④权限管理应设置权限指派、回收、过期处理等安全功能",
+            "⑦对访问与增删改查操作进行记录，保证操作日志完整性、可用性及可追溯性",
+            "⑨物理设备或介质移入或移出受控区域应获得审批授权"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-007",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
+            "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
+            "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
+            "④权限管理应设置权限指派、回收、过期处理等安全功能",
+            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存",
+            "⑥对生产、开发测试、办公及非生产网络进行访问控制",
+            "⑦对访问与增删改查操作进行记录，保证操作日志完整性、可用性及可追溯性",
+            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制",
+            "⑨物理设备或介质移入或移出受控区域应获得审批授权"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-008",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.22,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
+            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存"
+          ],
+          "uncovered_rules": [
+            "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
+            "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
+            "④权限管理应设置权限指派、回收、过期处理等安全功能",
+            "⑥对生产、开发测试、办公及非生产网络进行访问控制",
+            "⑦对访问与增删改查操作进行记录，保证操作日志完整性、可用性及可追溯性",
+            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制",
+            "⑨物理设备或介质移入或移出受控区域应获得审批授权"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-009",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.11,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存"
+          ],
+          "uncovered_rules": [
+            "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
+            "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
+            "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
+            "④权限管理应设置权限指派、回收、过期处理等安全功能",
+            "⑥对生产、开发测试、办公及非生产网络进行访问控制",
+            "⑦对访问与增删改查操作进行记录，保证操作日志完整性、可用性及可追溯性",
+            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制",
+            "⑨物理设备或介质移入或移出受控区域应获得审批授权"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-010",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
+            "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
+            "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
+            "④权限管理应设置权限指派、回收、过期处理等安全功能",
+            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存",
+            "⑥对生产、开发测试、办公及非生产网络进行访问控制",
+            "⑦对访问与增删改查操作进行记录，保证操作日志完整性、可用性及可追溯性",
+            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制",
+            "⑨物理设备或介质移入或移出受控区域应获得审批授权"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.56,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
+            "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
+            "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
+            "⑦对访问与增删改查操作进行记录，保证操作日志完整性、可用性及可追溯性",
+            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制"
+          ],
+          "uncovered_rules": [
+            "④权限管理应设置权限指派、回收、过期处理等安全功能",
+            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存",
+            "⑥对生产、开发测试、办公及非生产网络进行访问控制",
+            "⑨物理设备或介质移入或移出受控区域应获得审批授权"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-025",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.33,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
+            "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
+            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制"
+          ],
+          "uncovered_rules": [
+            "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
+            "④权限管理应设置权限指派、回收、过期处理等安全功能",
+            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存",
+            "⑥对生产、开发测试、办公及非生产网络进行访问控制",
+            "⑦对访问与增删改查操作进行记录，保证操作日志完整性、可用性及可追溯性",
+            "⑨物理设备或介质移入或移出受控区域应获得审批授权"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 0.78,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "④权限管理应设置权限指派、回收、过期处理等安全功能",
+          "⑨物理设备或介质移入或移出受控区域应获得审批授权"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.4.1",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-016",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ],
+          "uncovered_rules": [
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-009",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-012",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-013",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-014",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-015",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-025",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-038",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
+          ],
+          "uncovered_rules": [
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-040",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-064",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-013",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-015",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-016",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ],
+          "uncovered_rules": [
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
+          ]
+        },
+        {
+          "internal_policy_id": "漏洞扫描技术规范§VUS-028",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源"
+          ],
+          "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "部分覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": false,
+        "uncovered_rules": []
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.4.2",
+      "matched_policies": [
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-012",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①在委托处理、共享与转让、公开披露等过程中执行个人金融信息安全影响评估，并将评估报告归档保存",
+            "②每年至少开展一次对涉及收集、存储、传输、使用个人金融信息的信息系统进行安全检查或安全评估",
+            "③安全评估包括：漏洞扫描和渗透测试、重大变更时重新风险评估、定期安全审计并根据审计结果完善制度",
+            "④对支付信息部分，每年至少开展一次支付信息安全合规评估",
+            "⑤发生泄露事件造成一定经济损失或社会影响时，应及时委托外部机构重新进行安全评估，并将结果报送行业主管部门"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": [
+          "①在委托处理、共享与转让、公开披露等过程中执行个人金融信息安全影响评估，并将评估报告归档保存",
+          "②每年至少开展一次对涉及收集、存储、传输、使用个人金融信息的信息系统进行安全检查或安全评估",
+          "③安全评估包括：漏洞扫描和渗透测试、重大变更时重新风险评估、定期安全审计并根据审计结果完善制度",
+          "④对支付信息部分，每年至少开展一次支付信息安全合规评估",
+          "⑤发生泄露事件造成一定经济损失或社会影响时，应及时委托外部机构重新进行安全评估，并将结果报送行业主管部门"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.5-A",
+      "matched_policies": [],
+      "coverage_summary": {
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
+        "deadline_adequate": false,
+        "uncovered_rules": [
+          "①制定个人金融信息安全事件应急预案，明确处置流程和岗位职责",
+          "②定期组织内部相关人员进行应急演练培训",
+          "③建立投诉与申诉管理机制，并在规定时间内对投诉、申诉进行响应",
+          "④根据法律法规变化及事件处置情况，及时评估并更新应急预案"
+        ]
+      }
+    },
+    {
+      "regulation_id": "JR/T 0171§7.5-B",
+      "matched_policies": [
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-003",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-004",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": false,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-006",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ],
+          "uncovered_rules": [
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-010",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ],
+          "uncovered_rules": [
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-026",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-030",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ],
+          "uncovered_rules": [
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-041",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）"
+          ],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-050",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.25,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告"
+          ],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-051",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": true
+          },
+          "covered_rules": [
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-056",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-060",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.0,
+            "deadline_match": true
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ]
+        },
+        {
+          "internal_policy_id": "安全运营技术规范§SOP-063",
+          "pair_result": "部分覆盖",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": true,
+            "rule_coverage": 0.5,
+            "deadline_match": false
+          },
+          "covered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ],
+          "uncovered_rules": [
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告"
+          ]
+        },
+        {
+          "internal_policy_id": "零信任安全技术规范§ZXT-018",
+          "pair_result": "合规空白",
+          "dimensions": {
+            "subject_scope": true,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
+          },
+          "covered_rules": [],
+          "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
+            "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
+          ]
+        }
+      ],
+      "coverage_summary": {
+        "result": "全覆盖",
+        "rule_coverage": 1.0,
+        "modality_adequate": true,
+        "deadline_adequate": true,
+        "uncovered_rules": []
+      }
+    }
+  ]
+}
