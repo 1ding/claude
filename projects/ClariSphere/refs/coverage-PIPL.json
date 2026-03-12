@@ -3,7 +3,7 @@
   "law_name": "个人信息保护法",
   "perspective": "law",
   "generated_at": "2026-03-10",
-  "total_records": 60,
+  "total_records": 51,
   "records": [
     {
       "regulation_id": "个人信息保护法§5-A",
@@ -93,28 +93,28 @@
       "matched_policies": [
         {
           "internal_policy_id": "零信任安全技术规范§ZXT-003",
-          "pair_result": "部分覆盖",
+          "pair_result": "合规空白",
           "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 0.5,
-            "deadline_match": true
+            "subject_scope": false,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
           },
-          "covered_rules": [
-            "②采取必要措施保障所处理的个人信息的安全"
-          ],
+          "covered_rules": [],
           "uncovered_rules": [
+            "②采取必要措施保障所处理的个人信息的安全",
             "①对其个人信息处理活动负责"
           ]
         }
       ],
       "coverage_summary": {
-        "result": "部分覆盖",
-        "rule_coverage": 0.5,
-        "modality_adequate": true,
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
         "deadline_adequate": true,
         "uncovered_rules": [
-          "①对其个人信息处理活动负责"
+          "①对其个人信息处理活动负责",
+          "②采取必要措施保障所处理的个人信息的安全"
         ]
       }
     },
@@ -433,47 +433,6 @@
         "uncovered_rules": [
           "①取得未成年人的父母或其他监护人的同意",
           "②制定专门的个人信息处理规则"
-        ]
-      }
-    },
-    {
-      "regulation_id": "个人信息保护法§34",
-      "matched_policies": [],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": false,
-        "deadline_adequate": true,
-        "uncovered_rules": [
-          "①依照法律、行政法规规定的权限、程序进行",
-          "②不得超出履行法定职责所必需的范围和限度"
-        ]
-      }
-    },
-    {
-      "regulation_id": "个人信息保护法§35",
-      "matched_policies": [],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": false,
-        "deadline_adequate": true,
-        "uncovered_rules": [
-          "①依照本法规定履行告知义务"
-        ]
-      }
-    },
-    {
-      "regulation_id": "个人信息保护法§36",
-      "matched_policies": [],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": false,
-        "deadline_adequate": true,
-        "uncovered_rules": [
-          "①处理的个人信息应当在中华人民共和国境内存储",
-          "②确需向境外提供的，应当进行安全评估"
         ]
       }
     },
@@ -1012,23 +971,6 @@
       }
     },
     {
-      "regulation_id": "个人信息保护法§61",
-      "matched_policies": [],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": false,
-        "deadline_adequate": true,
-        "uncovered_rules": [
-          "①开展个人信息保护宣传教育",
-          "②接受关于个人信息保护的投诉举报",
-          "③组织对个人信息保护情况进行调查和评估",
-          "④调查处理违法个人信息处理活动",
-          "⑤法律法规规定的其他职责"
-        ]
-      }
-    },
-    {
       "regulation_id": "个人信息保护法§63",
       "matched_policies": [],
       "coverage_summary": {
@@ -1038,80 +980,6 @@
         "deadline_adequate": true,
         "uncovered_rules": [
           "①予以协助、配合，不得拒绝、阻挠"
-        ]
-      }
-    },
-    {
-      "regulation_id": "个人信息保护法§65",
-      "matched_policies": [
-        {
-          "internal_policy_id": "软件供应链安全技术规范§SSC-008",
-          "pair_result": "合规空白",
-          "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 0.0,
-            "deadline_match": false
-          },
-          "covered_rules": [],
-          "uncovered_rules": [
-            "①依法及时处理",
-            "②将处理结果告知投诉举报人",
-            "③公布接受投诉举报的联系方式"
-          ]
-        }
-      ],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": true,
-        "deadline_adequate": false,
-        "uncovered_rules": [
-          "①依法及时处理",
-          "②将处理结果告知投诉举报人",
-          "③公布接受投诉举报的联系方式"
-        ]
-      }
-    },
-    {
-      "regulation_id": "个人信息保护法§66",
-      "matched_policies": [],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": false,
-        "deadline_adequate": true,
-        "uncovered_rules": [
-          "①责令改正，给予警告，没收违法所得，对违法应用程序责令暂停或终止服务",
-          "②拒不改正的，并处一百万元以下罚款",
-          "③情节严重的，处五千万元以下或上一年度营业额5%以下罚款，并可责令暂停相关业务或停业整顿"
-        ]
-      }
-    },
-    {
-      "regulation_id": "个人信息保护法§67",
-      "matched_policies": [],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": false,
-        "deadline_adequate": true,
-        "uncovered_rules": [
-          "①依照有关法律、行政法规的规定记入信用档案，并予以公示"
-        ]
-      }
-    },
-    {
-      "regulation_id": "个人信息保护法§68",
-      "matched_policies": [],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": false,
-        "deadline_adequate": true,
-        "uncovered_rules": [
-          "①由其上级机关或履行个人信息保护职责的部门责令改正",
-          "②对直接负责的主管人员和其他直接责任人员依法给予处分"
         ]
       }
     },
@@ -1126,19 +994,6 @@
         "uncovered_rules": [
           "①不能证明自己没有过错的，应当承担损害赔偿等侵权责任",
           "②赔偿按照个人受到的损失或个人信息处理者获得的利益确定"
-        ]
-      }
-    },
-    {
-      "regulation_id": "个人信息保护法§70",
-      "matched_policies": [],
-      "coverage_summary": {
-        "result": "合规空白",
-        "rule_coverage": 0.0,
-        "modality_adequate": false,
-        "deadline_adequate": true,
-        "uncovered_rules": [
-          "①人民检察院、法律规定的消费者组织和国家网信部门确定的组织可以依法向人民法院提起诉讼"
         ]
       }
     },

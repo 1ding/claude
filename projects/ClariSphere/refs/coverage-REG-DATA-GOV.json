@@ -978,29 +978,30 @@
       "matched_policies": [
         {
           "internal_policy_id": "零信任安全技术规范§ZXT-012",
-          "pair_result": "部分覆盖",
+          "pair_result": "合规空白",
           "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 0.67,
-            "deadline_match": true
+            "subject_scope": false,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
           },
-          "covered_rules": [
-            "②定期组织实施，原则上不低于每年一次",
-            "③对重大问题要按照既定的报告路径提交，并按流程实施整改"
-          ],
+          "covered_rules": [],
           "uncovered_rules": [
+            "②定期组织实施，原则上不低于每年一次",
+            "③对重大问题要按照既定的报告路径提交，并按流程实施整改",
             "①建立数据质量现场检查制度"
           ]
         }
       ],
       "coverage_summary": {
-        "result": "部分覆盖",
-        "rule_coverage": 0.67,
-        "modality_adequate": true,
+        "result": "合规空白",
+        "rule_coverage": 0.0,
+        "modality_adequate": false,
         "deadline_adequate": true,
         "uncovered_rules": [
-          "①建立数据质量现场检查制度"
+          "①建立数据质量现场检查制度",
+          "②定期组织实施，原则上不低于每年一次",
+          "③对重大问题要按照既定的报告路径提交，并按流程实施整改"
         ]
       }
     },

@@ -14,10 +14,6 @@
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "数据安全法§27",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§53",
         "basis_type": "直接依据"
       },
@@ -44,7 +40,7 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 7,
       "indirect_basis_count": 0
     }
   },
@@ -59,21 +55,33 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
+        "regulation_id": "网络安全法§25",
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "数据安全法§6",
+        "regulation_id": "网络安全法§42",
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "数据治理指引§13",
+        "regulation_id": "数据安全法§29",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "个人信息保护法§57",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§7",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 6,
       "indirect_basis_count": 0
     }
   },
@@ -88,41 +96,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -137,21 +117,33 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
+        "regulation_id": "网络安全法§25",
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "数据安全法§6",
+        "regulation_id": "网络安全法§42",
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "数据治理指引§13",
+        "regulation_id": "数据安全法§29",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "个人信息保护法§57",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§7",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 6,
       "indirect_basis_count": 0
     }
   },
@@ -166,41 +158,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -215,55 +179,10 @@
     ],
     "doc_ref": "POL-SOP-2024-001",
     "scope": "信息科技部",
-    "matched_regulations": [
-      {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据治理指引§30",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
-        "basis_type": "直接依据"
-      }
-    ],
+    "matched_regulations": [],
     "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 11,
+      "result": "无明确依据",
+      "direct_basis_count": 0,
       "indirect_basis_count": 0
     }
   },
@@ -354,53 +273,17 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
         "basis_type": "直接依据"
       },
       {
         "regulation_id": "信息科技风险管理指引§34",
         "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
-        "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 11,
+      "direct_basis_count": 2,
       "indirect_basis_count": 0
     }
   },
@@ -544,22 +427,6 @@
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§34",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "信息科技风险管理指引§31",
         "basis_type": "直接依据"
       },
@@ -570,7 +437,7 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 7,
+      "direct_basis_count": 3,
       "indirect_basis_count": 0
     }
   },
@@ -612,41 +479,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -710,41 +549,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -859,41 +670,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -988,41 +771,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1038,41 +793,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1087,41 +814,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1164,15 +863,11 @@
       {
         "regulation_id": "网络安全法§21",
         "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 2,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1187,44 +882,11 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
-      }
-    ],
-    "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 2,
-      "indirect_basis_count": 0
-    }
-  },
-  {
-    "record_id": "POLMAP-040",
-    "internal_policy_id": "安全运营技术规范§SOP-060",
-    "action": "开展",
-    "object_codes": [
-      "M4.5"
-    ],
-    "doc_ref": "POL-SOP-2024-001",
-    "scope": "信息科技部",
-    "matched_regulations": [
-      {
         "regulation_id": "网络安全法§25",
         "basis_type": "直接依据"
       },
       {
         "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
         "basis_type": "直接依据"
       },
       {
@@ -1246,7 +908,28 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 8,
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-040",
+    "internal_policy_id": "安全运营技术规范§SOP-060",
+    "action": "开展",
+    "object_codes": [
+      "M4.5"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "个人信息保护法§57",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1280,15 +963,11 @@
       {
         "regulation_id": "网络安全法§21",
         "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 2,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1304,49 +983,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 10,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1488,33 +1131,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§9",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "个人信息保护法§9",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 6,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1530,21 +1153,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1560,21 +1175,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1590,21 +1197,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1647,31 +1246,10 @@
     ],
     "doc_ref": "POL-ZXT-2025-001",
     "scope": "信息科技部",
-    "matched_regulations": [
-      {
-        "regulation_id": "信息科技风险管理指引§17",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§22",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§36",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§6.1.4.7",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.3",
-        "basis_type": "直接依据"
-      }
-    ],
+    "matched_regulations": [],
     "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 5,
+      "result": "无明确依据",
+      "direct_basis_count": 0,
       "indirect_basis_count": 0
     }
   },
@@ -1734,29 +1312,17 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "信息科技风险管理指引§17",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§22",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "信息科技风险管理指引§35",
         "basis_type": "直接依据"
       },
       {
         "regulation_id": "信息科技风险管理指引§49",
         "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.3",
-        "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 5,
+      "direct_basis_count": 2,
       "indirect_basis_count": 0
     }
   },
@@ -1826,10 +1392,6 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "信息科技风险管理指引§17",
         "basis_type": "直接依据"
       },
@@ -1848,7 +1410,7 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 5,
+      "direct_basis_count": 4,
       "indirect_basis_count": 0
     }
   },
@@ -1862,31 +1424,10 @@
     ],
     "doc_ref": "POL-ZXT-2025-001",
     "scope": "信息科技部",
-    "matched_regulations": [
-      {
-        "regulation_id": "网络安全法§56",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§44",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§67",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据治理指引§33",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.4.2",
-        "basis_type": "直接依据"
-      }
-    ],
+    "matched_regulations": [],
     "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 5,
+      "result": "无明确依据",
+      "direct_basis_count": 0,
       "indirect_basis_count": 0
     }
   },
@@ -1916,19 +1457,10 @@
     ],
     "doc_ref": "POL-ZXT-2025-001",
     "scope": "信息科技部",
-    "matched_regulations": [
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.4.1",
-        "basis_type": "直接依据"
-      }
-    ],
+    "matched_regulations": [],
     "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 2,
+      "result": "无明确依据",
+      "direct_basis_count": 0,
       "indirect_basis_count": 0
     }
   },
@@ -1960,21 +1492,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -1988,19 +1512,10 @@
     ],
     "doc_ref": "POL-ZXT-2025-001",
     "scope": "信息科技部",
-    "matched_regulations": [
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.4.1",
-        "basis_type": "直接依据"
-      }
-    ],
+    "matched_regulations": [],
     "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 2,
+      "result": "无明确依据",
+      "direct_basis_count": 0,
       "indirect_basis_count": 0
     }
   },
@@ -2031,19 +1546,10 @@
     ],
     "doc_ref": "POL-ZXT-2025-001",
     "scope": "信息科技部",
-    "matched_regulations": [
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.4.1",
-        "basis_type": "直接依据"
-      }
-    ],
+    "matched_regulations": [],
     "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 2,
+      "result": "无明确依据",
+      "direct_basis_count": 0,
       "indirect_basis_count": 0
     }
   },
@@ -2080,35 +1586,11 @@
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "网络安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§32",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "网络安全法§49",
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "网络安全法§51",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§52",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§22",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据安全法§27",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§39",
         "basis_type": "直接依据"
       },
       {
@@ -2150,7 +1632,7 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 18,
+      "direct_basis_count": 12,
       "indirect_basis_count": 0
     }
   },
@@ -2166,31 +1648,7 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§25",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§42",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§55",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§23",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§29",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "个人信息保护法§57",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
         "basis_type": "直接依据"
       },
       {
@@ -2204,15 +1662,11 @@
       {
         "regulation_id": "JR/T 0171§7.3",
         "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.5",
-        "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 11,
+      "direct_basis_count": 4,
       "indirect_basis_count": 0
     }
   },
@@ -2228,21 +1682,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2258,21 +1704,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2288,21 +1726,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2316,23 +1746,10 @@
     ],
     "doc_ref": "POL-ZXT-2025-001",
     "scope": "信息科技部",
-    "matched_regulations": [
-      {
-        "regulation_id": "信息科技风险管理指引§17",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§22",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "JR/T 0171§7.3",
-        "basis_type": "直接依据"
-      }
-    ],
+    "matched_regulations": [],
     "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 3,
+      "result": "无明确依据",
+      "direct_basis_count": 0,
       "indirect_basis_count": 0
     }
   },
@@ -2397,21 +1814,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2427,21 +1836,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2457,21 +1858,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2504,25 +1897,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§22",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 4,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2537,21 +1918,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2564,15 +1937,10 @@
     ],
     "doc_ref": "POL-VUS-2026-001",
     "scope": "信息科技部",
-    "matched_regulations": [
-      {
-        "regulation_id": "数据安全法§22",
-        "basis_type": "直接依据"
-      }
-    ],
+    "matched_regulations": [],
     "basis_assessment": {
-      "result": "依据充分",
-      "direct_basis_count": 1,
+      "result": "无明确依据",
+      "direct_basis_count": 0,
       "indirect_basis_count": 0
     }
   },
@@ -2588,14 +1956,6 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "信息科技风险管理指引§35",
         "basis_type": "直接依据"
       },
@@ -2606,7 +1966,7 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 4,
+      "direct_basis_count": 2,
       "indirect_basis_count": 0
     }
   },
@@ -2622,21 +1982,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2651,21 +2003,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2914,17 +2258,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "信息科技风险管理指引§27",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 2,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -2939,21 +2279,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3186,21 +2518,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3215,21 +2539,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3277,21 +2593,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3307,21 +2615,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3337,21 +2637,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3367,21 +2659,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3397,21 +2681,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3427,21 +2703,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§8",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§6",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§13",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3474,21 +2742,13 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§15",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§17",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§20",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 1,
       "indirect_basis_count": 0
     }
   },
@@ -3505,39 +2765,11 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§14",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "网络安全法§19",
         "basis_type": "直接依据"
       },
       {
         "regulation_id": "网络安全法§26",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§34",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§39",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "数据安全法§12",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "个人信息保护法§65",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
         "basis_type": "直接依据"
       },
       {
@@ -3575,7 +2807,7 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 17,
+      "direct_basis_count": 10,
       "indirect_basis_count": 0
     }
   },
@@ -3635,13 +2867,21 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "信息科技风险管理指引§41",
+        "regulation_id": "网络安全法§47",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "网络安全法§21",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§27",
         "basis_type": "直接依据"
       }
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 1,
+      "direct_basis_count": 3,
       "indirect_basis_count": 0
     }
   },
@@ -3658,10 +2898,6 @@
     "scope": "信息科技部",
     "matched_regulations": [
       {
-        "regulation_id": "网络安全法§21",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "网络安全法§47",
         "basis_type": "直接依据"
       },
@@ -3672,7 +2908,7 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 3,
+      "direct_basis_count": 2,
       "indirect_basis_count": 0
     }
   },
@@ -3709,18 +2945,6 @@
         "basis_type": "直接依据"
       },
       {
-        "regulation_id": "网络安全法§39",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "网络安全法§54",
-        "basis_type": "直接依据"
-      },
-      {
-        "regulation_id": "信息科技风险管理指引§7",
-        "basis_type": "直接依据"
-      },
-      {
         "regulation_id": "数据治理指引§38",
         "basis_type": "直接依据"
       },
@@ -3743,7 +2967,719 @@
     ],
     "basis_assessment": {
       "result": "依据充分",
-      "direct_basis_count": 9,
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-128",
+    "internal_policy_id": "安全运营技术规范§SOP-017",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-129",
+    "internal_policy_id": "安全运营技术规范§SOP-018",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-130",
+    "internal_policy_id": "安全运营技术规范§SOP-019",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-131",
+    "internal_policy_id": "安全运营技术规范§SOP-020",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-132",
+    "internal_policy_id": "安全运营技术规范§SOP-021",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-133",
+    "internal_policy_id": "安全运营技术规范§SOP-022",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-134",
+    "internal_policy_id": "安全运营技术规范§SOP-023",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-135",
+    "internal_policy_id": "安全运营技术规范§SOP-035",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-136",
+    "internal_policy_id": "安全运营技术规范§SOP-036",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-137",
+    "internal_policy_id": "安全运营技术规范§SOP-047",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-138",
+    "internal_policy_id": "安全运营技术规范§SOP-048",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-139",
+    "internal_policy_id": "安全运营技术规范§SOP-053",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-140",
+    "internal_policy_id": "安全运营技术规范§SOP-054",
+    "action": "建立",
+    "object_codes": [
+      "G3.6"
+    ],
+    "doc_ref": "POL-SOP-2024-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§25",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§50",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§61",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§26",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.5",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 6,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-141",
+    "internal_policy_id": "零信任安全技术规范§ZXT-002",
+    "action": "建立",
+    "object_codes": [
+      "G3.7"
+    ],
+    "doc_ref": "POL-ZXT-2025-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "数据治理指引§20",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 1,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-142",
+    "internal_policy_id": "漏洞扫描技术规范§VUS-002",
+    "action": "建立",
+    "object_codes": [
+      "G3.7"
+    ],
+    "doc_ref": "POL-VUS-2026-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "数据治理指引§20",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 1,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-143",
+    "internal_policy_id": "漏洞扫描技术规范§VUS-019",
+    "action": "建立",
+    "object_codes": [
+      "G3.7"
+    ],
+    "doc_ref": "POL-VUS-2026-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "数据治理指引§20",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 1,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-144",
+    "internal_policy_id": "漏洞扫描技术规范§VUS-023",
+    "action": "建立",
+    "object_codes": [
+      "G3.7"
+    ],
+    "doc_ref": "POL-VUS-2026-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "数据治理指引§20",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 1,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-145",
+    "internal_policy_id": "软件供应链安全技术规范§SSC-001",
+    "action": "建立",
+    "object_codes": [
+      "G3.4"
+    ],
+    "doc_ref": "POL-SSC-2025-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§40",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§12",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§30",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§24",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§37",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§5",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.2.1",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 7,
+      "indirect_basis_count": 0
+    }
+  },
+  {
+    "record_id": "POLMAP-146",
+    "internal_policy_id": "软件供应链安全技术规范§SSC-002",
+    "action": "建立",
+    "object_codes": [
+      "G2.2",
+      "G2.3"
+    ],
+    "doc_ref": "POL-SSC-2025-001",
+    "scope": "信息科技部",
+    "matched_regulations": [
+      {
+        "regulation_id": "网络安全法§34",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据安全法§27",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "个人信息保护法§53",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§7",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§8",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "信息科技风险管理指引§10",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "数据治理指引§8",
+        "basis_type": "直接依据"
+      },
+      {
+        "regulation_id": "JR/T 0171§7.2.2",
+        "basis_type": "直接依据"
+      }
+    ],
+    "basis_assessment": {
+      "result": "依据充分",
+      "direct_basis_count": 8,
       "indirect_basis_count": 0
     }
   }

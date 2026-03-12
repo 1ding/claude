@@ -186,18 +186,18 @@
       "matched_policies": [
         {
           "internal_policy_id": "零信任安全技术规范§ZXT-007",
-          "pair_result": "全覆盖",
+          "pair_result": "合规空白",
           "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 1.0,
-            "deadline_match": true
+            "subject_scope": false,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
           },
-          "covered_rules": [
+          "covered_rules": [],
+          "uncovered_rules": [
             "①对开发测试环境与生产环境进行有效隔离",
             "②开发环境、测试环境不应使用真实的个人金融信息，应使用虚构的或经过去标识化脱敏处理的数据"
-          ],
-          "uncovered_rules": []
+          ]
         },
         {
           "internal_policy_id": "漏洞扫描技术规范§VUS-034",
@@ -216,7 +216,7 @@
         }
       ],
       "coverage_summary": {
-        "result": "全覆盖",
+        "result": "部分覆盖",
         "rule_coverage": 1.0,
         "modality_adequate": true,
         "deadline_adequate": true,
@@ -591,17 +591,16 @@
         },
         {
           "internal_policy_id": "零信任安全技术规范§ZXT-009",
-          "pair_result": "部分覆盖",
+          "pair_result": "合规空白",
           "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 0.11,
-            "deadline_match": true
+            "subject_scope": false,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
           },
-          "covered_rules": [
-            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存"
-          ],
+          "covered_rules": [],
           "uncovered_rules": [
+            "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存",
             "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
             "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
             "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
@@ -659,19 +658,18 @@
         },
         {
           "internal_policy_id": "零信任安全技术规范§ZXT-025",
-          "pair_result": "部分覆盖",
+          "pair_result": "合规空白",
           "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 0.33,
-            "deadline_match": true
+            "subject_scope": false,
+            "modality_level": false,
+            "rule_coverage": 0.0,
+            "deadline_match": false
           },
-          "covered_rules": [
+          "covered_rules": [],
+          "uncovered_rules": [
             "①根据业务需要和最小权限原则，严格控制和分配访问、使用权限",
             "③传输、处理、存储个人金融信息的系统默认用户权限应为拒绝所有访问",
-            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制"
-          ],
-          "uncovered_rules": [
+            "⑧对存储个人金融信息的数据库及操作日志实施严格用户授权与访问控制",
             "②对可访问和处理信息的系统设置基于角色的访问控制策略，禁止账户共用",
             "④权限管理应设置权限指派、回收、过期处理等安全功能",
             "⑤远程访问应通过专线、VPN等方式，个人金融信息不应在远程访问设备上留存",
@@ -683,7 +681,7 @@
       ],
       "coverage_summary": {
         "result": "部分覆盖",
-        "rule_coverage": 0.78,
+        "rule_coverage": 0.7778,
         "modality_adequate": true,
         "deadline_adequate": true,
         "uncovered_rules": [
@@ -697,18 +695,17 @@
       "matched_policies": [
         {
           "internal_policy_id": "零信任安全技术规范§ZXT-016",
-          "pair_result": "部分覆盖",
+          "pair_result": "合规空白",
           "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 0.5,
+            "subject_scope": false,
+            "modality_level": false,
+            "rule_coverage": 0.0,
             "deadline_match": false
           },
-          "covered_rules": [
-            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
-            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
-          ],
+          "covered_rules": [],
           "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）",
             "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
             "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
           ]
@@ -908,18 +905,17 @@
         },
         {
           "internal_policy_id": "零信任安全技术规范§ZXT-016",
-          "pair_result": "部分覆盖",
+          "pair_result": "合规空白",
           "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 0.5,
+            "subject_scope": false,
+            "modality_level": false,
+            "rule_coverage": 0.0,
             "deadline_match": false
           },
-          "covered_rules": [
-            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
-            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）"
-          ],
+          "covered_rules": [],
           "uncovered_rules": [
+            "①识别并记录管理员用户、业务用户对个人金融信息的访问",
+            "④采取技术手段对个人金融信息全生命周期进行安全风险识别和管控（恶意代码检测、异常流量监测、用户行为分析等）",
             "②对个人金融信息数据交换网络流量进行安全监控和分析，存储匹配安全规则的数据以备溯源",
             "③日志文件和匹配规则的数据应至少保存6个月，定期对所有系统组件日志进行审计"
           ]
@@ -1042,18 +1038,17 @@
         },
         {
           "internal_policy_id": "安全运营技术规范§SOP-006",
-          "pair_result": "部分覆盖",
+          "pair_result": "合规空白",
           "dimensions": {
-            "subject_scope": true,
-            "modality_level": true,
-            "rule_coverage": 0.5,
+            "subject_scope": false,
+            "modality_level": false,
+            "rule_coverage": 0.0,
             "deadline_match": false
           },
-          "covered_rules": [
-            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
-            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告"
-          ],
+          "covered_rules": [],
           "uncovered_rules": [
+            "①立即采取必要措施进行处置，控制事态发展，消除安全隐患",
+            "④记录事件内容，分析和鉴定原因，评估影响，制定补救措施，并按规定及时报告",
             "②及时告知受影响的个人金融信息主体（邮件、信函、电话、推送消息等方式）",
             "③发现因系统漏洞或人为原因造成泄露时，立即采取有效措施防止风险扩大，并向行业主管部门报告"
           ]

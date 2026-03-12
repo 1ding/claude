@@ -872,7 +872,41 @@
         "managementAction": "(一)安全事件分级\n根据国家网络安全事件管理相关办法规定，按照安全事件影响的网络区域、业务重要性和处置方式，将安全事件分为四级。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-017",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①依据国家规定建立四级安全事件分级体系（一至四级）",
+              "②明确各级别的触发条件、判定标准和处置优先级"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-018",
@@ -881,7 +915,41 @@
         "managementAction": "1)网络安全原因导致重要信息系统服务中断或者业务无法正常开展，或者外网网站等重要信息系统被攻击篡改导致违法有害信息特大范围传播，或者关键信息基础设施被非授权入侵获取最高系统管理权限，或者敏感级及以上数据(包括核心数据、重要数据、敏感数据)遭到泄露、破坏或者非法获取、非法利用构成特别重大数据安全事件，对公众利益、经济建设、社会秩序、 国家安全构成特别严重威胁、造成特别严重影响或者特别重大经济损失的网络安全事件。\n2)因网络安全原因导致重要信息系统服务异常，在业务服务时段导致开行两个(含)以上省(自治区、直辖市)业务无法正常开展达 3 个小时 (含) 以上，或者一个省 (自治区、直辖市) 业务无法正常开展达 6 个小时 (含)以上的网络安全事件。\n3)业务服务时段以外，重要信息系统出现网络安全事件处置失败，可能产生上述 1 至 2 类的网络安全事件。\n4)一级网络安全事件一般还包括:外部网络攻击导致我行关键信息基础设施(核心系统)被控或无法正常提供服务；外部网络攻击进入核心生产网，重要信息系统或服务器被控制，或无法正常提供服务；外部网络攻击导致大量客户、账务、交易等重要业务数据泄露；外部网络攻击导致恶意代码在我行大规模传播 (影响资产规模超过 20%)；外部网络攻击导致我行互联网系统 (面向公众服务的)页面被篡改或挂马，造成一定不良影响。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-018",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①明确一级（特别重大）安全事件的判定标准：系统大规模中断、核心数据大规模泄露、关键基础设施被控等",
+              "②设定业务不可用时限阈值和影响范围（两省以上或单省6小时以上）作为触发条件"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-019",
@@ -890,7 +958,41 @@
         "managementAction": "1)网络安全原因导致重要信息系统服务中断或者业务无法正常开展，或者外网网站等重要信息系统被攻击篡改导致违法有害信息大范围传播，或者关键信息基础设施外其他重要信息系统被非授权入侵获取最高系统管理权限，或者重要数据、敏感数据遭到泄露、破坏或者非法获取、非法利用构成重大数据安全事件， 对公众利益、经济建设、社会秩序、国家安全构成严重威胁、造成严重影响或者重大经济损失的网络安全事件。\n2)因网络安全原因导致重要信息系统服务异常，在业务服务时段导致开行两个(含)以上省(自治区、直辖市)业务无法正常开展达半个小时 (含) 以上，或者一个省(自治区、直辖市) 业务无法正常开展达 3 个小时 (含)以上的网络安全事件。\n3)业务服务时段以外，重要信息系统出现网络安全事件处置失败，可能产生上述 1 至 2 类的网络安全事件。\n4)二级网络安全事件一般还包括:外部网络攻击导致我行重要信息系统被控或无法正常提供服务；外部网络攻击进入强逻辑隔离业务内网，强逻辑隔离业务内网系统或服务器被控制，或无法正常提供服务；外部网络攻击造成客户、账务、交易等重要业务数据泄露；外部网络攻击导致恶意代码在我行大规模传播 (影响资产规模超过 10%，但不超过 20%)；外部网络攻击导致我行互联网系统(面向内部员工服务的)页面被篡改或挂马，造成一定不良影响；外部网络攻击导致大量员工终端、邮箱被控或无法使用(占比超过 30%)。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-019",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①明确二级（重大）安全事件的判定标准：重要数据或敏感数据大量泄露、重要系统被控等",
+              "②规定影响范围阈值（单省3小时以上或两省以上1小时以上）"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-020",
@@ -899,7 +1001,41 @@
         "managementAction": "1)网络安全原因导致重要信息系统服务中断或者业务无法正常开展，或者外网网站等重要信息系统被攻击篡改导致违法有害信息较大范围传播，信息系统被非授权入侵获取最高系统管理权限且影响业务正常开展，或者敏感数据遭到泄露、破坏或者非法获取、非法利用构成较大数据安全事件，对公众利益、经济建设、社会秩序、国家安全构成较严重威胁、造成较严重影响或者较大经济损失的网络安全事件。\n2)因网络安全原因导致重要信息系统服务异常，在业务服务时段导致开行一个省(自治区、直辖市)业务无法正常开展达半个小时(含)以上的网络安全事件。\n3)业务服务时段以外，重要信息系统出现网络安全事件处置失败，可能产生上述 1 至 2 类的网络安全事件。\n4)三级网络安全事件一般还包括:外部网络攻击进入逻辑隔离业务内网，重要互联网系统或逻辑隔离业务内网系统或服务器控制，或无法正常提供服务；网络攻击源地址为内部地址的探测或攻击行为；外部网络攻击造成大量非重要业务数据泄露；外部网络攻击导致恶意代码在我行较大规模传播(影响资产规模超过 5%，但不超过 10%)；外部网络攻击导致我行互联网系统页面被篡改或挂马，未造成不良影响；外部网络攻击导致较多员工终端、邮箱被控或无法使用(占比超过 10%，但不超过 30%)。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-020",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①明确三级（较大）安全事件的判定标准：敏感数据泄露、信息系统被控且影响业务等",
+              "②规定影响范围和时限阈值"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-021",
@@ -908,7 +1044,41 @@
         "managementAction": "1)对组织或者个人造成一定影响的网络安全事件。\n2)四级网络安全事件一般还包括:外部网络攻击突破互联网防线，进入 DMZ 区或开发测试区，控制非重要互联网系统、服务器；外部网络攻击造成非重要数据泄露；外部网络攻击控制少量员工终端、邮箱被控或无法使用(占比不超过 10%)；外部网络攻击导致恶意代码在我行小规模传播(影响资产规模不超过 5%)； 我行通过金融城域网、金融专网等对外部监管机构造成网络流量异常或一定影响的网络安全事件。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-021",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①明确四级（一般）安全事件的判定标准：局部系统受控、少量数据泄露、小规模恶意代码传播等",
+              "②列举四级事件的具体情形（影响资产不超过5%、员工终端受控不超过10%等）"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-022",
@@ -917,7 +1087,41 @@
         "managementAction": "以下情况，不构成网络安全事件定级标准，根据实际情况进行封禁和处置。\n1)外部网络攻击导致我行信息系统服务质量受到轻微影响。\n2)外部扫描和攻击尝试，攻击者未突破网络防线。\n3)员工互联网邮箱收到疑似钓鱼邮件，未发现终端被控。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-022",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①明确不构成网络安全事件定级的情形（轻微影响、未成功攻击、疑似钓鱼未确认终端被控等）",
+              "②规定此类情形须根据实际情况进行封禁和处置"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-023",
@@ -926,7 +1130,40 @@
         "managementAction": "1)拒绝服务类:指利用信息系统缺陷、或通过暴力攻击的手段，以消耗系统的CPU、内存、磁盘空间或网络带宽等资源，从而影响信息系统正常运行的网络安全事件。\n2)数据泄露类:指在未经授权的情况下利用诸如数据库注入、DNS 劫持等技术手段从信息系统中获取数据而导致系统数据泄露的网络安全事件。\n3)远程控制类:指利用系统漏洞上传后门获取信息系统控制权或利用系统漏洞可远程执行命令获取系统控制权，进而对系统进行违规操作的网络安全事件。\n4)信息篡改类:指在未经授权的情况下将信息系统中的信息更换为其所需要的信息而导致的网络安全事件，例如篡改官网主页内容等；\n5)网页挂马类:指蓄意制造、传播网页内嵌恶意代码，或在网页中植入隐蔽的木马程序，诱骗系统用户点击下载木马的网络安全事件。\n6)恶意代码类:指在计算机程序中插入破坏计算机功能或者数据代码，影响计算机使用，并能自我复制的一组计算机指令或者程序代码的网络安全事件。\n7)钓鱼攻击类:指利用假冒的网站或电子邮件等手段，诱骗用户泄露个人敏感信息，如用户名、密码等，从而进行恶意活动的网络安全事件。\n8)勒索病毒类:指利用系统漏洞或通过网络钓鱼等方式，向受害计算机或服务器植入病毒，进以加密硬盘上数据乃至整个硬盘, 并以此敲诈用户钱财等目的的网络安全事件。\n9)漏洞攻击类:指利用信息系统自身或第三方产品及服务的后门、配置缺陷、协议缺陷等漏洞，对信息系统实施攻击的网络安全事件。\n10)供应链攻击类:指通过入侵或操纵供应链中的一个或多个环节，以获取非法利益或对目标进行攻击的网络安全事件。\n11)供应中断类:指供应商停止生产和维护信息系统或其中某些组件时，面临服务质量下降、供应链中断或终止的网络安全事件。\n12)其他网络攻击类:指不能归为以上分类，攻击者采取的其他手段对网络或数据安全造成危害的行为。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-023",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①按攻击手段/影响类型建立安全事件分类体系（拒绝服务、数据泄露、远程控制、恶意程序、网页篡改、垃圾邮件等）"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-024",
@@ -1366,7 +1603,40 @@
         "managementAction": "勒索病毒是指用于劫持用户资产或资源实施勒索的一种恶意程序，攻击者利用勒索病毒，通过加密用户数据、更改配置等方式，使用户资产或资源无法正常使用，或窃取数据，并以此为条件恐吓、胁迫、勒索用户支付赎金。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-035",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①定义勒索病毒事件的识别特征（劫持用户资产或资源、通过加密数据/更改配置/窃取数据实施勒索）"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "要求清晰性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-036",
@@ -1375,7 +1645,45 @@
         "managementAction": "处理勒索病毒事件的应急原则是:明确责任、迅速响应、技管并重、完善防范。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-036",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①确立勒索病毒事件应急处置原则：明确责任、迅速响应、技管并重、完善防范"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "环境安全",
+                "level2": "平台稳定性",
+                "level3": "安全事件响应"
+              },
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "要求清晰性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-037",
@@ -1818,7 +2126,40 @@
         "managementAction": "APT 攻击数据泄露事件是指，有证据表明高度组织化得黑客集团，采用多阶段、长时间的渗透策略，通过恶意程序或利用系统漏洞获取敏感信息。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-047",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①定义APT攻击数据泄露事件的特征：高度组织化攻击集团、多阶段长时间渗透策略、通过恶意程序或漏洞获取敏感信息"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "要求清晰性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-048",
@@ -1827,7 +2168,45 @@
         "managementAction": "处理数据泄露事件的应急原则是:明确责任、迅速响应、情报联动、舆情管控。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-048",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①确立APT数据泄露事件应急处置原则：明确责任、迅速响应、情报联动、舆情管控"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "环境安全",
+                "level2": "平台稳定性",
+                "level3": "安全事件响应"
+              },
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "要求清晰性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-049",
@@ -1961,7 +2340,45 @@
         "managementAction": "Oday 漏洞，即零日漏洞，是指在软件或系统被发现存在安全漏洞时，相关厂商尚未发布修复补丁，攻击者可以利用该漏洞进行攻击的状况。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-053",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①定义Oday（零日）漏洞事件的特征：厂商尚未发布补丁的已知漏洞，攻击者可主动利用实施攻击"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "环境安全",
+                "level2": "平台稳定性",
+                "level3": "风险可预性"
+              },
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "要求清晰性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-054",
@@ -1970,7 +2387,45 @@
         "managementAction": "处理 Oday 漏洞事件的应急原则是:明确责任、迅速响应、 情报联动、紧急收敛/下线。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "安全运营技术规范§SOP-054",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.6",
+                "name": "应急预案"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①确立Oday漏洞事件应急处置原则：明确责任、迅速响应、情报联动、紧急收敛/下线"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "环境安全",
+                "level2": "平台稳定性",
+                "level3": "安全事件响应"
+              },
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "要求清晰性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SOP-055",
@@ -2774,7 +3229,46 @@
         "managementAction": "为构建以身份为中心、持续验证、动态授权的新型网络安全架构，根据《中华人民共和国网络安全法》《网络安全技术零信任参考体系架构》(GB/T 43696-2024)等法律标准要求， 结合国家开发银行(以下简称开行)信息化建设实际，特制定本规范。\n本规范适用于总行信息科技部。各分行、直管子公司可参照执行。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "零信任安全技术规范§ZXT-002",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.7",
+                "name": "技术框架与标准"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①依据《网络安全法》等法规要求，建立以身份为中心、持续验证、动态授权的零信任安全架构体系",
+              "②明确规范适用范围（总行信息科技部，分行/子公司参照执行）"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "环境安全",
+                "level2": "平台可信性",
+                "level3": "运行环境可信"
+              },
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "ZXT-003",
@@ -4526,7 +5020,41 @@
         "managementAction": "为加强国家开发银行(以下简称 “开行”)漏洞扫描技术应用的标准化、可控化, 降低安全工作对业务稳定性的干扰, 特制定本规范。\n本规范适用于总部各部门、各事业部及各分公司在中华人民共和国境内的所有信息系统、业务应用和基础设施的漏洞扫描活动。直管子公司参照执行。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "漏洞扫描技术规范§VUS-002",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.7",
+                "name": "技术框架与标准"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①建立漏洞扫描技术应用的标准化和可控化规范，降低安全工作对业务稳定性的干扰",
+              "②明确适用范围：全行所有信息系统、业务应用和基础设施的漏洞扫描活动"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "VUS-003",
@@ -5145,7 +5673,41 @@
         "managementAction": "常规扫描策略包含四种核心扫描能力，可按场景需求组合使用。\n<table><tr><td>扫描能力</td><td>核心目标</td><td>支持档位</td></tr><tr><td>Web 漏洞扫描</td><td>检测 Web 应用的安全漏洞</td><td>L1/L2/L3</td></tr><tr><td>主机服务扫描</td><td>发现主机资产、端口、服务及风险</td><td>L1/L2/L3</td></tr><tr><td>域名资产发现</td><td>发现子域名、解析记录及暴露资产</td><td>L1/L2/L3</td></tr><tr><td>API 安全扫描</td><td>检测 RESTful API、GraphQL 等接口的安全漏洞</td><td>L1/L2/L3</td></tr></table>\n表 3.1-1 常规扫描能力概览",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "漏洞扫描技术规范§VUS-019",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.7",
+                "name": "技术框架与标准"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①规定四类常规扫描策略：Web漏洞扫描、主机服务扫描、配置合规检测、数据库安全扫描",
+              "②定义三个扫描档位（L1快速/L2标准/L3深度）及各档位适用场景"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "VUS-020",
@@ -5328,7 +5890,40 @@
         "managementAction": "专项扫描策略用于特定场景下的按需扫描任务，不作为常规周期性检测使用。\n<table><tr><td>策略名称</td><td>核心目标</td><td>触发条件</td></tr><tr><td>应急威胁排查</td><td>快速排查特定漏洞在全网的影响范围</td><td>漏洞预警发布</td></tr></table>\n表 3.2-1 专项扫描策略概览",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "漏洞扫描技术规范§VUS-023",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.7",
+                "name": "技术框架与标准"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①规定应急威胁排查专项扫描策略，在漏洞预警发布后快速排查特定漏洞在全网资产中的影响范围"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "VUS-024",
@@ -6420,7 +7015,47 @@
         "managementAction": "为规范国家开发银行(以下简称开发银行)在软件的引入、 使用、退出等全生命周期过程中的供应链安全管理活动，建立和维持对软件供应链风险的识别、评估、处置和监控能力，防范和降低因第三方软件(包括商业软件、开源软件、AI/ML模型、云服务/SaaS、外包开发软件等)及自研软件开发过程引入的安全风险，保障业务系统的安全稳定运行，根据《GB/T 43698-2024 网络安全技术 软件供应链安全要求》等相关标准要求，制定本规范。\n本规范适用于开发银行信息科技部内所有涉及软件采购、开发、测试、运维和使用的部门及人员，涵盖了对软件供应商、软件产品及服务、软件开发过程的安全管理要求。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "软件供应链安全技术规范§SSC-001",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G3.4",
+                "name": "专项安全制度"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①建立软件供应链安全管理制度，覆盖软件引入、使用、退出全生命周期",
+              "②明确适用范围（总行各部门、分公司全部信息系统）",
+              "③建立风险识别、评估、处置和监控能力"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "环境安全",
+                "level2": "平台可信性",
+                "level3": "供应依赖可信"
+              },
+              {
+                "level1": "管控安全",
+                "level2": "规则明确性",
+                "level3": "策略完备性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SSC-002",
@@ -6429,7 +7064,45 @@
         "managementAction": "应基于“权责清晰、协同高效”的治理原则，对软件供应链安全管理中涉及的核心组织与岗位进行规范，以构建一个覆盖决策、 执行、支持与监督的全功能治理矩阵。",
         "systems": [],
         "evidences": [],
-        "analysis": []
+        "analysis": [
+          {
+            "source": "软件供应链安全技术规范§SSC-002",
+            "obligation_type": "结构性",
+            "subject": {
+              "normalized_type": "数据处理者",
+              "category": "组织"
+            },
+            "action": "建立",
+            "object": [
+              {
+                "code": "G2.2",
+                "name": "安全组织架构"
+              },
+              {
+                "code": "G2.3",
+                "name": "权责划分"
+              }
+            ],
+            "applicable_condition": null,
+            "trigger_event": null,
+            "modality": "应",
+            "rules": [
+              "①基于权责清晰、协同高效原则，对软件供应链安全管理涉及的核心组织与岗位进行规范",
+              "②构建覆盖决策、执行、支持与监督的全功能治理矩阵"
+            ],
+            "deadline": null,
+            "legal_interest": null,
+            "targets": [
+              {
+                "level1": "管控安全",
+                "level2": "分工合理性",
+                "level3": "权责匹配性"
+              }
+            ],
+            "exception": null,
+            "legal_consequence": null
+          }
+        ]
       },
       {
         "id": "SSC-003",
