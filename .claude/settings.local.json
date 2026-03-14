@@ -1,27 +1,38 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(*)",
-      "Read(*)",
-      "Write(*)",
-      "Edit(*)",
-      "Glob(*)",
-      "Grep(*)",
-      "mcp__multi-reviewer__review_document",
-      "mcp__multi-reviewer__list_models",
-      "mcp__multi-reviewer__start_review_session"
-    ]
-  },
-  "hooks": {
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/1ding/claude/.claude/hooks/cap-check.sh"
-          }
+    "permissions": {
+        "allow": [
+            "Bash(*)",
+            "Read(*)",
+            "Write(*)",
+            "Edit(*)",
+            "Glob(*)",
+            "Grep(*)",
+            "mcp__multi-reviewer__review_document",
+            "mcp__multi-reviewer__list_models",
+            "mcp__multi-reviewer__start_review_session"
         ]
-      }
-    ]
-  }
+    },
+    "hooks": {
+        "UserPromptSubmit": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "/home/1ding/claude/.claude/hooks/cap-check.sh"
+                    }
+                ]
+            }
+        ],
+        "PreToolUse": [
+            {
+                "matcher": "Skill",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "/home/1ding/claude/.claude/hooks/skill-cap-check.sh"
+                    }
+                ]
+            }
+        ]
+    }
 }

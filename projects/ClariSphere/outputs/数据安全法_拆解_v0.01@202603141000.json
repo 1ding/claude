@@ -1,0 +1,3384 @@
+[
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§5-1",
+      "clause_contents": "中央国家安全领导机构负责国家数据安全工作的决策和议事协调，研究制定、指导实施国家数据安全战略和有关重大方针政策，统筹协调国家数据安全的重大事项和重要工作，建立国家数据安全工作协调机制。",
+      "clause_restored": "中央国家安全领导机构应当研究制定国家数据安全战略。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": []
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "中央国家安全领导机构",
+        "class": "统筹协调机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "A",
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R1",
+        "name": "国家数据安全战略",
+        "attributes": []
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§5-2",
+      "clause_contents": "中央国家安全领导机构负责国家数据安全工作的决策和议事协调，研究制定、指导实施国家数据安全战略和有关重大方针政策，统筹协调国家数据安全的重大事项和重要工作，建立国家数据安全工作协调机制。",
+      "clause_restored": "中央国家安全领导机构应当研究制定有关国家数据安全的重大方针政策。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": []
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "中央国家安全领导机构",
+        "class": "统筹协调机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "A",
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R1",
+        "name": "有关重大方针政策",
+        "attributes": []
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§5-3",
+      "clause_contents": "中央国家安全领导机构负责国家数据安全工作的决策和议事协调，研究制定、指导实施国家数据安全战略和有关重大方针政策，统筹协调国家数据安全的重大事项和重要工作，建立国家数据安全工作协调机制。",
+      "clause_restored": "中央国家安全领导机构应当统筹协调国家数据安全的重大事项和重要工作。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": []
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "中央国家安全领导机构",
+        "class": "统筹协调机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "A",
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "name": "国家数据安全的重大事项和重要工作",
+        "code": "G-决策权限",
+        "attributes": []
+      }
+    ],
+    "action": "统筹协调",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§5-4",
+      "clause_contents": "中央国家安全领导机构负责国家数据安全工作的决策和议事协调，研究制定、指导实施国家数据安全战略和有关重大方针政策，统筹协调国家数据安全的重大事项和重要工作，建立国家数据安全工作协调机制。",
+      "clause_restored": "中央国家安全领导机构应当建立国家数据安全工作协调机制。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": []
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "中央国家安全领导机构",
+        "class": "统筹协调机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "A",
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "name": "国家数据安全工作协调机制",
+        "code": "G-组织架构",
+        "attributes": []
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§6-1",
+      "clause_contents": "各地区、各部门对本地区、本部门工作中收集和产生的数据及数据安全负责。",
+      "clause_restored": "各地区、各部门应当对本地区、本部门工作中收集和产生的数据及数据安全负责。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 落实到位性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "各地区、各部门",
+        "class": "行业主管部门",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D6",
+        "name": "一般业务数据",
+        "attributes": []
+      }
+    ],
+    "action": "承担",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§6-2",
+      "clause_contents": "工业、电信、交通、金融、自然资源、卫生健康、教育、科技等主管部门承担本行业、本领域数据安全监管职责。",
+      "clause_restored": "工业、电信、交通、金融、自然资源、卫生健康、教育、科技等主管部门应当承担本行业、本领域数据安全监管职责。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 监督持续性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "工业、电信、交通、金融等主管部门",
+        "class": "行业主管部门",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "承担",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§6-3",
+      "clause_contents": "公安机关、国家安全机关等依照本法和有关法律、行政法规的规定，在各自职责范围内承担数据安全监管职责。",
+      "clause_restored": "公安机关、国家安全机关应当依照本法和有关法律、行政法规的规定，在各自职责范围内承担数据安全监管职责。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 分工合理性 > 职责分离性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "公安机关、国家安全机关",
+        "class": "监管机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "承担",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§6-4",
+      "clause_contents": "国家网信部门依照本法和有关法律、行政法规的规定，负责统筹协调网络数据安全和相关监管工作。",
+      "clause_restored": "国家网信部门应当依照本法和有关法律、行政法规的规定，负责统筹协调网络数据安全和相关监管工作。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 分工合理性 > 职责分离性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "国家网信部门",
+        "class": "统筹协调机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "承担",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§8-1",
+      "clause_contents": "开展数据处理活动，应当遵守法律、法规，尊重社会公德和伦理，遵守商业道德和职业道德，诚实守信，履行数据安全保护义务，承担社会责任。",
+      "clause_restored": "数据处理者开展数据处理活动，应当遵守法律、法规，履行数据安全保护义务，承担社会责任。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 落实到位性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "承担",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§8-2",
+      "clause_contents": "开展数据处理活动，不得危害国家安全、公共利益，不得损害个人、组织的合法权益。",
+      "clause_restored": "数据处理者开展数据处理活动，不得危害国家安全、公共利益，不得损害个人、组织的合法权益。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据保密性",
+        "客体安全 > 数据隐私性 > 处理受限性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "处理",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "不得",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§10",
+      "clause_contents": "相关行业组织按照章程，依法制定数据安全行为规范和团体标准，加强行业自律，指导会员加强数据安全保护，提高数据安全保护水平，促进行业健康发展。",
+      "clause_restored": "相关行业组织应当按照章程，依法制定数据安全行为规范和团体标准，加强行业自律，指导会员加强数据安全保护。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 规则明确性 > 策略完备性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "相关行业组织",
+        "class": "行业主管部门",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R1",
+        "name": "安全策略/制度文件",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "制定",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "制度建设/文档管理"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "宜",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§12-1",
+      "clause_contents": "收到投诉、举报的部门应当及时依法处理。",
+      "clause_restored": "收到投诉、举报的有关主管部门应当及时依法处理数据安全违规投诉举报。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 改进闭环性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "有关主管部门",
+        "class": "监管机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "开展",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "收到违反数据安全法规定行为的投诉或举报",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "备案/报告"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "及时",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§12-2",
+      "clause_contents": "有关主管部门应当对投诉、举报人的相关信息予以保密，保护投诉、举报人的合法权益。",
+      "clause_restored": "有关主管部门应当对投诉、举报人的相关信息予以保密，保护投诉、举报人的合法权益。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据保密性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "有关主管部门",
+        "class": "监管机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D1",
+        "name": "个人信息",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "存储",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "处理",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "收到投诉或举报",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [
+          "访问控制"
+        ],
+        "M": [
+          "保密协议/NDA"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§14",
+      "clause_contents": "省级以上人民政府应当将数字经济发展纳入本级国民经济和社会发展规划，并根据需要制定数字经济发展规划。",
+      "clause_restored": "省级以上人民政府应当将数字经济发展纳入本级国民经济和社会发展规划，并根据需要制定数字经济发展规划。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 规则明确性 > 策略完备性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "国家机关",
+        "class": "国家机关",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R1",
+        "name": "安全策略/制度文件",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "制定",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "制度建设/文档管理"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§15",
+      "clause_contents": "提供智能化公共服务，应当充分考虑老年人、残疾人的需求，避免对老年人、残疾人的日常生活造成障碍。",
+      "clause_restored": "智能化公共服务提供者提供智能化公共服务，应当充分考虑老年人、残疾人的需求，避免对其日常生活造成障碍。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据可用性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "智能化公共服务提供者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "开展",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "职责定义条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§17",
+      "clause_contents": "国务院标准化行政主管部门和国务院有关部门根据各自的职责，组织制定并适时修订有关数据开发利用技术、产品和数据安全相关标准。",
+      "clause_restored": "国务院标准化行政主管部门和国务院有关部门应当根据各自的职责，组织制定并适时修订有关数据开发利用技术、产品和数据安全相关标准。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 规则明确性 > 标准一致性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "国务院标准化行政主管部门和国务院有关部门",
+        "class": "行业主管部门",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R1",
+        "name": "安全策略/制度文件",
+        "attributes": []
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": null
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§21",
+      "clause_contents": "各地区、各部门应当按照数据分类分级保护制度，确定本地区、本部门以及相关行业、领域的重要数据具体目录，对列入目录的数据进行重点保护。",
+      "clause_restored": "各地区、各部门应当按照数据分类分级保护制度，确定本地区、本部门以及相关行业、领域的重要数据具体目录，对列入目录的数据进行重点保护。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 规则明确性 > 策略完备性",
+        "客体安全 > 数据安全性 > 数据保密性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "各地区、各部门",
+        "class": "行业主管部门",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D3",
+        "name": "重要数据",
+        "attributes": [
+          {
+            "attr": "分级",
+            "value": "数安: 重要数据",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "分类分级标识",
+          "台账/登记"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§23",
+      "clause_contents": "发生数据安全事件，有关主管部门应当依法启动应急预案，采取相应的应急处置措施，防止危害扩大，消除安全隐患，并及时向社会发布与公众有关的警示信息。",
+      "clause_restored": "发生数据安全事件，有关主管部门应当依法启动应急预案，采取相应的应急处置措施，并及时向社会发布警示信息。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "环境安全 > 平台稳定性 > 安全事件响应"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "有关主管部门",
+        "class": "监管机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R4",
+        "name": "应急预案",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "演练",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "处置",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "发生数据安全事件",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "事件管理/响应"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "及时",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§27-1",
+      "clause_contents": "开展数据处理活动应当依照法律、法规的规定，建立健全全流程数据安全管理制度。利用互联网等信息网络开展数据处理活动，应当在网络安全等级保护制度的基础上，履行上述数据安全保护义务。",
+      "clause_restored": "数据处理者开展数据处理活动应当依照法律、法规的规定，建立健全全流程数据安全管理制度；利用互联网等信息网络开展数据处理活动的，应当在网络安全等级保护制度的基础上履行义务。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 规则明确性 > 策略完备性",
+        "管控安全 > 执行有效性 > 落实到位性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R1",
+        "name": "安全策略/制度文件",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "制定",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": [
+        {
+          "attr": "边界",
+          "value": "外网",
+          "required": false
+        }
+      ]
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "制度建设/文档管理"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§27-2",
+      "clause_contents": "开展数据处理活动应当组织开展数据安全教育培训，采取相应的技术措施和其他必要措施，保障数据安全。",
+      "clause_restored": "数据处理者开展数据处理活动应当组织开展数据安全教育培训，保障数据安全。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 落实到位性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "开展",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "安全培训/意识教育"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§27-3",
+      "clause_contents": "开展数据处理活动应当采取相应的技术措施和其他必要措施，保障数据安全。",
+      "clause_restored": "数据处理者开展数据处理活动应当采取相应的技术措施和其他必要措施，保障数据安全。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据保密性",
+        "客体安全 > 数据安全性 > 数据完整性",
+        "客体安全 > 数据安全性 > 数据可用性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D6",
+        "name": "一般业务数据",
+        "attributes": []
+      }
+    ],
+    "action": "处置",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [
+          "访问控制",
+          "密码/加密",
+          "安全审计/日志"
+        ],
+        "M": [],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§27-4",
+      "clause_contents": "重要数据的处理者应当明确数据安全负责人和管理机构，落实数据安全保护责任。",
+      "clause_restored": "重要数据的处理者应当明确数据安全负责人和管理机构，落实数据安全保护责任。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 分工合理性 > 权责匹配性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "重要数据的处理者",
+        "class": "重要数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "数据安全负责人",
+        "class": "数据安全负责人",
+        "category": "岗位",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "A"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [],
+        "G": [
+          "岗位/角色设置",
+          "职责分配"
+        ]
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§28",
+      "clause_contents": "开展数据处理活动以及研究开发数据新技术，应当有利于促进经济社会发展，增进人民福祉，符合社会公德和伦理。",
+      "clause_restored": "数据处理者开展数据处理活动以及研究开发数据新技术，应当符合社会公德和伦理，有利于促进经济社会发展。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据隐私性 > 结果公平性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "开展",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§29-1",
+      "clause_contents": "开展数据处理活动应当加强风险监测，发现数据安全缺陷、漏洞等风险时，应当立即采取补救措施。",
+      "clause_restored": "数据处理者开展数据处理活动应当加强风险监测，持续监控数据安全缺陷和漏洞。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "环境安全 > 平台稳定性 > 风险可预性",
+        "环境安全 > 平台稳定性 > 威胁防御性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "监测",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [
+          "安全监测/态势感知",
+          "漏洞管理/补丁"
+        ],
+        "M": [],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§29-2",
+      "clause_contents": "发现数据安全缺陷、漏洞等风险时，应当立即采取补救措施。",
+      "clause_restored": "数据处理者发现数据安全缺陷、漏洞等风险时，应当立即采取补救措施。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "环境安全 > 平台稳定性 > 威胁防御性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "处置",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "发现数据安全缺陷、漏洞等风险",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [
+          "漏洞管理/补丁"
+        ],
+        "M": [
+          "事件管理/响应"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "立即",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§29-3",
+      "clause_contents": "发生数据安全事件时，应当立即采取处置措施。",
+      "clause_restored": "数据处理者发生数据安全事件时，应当立即采取处置措施。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "环境安全 > 平台稳定性 > 安全事件响应",
+        "环境安全 > 平台稳定性 > 故障恢复性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "处置",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "发生数据安全事件",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "事件管理/响应"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "立即",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§29-4",
+      "clause_contents": "发生数据安全事件时，应当按照规定及时告知用户。",
+      "clause_restored": "数据处理者发生数据安全事件时，应当按照规定及时告知用户（数据主体）。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 改进闭环性",
+        "客体安全 > 数据隐私性 > 过程透明性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "用户/个人信息主体",
+        "class": "用户/个人信息主体",
+        "category": "角色",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "I"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "报告",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "发生数据安全事件",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "备案/报告"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "及时",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§29-5",
+      "clause_contents": "发生数据安全事件时，应当向有关主管部门报告。",
+      "clause_restored": "数据处理者发生数据安全事件时，应当按照规定向有关主管部门报告。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 监督持续性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "有关主管部门",
+        "class": "监管机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "I"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R2",
+        "name": "技术方案/报告",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "编制",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "报告",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "发生数据安全事件",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "备案/报告"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "及时",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§30-1",
+      "clause_contents": "重要数据的处理者应当按照规定对其数据处理活动定期开展风险评估。",
+      "clause_restored": "重要数据的处理者应当按照规定对其数据处理活动定期开展风险评估。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "环境安全 > 平台稳定性 > 风险可预性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "重要数据的处理者",
+        "class": "重要数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D3",
+        "name": "重要数据",
+        "attributes": [
+          {
+            "attr": "分级",
+            "value": "数安: 重要数据",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "评估",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "风险评估",
+          "定期审查/复审"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "定期",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§30-2",
+      "clause_contents": "重要数据的处理者应当向有关主管部门报送风险评估报告。风险评估报告应当包括处理的重要数据的种类、数量，开展数据处理活动的情况，面临的数据安全风险及其应对措施等。",
+      "clause_restored": "重要数据的处理者应当向有关主管部门报送风险评估报告，报告须包括重要数据种类、数量、数据处理活动情况、数据安全风险及应对措施等。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 监督持续性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§45"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "重要数据的处理者",
+        "class": "重要数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "有关主管部门",
+        "class": "监管机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "I"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R2",
+        "name": "技术方案/报告",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "编制",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "报告",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "备案/报告",
+          "定期审查/复审"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "定期",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§32-1",
+      "clause_contents": "任何组织、个人收集数据，应当采取合法、正当的方式。法律、行政法规对收集、使用数据的目的、范围有规定的，应当在法律、行政法规规定的目的和范围内收集、使用数据。",
+      "clause_restored": "任何组织、个人收集数据，应当采取合法、正当的方式，并应在法律、行政法规规定的目的和范围内收集、使用数据。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据隐私性 > 处理受限性",
+        "行为安全 > 行为可预期性 > 行为一致性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "任何组织、个人",
+        "class": "任何组织或个人",
+        "category": "角色",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D6",
+        "name": "一般业务数据",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "采集",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "处理",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "审批/授权"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§32-2",
+      "clause_contents": "任何组织、个人不得窃取或者以其他非法方式获取数据。",
+      "clause_restored": "任何组织、个人不得窃取或者以其他非法方式获取数据。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据保密性",
+        "主体安全 > 身份真实性 > 凭证真实性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§51"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "任何组织、个人",
+        "class": "任何组织或个人",
+        "category": "角色",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D6",
+        "name": "一般业务数据",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "采集",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "处理",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "不得",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§33-1",
+      "clause_contents": "从事数据交易中介服务的机构提供服务，应当要求数据提供方说明数据来源。",
+      "clause_restored": "从事数据交易中介服务的机构提供数据交易中介服务时，应当要求数据提供方说明数据来源。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "主体安全 > 身份真实性 > 来源权威性",
+        "协作安全 > 协作透明性 > 数据可溯源"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§47"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "从事数据交易中介服务的机构",
+        "class": "数据交易中介机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D6",
+        "name": "一般业务数据",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "共享",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "评估",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "提供数据交易中介服务",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "背景审查/尽职调查"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§33-2",
+      "clause_contents": "从事数据交易中介服务的机构提供服务，应当审核交易双方的身份。",
+      "clause_restored": "从事数据交易中介服务的机构提供数据交易中介服务时，应当审核交易双方的身份。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "主体安全 > 身份真实性 > 凭证真实性",
+        "主体安全 > 身份有效性 > 状态有效性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§47"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "从事数据交易中介服务的机构",
+        "class": "数据交易中介机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "评估",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "提供数据交易中介服务",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [
+          "身份鉴别"
+        ],
+        "M": [
+          "准入审查/白名单"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§33-3",
+      "clause_contents": "从事数据交易中介服务的机构提供服务，应当留存审核、交易记录。",
+      "clause_restored": "从事数据交易中介服务的机构提供数据交易中介服务时，应当留存审核记录和交易记录。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "行为安全 > 行为可验证性 > 行为可审计",
+        "行为安全 > 行为可验证性 > 行为抗抵赖"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§47"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "从事数据交易中介服务的机构",
+        "class": "数据交易中介机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R5",
+        "name": "操作记录/日志",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "留存",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "处理",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "提供数据交易中介服务",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [
+          "安全审计/日志"
+        ],
+        "M": [
+          "台账/登记"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§34",
+      "clause_contents": "法律、行政法规规定提供数据处理相关服务应当取得行政许可的，服务提供者应当依法取得许可。",
+      "clause_restored": "法律、行政法规规定须取得行政许可的数据处理相关服务提供者，应当依法取得许可方可开展服务。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 规则明确性 > 要求清晰性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "服务提供者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "取得",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "法律行政法规规定须取得行政许可",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "审批/授权"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§35",
+      "clause_contents": "公安机关、国家安全机关因依法维护国家安全或者侦查犯罪的需要调取数据，应当按照国家有关规定，经过严格的批准手续，依法进行，有关组织、个人应当予以配合。",
+      "clause_restored": "有关组织、个人在公安机关、国家安全机关依法调取数据时，应当予以配合。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 落实到位性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§48"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "有关组织、个人",
+        "class": "任何组织或个人",
+        "category": "角色",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "公安机关、国家安全机关",
+        "class": "监管机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "S"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D6",
+        "name": "一般业务数据",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "使用",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "配合",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "公安机关、国家安全机关依法调取数据",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "审批/授权"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§36",
+      "clause_contents": "非经中华人民共和国主管机关批准，境内的组织、个人不得向外国司法或者执法机构提供存储于中华人民共和国境内的数据。",
+      "clause_restored": "境内的组织、个人未经中华人民共和国主管机关批准，不得向外国司法或者执法机构提供存储于中华人民共和国境内的数据。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据保密性",
+        "通信安全 > 信道安全性 > 网络隔离性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§48"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "境内的组织、个人",
+        "class": "境内组织或个人",
+        "category": "角色",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          },
+          {
+            "attr": "属地",
+            "value": "境内",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D6",
+        "name": "一般业务数据",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "出境",
+            "required": false
+          },
+          {
+            "attr": "属地",
+            "value": "境内",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "提供",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": [
+        {
+          "attr": "属地",
+          "value": "跨境",
+          "required": false
+        }
+      ]
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": "经中华人民共和国主管机关批准"
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "审批/授权"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "不得",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§38-1",
+      "clause_contents": "国家机关为履行法定职责的需要收集、使用数据，应当在其履行法定职责的范围内依照法律、行政法规规定的条件和程序进行。",
+      "clause_restored": "国家机关为履行法定职责收集、使用数据，应当在法定职责范围内依照法律、行政法规规定的条件和程序进行。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据隐私性 > 处理受限性",
+        "行为安全 > 行为可预期性 > 行为一致性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§49"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "国家机关",
+        "class": "国家机关",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D5",
+        "name": "政务数据",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "采集",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "处理",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "审批/授权"
+        ],
+        "G": [
+          "授权矩阵"
+        ]
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§38-2",
+      "clause_contents": "国家机关对在履行职责中知悉的个人隐私、个人信息、商业秘密、保密商务信息等数据应当依法予以保密，不得泄露或者非法向他人提供。",
+      "clause_restored": "国家机关对在履行职责中知悉的个人隐私、个人信息、商业秘密等数据应当依法保密，不得泄露或非法向他人提供。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据保密性",
+        "客体安全 > 数据隐私性 > 处理受限性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§49"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "国家机关",
+        "class": "国家机关",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D1",
+        "name": "个人信息",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "存储",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "处理",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "在履行法定职责中知悉上述数据",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [
+          "访问控制",
+          "密码/加密"
+        ],
+        "M": [
+          "保密协议/NDA"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "不得",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§39",
+      "clause_contents": "国家机关应当依照法律、行政法规的规定，建立健全数据安全管理制度，落实数据安全保护责任，保障政务数据安全。",
+      "clause_restored": "国家机关应当依照法律、行政法规的规定，建立健全数据安全管理制度，落实数据安全保护责任，保障政务数据安全。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 规则明确性 > 策略完备性",
+        "客体安全 > 数据安全性 > 数据保密性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§49"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "国家机关",
+        "class": "国家机关",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "R1",
+        "name": "安全策略/制度文件",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "制定",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "建立",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "制度建设/文档管理"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§40-1",
+      "clause_contents": "国家机关委托他人建设、维护电子政务系统，存储、加工政务数据，应当经过严格的批准程序。",
+      "clause_restored": "国家机关委托第三方建设、维护电子政务系统或存储、加工政务数据，应当经过严格的批准程序。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 分工合理性 > 授权合理性",
+        "环境安全 > 平台可信性 > 供应依赖可信"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§49"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "国家机关",
+        "class": "国家机关",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "开展",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "委托第三方建设维护电子政务系统或存储加工政务数据",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "审批/授权",
+          "四眼原则/双人复核"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§40-2",
+      "clause_contents": "国家机关委托他人建设、维护电子政务系统，存储、加工政务数据，应当监督受托方履行相应的数据安全保护义务。",
+      "clause_restored": "国家机关委托第三方建设维护电子政务系统或存储加工政务数据时，应当持续监督受托方履行数据安全保护义务。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 监督持续性",
+        "环境安全 > 平台可信性 > 供应依赖可信"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§49"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "国家机关",
+        "class": "国家机关",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "V"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "受托方",
+        "class": "受托方",
+        "category": "角色",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "开展",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "委托第三方建设维护电子政务系统或存储加工政务数据",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "定期审查/复审",
+          "合同约束/SLA"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§40-3",
+      "clause_contents": "受托方应当依照法律、法规的规定和合同约定履行数据安全保护义务，不得擅自留存、使用、泄露或者向他人提供政务数据。",
+      "clause_restored": "受托方应当依照法律法规和合同约定履行数据安全保护义务，不得擅自留存、使用、泄露或向他人提供政务数据。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据保密性",
+        "客体安全 > 数据隐私性 > 处理受限性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§49"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "受托方",
+        "class": "受托方",
+        "category": "角色",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D5",
+        "name": "政务数据",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "存储",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "处理",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "受国家机关委托建设维护电子政务系统或存储加工政务数据",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [
+          "访问控制"
+        ],
+        "M": [
+          "合同约束/SLA",
+          "保密协议/NDA"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "不得",
+          "required": true
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§41",
+      "clause_contents": "国家机关应当遵循公正、公平、便民的原则，按照规定及时、准确地公开政务数据。依法不予公开的除外。",
+      "clause_restored": "国家机关应当遵循公正、公平、便民的原则，按照规定及时、准确地公开政务数据。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "客体安全 > 数据安全性 > 数据可用性",
+        "客体安全 > 数据隐私性 > 过程透明性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": [
+        "数据安全法§49"
+      ]
+    },
+    "subjects": [
+      {
+        "name": "国家机关",
+        "class": "国家机关",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": [
+      {
+        "code": "D5",
+        "name": "政务数据",
+        "attributes": [
+          {
+            "attr": "状态",
+            "value": "共享",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "action": "报告",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": null,
+      "exception": "依法不予公开的政务数据"
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "制度建设/文档管理"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "应",
+          "required": true
+        },
+        {
+          "attr": "时限",
+          "value": "及时",
+          "required": false
+        }
+      ]
+    }
+  },
+  {
+    "regulation": {
+      "clause_id": "",
+      "clause_type": "义务条款",
+      "source_type": "外部法规",
+      "clause_code": "数据安全法§44",
+      "clause_contents": "有关主管部门在履行数据安全监管职责中，发现数据处理活动存在较大安全风险的，可以按照规定的权限和程序对有关组织、个人进行约谈，并要求有关组织、个人采取措施进行整改，消除隐患。",
+      "clause_restored": "有关主管部门发现数据处理活动存在较大安全风险时，可以依规对有关组织、个人进行约谈，并要求其采取措施进行整改，消除安全隐患。",
+      "law_name": "中华人民共和国数据安全法",
+      "effect_level": "法律",
+      "applicable_industry": [
+        "通用"
+      ]
+    },
+    "target": {
+      "security_targets": [
+        "管控安全 > 执行有效性 > 改进闭环性"
+      ]
+    },
+    "consequence": {
+      "legal_consequence": null
+    },
+    "subjects": [
+      {
+        "name": "有关主管部门",
+        "class": "监管机构",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "R"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "数据处理者",
+        "class": "数据处理者",
+        "category": "组织",
+        "attributes": [
+          {
+            "attr": "职责",
+            "value": [
+              "I"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ],
+    "object": null,
+    "action": "开展",
+    "environment": {
+      "resource_env": null,
+      "deployment_env": null
+    },
+    "condition": {
+      "trigger_event": "发现数据处理活动存在较大安全风险",
+      "exception": null
+    },
+    "control": {
+      "mechanisms": {
+        "T": [],
+        "M": [
+          "定期审查/复审"
+        ],
+        "G": []
+      },
+      "attributes": [
+        {
+          "attr": "义务模态",
+          "value": "可以",
+          "required": true
+        }
+      ]
+    }
+  }
+]
